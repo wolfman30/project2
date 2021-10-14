@@ -1,0 +1,18 @@
+<div fxLayout="row" fxLayoutAlign="center center">
+    <mat-card style="padding: 40px 70px 50px; width: 600px">
+      <mat-card-title>Register</mat-card-title>
+      <mat-form-field appearance="fill">
+        <mat-label>First Name</mat-label>
+        <input matInput [formControl]="firstName"/>
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Last Name</mat-label>
+        <input matInput [formControl]="lastName"/>
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Email</mat-label>
+        <input matInput [formControl]="email">
+      </mat-form-field>
+      <button mat-raised-button color="primary" (click)="register()">Create Profile</button>
+    </mat-card>
+</div>
