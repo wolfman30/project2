@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
 import { Trainee } from 'src/app/models/trainee';
+import { QuizService } from 'src/app/services/quiz.service'; 
+ 
 
 @Component({
   selector: 'app-register',
@@ -17,7 +19,7 @@ export class RegisterComponent implements OnInit {
                                   Validators.minLength(5), 
                                   Validators.pattern('^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])[a-zA-Z0-9]+$')]); 
 
-  constructor() { }
+  constructor(private quizService: QuizService) { }
 
   ngOnInit(): void {
   }
