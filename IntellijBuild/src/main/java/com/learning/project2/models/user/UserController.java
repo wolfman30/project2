@@ -28,16 +28,12 @@ public class UserController {
         this.userRepository = userRepository;
     }
 
-    public List<User> getAll(){
-        return userRepository.findAll();
-    }
-
     @PostMapping(
             value="create-or-update/",
             consumes = MediaType.APPLICATION_JSON_VALUE,
             produces = MediaType.APPLICATION_JSON_VALUE
     )
-    public ResponseEntity<User> saveOrUpdate(@RequestBody User user){
+    public ResponseEntity<User> createOrUpdate(@RequestBody User user){
         try{
             System.out.println(user.toString());
             userRepository.save(user);
@@ -55,7 +51,7 @@ public class UserController {
             consumes = MediaType.APPLICATION_JSON_VALUE,
             produces = MediaType.APPLICATION_JSON_VALUE
     )
-    public ResponseEntity<User> login(@RequestBody User user) {
+    public ResponseEntity<User> loginAttempt(@RequestBody User user) {
         try {
             HttpHeaders headers = new HttpHeaders();
             headers.add("Content-Type", "application/json");
@@ -74,7 +70,5 @@ public class UserController {
             return new ResponseEntity<>(null, null, HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
-
-
 
 }

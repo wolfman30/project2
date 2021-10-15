@@ -1,6 +1,7 @@
 package com.learning.project2.models;
 
 
+import com.learning.project2.models.test.Test;
 import com.learning.project2.models.user.User;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -14,7 +15,7 @@ import java.time.Instant;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class UserTestHistory {
+public class TestHistory {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
