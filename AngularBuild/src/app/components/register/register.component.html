@@ -1,18 +1,83 @@
 <div fxLayout="row" fxLayoutAlign="center center">
-    <mat-card style="padding: 40px 70px 50px; width: 600px">
-      <mat-card-title>Register</mat-card-title>
-      <mat-form-field appearance="fill">
-        <mat-label>First Name</mat-label>
-        <input matInput [formControl]="firstName"/>
-      </mat-form-field>
-      <mat-form-field appearance="fill">
-        <mat-label>Last Name</mat-label>
-        <input matInput [formControl]="lastName"/>
-      </mat-form-field>
-      <mat-form-field appearance="fill">
-        <mat-label>Email</mat-label>
-        <input matInput [formControl]="email">
-      </mat-form-field>
-      <button mat-raised-button color="primary" (click)="register()">Create Profile</button>
-    </mat-card>
+  <mat-tab-group>
+    <mat-tab label ="Register">
+      <mat-card style="padding: 40px 70px 50px; width: 600px">
+    
+        <div class="row">
+          <mat-icon>
+            <span class="material-icons-outlined">
+            face
+            </span>
+          </mat-icon>
+          <mat-form-field appearance="fill">
+            <mat-label>First Name</mat-label>
+            <input matInput [formControl]="firstName"/>
+          </mat-form-field>
+
+          <mat-form-field appearance="fill">
+            <mat-label>Last Name</mat-label>
+            <input matInput [formControl]="lastName"/>
+          </mat-form-field>
+        </div>
+
+        <div class="row">
+          <mat-icon>
+            <span class="material-icons-outlined">
+              face
+            </span>
+          </mat-icon>
+          <mat-form-field appearance="fill">
+            <mat-label>Username</mat-label>
+            <input matInput [formControl]="userName">
+          </mat-form-field>
+        </div>
+
+        <div class="row">
+          <mat-icon>
+            <span class="material-icons-outlined">
+              email
+            </span>
+          </mat-icon>
+          <mat-form-field appearance="fill">
+            <mat-label>Email</mat-label>
+            <input matInput [formControl]="email">
+          </mat-form-field>
+        </div>
+        <button mat-raised-button color="primary" (click)="register()">Create Profile</button>
+
+        </mat-card>
+      </mat-tab>
+    <mat-tab label="Login">
+      <mat-card style="padding: 40px 70px 50px; width: 600px">
+
+        <div class="row">
+          <mat-icon>
+            <span class="material-icons-outlined">
+              face
+            </span>
+          </mat-icon>
+          <mat-form-field appearance="fill">
+            <mat-label>Username</mat-label>
+            <input matInput [formControl]="userName">
+          </mat-form-field>
+        </div>
+
+        <div class="row">
+          <mat-icon>
+            <span class="material-icons-outlined">
+              face
+            </span>
+          </mat-icon>
+          <mat-form-field appearance="fill">
+            <mat-label>Password</mat-label>
+            <input type="password" matInput [formControl]="password">
+          </mat-form-field>
+        </div>
+        <button mat-raised-button color="primary" (click)="register()">Log In</button>
+
+        </mat-card>
+    </mat-tab>
+
+  </mat-tab-group>
+
 </div>

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, Validators } from '@angular/forms'; 
+import { FormControl, Validators } from '@angular/forms';
 import { Trainee } from 'src/app/models/trainee';
 
 @Component({
@@ -9,10 +9,14 @@ import { Trainee } from 'src/app/models/trainee';
 })
 export class RegisterComponent implements OnInit {
 
-  firstName = new FormControl('', [Validators.required]); 
-  lastName = new FormControl('', [Validators.required]); 
-  email = new FormControl('', [Validators.required, Validators.email])
-  
+  firstName = new FormControl('', [Validators.required]);
+  lastName = new FormControl('', [Validators.required]);
+  userName = new FormControl("", [Validators.required]);
+  email = new FormControl('', [Validators.required, Validators.email]); 
+  password = new FormControl('', [Validators.required, 
+                                  Validators.minLength(5), 
+                                  Validators.pattern('^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])[a-zA-Z0-9]+$')]); 
+
   constructor() { }
 
   ngOnInit(): void {
@@ -20,13 +24,15 @@ export class RegisterComponent implements OnInit {
 
   register()
   {
-    const newTrainee: Trainee = 
+    const newTrainee: Trainee =
     {
-      firstName: this.firstName.value, 
-      lastName: this.lastName.value, 
-      email: this.email.value 
-    }; 
-    console.log(newTrainee); 
+      firstName: this.firstName.value,
+      lastName: this.lastName.value,
+      userName: this.userName.value,
+      email: this.email.value,
+      password: this.password.value
+    };
+    console.log(newTrainee);
   }
 
 }
