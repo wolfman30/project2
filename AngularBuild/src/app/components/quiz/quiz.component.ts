@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Question } from 'src/app/models/question'; 
+import { QUESTIONS } from 'src/app/models/mock.questions';
 import { Answer } from 'src/app/models/answer';
 
 @Component({
@@ -10,6 +11,8 @@ import { Answer } from 'src/app/models/answer';
 export class QuizComponent implements OnInit 
 {
 
+  questions = QUESTIONS; 
+  
   question : Question = 
   {
     question: "What is Spring?",
