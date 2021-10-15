@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
-import { Trainee } from 'src/app/models/trainee';
+import { User } from 'src/app/models/user';
 import { QuizService } from 'src/app/services/quiz.service'; 
  
 
@@ -26,7 +26,7 @@ export class RegisterComponent implements OnInit {
 
   register()
   {
-    const newTrainee: Trainee =
+    const newTrainee: User =
     {
       firstName: this.firstName.value,
       lastName: this.lastName.value,

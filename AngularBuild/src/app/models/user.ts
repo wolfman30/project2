@@ -1,4 +1,4 @@
-export interface Trainee
+export interface User
 {
     id?: number;
     firstName: string;
