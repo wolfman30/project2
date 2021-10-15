@@ -1,6 +1,7 @@
 package com.learning.project2.models;
 
 
+import com.learning.project2.models.user.User;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
