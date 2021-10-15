@@ -1,9 +1,10 @@
-package com.learning.project2.models;
+package com.learning.project2.models.user;
 
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.stereotype.Component;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -16,6 +17,7 @@ import java.time.Instant;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@Component
 public class User {
     @Id
     @Column(name = "id", nullable = false)
