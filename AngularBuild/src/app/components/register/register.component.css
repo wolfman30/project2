@@ -4,15 +4,13 @@ button
     width: 25%
 }
 
+mat-card  
+{
+    padding: 40px 70px 50px; 
+    width: 600px
+}
 mat-form-field
 {
     width: 100%
-}
-
-.row 
-{
-    display: flex; 
-    gap: 1.5em; 
-    align-items: center; 
 }
 

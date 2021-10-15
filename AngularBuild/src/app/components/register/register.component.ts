@@ -37,4 +37,9 @@ export class RegisterComponent implements OnInit {
     console.log(newTrainee);
   }
 
+  login() 
+  {
+    console.log("logged in!"); 
+  }
+
 }

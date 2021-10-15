@@ -1,2 +1,25 @@
 <app-navbar></app-navbar>
-<p>quiz works!</p>
+
+<mat-card style="padding: 40px 70px 50px">
+
+    <mat-card>
+
+        <div class="row">
+            <mat-icon>
+                <span class="material-icons-outlined">
+                quiz
+                </span>
+            </mat-icon>
+            <h1>{{question.question}}</h1>
+        </div>
+        <br>
+        <mat-radio-group class="col">
+            <mat-radio-button value="1">{{question.a1}}</mat-radio-button>
+            <mat-radio-button value="2">{{question.a2}}</mat-radio-button>
+            <mat-radio-button value="3">{{question.a3}}</mat-radio-button>
+            <mat-radio-button value="4">{{question.a4}}</mat-radio-button>
+        </mat-radio-group>
+        
+    </mat-card>
+
+</mat-card>

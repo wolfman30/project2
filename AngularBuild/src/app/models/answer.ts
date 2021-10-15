@@ -1,7 +1,6 @@
 export interface Answer    
 {
-    test_question: string, 
-    test_id: number, 
-    difficulty: number, 
+    content: string,
+    question_id: number, 
     is_correct: boolean
 }
