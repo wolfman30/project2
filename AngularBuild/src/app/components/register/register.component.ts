@@ -12,7 +12,10 @@ export class RegisterComponent implements OnInit {
   firstName = new FormControl('', [Validators.required]);
   lastName = new FormControl('', [Validators.required]);
   userName = new FormControl("", [Validators.required]);
-  email = new FormControl('', [Validators.required, Validators.email])
+  email = new FormControl('', [Validators.required, Validators.email]); 
+  password = new FormControl('', [Validators.required, 
+                                  Validators.minLength(5), 
+                                  Validators.pattern('^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])[a-zA-Z0-9]+$')]); 
 
   constructor() { }
 
@@ -26,7 +29,8 @@ export class RegisterComponent implements OnInit {
       firstName: this.firstName.value,
       lastName: this.lastName.value,
       userName: this.userName.value,
-      email: this.email.value
+      email: this.email.value,
+      password: this.password.value
     };
     console.log(newTrainee);
   }
