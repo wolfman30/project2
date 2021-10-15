@@ -4,12 +4,9 @@ package com.learning.project2.models.user;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.springframework.stereotype.Component;
+import org.hibernate.annotations.CreationTimestamp;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.time.Instant;
 import java.util.Objects;
 
@@ -20,6 +17,7 @@ import java.util.Objects;
 @Entity
 public class User {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
     private Long id;
 
@@ -33,7 +31,8 @@ public class User {
     @Column(name = "email", nullable = false, length = 64)
     private String email;
 
-    @Column(name = "date_jointed")
+    @Column(name = "date_jointed", nullable = false)
+    @CreationTimestamp
     private Instant dateJointed;
 
     @Override
