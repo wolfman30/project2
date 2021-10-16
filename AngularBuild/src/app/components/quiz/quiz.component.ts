@@ -15,7 +15,8 @@ export class QuizComponent implements OnInit
 
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit(): void 
+  {
   }
 
 }

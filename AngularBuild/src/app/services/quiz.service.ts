@@ -5,6 +5,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class QuizService {
+  
 //---------Properties-----------
 readonly rootURL = 'http://localhost:4200'; 
 
