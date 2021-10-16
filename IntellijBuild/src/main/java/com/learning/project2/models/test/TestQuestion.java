@@ -19,9 +19,9 @@ public class TestQuestion {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
-    private Integer id;
+    private Long id;
 
-    @ManyToOne(optional = false)
+    @ManyToOne(optional = true, fetch = FetchType.LAZY)
     @JoinColumn(name = "test_id", nullable = false)
     private Test test;
 
@@ -34,7 +34,7 @@ public class TestQuestion {
     @Column(name = "points", nullable = false)
     private Double points;
 
-    @OneToMany
+    @OneToMany(fetch =FetchType.EAGER)
     @JoinColumn(name = "question_id")
     private List<TestAnswer> testAnswerList;
 

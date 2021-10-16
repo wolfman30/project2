@@ -19,7 +19,7 @@ public class Test {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
-    private Integer id;
+    private Long id;
 
     @Column(name = "subject", nullable = false, length = 24)
     private String subject;
@@ -27,7 +27,7 @@ public class Test {
     @Column(name = "test_name", nullable = false, length = 64)
     private String testName;
 
-    @OneToMany
+    @OneToMany (fetch = FetchType.EAGER)
     @JoinColumn(name = "test_id")
     private List<TestQuestion> testQuestions;
 
