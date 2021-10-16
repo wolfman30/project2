@@ -3,7 +3,7 @@ import { Question } from './question';
 export const QUESTIONS: Question[] = 
 [
     {
-        question: "What is Spring?",
+        content: "What is Spring?",
         test_id: 1,
         difficulty: 1,
         correct_answer: 1,
@@ -16,7 +16,7 @@ export const QUESTIONS: Question[] =
         a4: "Spring automates the entire DevOps pipeline."
       },
       {
-        question: "In Aspect Oriented Programming:",
+        content: "In Aspect Oriented Programming:",
         test_id: 1,
         difficulty: 1,
         correct_answer: 1,
@@ -29,7 +29,7 @@ export const QUESTIONS: Question[] =
         a4: "functions are objects that can serve as input to other functions."
       },
       {
-        question: "Which API does Spring need to use to modify the behavior of methods and classes at runtime?",
+        content: "Which API does Spring need to use to modify the behavior of methods and classes at runtime?",
         test_id: 1,
         difficulty: 1,
         correct_answer: 2,
@@ -40,7 +40,7 @@ export const QUESTIONS: Question[] =
         a4: "Jackson API"
       },
       {
-        question: "Which of the following is NOT an example of a cross-cutting concern:",
+        content: "Which of the following is NOT an example of a cross-cutting concern:",
         test_id: 1, 
         difficulty: 1, 
         correct_answer: 0, 
@@ -51,7 +51,7 @@ export const QUESTIONS: Question[] =
 	      a4: "Error Handling - handling checked and unchecked exceptions and errors"
       },
       {
-        question: "Weaving is:", 
+        content: "Weaving is:", 
         test_id: 1,
         difficulty: 1, 
         correct_answer: 1,
@@ -65,7 +65,7 @@ export const QUESTIONS: Question[] =
             advised object such that they are all functionally woven together`
       },
       {
-        question: "What is the common goal between Lombok and Spring?", 
+        content: "What is the common goal between Lombok and Spring?", 
         test_id: 1,
         difficulty: 1, 
         correct_answer: 0,
@@ -77,7 +77,7 @@ export const QUESTIONS: Question[] =
         a4: `To autogenerate the XML configuration file that configures servlets.`
       },
       {
-        question: "Which of the following is used as the front controller in the Spring Web MVC Framework?",
+        content: "Which of the following is used as the front controller in the Spring Web MVC Framework?",
         test_id: 1,
         difficulty: 1,
         correct_answer: 2,
@@ -88,7 +88,7 @@ export const QUESTIONS: Question[] =
         a4: "FrontControllerServlet"
       },
       {
-        question: "Which of the following are not endpoints for a Spring Boot Actuator?",
+        content: "Which of the following are not endpoints for a Spring Boot Actuator?",
         test_id: 1,
         difficulty: 1,
         correct_answer: 2,
@@ -99,7 +99,7 @@ export const QUESTIONS: Question[] =
         a4: "/shutdown"
       },
       {
-        question: "In Spring, RestTemplate acts as a:", 
+        content: "In Spring, RestTemplate acts as a:", 
         test_id: 1,
         difficulty: 1, 
         correct_answer: 0,
@@ -110,7 +110,7 @@ export const QUESTIONS: Question[] =
         a4: `an interface that facilitates the conversion of JSON to Java objects`
       },
       {
-        question: ` Which of the following are the two major tools use to improve development workflow
+        content: ` Which of the following are the two major tools use to improve development workflow
         in Spring Boot applications?`, 
         test_id: 1,
         difficulty: 1, 
@@ -118,7 +118,7 @@ export const QUESTIONS: Question[] =
         points: 3,
         a1: `Hibernate and Jackson`,
         a2: `Disabling caching and manual restarts`,
-        a3: `Jenkings and Docker`,
+        a3: `Jenkins and Docker`,
         a4: `Disabling caching and automatic restarts`
       }
 

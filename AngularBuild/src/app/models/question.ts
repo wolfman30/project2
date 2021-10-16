@@ -2,7 +2,7 @@ import { Answer } from './answer';
 
 export interface Question
 {
-    question: string,
+    content: string,
     test_id: number, 
     difficulty: number, 
     correct_answer: number, 
@@ -12,3 +12,5 @@ export interface Question
     a3: string, 
     a4: string
 }
+
+

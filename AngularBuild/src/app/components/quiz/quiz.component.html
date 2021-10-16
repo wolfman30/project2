@@ -6,16 +6,13 @@
 
     <div *ngFor="let question of questions">
         <mat-card>
-        
-
-
             <div class="row">
                 <mat-icon>
                     <span class="material-icons-outlined">
                     quiz
                     </span>
                 </mat-icon>
-                <h1>{{question.question}}</h1>
+                <h1>{{question.content}}</h1>
             </div>
 
             <br>
@@ -26,8 +23,10 @@
                 <mat-radio-button value="3">{{question.a3}}</mat-radio-button>
             <mat-radio-button value="4">{{question.a4}}</mat-radio-button>
             </mat-radio-group>
-
         </mat-card>
     </div>
-
+    <div id="submit-test-button">
+        <a href="http://localhost:4200/result"><button type="submit" mat-raised-button color="primary">Sumbit Test</button></a>
+    </div>
+    
 </mat-card>
