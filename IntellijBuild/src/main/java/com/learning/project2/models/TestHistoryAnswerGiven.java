@@ -1,6 +1,7 @@
 package com.learning.project2.models;
 
 
+import com.learning.project2.models.test.TestAnswer;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -20,10 +21,10 @@ public class TestHistoryAnswerGiven {
 
     @ManyToOne(optional = false)
     @JoinColumn(name = "test_history_id", nullable = false)
-    private UserTestHistory testHistory;
+    private TestHistory testHistory;
 
     @ManyToOne(optional = false)
     @JoinColumn(name = "test_answer_id", nullable = false)
-    private P2TestAnswer testAnswer;
+    private TestAnswer testAnswer;
 
 }
