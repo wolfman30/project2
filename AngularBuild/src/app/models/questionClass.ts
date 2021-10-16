@@ -5,6 +5,7 @@ export class Question
     id: number; 
     content: string; 
     test_id: number; 
+    questionTypeId: number; 
     difficulty: number;  
     answers: Answer[]; 
     points: number; 
@@ -16,6 +17,7 @@ export class Question
         this.id = data.id; 
         this.content = data.content; 
         this.test_id = data.test_id; 
+        this.questionTypeId = data.questionTypeId; 
         this.difficulty = data.difficulty; 
         this.answers = []; 
         data.answers.forEach( (ans: any) => 
