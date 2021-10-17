@@ -4,29 +4,34 @@
 
     <app-navbar></app-navbar>
 
-    <div *ngFor="let question of questions">
-        <mat-card>
-            <div class="row">
-                <mat-icon>
-                    <span class="material-icons-outlined">
-                    quiz
-                    </span>
-                </mat-icon>
-                <h1>{{question.content}}</h1>
-            </div>
 
-            <br>
+    <div *ngIf="mode == 'quiz' && quiz">
 
-            <mat-radio-group class="col">
-                <mat-radio-button value="1">{{question.a1}}</mat-radio-button>
-                <mat-radio-button value="2">{{question.a2}}</mat-radio-button>
-                <mat-radio-button value="3">{{question.a3}}</mat-radio-button>
-            <mat-radio-button value="4">{{question.a4}}</mat-radio-button>
-            </mat-radio-group>
-        </mat-card>
-    </div>
-    <div id="submit-test-button">
-        <a href="http://localhost:4200/result"><button type="submit" mat-raised-button color="primary">Sumbit Test</button></a>
-    </div>
-    
+        <div *ngFor="let question of quiz.questions">
+            <mat-card>
+                
+                <div class="row">
+                    <mat-icon>
+                        <span class="material-icons-outlined">
+                        quiz
+                        </span>
+                    </mat-icon>
+                    <h2>{{question.content}}</h2>
+                </div>
+
+                <br>
+
+                <mat-radio-group class="col">
+                    <div *ngFor="let answer of question.answers">
+                        <mat-radio-button value="{{++ZERO}}" [(ngModel)]="answer.selected">{{answer.content}}</mat-radio-button>
+                    </div>
+                </mat-radio-group>
+            </mat-card>
+        </div>
+        <div id="submit-test-button">
+            <a href="http://localhost:4200/result"><button type="submit" mat-raised-button color="primary">Sumbit Test</button></a>
+        </div>
+        
+    </div>  
+
 </mat-card>

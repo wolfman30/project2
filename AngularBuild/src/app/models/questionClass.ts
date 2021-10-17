@@ -9,7 +9,7 @@ export class Question
     difficulty: number;  
     answers: Answer[]; 
     points: number; 
-    is_answered: boolean; 
+    is_answered?: boolean; 
 
     constructor(data: any)
     {

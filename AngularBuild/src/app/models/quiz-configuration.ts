@@ -7,8 +7,8 @@ export class QuizConfiguration
     pageSize: number; 
     requiredAll: boolean; 
     richText: boolean; 
-    shuffledQuestions: boolean; 
-    shuffleOptions: boolean; 
+    shuffleQuestions: boolean; 
+    shuffleAnswers: boolean; 
     showClock: boolean; 
     showPager: boolean; 
     theme?: string; 
@@ -23,8 +23,8 @@ export class QuizConfiguration
         this.pageSize = data.pageSize; 
         this.requiredAll = data.requiredAll; 
         this.richText = data.richText; 
-        this.shuffledQuestions = data.shuffledQuestions; 
-        this.shuffleOptions = data.shuffleOptions;
+        this.shuffleQuestions = data.shuffleQuestions; 
+        this.shuffleAnswers = data.shuffleAnswers;
         this.showClock = data.showClock; 
         this.showPager = data.showPager;  
     }

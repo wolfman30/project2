@@ -1,0 +1,348 @@
+{
+    "id": 1,
+    "test_name": "JavaScript Quiz",
+    "subject": "JavaScript Quiz (Basic Multiple Choice Questions for JavaScript Developers)",
+    "questions": [
+        {
+            "id": 1010,
+            "content": "Which HTML tag do we use to put the JavaScript?",
+            "test_id": 1, 
+            "questionTypeId": 1,
+            "difficulty": 1,
+            "answers": [
+                {
+                    "id": 1055,
+                    "questionId": 1010,
+                    "name": "<javascript>",
+                    "isAnswer": false
+                },
+                {
+                    "id": 1056,
+                    "questionId": 1010,
+                    "name": "<script>",
+                    "isAnswer": true
+                },
+                {
+                    "id": 1057,
+                    "questionId": 1010,
+                    "name": "<js>",
+                    "isAnswer": false
+                },
+                {
+                    "id": 1058,
+                    "questionId": 1010,
+                    "name": "None of the above",
+                    "isAnswer": false
+                }
+            ],
+            "points": 2
+
+        },
+        {
+            "id": 1011,
+            "content": "Which built-in method calls a function for each element in the array?",
+            "test_id": 1,
+            "questionTypeId": 1,
+            "difficulty": 1,
+            "answers": [
+                {
+                    "id": 1055,
+                    "questionId": 1010,
+                    "name": "while()",
+                    "isAnswer": false
+                },
+                {
+                    "id": 1057,
+                    "questionId": 1010,
+                    "name": "loop",
+                    "isAnswer": false
+                },
+                {
+                    "id": 1056,
+                    "questionId": 1010,
+                    "name": "forEach",
+                    "isAnswer": true
+                },
+                {
+                    "id": 1058,
+                    "questionId": 1010,
+                    "name": "takeUntil",
+                    "isAnswer": false
+                }
+            ],
+            "points": 2
+        },
+        {
+            "id": 1012,
+            "content": "What is the difference between let and var?",
+            "test_id": 1,
+            "questionTypeId": 1,
+            "difficulty": 1,
+            "answers": [
+                {
+                    "id": 1055,
+                    "questionId": 1010,
+                    "name": "let has local scope",
+                    "isAnswer": true
+                },
+                {
+                    "id": 1057,
+                    "questionId": 1010,
+                    "name": "Both are same",
+                    "isAnswer": false
+                },
+                {
+                    "id": 1056,
+                    "questionId": 1010,
+                    "name": "var is new data type",
+                    "isAnswer": false
+                },
+                {
+                    "id": 1058,
+                    "questionId": 1010,
+                    "name": "let consumes more cpu and ram",
+                    "isAnswer": false
+                }
+            ],
+            "points": 2
+        },
+        {
+            "id": 1013,
+            "content": "What is TypeScript?",
+            "test_id":1,
+            "questionTypeId": 1,
+            "difficulty": 1,
+            "answers": [
+                {
+                    "id": 1055,
+                    "questionId": 1010,
+                    "name": "A Language based on Javascript",
+                    "isAnswer": true
+                },
+                {
+                    "id": 1057,
+                    "questionId": 1010,
+                    "name": "script that runs on browser",
+                    "isAnswer": false
+                },
+                {
+                    "id": 1056,
+                    "questionId": 1010,
+                    "name": "A DataType Collection of Javascript",
+                    "isAnswer": false
+                },
+                {
+                    "id": 1058,
+                    "questionId": 1010,
+                    "name": "None of the above",
+                    "isAnswer": false
+                }
+            ],
+            "points": 2
+        },
+        {
+            "id": 1014,
+            "content": "Which of the following is right syntex for arrow function?",
+            "test_id": 1,
+            "questionTypeId": 1,
+            "difficulty": 1,
+            "answers": [
+                {
+                    "id": 1055,
+                    "questionId": 1010,
+                    "name": "a -> { return b; }",
+                    "isAnswer": false
+                },
+                {
+                    "id": 1057,
+                    "questionId": 1010,
+                    "name": "x <= x + y;",
+                    "isAnswer": false
+                },
+                {
+                    "id": 1056,
+                    "questionId": 1010,
+                    "name": "x <- x + 5;",
+                    "isAnswer": false
+                },
+                {
+                    "id": 1058,
+                    "questionId": 1010,
+                    "name": "x => x + 5;",
+                    "isAnswer": true
+                }
+            ],
+            "points": 2
+        },
+        {
+            "id": 1015,
+            "content": "Which new ES6 syntax helps with formatting output text - mixing variables with string literals, for example.",
+            "test_id": 1,
+            "questionTypeId": 1,
+            "difficulty": 1, 
+            "answers": [
+                {
+                    "id": 1055,
+                    "questionId": 1010,
+                    "name": "Generator Functions",
+                    "isAnswer": false
+                },
+                {
+                    "id": 1057,
+                    "questionId": 1010,
+                    "name": "Arrow Functions",
+                    "isAnswer": false
+                },
+                {
+                    "id": 1056,
+                    "questionId": 1010,
+                    "name": "Template Strings",
+                    "isAnswer": true
+                },
+                {
+                    "id": 1058,
+                    "questionId": 1010,
+                    "name": "Set Data Structure",
+                    "isAnswer": false
+                }
+            ],
+            "points": 2
+        },
+        {
+            "id": 1016,
+            "content": "Which ES6 feature helps in merging of a number of changed properties into an existing object?",
+            "test_id": 1, 
+            "questionTypeId": 1,
+            "difficulty": 1,
+            "answers": [
+                {
+                    "id": 1055,
+                    "questionId": 1010,
+                    "name": "Class syntex",
+                    "isAnswer": false
+                },
+                {
+                    "id": 1056,
+                    "questionId": 1010,
+                    "name": "Object.assign()",
+                    "isAnswer": true
+                },
+                {
+                    "id": 1057,
+                    "questionId": 1010,
+                    "name": "map data structure",
+                    "isAnswer": false
+                },
+                {
+                    "id": 1058,
+                    "questionId": 1010,
+                    "name": "Array.includes(obj);",
+                    "isAnswer": false
+                }
+            ],
+            "points": 2
+        },
+        {
+            "id": 1017,
+            "content": "What is the difference between == and === ?",
+            "test_id": 1, 
+            "questionTypeId": 1,
+            "difficulty": 1,
+            "answers": [
+                {
+                    "id": 1055,
+                    "questionId": 1010,
+                    "name": "=== throws syntex error",
+                    "isAnswer": false
+                },
+                {
+                    "id": 1056,
+                    "questionId": 1010,
+                    "name": "== checks values only, === checks types as well",
+                    "isAnswer": true
+                },
+                {
+                    "id": 1057,
+                    "questionId": 1010,
+                    "name": "=== is reference type check only",
+                    "isAnswer": false
+                },
+                {
+                    "id": 1058,
+                    "questionId": 1010,
+                    "name": "Both are same",
+                    "isAnswer": false
+                }
+            ],
+            "points": 2
+        },
+        {
+            "id": 1018,
+            "content": "Which of the following is NOT the method of an Array?",
+            "test_id": 1,
+            "questionTypeId": 1,
+            "difficulty": 1,
+            "answers": [
+                {
+                    "id": 1055,
+                    "questionId": 1010,
+                    "name": ".map()",
+                    "isAnswer": false
+                },
+                {
+                    "id": 1057,
+                    "questionId": 1010,
+                    "name": ".includes()",
+                    "isAnswer": false
+                },
+                {
+                    "id": 1056,
+                    "questionId": 1010,
+                    "name": ".subscribe()",
+                    "isAnswer": true
+                },
+                {
+                    "id": 1058,
+                    "questionId": 1010,
+                    "name": ".flatMap()",
+                    "isAnswer": false
+                }
+            ],
+            "points": 2
+        },
+        {
+            "id": 1019,
+            "content": "What will be the output of the following code: ['a', 'b', 'c'].fill(7, 1, 2);?",
+            "test_id": 1,
+            "questionTypeId": 1,
+            "difficulty": 1,
+            "answers": [
+                {
+                    "id": 1055,
+                    "questionId": 1010,
+                    "name": "['a', 7, 'c']",
+                    "isAnswer": true
+                },
+                {
+                    "id": 1056,
+                    "questionId": 1010,
+                    "name": "['a', 7, 7, 'b', 'c']",
+                    "isAnswer": false
+                },
+                {
+                    "id": 1057,
+                    "questionId": 1010,
+                    "name": "['a', 'b', 'c']",
+                    "isAnswer": false
+                },
+                {
+                    "id": 1058,
+                    "questionId": 1010,
+                    "name": "['7', 7, 'c']",
+                    "isAnswer": false
+                }
+            ],
+            "points": 2
+        }
+    ]
+}
