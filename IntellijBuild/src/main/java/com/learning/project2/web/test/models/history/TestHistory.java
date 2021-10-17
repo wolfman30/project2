@@ -1,14 +1,15 @@
-package com.learning.project2.models;
+package com.learning.project2.web.test.models.history;
 
 
-import com.learning.project2.models.test.Test;
-import com.learning.project2.models.user.User;
+import com.learning.project2.web.test.models.Test;
+import com.learning.project2.web.user.User;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.time.Instant;
+import java.util.List;
 
 @Table(name="p2_test_history")
 @Entity
@@ -31,5 +32,10 @@ public class TestHistory {
 
     @Column(name = "date_taken")
     private Instant dateTaken;
+
+    @OneToMany
+    @JoinColumn(name = "test_history_id", nullable = false)
+    private List<TestHistoryAnswerGiven> answers;
+
 
 }

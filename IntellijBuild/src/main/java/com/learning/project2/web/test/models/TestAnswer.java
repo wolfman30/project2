@@ -1,4 +1,4 @@
-package com.learning.project2.models.test;
+package com.learning.project2.web.test.models;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -27,6 +27,10 @@ public class TestAnswer {
 
     @Column(name = "answer_text", nullable = false, length = 180)
     private String answerText;
+
+    public TestAnswer(long answerId){
+        this.id = answerId;
+    }
 
     @Override
     public String toString() {

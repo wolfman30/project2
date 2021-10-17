@@ -1,4 +1,4 @@
-package com.learning.project2.models.test;
+package com.learning.project2.web.test.models;
 
 
 import lombok.AllArgsConstructor;
@@ -27,7 +27,7 @@ public class Test {
     @Column(name = "test_name", nullable = false, length = 64)
     private String testName;
 
-    @OneToMany (fetch = FetchType.EAGER)
+    @OneToMany
     @JoinColumn(name = "test_id")
     private List<TestQuestion> testQuestions;
 
