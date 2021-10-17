@@ -16,9 +16,9 @@ public class TestAnswer {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
-    private Integer id;
+    private Long id;
 
-    @ManyToOne(optional = false)
+    @ManyToOne(optional = true, fetch = FetchType.LAZY)
     @JoinColumn(name = "question_id", nullable = false)
     private TestQuestion question;
 
