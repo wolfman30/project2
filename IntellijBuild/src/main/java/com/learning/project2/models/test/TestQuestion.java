@@ -34,9 +34,9 @@ public class TestQuestion {
     @Column(name = "points", nullable = false)
     private Double points;
 
-//    @OneToMany(fetch =FetchType.EAGER)
-//    @JoinColumn(name = "question_id")
-//    private List<TestAnswer> testAnswerList;
+    @OneToMany(fetch =FetchType.EAGER)
+    @JoinColumn(name = "question_id")
+    private List<TestAnswer> testAnswerList;
 
     @Override
     public String toString() {

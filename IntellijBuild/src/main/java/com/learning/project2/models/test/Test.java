@@ -27,9 +27,9 @@ public class Test {
     @Column(name = "test_name", nullable = false, length = 64)
     private String testName;
 
-//    @OneToMany (fetch = FetchType.EAGER)
-//    @JoinColumn(name = "test_id")
-//    private List<TestQuestion> testQuestions;
+    @OneToMany (fetch = FetchType.EAGER)
+    @JoinColumn(name = "test_id")
+    private List<TestQuestion> testQuestions;
 
 
     @Override
