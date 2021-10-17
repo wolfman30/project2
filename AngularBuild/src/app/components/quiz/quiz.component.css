@@ -4,3 +4,25 @@
     justify-content: center; 
     margin: 20px; 
 }
+
+mat-checkbox
+{
+    margin-bottom: 18px; 
+}
+
+mat-card-header
+{
+    display: flex; 
+    justify-content: center; 
+}
+
+.row
+{
+    margin-top: 15px; 
+
+}
+
+.test-info
+{
+    gap: 4em; 
+}
