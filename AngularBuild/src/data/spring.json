@@ -399,7 +399,7 @@
         },
         {
             "id": 1021,
-            "content": "What is the ApplicatinContext?",
+            "content": "What is the ApplicationContext?",
             "test_id": 1,
             "questionTypeId": 1,
             "difficulty": 1,
