@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { QuizAltService } from 'src/app/services/quiz-alt.service';
-import { QUESTIONS } from 'src/app/models/mock.questions';
 import { Answer, Question, Quiz, QuizConfiguration } from 'src/app/models/index';
 
 @Component({
@@ -11,7 +10,6 @@ import { Answer, Question, Quiz, QuizConfiguration } from 'src/app/models/index'
 })
 export class QuizComponent implements OnInit 
 {
-  ZERO: number = 0; 
   quizzes: any[] = []; 
   quiz: Quiz = new Quiz(null); 
   mode = 'quiz'; 
@@ -38,12 +36,12 @@ export class QuizComponent implements OnInit
     size: 1, 
     count: 1
   }; 
+
   timer: any = null; 
   startTime: Date = new Date(); 
   endTime: Date = new Date(); 
   elapsedTime = '00:00'; 
   duration = ''; 
-  questions = QUESTIONS; 
 
   constructor(private quizService: QuizAltService) { }
 
@@ -56,7 +54,8 @@ export class QuizComponent implements OnInit
 
   loadQuiz(quizName: string)
   {
-    this.quizService.get(quizName).subscribe(res =>
+    this.quizService.get(quizName).subscribe
+    (res =>
       {
         this.quiz = new Quiz(res); 
         this.pager.count = this.quiz.questions.length; 
@@ -92,7 +91,7 @@ export class QuizComponent implements OnInit
   get filteredQuestions() 
   {
     return (this.quiz.questions) ? 
-    this.quiz.questions.slice(this.pager.index, this.pager.index + this.pager.index) : []; 
+    this.quiz.questions.slice(this.pager.index, this.pager.index + this.pager.size) : []; 
   }
 
   onSelect(question: Question, option: Answer)
@@ -132,7 +131,10 @@ export class QuizComponent implements OnInit
     this.quiz.questions.forEach(x => answers.push({'quizId': this.quiz.id, 'questionId': x.id, 'answered': x.is_answered})); 
 
   // Post your data to the server here. answers contain the questionId and the users' answer.
-  console.log(this.quiz.questions); 
-  this.mode = 'result'; 
+    console.log(this.quiz.questions); 
+    this.mode = 'result'; 
+    
+    return this.quiz.questions; 
   }
+ 
 }

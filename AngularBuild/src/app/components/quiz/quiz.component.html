@@ -2,36 +2,54 @@
 
 <mat-card style="padding: 40px 70px 50px">
 
+    
     <app-navbar></app-navbar>
+    
+    <mat-card-header>
+        <mat-card-title>{{quiz.test_name}}</mat-card-title>
+    </mat-card-header>
 
+    <div class="row test-info">
+        <h3 id="question-marker">Question {{pager.index + 1}} of {{pager.count}}.</h3>
+        <h3 id="time-elapsed" *ngIf="config.duration"> Time: {{elapsedTime}} / {{duration}}</h3>
+    </div>
+    <div *ngFor="let question of filteredQuestions;">
+        <mat-card>
+            
+            <div class="row">
+                <mat-icon>
+                    <span class="material-icons-outlined">
+                    quiz
+                    </span>
+                </mat-icon>
+                <h2>{{question.content}}</h2>
+            </div>
 
-    <div *ngIf="mode == 'quiz' && quiz">
+            <br>
 
-        <div *ngFor="let question of quiz.questions">
-            <mat-card>
-                
-                <div class="row">
-                    <mat-icon>
-                        <span class="material-icons-outlined">
-                        quiz
-                        </span>
-                    </mat-icon>
-                    <h2>{{question.content}}</h2>
+            
+                <div *ngFor="let answer of question.answers;">
+                    <label class="col" [attr.for]="answer.id">
+                        <mat-checkbox id={{answer.id}} [(ngModel)]="answer.selected" (change)="onSelect(question, answer)">{{answer.content}}</mat-checkbox>
+                    </label>
                 </div>
-
-                <br>
-
-                <mat-radio-group class="col">
-                    <div *ngFor="let answer of question.answers">
-                        <mat-radio-button value="{{++ZERO}}" [(ngModel)]="answer.selected">{{answer.content}}</mat-radio-button>
-                    </div>
-                </mat-radio-group>
-            </mat-card>
-        </div>
-        <div id="submit-test-button">
-            <a href="http://localhost:4200/result"><button type="submit" mat-raised-button color="primary">Sumbit Test</button></a>
-        </div>
+            
+        </mat-card>
+    </div>
+    <div class="row">
+        <button mat-raised-button color="primary" *ngIf="config.allowBack" (click)="goTo(0);">First</button>
+        <button mat-stroked-button color="accent" *ngIf="config.allowBack" (click)="goTo(pager.index - 1);">Previous</button>
+        <button mat-stroked-button color="accent" (click)="goTo(pager.index + 1);">Next</button>
+        <button mat-raised-button color="primary" *ngIf="config.allowBack" (click)="goTo(pager.count - 1);">Last</button>
+    </div>
         
-    </div>  
+   
+
+   
+    <div id="submit-test-button">
+        <a href="http://localhost:4200/result"><button (click)="onSubmit();" mat-raised-button color="primary">Sumbit Test</button></a>
+    </div>
+    
+
 
 </mat-card>

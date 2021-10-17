@@ -1,345 +1,345 @@
 {
     "id": 1,
-    "test_name": "JavaScript Quiz",
-    "subject": "JavaScript Quiz (Basic Multiple Choice Questions for JavaScript Developers)",
+    "test_name": "Spring Quiz",
+    "subject": "Spring Quiz (Basic Multiple Choice Questions for Java Developers)",
     "questions": [
         {
             "id": 1010,
-            "content": "Which HTML tag do we use to put the JavaScript?",
+            "content": "What is Spring?",
             "test_id": 1, 
             "questionTypeId": 1,
             "difficulty": 1,
+            "points": 2,
             "answers": [
                 {
                     "id": 1055,
-                    "questionId": 1010,
-                    "name": "<javascript>",
-                    "isAnswer": false
+                    "question_id": 1010,
+                    "content": "Spring is basically Hibernate on steroids. ",
+                    "is_correct": false
                 },
                 {
                     "id": 1056,
-                    "questionId": 1010,
-                    "name": "<script>",
-                    "isAnswer": true
+                    "question_id": 1010,
+                    "content": "Spring is an application framework written in Java used for Inversion of Control through Dependency Injection to alleviate the complex nature of developing enterprise-grade applications.",
+                    "is_correct": true
                 },
                 {
                     "id": 1057,
-                    "questionId": 1010,
-                    "name": "<js>",
-                    "isAnswer": false
+                    "question_id": 1010,
+                    "content": "Spring is used to connect a database to a web application. ",
+                    "is_correct": false
                 },
                 {
                     "id": 1058,
-                    "questionId": 1010,
-                    "name": "None of the above",
-                    "isAnswer": false
+                    "question_id": 1010,
+                    "content": "Spring automates the entire DevOps pipeline.",
+                    "is_correct": false
                 }
-            ],
-            "points": 2
+            ]
 
         },
         {
             "id": 1011,
-            "content": "Which built-in method calls a function for each element in the array?",
+            "content": "In Aspect Oriented Programming: ",
             "test_id": 1,
             "questionTypeId": 1,
             "difficulty": 1,
             "answers": [
                 {
                     "id": 1055,
-                    "questionId": 1010,
-                    "name": "while()",
-                    "isAnswer": false
+                    "question_id": 1010,
+                    "content": "classes are used as the key component to drive creation of objects, which serve the purpose of representing concrete ideas or things with states and behaviors. ",
+                    "is_correct": false
                 },
                 {
                     "id": 1057,
-                    "questionId": 1010,
-                    "name": "loop",
-                    "isAnswer": false
+                    "question_id": 1010,
+                    "content": "dependencies are injected into models. ",
+                    "is_correct": false
                 },
                 {
                     "id": 1056,
-                    "questionId": 1010,
-                    "name": "forEach",
-                    "isAnswer": true
+                    "question_id": 1010,
+                    "content": "the key components modularize particular transactional concerns which can present across multiple classes known as cross-cutting concerns.",
+                    "is_correct": true
                 },
                 {
                     "id": 1058,
-                    "questionId": 1010,
-                    "name": "takeUntil",
-                    "isAnswer": false
+                    "question_id": 1010,
+                    "content": "functions are objects that can serve as input to other functions.",
+                    "is_correct": false
                 }
             ],
             "points": 2
         },
         {
             "id": 1012,
-            "content": "What is the difference between let and var?",
+            "content": "Which API does Spring need to use to modify the behavior of methods and classes at runtime?",
             "test_id": 1,
             "questionTypeId": 1,
             "difficulty": 1,
             "answers": [
                 {
                     "id": 1055,
-                    "questionId": 1010,
-                    "name": "let has local scope",
-                    "isAnswer": true
+                    "question_id": 1010,
+                    "content": "Fetch API",
+                    "is_correct": false
                 },
                 {
                     "id": 1057,
-                    "questionId": 1010,
-                    "name": "Both are same",
-                    "isAnswer": false
+                    "question_id": 1010,
+                    "content": "RxJS API",
+                    "is_correct": false
                 },
                 {
                     "id": 1056,
-                    "questionId": 1010,
-                    "name": "var is new data type",
-                    "isAnswer": false
+                    "question_id": 1010,
+                    "content": "Reflection API",
+                    "is_correct": true
                 },
                 {
                     "id": 1058,
-                    "questionId": 1010,
-                    "name": "let consumes more cpu and ram",
-                    "isAnswer": false
+                    "question_id": 1010,
+                    "content": "Jackson API",
+                    "is_correct": false
                 }
             ],
             "points": 2
         },
         {
             "id": 1013,
-            "content": "What is TypeScript?",
+            "content": "Which of the following is NOT an example of a cross-cutting concern:",
             "test_id":1,
             "questionTypeId": 1,
             "difficulty": 1,
             "answers": [
                 {
                     "id": 1055,
-                    "questionId": 1010,
-                    "name": "A Language based on Javascript",
-                    "isAnswer": true
+                    "question_id": 1010,
+                    "content": "Instance field - data member of an object ",
+                    "is_correct": true
                 },
                 {
                     "id": 1057,
-                    "questionId": 1010,
-                    "name": "script that runs on browser",
-                    "isAnswer": false
+                    "question_id": 1010,
+                    "content": "Database Access - security for a database",
+                    "is_correct": false
                 },
                 {
                     "id": 1056,
-                    "questionId": 1010,
-                    "name": "A DataType Collection of Javascript",
-                    "isAnswer": false
+                    "question_id": 1010,
+                    "content": "Data Entities - transactions to take place",
+                    "is_correct": false
                 },
                 {
                     "id": 1058,
-                    "questionId": 1010,
-                    "name": "None of the above",
-                    "isAnswer": false
+                    "question_id": 1010,
+                    "content": "Error Handling - handling checked and unchecked exceptions and errors",
+                    "is_correct": false
                 }
             ],
             "points": 2
         },
         {
             "id": 1014,
-            "content": "Which of the following is right syntex for arrow function?",
+            "content": "Weaving is:",
             "test_id": 1,
             "questionTypeId": 1,
             "difficulty": 1,
             "answers": [
                 {
                     "id": 1055,
-                    "questionId": 1010,
-                    "name": "a -> { return b; }",
-                    "isAnswer": false
+                    "question_id": 1010,
+                    "content": "the chaining of objects",
+                    "is_correct": false
                 },
                 {
                     "id": 1057,
-                    "questionId": 1010,
-                    "name": "x <= x + y;",
-                    "isAnswer": false
+                    "question_id": 1010,
+                    "content": "the process of linking aspects with other objects, such as beans, to create advised objects.",
+                    "is_correct": false
                 },
                 {
                     "id": 1056,
-                    "questionId": 1010,
-                    "name": "x <- x + 5;",
-                    "isAnswer": false
+                    "question_id": 1010,
+                    "content": "a defintiion of which methods in our application advice ought to be injected into or around",
+                    "is_correct": false
                 },
                 {
                     "id": 1058,
-                    "questionId": 1010,
-                    "name": "x => x + 5;",
-                    "isAnswer": true
+                    "question_id": 1010,
+                    "content": "declaration of new interfaces and corresponding implementations in subclasses of any advised object such that they are all functionally woven together",
+                    "is_correct": true
                 }
             ],
             "points": 2
         },
         {
             "id": 1015,
-            "content": "Which new ES6 syntax helps with formatting output text - mixing variables with string literals, for example.",
+            "content": "What is the common goal between Lombok and Spring? ",
             "test_id": 1,
             "questionTypeId": 1,
             "difficulty": 1, 
             "answers": [
                 {
                     "id": 1055,
-                    "questionId": 1010,
-                    "name": "Generator Functions",
-                    "isAnswer": false
+                    "question_id": 1010,
+                    "content": "To reduce the amount of boilerplate code by autogenerating the required code elements at compiletime.",
+                    "is_correct": true
                 },
                 {
                     "id": 1057,
-                    "questionId": 1010,
-                    "name": "Arrow Functions",
-                    "isAnswer": false
+                    "question_id": 1010,
+                    "content": "To make the workflow of a DevOps team more efficient. ",
+                    "is_correct": false
                 },
                 {
                     "id": 1056,
-                    "questionId": 1010,
-                    "name": "Template Strings",
-                    "isAnswer": true
+                    "question_id": 1010,
+                    "content": "To abstract away the need to write connective code between a database and Java objects.",
+                    "is_correct": false
                 },
                 {
                     "id": 1058,
-                    "questionId": 1010,
-                    "name": "Set Data Structure",
-                    "isAnswer": false
+                    "question_id": 1010,
+                    "content": "To autogenerate the XML configuration file that configures servlets. ",
+                    "is_correct": false
                 }
             ],
             "points": 2
         },
         {
             "id": 1016,
-            "content": "Which ES6 feature helps in merging of a number of changed properties into an existing object?",
+            "content": "Which of the following is used as the front controller in the Spring Web MVC Framework?",
             "test_id": 1, 
             "questionTypeId": 1,
             "difficulty": 1,
             "answers": [
                 {
                     "id": 1055,
-                    "questionId": 1010,
-                    "name": "Class syntex",
-                    "isAnswer": false
+                    "question_id": 1010,
+                    "content": "HttpServlet",
+                    "is_correct": false
                 },
                 {
                     "id": 1056,
-                    "questionId": 1010,
-                    "name": "Object.assign()",
-                    "isAnswer": true
+                    "question_id": 1010,
+                    "content": " HelperServlet",
+                    "is_correct": false
                 },
                 {
                     "id": 1057,
-                    "questionId": 1010,
-                    "name": "map data structure",
-                    "isAnswer": false
+                    "question_id": 1010,
+                    "content": "DispatcherServlet",
+                    "is_correct": true
                 },
                 {
                     "id": 1058,
-                    "questionId": 1010,
-                    "name": "Array.includes(obj);",
-                    "isAnswer": false
+                    "question_id": 1010,
+                    "content": "FrontControllerServlet",
+                    "is_correct": false
                 }
             ],
             "points": 2
         },
         {
             "id": 1017,
-            "content": "What is the difference between == and === ?",
+            "content": "Which of the following is not an endpoint for a Spring Boot Actuator?",
             "test_id": 1, 
             "questionTypeId": 1,
             "difficulty": 1,
             "answers": [
                 {
                     "id": 1055,
-                    "questionId": 1010,
-                    "name": "=== throws syntex error",
-                    "isAnswer": false
+                    "question_id": 1010,
+                    "content": "/health",
+                    "is_correct": false
                 },
                 {
                     "id": 1056,
-                    "questionId": 1010,
-                    "name": "== checks values only, === checks types as well",
-                    "isAnswer": true
+                    "question_id": 1010,
+                    "content": "/logfile",
+                    "is_correct": false
                 },
                 {
                     "id": 1057,
-                    "questionId": 1010,
-                    "name": "=== is reference type check only",
-                    "isAnswer": false
+                    "question_id": 1010,
+                    "content": "/wiring",
+                    "is_correct": true
                 },
                 {
                     "id": 1058,
-                    "questionId": 1010,
-                    "name": "Both are same",
-                    "isAnswer": false
+                    "question_id": 1010,
+                    "content": "/shutdown",
+                    "is_correct": false
                 }
             ],
             "points": 2
         },
         {
             "id": 1018,
-            "content": "Which of the following is NOT the method of an Array?",
+            "content": "In Spring, RestTemplate acts as a: ",
             "test_id": 1,
             "questionTypeId": 1,
             "difficulty": 1,
             "answers": [
                 {
                     "id": 1055,
-                    "questionId": 1010,
-                    "name": ".map()",
-                    "isAnswer": false
+                    "question_id": 1010,
+                    "content": "web client to make requests to web services.",
+                    "is_correct": true
                 },
                 {
                     "id": 1057,
-                    "questionId": 1010,
-                    "name": ".includes()",
-                    "isAnswer": false
+                    "question_id": 1010,
+                    "content": "a front controller to direct HTTP requests to their respective controllers.",
+                    "is_correct": false
                 },
                 {
                     "id": 1056,
-                    "questionId": 1010,
-                    "name": ".subscribe()",
-                    "isAnswer": true
+                    "question_id": 1010,
+                    "content": "an aspect that controls the cross-cutting concern of security. ",
+                    "is_correct": false
                 },
                 {
                     "id": 1058,
-                    "questionId": 1010,
-                    "name": ".flatMap()",
-                    "isAnswer": false
+                    "question_id": 1010,
+                    "content": "an interface that facilitates the conversion of JSON to Java objects",
+                    "is_correct": false
                 }
             ],
             "points": 2
         },
         {
             "id": 1019,
-            "content": "What will be the output of the following code: ['a', 'b', 'c'].fill(7, 1, 2);?",
+            "content": "Which of the following are the two major tools use to improve development workflow in Spring Boot applications?",
             "test_id": 1,
             "questionTypeId": 1,
             "difficulty": 1,
             "answers": [
                 {
                     "id": 1055,
-                    "questionId": 1010,
-                    "name": "['a', 7, 'c']",
-                    "isAnswer": true
+                    "question_id": 1010,
+                    "content": "Hibernate and Jackson",
+                    "is_correct": false
                 },
                 {
                     "id": 1056,
-                    "questionId": 1010,
-                    "name": "['a', 7, 7, 'b', 'c']",
-                    "isAnswer": false
+                    "question_id": 1010,
+                    "content": "Disabling caching and manual restarts",
+                    "is_correct": false
                 },
                 {
                     "id": 1057,
-                    "questionId": 1010,
-                    "name": "['a', 'b', 'c']",
-                    "isAnswer": false
+                    "question_id": 1010,
+                    "content": "Jenkings and Docker",
+                    "is_correct": false
                 },
                 {
                     "id": 1058,
-                    "questionId": 1010,
-                    "name": "['7', 7, 'c']",
-                    "isAnswer": false
+                    "question_id": 1010,
+                    "content": "Disabling caching and automatic restarts",
+                    "is_correct": true
                 }
             ],
             "points": 2

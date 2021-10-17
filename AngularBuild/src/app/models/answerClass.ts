@@ -4,7 +4,7 @@ export class Answer
     content: string; 
     question_id: number; 
     is_correct: boolean;
-    selected?: boolean; 
+    selected: boolean = false; 
 
     constructor(data: any) 
     {

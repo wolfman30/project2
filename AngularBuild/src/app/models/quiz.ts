@@ -6,7 +6,7 @@ export class Quiz
     id: number = 0; 
     subject: string = ''; 
     test_name: string = ''; 
-    config: QuizConfiguration = new QuizConfiguration(0); 
+    config: QuizConfiguration = new QuizConfiguration(null); 
     questions: Question[] = []; 
 
     constructor(data: any)
