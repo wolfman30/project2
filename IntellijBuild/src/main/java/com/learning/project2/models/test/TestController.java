@@ -24,15 +24,18 @@ public class TestController {
 
 
     @GetMapping(
-            path="test-id/{id}",
-            produces = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE}
+            path="/{id}",
+            produces =
+                    MediaType.APPLICATION_JSON_VALUE
+
     )
-    public ResponseEntity<Test> getTestById(@RequestParam(required = false, defaultValue = "100") Long id){
-        Test test = (Test) Hibernate.unproxy(testRepository.getById(id));
-        if (test!=null) {
+    public ResponseEntity<Test> getTestById(@PathVariable Long id){
+        Optional<Test> resp = testRepository.findById(id);
+        if(resp.isPresent()){
+            Test test = resp.get();
             return new ResponseEntity<>(test, HttpStatus.OK);
         } else {
-            return new ResponseEntity<>(test, HttpStatus.NOT_FOUND);
+            return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
         }
     }
 

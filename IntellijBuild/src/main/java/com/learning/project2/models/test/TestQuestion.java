@@ -21,9 +21,9 @@ public class TestQuestion {
     @Column(name = "id", nullable = false)
     private Long id;
 
-    @ManyToOne(optional = true, fetch = FetchType.LAZY)
-    @JoinColumn(name = "test_id", nullable = false)
-    private Test test;
+//    @ManyToOne(optional = true, fetch = FetchType.LAZY)
+//    @JoinColumn(name = "test_id", nullable = false)
+//    private Test test;
 
     @Column(name = "question_text", nullable = false, length = 180)
     private String questionText;
@@ -34,9 +34,9 @@ public class TestQuestion {
     @Column(name = "points", nullable = false)
     private Double points;
 
-    @OneToMany(fetch =FetchType.EAGER)
-    @JoinColumn(name = "question_id")
-    private List<TestAnswer> testAnswerList;
+//    @OneToMany(fetch =FetchType.EAGER)
+//    @JoinColumn(name = "question_id")
+//    private List<TestAnswer> testAnswerList;
 
     @Override
     public String toString() {
@@ -45,7 +45,6 @@ public class TestQuestion {
                 ", questionText='" + questionText + '\'' +
                 ", difficulty=" + difficulty +
                 ", points=" + points +
-                ", testAnswerList=" + testAnswerList +
                 '}';
     }
 
