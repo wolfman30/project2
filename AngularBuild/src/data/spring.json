@@ -343,6 +343,95 @@
                 }
             ],
             "points": 2
+        },
+        {
+            "id": 1020,
+            "content": "Which of the following is not a Spring Bean scope?",
+            "test_id": 1,
+            "questionTypeId": 1,
+            "difficulty": 1,
+            "answers": [
+                {
+                    "id": 1055,
+                    "question_id": 1010,
+                    "content": "singleton scope",
+                    "is_correct": false
+                },
+                {
+                    "id": 1056,
+                    "question_id": 1010,
+                    "content": "prototype scope",
+                    "is_correct": false
+                },
+                {
+                    "id": 1057,
+                    "question_id": 1010,
+                    "content": "parameter scope",
+                    "is_correct": true
+                },
+                {
+                    "id": 1058,
+                    "question_id": 1010,
+                    "content": "request scope",
+                    "is_correct": false
+                }, 
+                {
+                    "id": 1059,
+                    "question_id": 1010,
+                    "content": "session scope",
+                    "is_correct": false
+                }, 
+                {
+                    "id": 1060,
+                    "question_id": 1010,
+                    "content": "global session scope",
+                    "is_correct": false
+                },
+                {                 
+                    "id": 1060,
+                    "question_id": 1010,
+                    "content": "application scope",
+                    "is_correct": false
+                }
+            ],
+            "points": 2
+            
+        },
+        {
+            "id": 1021,
+            "content": "What is the ApplicatinContext?",
+            "test_id": 1,
+            "questionTypeId": 1,
+            "difficulty": 1,
+            "answers": [
+                {
+                    "id": 1055,
+                    "question_id": 1010,
+                    "content": "The main feature of the Context module that represents the Spring IoC container. It is used to instantiate, configure, and assemble beans.",
+                    "is_correct": false
+                },
+                {
+                    "id": 1056,
+                    "question_id": 1010,
+                    "content": "A module which provides a powerful expression language which can be used to query and manipulate an object graph at runtime.",
+                    "is_correct": false
+                },
+                {
+                    "id": 1057,
+                    "question_id": 1010,
+                    "content": "A module which provides an implementation for Spring MVC.",
+                    "is_correct": true
+                },
+                {
+                    "id": 1058,
+                    "question_id": 1010,
+                    "content": "A module which provides a layer of abstraction for mapping implementations for JAXB, Castor, XMLBeans, JiBX, and XStream",
+                    "is_correct": false
+                } 
+
+            ],
+            "points": 2
+            
         }
     ]
 }
