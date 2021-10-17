@@ -13,4 +13,7 @@ import java.util.Optional;
 public interface TestRepository extends JpaRepository<Test, Long> {
     List<Test> findBySubject(String subject);
 
+
+    @Override
+    Optional<Test> findById(Long aLong);
 }

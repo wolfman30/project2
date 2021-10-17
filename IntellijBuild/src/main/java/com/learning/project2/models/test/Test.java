@@ -38,7 +38,6 @@ public class Test {
                 "id=" + id +
                 ", subject='" + subject + '\'' +
                 ", testName='" + testName + '\'' +
-                ", testQuestions=" + testQuestions +
                 '}';
     }
 
