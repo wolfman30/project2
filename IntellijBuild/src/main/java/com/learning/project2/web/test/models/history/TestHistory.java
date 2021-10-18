@@ -19,22 +19,22 @@ import java.util.List;
 public class TestHistory {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id", nullable = false)
-    private Integer id;
+    @Column(name = "id")
+    private Long id;
 
-    @ManyToOne(optional = false)
-    @JoinColumn(name = "test_id", nullable = false)
+    @ManyToOne(optional = false, cascade=CascadeType.MERGE)
+    @JoinColumn(name = "test_id")
     private Test test;
 
-    @ManyToOne(optional = false)
-    @JoinColumn(name = "user_id", nullable = false)
+    @ManyToOne(optional = false, cascade=CascadeType.MERGE)
+    @JoinColumn(name = "user_id")
     private User user;
 
     @Column(name = "date_taken")
     private Instant dateTaken;
 
-    @OneToMany
-    @JoinColumn(name = "test_history_id", nullable = false)
+    @OneToMany(cascade=CascadeType.ALL)
+    @JoinColumn(name = "test_history_id")
     private List<TestHistoryAnswerGiven> answers;
 
 

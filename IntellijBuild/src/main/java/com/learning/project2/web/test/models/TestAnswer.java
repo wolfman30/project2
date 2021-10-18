@@ -15,17 +15,13 @@ import java.util.Objects;
 public class TestAnswer {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id", nullable = false)
+    @Column(name = "id")
     private Long id;
-
-//    @ManyToOne(optional = true, fetch = FetchType.LAZY)
-//    @JoinColumn(name = "question_id", nullable = false)
-//    private TestQuestion question;
 
     @Column(name = "is_correct")
     private Boolean isCorrect;
 
-    @Column(name = "answer_text", nullable = false, length = 180)
+    @Column(name = "answer_text", length = 180)
     private String answerText;
 
     public TestAnswer(long answerId){

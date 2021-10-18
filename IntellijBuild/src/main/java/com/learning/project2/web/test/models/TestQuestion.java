@@ -17,16 +17,16 @@ public class TestQuestion {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id", nullable = false)
+    @Column(name = "id")
     private Long id;
 
-    @Column(name = "question_text", nullable = false, length = 180)
+    @Column(name = "question_text", length = 180)
     private String questionText;
 
     @Column(name = "difficulty")
     private Integer difficulty;
 
-    @Column(name = "points", nullable = false)
+    @Column(name = "points")
     private Double points;
 
     @OneToMany(fetch =FetchType.EAGER)

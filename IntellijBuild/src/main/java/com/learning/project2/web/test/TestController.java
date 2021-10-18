@@ -23,6 +23,11 @@ public class TestController {
         this.testService = testService;
     }
 
+    @Autowired
+    private void setTestHistoryService(TestHistoryService testHistoryService){
+        this.testHistoryService = testHistoryService;
+    }
+
     @GetMapping(
         path="get/{id}",
         produces =
@@ -62,6 +67,6 @@ public class TestController {
     public ResponseEntity<TestHistory> submitTest(@RequestBody TestSubmission testSubmission){
         System.out.println(testSubmission.toString());
         System.out.println(testSubmission.asTestHistory().toString());
-//        return testHistoryService.submitTest(testSubmission.asTestHistory());
+        return testHistoryService.submitTest(testSubmission.asTestHistory());
     }
 }

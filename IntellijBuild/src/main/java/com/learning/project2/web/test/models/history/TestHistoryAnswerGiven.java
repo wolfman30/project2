@@ -18,11 +18,14 @@ import javax.persistence.*;
 public class TestHistoryAnswerGiven {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id", nullable = false)
-    private Integer id;
+    @Column(name = "id")
+    private Long id;
 
-    @ManyToOne(optional = true)
-    @JoinColumn(name = "test_answer_id", nullable = false)
+    @ManyToOne(optional = true, cascade=CascadeType.MERGE)
+    @JoinColumn(name = "test_answer_id")
     private TestAnswer testAnswer;
+
+    @Column(name="test_history_id")
+    private Long testHistoryId;
 
 }

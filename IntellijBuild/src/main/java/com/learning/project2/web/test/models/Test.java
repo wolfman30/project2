@@ -18,13 +18,13 @@ public class Test {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id", nullable = false)
+    @Column(name = "id")
     private Long id;
 
-    @Column(name = "subject", nullable = false, length = 24)
+    @Column(name = "subject", length = 24)
     private String subject;
 
-    @Column(name = "test_name", nullable = false, length = 64)
+    @Column(name = "test_name", length = 64)
     private String testName;
 
     @OneToMany

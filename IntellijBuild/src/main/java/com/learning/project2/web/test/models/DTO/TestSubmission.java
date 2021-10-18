@@ -6,15 +6,12 @@ import com.learning.project2.web.test.models.TestAnswer;
 import com.learning.project2.web.test.models.history.TestHistory;
 import com.learning.project2.web.test.models.history.TestHistoryAnswerGiven;
 import com.learning.project2.web.user.User;
-import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Data
-@AllArgsConstructor
-@NoArgsConstructor
 public class TestSubmission {
     private Long testId;
     private Long userId;
@@ -34,7 +31,10 @@ public class TestSubmission {
         testHistory.setTest(test);
         testHistory.setUser(user);
 
-        List<TestHistoryAnswerGiven> answers = testHistory.getAnswers();
+
+        List<TestHistoryAnswerGiven> answers = new ArrayList<TestHistoryAnswerGiven>();
+        testHistory.setAnswers(answers);
+
         for(Long id : answerId){
             TestAnswer answer = new TestAnswer();
             answer.setId(id);

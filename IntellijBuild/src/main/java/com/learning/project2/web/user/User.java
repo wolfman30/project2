@@ -18,20 +18,20 @@ import java.util.Objects;
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id", nullable = false)
+    @Column(name = "id")
     private Long id;
 
 
-    @Column(name = "username", nullable = false, length = 64)
+    @Column(name = "username", length = 64)
     private String username;
 
-    @Column(name = "pass", nullable = false, length = 12)
+    @Column(name = "pass", length = 12)
     private String password;
 
-    @Column(name = "email", nullable = false, length = 64)
+    @Column(name = "email", length = 64)
     private String email;
 
-    @Column(name = "date_jointed", nullable = false)
+    @Column(name = "date_jointed")
     @CreationTimestamp
     private Instant dateJointed;
 
