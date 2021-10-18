@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { QuizAltService } from 'src/app/services/quiz-alt.service';
 import { Answer, Question, Quiz, QuizConfiguration } from 'src/app/models/index';
+import { HttpClient, HttpHeaders } from '@angular/common/http'; 
+import { Observable } from 'rxjs';
+
 
 @Component({
   selector: 'app-quiz',
@@ -8,8 +11,14 @@ import { Answer, Question, Quiz, QuizConfiguration } from 'src/app/models/index'
   styleUrls: ['./quiz.component.css'],
   providers: [QuizAltService]
 })
+ 
 export class QuizComponent implements OnInit 
 {
+  
+  Tests: any; 
+  Answers: any; 
+  
+  json?: any; 
   quizzes: any[] = []; 
   quiz: Quiz = new Quiz(null); 
   mode = 'quiz'; 
@@ -43,13 +52,43 @@ export class QuizComponent implements OnInit
   elapsedTime = '00:00'; 
   duration = ''; 
 
-  constructor(private quizService: QuizAltService) { }
+
+  constructor(private quizService: QuizAltService, private http: HttpClient) { }
+
+
+  url = 'http://localhost:4200/data/answeredQuestions.json'; 
+
+  httpOptions = 
+  {
+    headers: new HttpHeaders({
+      'Content-Type': 'application/json'
+    })
+  }
+
+//attempting to create a function to connect to Asher's testController 
+  postTestAnswers(data: any): Observable<any>
+  {
+    return this.http.post<any>(this.url, JSON.stringify(data), this.httpOptions)
+    .pipe(
+      retry(1), 
+      catchError(this.errorHandl)
+    )
+  }
+
+  errorHandl(errorHandl: any): import("rxjs").OperatorFunction<unknown, Answer> {
+    throw new Error('Method not implemented.');
+  }
 
   ngOnInit(): void 
   {
     this.quizzes = this.quizService.getAll(); 
     this.quizName = this.quizzes[0].id; 
     this.loadQuiz(this.quizName); 
+    
+    /*
+    let request = this.http.post("http://localhost:8000/test", this.Answers)
+    request.subscribe((data) =>this.Tests=data)
+    */
   }
 
   loadQuiz(quizName: string)
@@ -127,14 +166,27 @@ export class QuizComponent implements OnInit
 
   onSubmit()
   {
-    let answers = []; 
+    let answers: any[] = []; 
     this.quiz.questions.forEach(x => answers.push({'quizId': this.quiz.id, 'questionId': x.id, 'answered': x.is_answered})); 
 
   // Post your data to the server here. answers contain the questionId and the users' answer.
-    console.log(this.quiz.questions); 
+    this.http.post(this.url, answers).toPromise().then((data:any) =>
+    {
+        this.json = JSON.stringify(data.json); 
+    }); 
+
     this.mode = 'result'; 
     
     return this.quiz.questions; 
   }
  
 }
+
+function retry(arg0: number): import("rxjs").OperatorFunction<any, unknown> {
+  throw new Error('Function not implemented.');
+}
+
+function catchError(errorHandl: any): import("rxjs").OperatorFunction<unknown, Answer> {
+  throw new Error('Function not implemented.');
+}
+
