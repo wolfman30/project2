@@ -1,13 +1,11 @@
 package com.learning.project2.web.test;
 
+import com.learning.project2.web.test.models.DTO.TestSubmission;
 import com.learning.project2.web.test.models.Test;
 import com.learning.project2.web.test.models.history.TestHistory;
 import com.learning.project2.web.test.services.TestHistoryService;
 import com.learning.project2.web.test.services.TestService;
-import com.learning.project2.web.user.User;
-import org.hibernate.JDBCException;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -61,11 +59,9 @@ public class TestController {
             consumes = MediaType.APPLICATION_JSON_VALUE,
             produces = MediaType.APPLICATION_JSON_VALUE
     )
-    public ResponseEntity<TestHistory> submitTest(@RequestBody TestHistory testHistory){
-
-        System.out.println("TestHistory:");
-        System.out.println(testHistory);
-
-        return testHistoryService.submitTest(testHistory);
+    public ResponseEntity<TestHistory> submitTest(@RequestBody TestSubmission testSubmission){
+        System.out.println(testSubmission.toString());
+        System.out.println(testSubmission.asTestHistory().toString());
+//        return testHistoryService.submitTest(testSubmission.asTestHistory());
     }
 }
