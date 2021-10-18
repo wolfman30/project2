@@ -1,6 +1,5 @@
-package com.learning.project2.models.test;
+package com.learning.project2.web.test.models;
 
-import com.learning.project2.models.test.Test;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -20,10 +19,6 @@ public class TestQuestion {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
     private Long id;
-
-//    @ManyToOne(optional = true, fetch = FetchType.LAZY)
-//    @JoinColumn(name = "test_id", nullable = false)
-//    private Test test;
 
     @Column(name = "question_text", nullable = false, length = 180)
     private String questionText;

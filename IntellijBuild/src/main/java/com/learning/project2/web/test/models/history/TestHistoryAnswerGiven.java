@@ -1,7 +1,9 @@
-package com.learning.project2.models;
+package com.learning.project2.web.test.models.history;
 
 
-import com.learning.project2.models.test.TestAnswer;
+import com.learning.project2.web.test.models.Test;
+import com.learning.project2.web.test.models.TestAnswer;
+import com.learning.project2.web.test.models.history.TestHistory;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -19,11 +21,7 @@ public class TestHistoryAnswerGiven {
     @Column(name = "id", nullable = false)
     private Integer id;
 
-    @ManyToOne(optional = false)
-    @JoinColumn(name = "test_history_id", nullable = false)
-    private TestHistory testHistory;
-
-    @ManyToOne(optional = false)
+    @ManyToOne(optional = true)
     @JoinColumn(name = "test_answer_id", nullable = false)
     private TestAnswer testAnswer;
 

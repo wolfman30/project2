@@ -1,4 +1,4 @@
-package com.learning.project2.models.user;
+package com.learning.project2.web.user;
 
 
 import lombok.AllArgsConstructor;

@@ -1,21 +1,13 @@
-package com.learning.project2.models.user;
+package com.learning.project2.web.user;
 
 import org.hibernate.JDBCException;
-import org.hibernate.exception.ConstraintViolationException;
-import org.postgresql.util.PSQLException;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.configurationprocessor.json.JSONException;
-import org.springframework.boot.configurationprocessor.json.JSONObject;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Repository;
 import org.springframework.web.bind.annotation.*;
-
-import java.sql.SQLException;
-import java.util.List;
 
 @RestController
 @RequestMapping(path = "/user")
@@ -35,7 +27,6 @@ public class UserController {
     )
     public ResponseEntity<User> createOrUpdate(@RequestBody User user){
         try{
-            System.out.println(user.toString());
             userRepository.save(user);
             return new ResponseEntity<>(user, null, HttpStatus.OK);
         }catch(JDBCException | DataIntegrityViolationException e){
