@@ -16,8 +16,7 @@ public class TestHistoryService {
 
     private TestHistoryRepository testHistoryRepository;
 
-    @Autowired
-    public void setTestHistoryRepository(TestHistoryRepository testHistoryRepository){
+    @Autowired    public void setTestHistoryRepository(TestHistoryRepository testHistoryRepository){
         this.testHistoryRepository = testHistoryRepository;
     }
 
