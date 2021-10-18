@@ -7,7 +7,8 @@ export class Quiz
     subject: string = ''; 
     test_name: string = ''; 
     config: QuizConfiguration = new QuizConfiguration(null); 
-    questions: Question[] = []; 
+    questions: Question[] = [];
+    dateTaken: Date = new Date();  
 
     constructor(data: any)
     {
