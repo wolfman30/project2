@@ -3,9 +3,14 @@ import { QuizAltService } from 'src/app/services/quiz-alt.service';
 import { Answer, Question, Quiz, QuizConfiguration } from 'src/app/models/index';
 import { HttpClient, HttpHeaders } from '@angular/common/http'; 
 import { Observable } from 'rxjs';
+import { Router } from '@angular/router'; 
 
+/*
+@CrossOrigin(origins = "http://localhost:4200")
+*/
 
-@Component({
+@Component
+({
   selector: 'app-quiz',
   templateUrl: './quiz.component.html',
   styleUrls: ['./quiz.component.css'],
@@ -53,14 +58,15 @@ export class QuizComponent implements OnInit
   duration = ''; 
 
 
-  constructor(private quizService: QuizAltService, private http: HttpClient) { }
+  constructor(private quizService: QuizAltService, private http: HttpClient, private router: Router) { }
 
 
-  url = 'http://localhost:4200/data/answeredQuestions.json'; 
+  url = 'http://localhost:3000/tests'; 
 
   httpOptions = 
   {
-    headers: new HttpHeaders({
+    headers: new HttpHeaders
+    ({
       'Content-Type': 'application/json'
     })
   }
@@ -167,17 +173,20 @@ export class QuizComponent implements OnInit
   onSubmit()
   {
     let answers: any[] = []; 
-    this.quiz.questions.forEach(x => answers.push({'quizId': this.quiz.id, 'questionId': x.id, 'answered': x.is_answered})); 
+    this.quiz.questions.forEach(x => answers.push({'quizId': this.quiz.id, 'answered': x.is_answered, 'points':x.points,'questionId': x.id})); 
 
+    let testSubmission = {'userId': 1, 'testId': 1, 'answers': [answers]}
   // Post your data to the server here. answers contain the questionId and the users' answer.
-    this.http.post(this.url, answers).toPromise().then((data:any) =>
-    {
-        this.json = JSON.stringify(data.json); 
-    }); 
+    this.http.post(this.url, testSubmission).toPromise();  
+
+    
+    localStorage.setItem('answers', JSON.stringify(answers)); 
 
     this.mode = 'result'; 
+
+    this.router.navigate(["/result"]); 
     
-    return this.quiz.questions; 
+    return answers; 
   }
  
 }

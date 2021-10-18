@@ -11,7 +11,8 @@ import { appRoutes } from './routes';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
 import { AngularMaterialModule } from './modules/angular-material.module'; 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http'; 
+import { HttpClientModule } from '@angular/common/http';
+import { UserComponent } from './components/user/user.component'; 
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { HttpClientModule } from '@angular/common/http';
     RegisterComponent,
     NavbarComponent,
     QuizComponent,
-    ResultComponent
+    ResultComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,
