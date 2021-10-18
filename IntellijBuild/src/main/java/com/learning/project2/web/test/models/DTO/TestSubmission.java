@@ -8,6 +8,7 @@ import com.learning.project2.web.test.models.history.TestHistoryAnswerGiven;
 import com.learning.project2.web.user.User;
 import lombok.Data;
 
+import java.time.Instant;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -30,6 +31,7 @@ public class TestSubmission {
         TestHistory testHistory = new TestHistory();
         testHistory.setTest(test);
         testHistory.setUser(user);
+        testHistory.setDateTaken(Instant.now());
 
 
         List<TestHistoryAnswerGiven> answers = new ArrayList<TestHistoryAnswerGiven>();
