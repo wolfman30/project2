@@ -14,6 +14,10 @@ import { Observable } from 'rxjs';
  
 export class QuizComponent implements OnInit 
 {
+  
+  Tests: any; 
+  Answers: any; 
+  
   json?: any; 
   quizzes: any[] = []; 
   quiz: Quiz = new Quiz(null); 
@@ -48,9 +52,11 @@ export class QuizComponent implements OnInit
   elapsedTime = '00:00'; 
   duration = ''; 
 
-  jsonPath = 'http://localhost:4200/data/answeredQuestions.json'; 
 
   constructor(private quizService: QuizAltService, private http: HttpClient) { }
+
+
+  url = 'http://localhost:4200/data/answeredQuestions.json'; 
 
   httpOptions = 
   {
@@ -59,9 +65,10 @@ export class QuizComponent implements OnInit
     })
   }
 
+//attempting to create a function to connect to Asher's testController 
   postTestAnswers(data: any): Observable<any>
   {
-    return this.http.post<any>(this.jsonPath, JSON.stringify(data), this.httpOptions)
+    return this.http.post<any>(this.url, JSON.stringify(data), this.httpOptions)
     .pipe(
       retry(1), 
       catchError(this.errorHandl)
@@ -77,6 +84,11 @@ export class QuizComponent implements OnInit
     this.quizzes = this.quizService.getAll(); 
     this.quizName = this.quizzes[0].id; 
     this.loadQuiz(this.quizName); 
+    
+    /*
+    let request = this.http.post("http://localhost:8000/test", this.Answers)
+    request.subscribe((data) =>this.Tests=data)
+    */
   }
 
   loadQuiz(quizName: string)
@@ -158,7 +170,7 @@ export class QuizComponent implements OnInit
     this.quiz.questions.forEach(x => answers.push({'quizId': this.quiz.id, 'questionId': x.id, 'answered': x.is_answered})); 
 
   // Post your data to the server here. answers contain the questionId and the users' answer.
-    this.http.post(this.jsonPath, answers).toPromise().then((data:any) =>
+    this.http.post(this.url, answers).toPromise().then((data:any) =>
     {
         this.json = JSON.stringify(data.json); 
     }); 
@@ -169,6 +181,7 @@ export class QuizComponent implements OnInit
   }
  
 }
+
 function retry(arg0: number): import("rxjs").OperatorFunction<any, unknown> {
   throw new Error('Function not implemented.');
 }
