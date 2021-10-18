@@ -2,7 +2,6 @@
 
 <mat-card style="padding: 40px 70px 50px">
 
-    
     <app-navbar></app-navbar>
     
     <mat-card-header>
@@ -43,13 +42,8 @@
         <button mat-raised-button color="primary" *ngIf="config.allowBack" (click)="goTo(pager.count - 1);">Last</button>
     </div>
         
-   
-
-   
     <div id="submit-test-button">
-        <a href="http://localhost:4200/result"><button (click)="onSubmit();" mat-raised-button color="primary">Sumbit Test</button></a>
+        <button (click)="onSubmit();" mat-raised-button color="primary">Sumbit Test</button>
     </div>
     
-
-
 </mat-card>
