@@ -12,7 +12,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AngularMaterialModule } from './modules/angular-material.module'; 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { UserComponent } from './components/user/user.component'; 
+import { UserComponent } from './components/user/user.component';
+import { MessagingComponent } from './components/messaging/messaging.component'; 
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { UserComponent } from './components/user/user.component';
     NavbarComponent,
     QuizComponent,
     ResultComponent,
-    UserComponent
+    UserComponent,
+    MessagingComponent
   ],
   imports: [
     BrowserModule,

@@ -61,13 +61,14 @@ export class QuizComponent implements OnInit
   constructor(private quizService: QuizAltService, private http: HttpClient, private router: Router) { }
 
 
-  url = 'http://localhost:3000/tests'; 
+  url = 'http://localhost:8000/test/submit'; 
 
   httpOptions = 
   {
     headers: new HttpHeaders
     ({
-      'Content-Type': 'application/json'
+      'Content-Type': 'application/json', 
+      'Access-Control-Allow-Origin': ' null'
     })
   }
 
@@ -141,10 +142,12 @@ export class QuizComponent implements OnInit
 
   onSelect(question: Question, option: Answer)
   {
+    question.is_answered = true; 
     if (question.questionTypeId === 1)
     {
       question.answers.forEach((x) => {if (x.id !== option.id) x.selected = false; })
     }
+    
     if (this.config.autoMove)
     {
       this.goTo(this.pager.index + 1); 
@@ -173,14 +176,16 @@ export class QuizComponent implements OnInit
   onSubmit()
   {
     let answers: any[] = []; 
-    this.quiz.questions.forEach(x => answers.push({'quizId': this.quiz.id, 'answered': x.is_answered, 'points':x.points,'questionId': x.id})); 
+    this.quiz.questions.forEach(x => answers.push(x.id)); 
 
-    let testSubmission = {'userId': 1, 'testId': 1, 'answers': [answers]}
+    let testSubmission = {'userId': 7, 'testId': 4, 'answers': [42, 43]}
+
   // Post your data to the server here. answers contain the questionId and the users' answer.
-    this.http.post(this.url, testSubmission).toPromise();  
+    
+  this.http.post(this.url, testSubmission, this.httpOptions).toPromise();  
 
     
-    localStorage.setItem('answers', JSON.stringify(answers)); 
+    //localStorage.setItem('answers', JSON.stringify(answers)); 
 
     this.mode = 'result'; 
 
