@@ -13,7 +13,8 @@ import { Router } from '@angular/router';
 
 export class ResultComponent implements OnInit 
 {
-
+  @Input() data: any; 
+  
   quizzes: any[] = []; 
   quiz: Quiz = new Quiz(null); 
   mode = 'result'; 

@@ -9,7 +9,7 @@ export class Question
     difficulty: number;  
     answers: Answer[]; 
     points: number; 
-    is_answered: boolean; 
+    is_answered: boolean = false; 
 
     constructor(data: any)
     {
@@ -25,7 +25,7 @@ export class Question
                 this.answers.push(new Answer(ans));
             }); 
         this.points = data.points; 
-        this.is_answered = data.is_answered;  
+        this.is_answered = data.is_answered; 
     }
     
     

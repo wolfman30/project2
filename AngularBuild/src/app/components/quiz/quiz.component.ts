@@ -142,10 +142,12 @@ export class QuizComponent implements OnInit
 
   onSelect(question: Question, option: Answer)
   {
+    question.is_answered = true; 
     if (question.questionTypeId === 1)
     {
       question.answers.forEach((x) => {if (x.id !== option.id) x.selected = false; })
     }
+    
     if (this.config.autoMove)
     {
       this.goTo(this.pager.index + 1); 
@@ -177,11 +179,13 @@ export class QuizComponent implements OnInit
     this.quiz.questions.forEach(x => answers.push(x.id)); 
 
     let testSubmission = {'userId': 7, 'testId': 4, 'answers': [42, 43]}
+
   // Post your data to the server here. answers contain the questionId and the users' answer.
-    this.http.post(this.url, testSubmission, this.httpOptions).toPromise();  
+    
+  this.http.post(this.url, testSubmission, this.httpOptions).toPromise();  
 
     
-    localStorage.setItem('answers', JSON.stringify(answers)); 
+    //localStorage.setItem('answers', JSON.stringify(answers)); 
 
     this.mode = 'result'; 
 
