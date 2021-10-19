@@ -42,7 +42,7 @@ public class TestController {
         return new ResponseEntity<>(test, HttpStatus.OK);
     }
 
-    @PostMapping(
+    @GetMapping(
         path="/take/{id}/{count}",
         produces =
                 MediaType.APPLICATION_JSON_VALUE,

@@ -51,6 +51,7 @@ public class TestHistoryService {
             return new ResponseEntity<>(testHistory, HttpStatus.OK);
 
         }catch(JDBCException | DataIntegrityViolationException e){
+            e.printStackTrace();
             return new ResponseEntity<>(null, HttpStatus.CONFLICT);
         }catch (Exception e){
             e.printStackTrace();
