@@ -22,9 +22,6 @@ public class TestHistoryService {
 
     private TestHistoryRepository testHistoryRepository;
     private TestHistoryAnswerGivenRepository answerGivenRepository;
-    private TestRepository testRepository;
-
-    private ModelMapper mapper;
 
     @Autowired public void setTestHistoryRepository(TestHistoryRepository testHistoryRepository){
         this.testHistoryRepository = testHistoryRepository;

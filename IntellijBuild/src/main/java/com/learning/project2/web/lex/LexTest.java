@@ -34,7 +34,7 @@ public class LexTest {
         String accessKey = key;
         String secretKey = secret;
         String sessionId = UUID.randomUUID().toString();
-        Region region = Region.US_WEST_2; // pick an appropriate region
+        Region region = Region.US_WEST_2;
 
 
         AwsBasicCredentials awsCreds = AwsBasicCredentials.create(accessKey, secretKey);
@@ -107,7 +107,7 @@ public class LexTest {
 //        });
     }
 
-    private static RecognizeTextRequest getRecognizeTextRequest(String botId, String botAliasId, String localeId, String sessionId, String userInput) {
+    static RecognizeTextRequest getRecognizeTextRequest(String botId, String botAliasId, String localeId, String sessionId, String userInput) {
         RecognizeTextRequest recognizeTextRequest = RecognizeTextRequest.builder()
                 .botAliasId(botAliasId)
                 .botId(botId)
