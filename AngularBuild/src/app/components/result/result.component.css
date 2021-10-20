@@ -1,0 +1,26 @@
+h1
+{
+    font-size: 40px;
+    color: rgb(55, 4, 194);  
+}
+
+h2
+{
+    text-align: center; 
+}
+
+span
+{
+    color: rgb(40, 3, 143)
+}
+.row
+{
+    display: flex; 
+    justify-content: center; 
+}
+
+#header
+{
+    width: 50%; 
+    margin-left: 25%; 
+}

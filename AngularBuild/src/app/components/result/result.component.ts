@@ -3,6 +3,8 @@ import { QuizAltService } from 'src/app/services/quiz-alt.service';
 import { Answer, Question, Quiz, QuizConfiguration } from 'src/app/models/index';
 import { QuizComponent } from '../quiz/quiz.component';
 import { Router } from '@angular/router'; 
+import { analyzeAndValidateNgModules } from '@angular/compiler';
+import { FOCUS_MONITOR_DEFAULT_OPTIONS } from '@angular/cdk/a11y';
 
 @Component({
   selector: 'app-result',
@@ -17,6 +19,64 @@ export class ResultComponent implements OnInit
 
   questions: any = localStorage.getItem('completed-quiz'); 
   parsedQuestions: any = JSON.parse(this.questions); 
+  total_points: number = 0; 
+  actual_points: number = 0; 
+  
+  forLoop(points: number, questions: any): number
+  {
+    for (let i = 0; i < questions.length; i++)
+    {
+      points += questions[i].points; 
+    } 
+    return points; 
+  }
+
+  actual_points_calculator(points: number, questions: any): number
+  {
+  
+    for (let i = 0; i < questions.length; i++)
+    {
+      
+      for (let j = 0; j < questions[i].answers.length; j++)
+      {
+        if (questions[i].answers[j].selected && questions[i].answers[j].is_correct)
+        {
+          points += questions[i].points; 
+        }
+      }
+    }
+    return points; 
+  }
+
+  count_questions(questions: any): any
+  {
+    let count = 0; 
+    for (let i = 0; i < questions.length; i++)
+    {
+      count++; 
+    }
+    return count; 
+  }
+
+  count_correct_answers(questions: any): number
+  {
+    let count = 0; 
+    for (let i = 0; i < questions.length; i++)
+    {
+      
+      for (let j = 0; j < questions[i].answers.length; j++)
+      {
+        if (questions[i].answers[j].selected && questions[i].answers[j].is_correct)
+        {
+          count++; 
+        }
+      }
+    }
+    return count; 
+  }
+  
+
+  
   
   quizzes: any[] = []; 
   quiz: Quiz = new Quiz(null); 
