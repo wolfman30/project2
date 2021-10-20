@@ -3,8 +3,11 @@ package com.learning.project2.web.test.services;
 import com.learning.project2.web.test.models.Test;
 import com.learning.project2.web.test.models.TestAnswer;
 import com.learning.project2.web.test.models.TestQuestion;
+import com.learning.project2.web.test.models.history.TestHistory;
+import com.learning.project2.web.test.repositories.TestHistoryRepository;
 import com.learning.project2.web.test.repositories.TestRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import java.util.*;
@@ -13,6 +16,7 @@ import java.util.*;
 public class TestService {
 
     private TestRepository testRepository;
+    private TestHistoryRepository testHistoryRepository;
 
     @Autowired
     private void setTestRepository(TestRepository testRepository){
@@ -69,5 +73,4 @@ public class TestService {
         return t;
 
     }
-
 }
