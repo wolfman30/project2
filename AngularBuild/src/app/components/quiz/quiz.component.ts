@@ -182,10 +182,10 @@ export class QuizComponent implements OnInit
 
   // Post your data to the server here. answers contain the questionId and the users' answer.
     
-  this.http.post(this.url, testSubmission, this.httpOptions).toPromise();  
+    //this.http.post(this.url, testSubmission, this.httpOptions).toPromise();  
 
     
-    //localStorage.setItem('answers', JSON.stringify(answers)); 
+    localStorage.setItem('completed-quiz', JSON.stringify(this.quiz.questions)); 
 
     this.mode = 'result'; 
 
