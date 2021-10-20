@@ -1,6 +1,14 @@
 <app-navbar></app-navbar>
 <h1>Results</h1>
 
+{{questions}}
+<br><br>
+
+<div *ngFor="let question of parsedQuestions; let i = index">
+    {{parsedQuestions[i].content}}
+</div>
+
+
 
 
     

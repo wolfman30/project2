@@ -14,6 +14,9 @@ import { Router } from '@angular/router';
 export class ResultComponent implements OnInit 
 {
   @Input() data: any; 
+
+  questions: any = localStorage.getItem('completed-quiz'); 
+  parsedQuestions: any = JSON.parse(this.questions); 
   
   quizzes: any[] = []; 
   quiz: Quiz = new Quiz(null); 
@@ -50,7 +53,7 @@ export class ResultComponent implements OnInit
 
   constructor(private quizService: QuizAltService) { }
 
-   ngOnInit(): void 
+  ngOnInit(): void 
   {
     this.quizzes = this.quizService.getAll(); 
     this.quizName = this.quizzes[0].id; 
