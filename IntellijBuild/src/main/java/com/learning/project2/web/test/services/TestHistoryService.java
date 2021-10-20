@@ -6,8 +6,8 @@ import com.learning.project2.web.test.repositories.TestHistoryAnswerGivenReposit
 import com.learning.project2.web.test.repositories.TestHistoryRepository;
 import com.learning.project2.web.test.repositories.TestRepository;
 import org.hibernate.JDBCException;
+import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.amqp.RabbitProperties;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -15,6 +15,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class TestHistoryService {
@@ -57,5 +58,20 @@ public class TestHistoryService {
             e.printStackTrace();
             return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
         }
+    }
+
+    public ResponseEntity<TestHistory> getTestHistoryWithQuestions(Long id) {
+        try {
+            Optional<TestHistory> testHistory = testHistoryRepository.findById(id);
+            if(testHistory.isPresent()){
+                return new ResponseEntity<>(testHistory.get(), HttpStatus.OK);
+            }
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+
+        }catch(Exception e){
+            e.printStackTrace();
+            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+
     }
 }

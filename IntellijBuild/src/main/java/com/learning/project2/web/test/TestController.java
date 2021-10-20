@@ -28,6 +28,10 @@ public class TestController {
         this.testHistoryService = testHistoryService;
     }
 
+    // path: BASEURL/test/get/{id}
+    //
+    // Get request will return JSON of test object information
+    // without any of the questions attached.
     @GetMapping(
         path="get/{id}",
         produces =
@@ -42,6 +46,13 @@ public class TestController {
         return new ResponseEntity<>(test, HttpStatus.OK);
     }
 
+    // path: BASEURL/test/take/{id}/{count}
+    //
+    // Get request will return test JSON object with a
+    // randomized assortment of questions (ex: if {count}
+    // is replaced with 5, it will give five random questions.)
+    // The answers object does not have a value for whether the
+    // answer is correct or not.
     @GetMapping(
         path="/take/{id}/{count}",
         produces =
@@ -59,6 +70,28 @@ public class TestController {
         return new ResponseEntity<>(resp, HttpStatus.OK);
     }
 
+    // path: BASEURL/test/get_history/{id}
+    //
+    // Get the test history object associated with
+    // Some instance of a user's test submission
+    @GetMapping(
+            path="/get_history/{id}",
+            produces =
+                    MediaType.APPLICATION_JSON_VALUE,
+            consumes =
+                    MediaType.TEXT_PLAIN_VALUE
+    )
+    public ResponseEntity<TestHistory> getTestHistory(@PathVariable Long id){
+        return testHistoryService.getTestHistoryWithQuestions(id);
+    }
+
+
+    // path: BASEURL/test/submit
+    //
+    // Send a post request to the above url to commit object
+    // to the database. The object in the body of the request
+    // will be formated with the testId, userId, and list of
+    // answers they gave.
     @PostMapping(
             value="/submit",
             consumes = MediaType.APPLICATION_JSON_VALUE,

@@ -1,6 +1,5 @@
-package com.learning.project2.lex;
+package com.learning.project2.web.lex;
 
-import org.apache.commons.configuration.PropertiesConfiguration;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import software.amazon.awssdk.auth.credentials.AwsBasicCredentials;
@@ -21,14 +20,22 @@ import java.util.UUID;
 @Service
 public class LexTest {
 
+    @Value("${aws.lex.key}")
+    private static String key;
+
+    @Value("${aws.lex.secret}")
+    private static String secret;
+
     public static void main(String[] args) throws URISyntaxException, InterruptedException {
+
         String botId = "PMRFRTC6SE";
         String botAliasId = "TSTALIASID";
         String localeId = "en_US";
-        String accessKey = "AKIAQDWPQ6STVN5OEIV5";
-        String secretKey = "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";
+        String accessKey = key;
+        String secretKey = secret;
         String sessionId = UUID.randomUUID().toString();
-        Region region = Region.US_WEST_2; // pick an appropriate region
+        Region region = Region.US_WEST_2;
+
 
         AwsBasicCredentials awsCreds = AwsBasicCredentials.create(accessKey, secretKey);
         AwsCredentialsProvider awsCredentialsProvider = StaticCredentialsProvider.create(awsCreds);
@@ -40,7 +47,7 @@ public class LexTest {
                 .build();
 
         // utterance 1
-        String userInput = "Say Hello World";
+        String userInput = "Can you tell me a joke?";
         RecognizeTextRequest recognizeTextRequest = getRecognizeTextRequest(botId, botAliasId, localeId, sessionId, userInput);
         RecognizeTextResponse recognizeTextResponse = lexV2Client.recognizeText(recognizeTextRequest);
 
@@ -100,7 +107,7 @@ public class LexTest {
 //        });
     }
 
-    private static RecognizeTextRequest getRecognizeTextRequest(String botId, String botAliasId, String localeId, String sessionId, String userInput) {
+    static RecognizeTextRequest getRecognizeTextRequest(String botId, String botAliasId, String localeId, String sessionId, String userInput) {
         RecognizeTextRequest recognizeTextRequest = RecognizeTextRequest.builder()
                 .botAliasId(botAliasId)
                 .botId(botId)
