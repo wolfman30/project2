@@ -1,5 +1,6 @@
 package com.learning.project2.web.test;
 
+import com.learning.project2.web.WebLinks;
 import com.learning.project2.web.test.models.DTO.TestSubmission;
 import com.learning.project2.web.test.models.Test;
 import com.learning.project2.web.test.models.history.TestHistory;
@@ -32,6 +33,7 @@ public class TestController {
     //
     // Get request will return JSON of test object information
     // without any of the questions attached.
+    @CrossOrigin(origins = WebLinks.ANGULAR_ORIGIN)
     @GetMapping(
         path="get/{id}",
         produces =
@@ -53,6 +55,7 @@ public class TestController {
     // is replaced with 5, it will give five random questions.)
     // The answers object does not have a value for whether the
     // answer is correct or not.
+    @CrossOrigin(origins = WebLinks.ANGULAR_ORIGIN)
     @GetMapping(
         path="/take/{id}/{count}",
         produces =
@@ -74,6 +77,7 @@ public class TestController {
     //
     // Get the test history object associated with
     // Some instance of a user's test submission
+    @CrossOrigin(origins = WebLinks.ANGULAR_ORIGIN)
     @GetMapping(
             path="/get_history/{id}",
             produces =
@@ -92,7 +96,11 @@ public class TestController {
     // to the database. The object in the body of the request
     // will be formated with the testId, userId, and list of
     // answers they gave.
+<<<<<<< HEAD
     @CrossOrigin(origins = "http://localhost:4200")
+=======
+    @CrossOrigin(origins = WebLinks.ANGULAR_ORIGIN)
+>>>>>>> 46ed8bb046ae2ac1dd72165fd198e978e717cb11
     @PostMapping(
             value="/submit",
             consumes = MediaType.APPLICATION_JSON_VALUE,

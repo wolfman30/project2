@@ -1,5 +1,6 @@
 package com.learning.project2.web.user;
 
+import com.learning.project2.web.WebLinks;
 import org.hibernate.JDBCException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
@@ -21,6 +22,13 @@ public class UserController {
         this.userRepository = userRepository;
     }
 
+
+    // path: BASEURL/user/create-or-update/
+    //
+    // Send in post request with user information and the service will
+    // create or update the user based on the id provided (if no id is
+    // provided it will create)
+    @CrossOrigin(origins = WebLinks.ANGULAR_ORIGIN)
     @PostMapping(
             value="create-or-update/",
             consumes = MediaType.APPLICATION_JSON_VALUE,
@@ -38,7 +46,14 @@ public class UserController {
         }
     }
 
-    @CrossOrigin(origins = "http://localhost:4200")
+
+    // path: BASEURL/user/login-attempt/
+    //
+    // Send in post request with user object with the username
+    // and password of the attempt. Will return status of found
+    // if the login attempt is successful and a JSON user object.
+    // Returns status of 404 not found if not successful
+    @CrossOrigin(origins = WebLinks.ANGULAR_ORIGIN)
     @PostMapping(
             path = "login-attempt/",
             consumes = MediaType.APPLICATION_JSON_VALUE,
