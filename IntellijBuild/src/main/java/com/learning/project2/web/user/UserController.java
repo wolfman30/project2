@@ -10,7 +10,7 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = WebLinks.ANGULAR_ORIGIN)
 @RestController
 @RequestMapping(path = "/user")
 public class UserController {
@@ -28,7 +28,6 @@ public class UserController {
     // Send in post request with user information and the service will
     // create or update the user based on the id provided (if no id is
     // provided it will create)
-    @CrossOrigin(origins = WebLinks.ANGULAR_ORIGIN)
     @PostMapping(
             value="create-or-update/",
             consumes = MediaType.APPLICATION_JSON_VALUE,
@@ -39,6 +38,7 @@ public class UserController {
             userRepository.save(user);
             return new ResponseEntity<>(user, null, HttpStatus.OK);
         }catch(JDBCException | DataIntegrityViolationException e){
+            e.printStackTrace();
             return new ResponseEntity<>(null, null, HttpStatus.CONFLICT);
         }catch (Exception e){
             e.printStackTrace();
@@ -53,9 +53,9 @@ public class UserController {
     // and password of the attempt. Will return status of found
     // if the login attempt is successful and a JSON user object.
     // Returns status of 404 not found if not successful
-    @CrossOrigin(origins = WebLinks.ANGULAR_ORIGIN)
+
     @PostMapping(
-            path = "login-attempt/",
+            value = "/login-attempt",
             consumes = MediaType.APPLICATION_JSON_VALUE,
             produces = MediaType.APPLICATION_JSON_VALUE
     )
@@ -64,6 +64,7 @@ public class UserController {
             HttpHeaders headers = new HttpHeaders();
             headers.add("Content-Type", "application/json");
 
+            System.out.println(user.getUsername());
             String username = user.getUsername();
             String password = user.getPassword();
 
@@ -73,8 +74,10 @@ public class UserController {
             if (login != null) {
                 return new ResponseEntity<>(login, httpHeaders, HttpStatus.FOUND);
             }
+            System.out.println(HttpStatus.NOT_FOUND);
             return new ResponseEntity<>(null, httpHeaders, HttpStatus.NOT_FOUND);
         }catch(Exception e){
+            e.printStackTrace();
             return new ResponseEntity<>(null, null, HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }

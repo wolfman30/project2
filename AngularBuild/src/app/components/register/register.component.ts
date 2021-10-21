@@ -19,15 +19,13 @@ export class RegisterComponent implements OnInit {
   password = new FormControl('', [Validators.required, 
                                   Validators.minLength(5)]); 
                                   //Validators.pattern('^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])[a-zA-Z0-9]+$')
-  get_login_creds_url =  'http://localhost:8000/user/login-attempt'; 
+  login_creds_url =  'http://localhost:8000/user/login-attempt'; 
 
   httpOptions = 
   {
     headers: new HttpHeaders
     ({
-      'Content-Type': 'application/json',
-      'Accept': 'application/json',
-      'Access-Control-Allow-Origin': '*'
+      'Content-Type': 'application/json'
     })
   }
 
@@ -51,7 +49,7 @@ export class RegisterComponent implements OnInit {
 
   login() 
   {
-    this.http.post(this.get_login_creds_url, {"username": this.userName.value, "pass": this.password.value}, this.httpOptions).subscribe
+    this.http.post(this.login_creds_url, {"username": this.userName.value, "password": this.password.value}, this.httpOptions).subscribe
     (
       (response) =>
         {

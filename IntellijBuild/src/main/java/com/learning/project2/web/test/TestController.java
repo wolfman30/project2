@@ -96,11 +96,8 @@ public class TestController {
     // to the database. The object in the body of the request
     // will be formated with the testId, userId, and list of
     // answers they gave.
-<<<<<<< HEAD
-    @CrossOrigin(origins = "http://localhost:4200")
-=======
+
     @CrossOrigin(origins = WebLinks.ANGULAR_ORIGIN)
->>>>>>> 46ed8bb046ae2ac1dd72165fd198e978e717cb11
     @PostMapping(
             value="/submit",
             consumes = MediaType.APPLICATION_JSON_VALUE,
