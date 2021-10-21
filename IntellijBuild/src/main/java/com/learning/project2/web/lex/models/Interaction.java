@@ -1,13 +1,11 @@
 package com.learning.project2.web.lex.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 @Data
 @NoArgsConstructor
@@ -18,17 +16,19 @@ public class Interaction {
     private List<String> userMessages = new ArrayList<>();
 
     private String intent;
-    private Map<String, String> slots;
+    private Map<String, String> slots = new HashMap<>();
     private String state;
 
     public void addToSlots(String name, String value){
         slots.put(name, value);
     }
 
+    @JsonIgnore
     public String getSlotValue(String name){
         return slots.get(name);
     }
 
+    @JsonIgnore
     public String[] getSlotNames(){
         return slots.keySet().toArray(new String[0]);
     }

@@ -13,9 +13,11 @@ import software.amazon.awssdk.services.lexruntimev2.LexRuntimeV2Client;
 import software.amazon.awssdk.services.lexruntimev2.model.Message;
 import software.amazon.awssdk.services.lexruntimev2.model.RecognizeTextRequest;
 import software.amazon.awssdk.services.lexruntimev2.model.RecognizeTextResponse;
+import software.amazon.awssdk.services.lexruntimev2.model.Slot;
 
 import javax.annotation.PostConstruct;
 
+import java.util.Map;
 import java.util.UUID;
 
 import static com.learning.project2.web.lex.LexTest.getRecognizeTextRequest;
@@ -74,11 +76,37 @@ public class BotService {
             System.out.println("Request Object: "+response.toString());
             System.out.println("Intent Object: " + response.sessionState().intent().toString());
 
+            // Add bot's response to the interaction
             for(Message m : response.messages()){
                 interaction.addToBotMessages(m.content());
             }
 
+            // Add slots to the interaction
+            Map<String, Slot> slots = response.sessionState().intent().slots();
+            for(String s : slots.keySet()){
+                if(interaction.getSlots().size()>0){
+                    if(interaction.getSlots().get(s)!=null) {
+                        //TODO - fix null pointer exception by checking when slot keys are null (get(s).value() )i
+                        interaction.addToSlots(s, slots.get(s).value().interpretedValue());
+                    }
+                }else{
+                    interaction.addToSlots(s, slots.get(s).value().interpretedValue());
+                }
+            }
+
+            // Add Intent to the interaction
+            if(interaction.getIntent()==null) {
+                interaction.setIntent(response.sessionState().intent().name());
+            }
+
+            //Add State
+            if(interaction.getState()==null){
+                interaction.setState(response.sessionState().intent().state().toString());
+            }
+
             return interaction;
+
+
         }catch(Exception e){
             e.printStackTrace();
             return null;
