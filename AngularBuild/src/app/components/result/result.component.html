@@ -1,12 +1,42 @@
 <app-navbar></app-navbar>
-<h1>Results</h1>
+<mat-card id="header">
+    <h1 style="text-align: center;">Results</h1>
+    <mat-card-footer>
+        <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+    </mat-card-footer>
+</mat-card>
 
-{{questions}}
-<br><br>
 
-<div *ngFor="let question of parsedQuestions; let i = index">
-    {{parsedQuestions[i].content}}
-</div>
+<mat-card class="row">
+    <mat-card>
+        <mat-card-title><span>Correct Answers</span>/Total Questions</mat-card-title>
+        <h2><span>{{count_correct_answers(parsedQuestions)}}</span>/{{count_questions(parsedQuestions)}}</h2>
+        <mat-card-footer>
+            <mat-progress-bar mode="buffer"></mat-progress-bar>
+        </mat-card-footer>
+    </mat-card>
+
+    <mat-card>
+        <mat-card-title><span>Actual points</span>/Total Points</mat-card-title>
+        <h2><span>{{actual_points_calculator(actual_points, parsedQuestions)}}</span>/{{forLoop(total_points, parsedQuestions)}}</h2>
+        <mat-card-footer>
+            <mat-progress-bar mode="buffer"></mat-progress-bar>
+        </mat-card-footer>
+    </mat-card>
+    <mat-card>
+        <mat-card-title><span>Percentage</span> correct</mat-card-title>
+        <h2><span>{{actual_points_calculator(actual_points, parsedQuestions)/forLoop(total_points, parsedQuestions) * 100 | number:'1.1-1'}}</span>%</h2>
+        <mat-card-footer>
+            <mat-progress-bar mode="buffer"></mat-progress-bar>
+        </mat-card-footer>
+    </mat-card>
+
+</mat-card>
+<mat-card style="display: flex; justify-content: center;">
+    <button mat-raised-button color="primary">View Test History</button>
+</mat-card>
+
+
 
 
 
