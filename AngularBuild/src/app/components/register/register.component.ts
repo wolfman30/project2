@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
 import { User } from 'src/app/models/user';
 import { QuizService } from 'src/app/services/quiz.service'; 
+import { HttpClient, HttpHeaders } from '@angular/common/http'; 
  
 
 @Component({
@@ -16,10 +17,21 @@ export class RegisterComponent implements OnInit {
   userName = new FormControl("", [Validators.required]);
   email = new FormControl('', [Validators.required, Validators.email]); 
   password = new FormControl('', [Validators.required, 
-                                  Validators.minLength(5), 
-                                  Validators.pattern('^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])[a-zA-Z0-9]+$')]); 
+                                  Validators.minLength(5)]); 
+                                  //Validators.pattern('^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])[a-zA-Z0-9]+$')
+  get_login_creds_url =  'http://localhost:8000/user/login-attempt'; 
 
-  constructor(private quizService: QuizService) { }
+  httpOptions = 
+  {
+    headers: new HttpHeaders
+    ({
+      'Content-Type': 'application/json',
+      'Accept': 'application/json',
+      'Access-Control-Allow-Origin': '*'
+    })
+  }
+
+  constructor(private quizService: QuizService, private http: HttpClient) { }
 
   ngOnInit(): void {
   }
@@ -39,7 +51,13 @@ export class RegisterComponent implements OnInit {
 
   login() 
   {
-    console.log("logged in!"); 
+    this.http.post(this.get_login_creds_url, {"username": this.userName.value, "pass": this.password.value}, this.httpOptions).subscribe
+    (
+      (response) =>
+        {
+          console.log(response)
+        }
+    ); 
   }
 
 }

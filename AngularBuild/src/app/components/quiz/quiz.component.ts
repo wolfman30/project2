@@ -79,6 +79,7 @@ export class QuizComponent implements OnInit
     headers: new HttpHeaders
     ({
       'Content-Type': 'application/json', 
+      'Accept': 'application/json',
       'Access-Control-Allow-Origin': ' null'
     })
   }
@@ -181,9 +182,8 @@ export class QuizComponent implements OnInit
 
     let testSubmission = {'userId': 7, 'testId': 4, 'answers': [42, 43]}
 
-  // Post your data to the server here. answers contain the questionId and the users' answer.
-    
-    //this.http.post(this.url, testSubmission, this.httpOptions).toPromise();  
+  // Post your data to the server here. 
+    this.http.post(this.url, testSubmission, this.httpOptions).toPromise();  
 
     
     localStorage.setItem('completed-quiz', JSON.stringify(this.quiz.questions)); 

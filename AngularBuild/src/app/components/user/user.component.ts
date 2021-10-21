@@ -19,6 +19,9 @@ export class UserComponent implements OnInit
   user: User = new User(null); 
   public userList:{id:number, firstName:string, lastName: string}[] = users; 
 
+  insert_user_url = 'http://localhost:8000/user/create-or-update'; 
+  get_login_creds_url =  'http://localhost:8000/user/login-attempt'; 
+
   constructor(private userService: UserService, private http:HttpClient, private router: Router) { }
 
   ngOnInit(): void 
