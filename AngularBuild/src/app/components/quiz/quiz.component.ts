@@ -60,6 +60,17 @@ export class QuizComponent implements OnInit
 
   constructor(private quizService: QuizAltService, private http: HttpClient, private router: Router) { }
 
+  ngOnInit(): void 
+  {
+    this.quizzes = this.quizService.getAll(); 
+    this.quizName = this.quizzes[0].id; 
+    this.loadQuiz(this.quizName); 
+    
+    /*
+    let request = this.http.post("http://localhost:8000/test", this.Answers)
+    request.subscribe((data) =>this.Tests=data)
+    */
+  }
 
   url = 'http://localhost:8000/test/submit'; 
 
@@ -86,17 +97,7 @@ export class QuizComponent implements OnInit
     throw new Error('Method not implemented.');
   }
 
-  ngOnInit(): void 
-  {
-    this.quizzes = this.quizService.getAll(); 
-    this.quizName = this.quizzes[0].id; 
-    this.loadQuiz(this.quizName); 
-    
-    /*
-    let request = this.http.post("http://localhost:8000/test", this.Answers)
-    request.subscribe((data) =>this.Tests=data)
-    */
-  }
+
 
   loadQuiz(quizName: string)
   {
