@@ -1,6 +1,7 @@
 package com.learning.project2.web.lex;
 
 
+import com.learning.project2.web.WebLinks;
 import com.learning.project2.web.lex.models.UserBotInteraction;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -19,6 +20,7 @@ public class BotController {
         this.botService = botService;
     }
 
+    @CrossOrigin(origins = WebLinks.ANGULAR_ORIGIN)
     @PostMapping(
             value = {"converse/{sessionId}", "converse"},
             consumes = MediaType.APPLICATION_JSON_VALUE,
