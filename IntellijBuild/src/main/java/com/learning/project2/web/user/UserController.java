@@ -36,13 +36,13 @@ public class UserController {
     public ResponseEntity<User> createOrUpdate(@RequestBody User user){
         try{
             userRepository.save(user);
-            return new ResponseEntity<>(user, null, HttpStatus.OK);
+            return new ResponseEntity<>(user, HttpStatus.OK);
         }catch(JDBCException | DataIntegrityViolationException e){
             e.printStackTrace();
-            return new ResponseEntity<>(null, null, HttpStatus.CONFLICT);
+            return new ResponseEntity<>(HttpStatus.CONFLICT);
         }catch (Exception e){
             e.printStackTrace();
-            return new ResponseEntity<>(null, null, HttpStatus.INTERNAL_SERVER_ERROR);
+            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
 
@@ -70,15 +70,13 @@ public class UserController {
 
             User login = userRepository.findByUsernameIgnoreCaseAndPassword(username, password);
 
-            HttpHeaders httpHeaders = new HttpHeaders();
             if (login != null) {
-                return new ResponseEntity<>(login, httpHeaders, HttpStatus.FOUND);
+                return new ResponseEntity<>(login, HttpStatus.OK);
             }
-            System.out.println(HttpStatus.NOT_FOUND);
-            return new ResponseEntity<>(null, httpHeaders, HttpStatus.NOT_FOUND);
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }catch(Exception e){
             e.printStackTrace();
-            return new ResponseEntity<>(null, null, HttpStatus.INTERNAL_SERVER_ERROR);
+            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
 
