@@ -1,7 +1,7 @@
 {
     "id": 1,
     "test_name": "Spring Quiz",
-    "subject": "Spring Quiz (Basic Multiple Choice Questions for Java Developers)",
+    "subject": "Spring Quiz (Multiple Choice Questions for Java Developers)",
     "questions": [
         {
             "id": 1010,
@@ -157,7 +157,7 @@
                     "id": 1057,
                     "question_id": 1010,
                     "content": "the process of linking aspects with other objects, such as beans, to create advised objects.",
-                    "is_correct": false
+                    "is_correct": true
                 },
                 {
                     "id": 1056,
@@ -169,7 +169,7 @@
                     "id": 1058,
                     "question_id": 1010,
                     "content": "declaration of new interfaces and corresponding implementations in subclasses of any advised object such that they are all functionally woven together",
-                    "is_correct": true
+                    "is_correct": false
                 }
             ],
             "points": 2
