@@ -84,7 +84,7 @@ public class BotService {
             case("TellJoke"):
                 return tellJoke(interaction);
             default:
-                return null;
+                return interaction;
         }
 
     }
