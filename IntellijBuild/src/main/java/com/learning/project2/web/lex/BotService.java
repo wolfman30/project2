@@ -64,18 +64,47 @@ public class BotService {
     }
 
     public Interaction converse(Interaction interaction){
+
+        Interaction sendToBot = response(interaction);
+
+        if(sendToBot==null){
+            return null;
+        }
+
+        if(sendToBot.getState().equals("ReadyForFulfillment")){
+            return fulfillmentSwitchBoard(interaction);
+        }
+
+        return sendToBot;
+    }
+
+    private Interaction fulfillmentSwitchBoard(Interaction interaction) {
+
+        switch(interaction.getIntent()){
+            case("TellJoke"):
+                return tellJoke(interaction);
+            default:
+                return null;
+        }
+
+    }
+
+    private Interaction tellJoke(Interaction interaction) {
+        interaction.addToBotMessages("[insert joke text here]");
+        return interaction;
+    }
+
+    private Interaction response(Interaction interaction) {
         try{
+            // Assign a sessionID to the interaction if one has not yet been created
             if(interaction.getSessionId()==null){
                 interaction.setSessionId(UUID.randomUUID().toString());
             }
 
+            // Send request to bot
             RecognizeTextRequest recognizeTextRequest =
                     getRecognizeTextRequest(botId, botAliasId, localeId, interaction.getSessionId(), interaction.getCurrentUserMessage());
             RecognizeTextResponse response = lexV2Client.recognizeText(recognizeTextRequest);
-
-            System.out.println("Session Id: "+interaction.getSessionId());
-            System.out.println("Request Object: "+response.toString());
-            System.out.println("Intent Object: " + response.sessionState().intent().toString());
 
             // Add bot's response to the interaction
             for(Message m : response.messages()){
@@ -106,7 +135,6 @@ public class BotService {
             return null;
         }
     }
-
 
 
     public boolean isInitialized(){
