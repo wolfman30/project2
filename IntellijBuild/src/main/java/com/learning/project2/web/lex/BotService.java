@@ -2,6 +2,7 @@ package com.learning.project2.web.lex;
 
 import com.learning.project2.web.lex.models.Interaction;
 import lombok.Getter;
+import org.apache.commons.lang.ObjectUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
@@ -84,25 +85,18 @@ public class BotService {
             // Add slots to the interaction
             Map<String, Slot> slots = response.sessionState().intent().slots();
             for(String s : slots.keySet()){
-                if(interaction.getSlots().size()>0){
-                    if(interaction.getSlots().get(s)!=null) {
-                        //TODO - fix null pointer exception by checking when slot keys are null (get(s).value() )i
-                        interaction.addToSlots(s, slots.get(s).value().interpretedValue());
-                    }
-                }else{
-                    interaction.addToSlots(s, slots.get(s).value().interpretedValue());
-                }
+                Slot slot = slots.get(s);
+                if(slot!=null)
+                    interaction.addToSlots(s, slot.value().interpretedValue());
+                else
+                    interaction.addToSlots(s, null);
             }
 
             // Add Intent to the interaction
-            if(interaction.getIntent()==null) {
-                interaction.setIntent(response.sessionState().intent().name());
-            }
+            interaction.setIntent(response.sessionState().intent().name());
 
             //Add State
-            if(interaction.getState()==null){
-                interaction.setState(response.sessionState().intent().state().toString());
-            }
+            interaction.setState(response.sessionState().intent().state().toString());
 
             return interaction;
 
