@@ -35,7 +35,7 @@ import { MessagingComponent } from './components/messaging/messaging.component';
     ReactiveFormsModule, 
     HttpClientModule
   ],
-  providers: [],
+  providers: [ ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

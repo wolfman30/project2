@@ -3,6 +3,8 @@ import { FormControl, Validators } from '@angular/forms';
 import { User } from 'src/app/models/user';
 import { QuizService } from 'src/app/services/quiz.service'; 
 import { HttpClient, HttpHeaders } from '@angular/common/http'; 
+import { ɵparseCookieValue } from '@angular/common';
+import { Router } from '@angular/router'; 
  
 
 @Component({
@@ -29,7 +31,7 @@ export class RegisterComponent implements OnInit {
     })
   }
 
-  constructor(private quizService: QuizService, private http: HttpClient) { }
+  constructor(private quizService: QuizService, private http: HttpClient, private router: Router) { }
 
   ngOnInit(): void {
   }
@@ -53,7 +55,8 @@ export class RegisterComponent implements OnInit {
     (
       (response) =>
         {
-          console.log(response)
+          sessionStorage.setItem("userData", JSON.stringify(response)); 
+          this.router.navigate(["/user"]); 
         }
     ); 
   }
