@@ -80,7 +80,7 @@ export class QuizComponent implements OnInit
     ({
       'Content-Type': 'application/json', 
       'Accept': 'application/json',
-      'Access-Control-Allow-Origin': ' null'
+      'Access-Control-Allow-Origin': 'null'
     })
   }
 

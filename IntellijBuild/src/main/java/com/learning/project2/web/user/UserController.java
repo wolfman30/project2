@@ -35,6 +35,7 @@ public class UserController {
     )
     public ResponseEntity<User> createOrUpdate(@RequestBody User user){
         try{
+            System.out.println(user.toString());
             userRepository.save(user);
             return new ResponseEntity<>(user, HttpStatus.OK);
         }catch(JDBCException | DataIntegrityViolationException e){
