@@ -1,5 +1,6 @@
 package com.learning.project2.web.lex;
 
+import com.learning.project2.web.lex.models.Interaction;
 import lombok.Getter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -9,11 +10,14 @@ import software.amazon.awssdk.auth.credentials.AwsCredentialsProvider;
 import software.amazon.awssdk.auth.credentials.StaticCredentialsProvider;
 import software.amazon.awssdk.regions.Region;
 import software.amazon.awssdk.services.lexruntimev2.LexRuntimeV2Client;
+import software.amazon.awssdk.services.lexruntimev2.model.Message;
 import software.amazon.awssdk.services.lexruntimev2.model.RecognizeTextRequest;
 import software.amazon.awssdk.services.lexruntimev2.model.RecognizeTextResponse;
+import software.amazon.awssdk.services.lexruntimev2.model.Slot;
 
 import javax.annotation.PostConstruct;
 
+import java.util.Map;
 import java.util.UUID;
 
 import static com.learning.project2.web.lex.LexTest.getRecognizeTextRequest;
@@ -44,7 +48,6 @@ public class BotService {
 
     @PostConstruct
     public void init(){
-        System.out.println("\n\n\n\n\n\n\n\n\n\n...");
         System.out.println("Initializing bot");
         try {
             awsCreds = AwsBasicCredentials.create(key, secret);
@@ -59,21 +62,54 @@ public class BotService {
         }
     }
 
-    public String converse(String userInput){
-        return this.converse(userInput, UUID.randomUUID().toString());
-    }
+    public Interaction converse(Interaction interaction){
+        try{
+            if(interaction.getSessionId()==null){
+                interaction.setSessionId(UUID.randomUUID().toString());
+            }
 
-    public String converse(String userInput, String sessionId){
+            RecognizeTextRequest recognizeTextRequest =
+                    getRecognizeTextRequest(botId, botAliasId, localeId, interaction.getSessionId(), interaction.getCurrentUserMessage());
+            RecognizeTextResponse response = lexV2Client.recognizeText(recognizeTextRequest);
 
-        if(!this.isInitialized()) init();
+            System.out.println("Session Id: "+interaction.getSessionId());
+            System.out.println("Request Object: "+response.toString());
+            System.out.println("Intent Object: " + response.sessionState().intent().toString());
 
-        RecognizeTextRequest recognizeTextRequest = getRecognizeTextRequest(botId, botAliasId, localeId, sessionId, userInput);
-        RecognizeTextResponse recognizeTextResponse = lexV2Client.recognizeText(recognizeTextRequest);
-        try {
-            return recognizeTextResponse.messages().get(0).content();
+            // Add bot's response to the interaction
+            for(Message m : response.messages()){
+                interaction.addToBotMessages(m.content());
+            }
+
+            // Add slots to the interaction
+            Map<String, Slot> slots = response.sessionState().intent().slots();
+            for(String s : slots.keySet()){
+                if(interaction.getSlots().size()>0){
+                    if(interaction.getSlots().get(s)!=null) {
+                        //TODO - fix null pointer exception by checking when slot keys are null (get(s).value() )i
+                        interaction.addToSlots(s, slots.get(s).value().interpretedValue());
+                    }
+                }else{
+                    interaction.addToSlots(s, slots.get(s).value().interpretedValue());
+                }
+            }
+
+            // Add Intent to the interaction
+            if(interaction.getIntent()==null) {
+                interaction.setIntent(response.sessionState().intent().name());
+            }
+
+            //Add State
+            if(interaction.getState()==null){
+                interaction.setState(response.sessionState().intent().state().toString());
+            }
+
+            return interaction;
+
+
         }catch(Exception e){
             e.printStackTrace();
-            return "error";
+            return null;
         }
     }
 
