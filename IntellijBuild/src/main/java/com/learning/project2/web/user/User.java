@@ -35,6 +35,13 @@ public class User {
     @CreationTimestamp
     private Instant dateJointed;
 
+    @Column(name = "first_name", length = 32)
+    private String firstName;
+
+    @Column(name = "last_name", length = 40)
+    private String lastName;
+
+
     @Override
     public String toString() {
         return "User{" +
