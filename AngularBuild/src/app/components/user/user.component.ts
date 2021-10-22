@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from 'src/app/services/user.service'; 
 import { User } from 'src/app/models/userClass'; 
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders} from '@angular/common/http';
 import { Router } from '@angular/router'; 
 import users from 'src/data/users.json'; 
 
@@ -16,10 +16,18 @@ export class UserComponent implements OnInit
 {
   userData: any = sessionStorage.getItem("userData"); 
   parsedUserData: any = JSON.parse(this.userData); 
+  testHistory: any; 
   usersContainer: any; 
   userName: string = ''; 
   user: User = new User(null); 
   public userList:{id:number, firstName:string, lastName: string}[] = users; 
+  httpOptions = 
+  {
+    headers: new HttpHeaders
+    ({
+      'Content-Type': 'text/plain'
+    })
+  }
 
   insert_user_url = 'http://localhost:8000/user/create-or-update'; 
   get_login_creds_url =  'http://localhost:8000/user/login-attempt'; 
@@ -42,6 +50,25 @@ export class UserComponent implements OnInit
           this.user = new User(res);
           console.log(this.user);  
         }
+    )
+  }
+
+  takeTest()
+  {
+    this.router.navigate(['/quiz']); 
+  }
+
+  getTestHistory()
+  {
+    this.http.get("http://localhost:8000/test/get_history/57", this.httpOptions).subscribe(
+      (response) =>
+      {
+        sessionStorage.setItem("test-history", JSON.stringify(response));
+        this.testHistory = sessionStorage.getItem("test-history"); 
+        this.testHistory = JSON.parse(this.testHistory); 
+        console.log(this.testHistory); 
+         
+      }
     )
   }
 

@@ -64,7 +64,6 @@ export class RegisterComponent implements OnInit
 
   register()
   {
-    console.log(this.login_password.value); 
 
     this.registered_user = {
                       "firstName": this.firstName.value, "lastName": this.lastName.value, 
