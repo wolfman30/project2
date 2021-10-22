@@ -14,6 +14,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { UserComponent } from './components/user/user.component';
 import { MessagingComponent } from './components/messaging/messaging.component'; 
+import { userList } from './models/userList'; 
 
 @NgModule({
   declarations: [
@@ -35,7 +36,9 @@ import { MessagingComponent } from './components/messaging/messaging.component';
     ReactiveFormsModule, 
     HttpClientModule
   ],
-  providers: [ ],
+  providers: [
+    { provide: "USERS", useValue: userList }
+   ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
