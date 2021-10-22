@@ -1,0 +1,28 @@
+span
+{
+    color: rgb(40, 3, 143) 
+}
+.greeting
+{
+    margin-top: 2%; 
+    font-size: 35px; 
+    text-align: center; 
+}
+
+.row
+{
+    display: flex; 
+    justify-content: center; 
+}
+
+.buttons
+{
+    margin-top: 15px; 
+}
+
+#intro
+{
+    display: flex;
+    width: 60%;  
+    justify-content: center; 
+}

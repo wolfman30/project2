@@ -1,4 +1,34 @@
-<h1 style="text-align: center;">User Profile</h1>
-<h2>{{userList[0].firstName}} {{userList[0].lastName}}</h2>
-<button mat-raised-button color="primary">Take Test</button><br><br/>
+<div *ngFor="let user of userList; let i = index">
+    <div *ngIf="userList[i].id == parsedUserData.id">
+        <h1 class="greeting">Hello <span>{{userList[i].firstName}} {{userList[i].lastName}}</span></h1>
+    </div>
+</div>
+<h2 id="intro">Here is your information: </h2>
+<mat-card class="row">
+    
+    <mat-card>
+        <h2>Username: <span>{{parsedUserData.username}}</span></h2>
+        <mat-card-footer>
+            <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+        </mat-card-footer>
+    </mat-card>
+    <mat-card>
+        <h2>Password: <span>{{parsedUserData.password}}</span></h2>
+        <mat-card-footer>
+            <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+        </mat-card-footer>
+    </mat-card>
+    <mat-card>
+        <h2>Email: <span>{{parsedUserData.email}}</span></h2>
+        <mat-card-footer>
+            <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+        </mat-card-footer>
+    </mat-card>
+
+</mat-card>
+
+<div class="row buttons">
+    <button mat-raised-button color="primary">Take Test</button>
 <button mat-raised-button color="primary">View Test History</button>
+</div>
+

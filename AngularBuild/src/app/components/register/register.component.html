@@ -43,7 +43,18 @@
             <input matInput [formControl]="email">
           </mat-form-field>
         </div>
-        <button mat-raised-button color="primary" (click)="register()">Create Profile</button>
+        <div class="row">
+          <mat-icon>
+            <span class="material-icons-outlined">
+              vpn_key
+            </span>
+          </mat-icon>
+          <mat-form-field appearance="fill">
+            <mat-label>Password</mat-label>
+            <input type="password" matInput [formControl]="password">
+          </mat-form-field>
+        </div>
+        <button mat-raised-button color="primary" type="submit" (submit)="register()">Create Profile</button>
 
         </mat-card>
       </mat-tab>

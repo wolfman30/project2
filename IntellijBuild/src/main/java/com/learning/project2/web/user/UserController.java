@@ -29,7 +29,7 @@ public class UserController {
     // create or update the user based on the id provided (if no id is
     // provided it will create)
     @PostMapping(
-            value="create-or-update/",
+            value="/create-or-update",
             consumes = MediaType.APPLICATION_JSON_VALUE,
             produces = MediaType.APPLICATION_JSON_VALUE
     )

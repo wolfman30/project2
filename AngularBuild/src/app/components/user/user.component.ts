@@ -14,6 +14,8 @@ import users from 'src/data/users.json';
 })
 export class UserComponent implements OnInit 
 {
+  userData: any = sessionStorage.getItem("userData"); 
+  parsedUserData: any = JSON.parse(this.userData); 
   usersContainer: any; 
   userName: string = ''; 
   user: User = new User(null); 
