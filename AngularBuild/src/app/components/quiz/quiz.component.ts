@@ -20,9 +20,10 @@ import { Router } from '@angular/router';
 export class QuizComponent implements OnInit 
 {
   
+  userData: any = sessionStorage.getItem("userData"); 
+  parsedUserData: any = JSON.parse(this.userData); 
   Tests: any; 
   Answers: any; 
-  
   json?: any; 
   quizzes: any[] = []; 
   quiz: Quiz = new Quiz(null); 
@@ -80,7 +81,7 @@ export class QuizComponent implements OnInit
     ({
       'Content-Type': 'application/json', 
       'Accept': 'application/json',
-      'Access-Control-Allow-Origin': ' null'
+      'Access-Control-Allow-Origin': 'null'
     })
   }
 
@@ -180,7 +181,7 @@ export class QuizComponent implements OnInit
     let answers: any[] = []; 
     this.quiz.questions.forEach(x => answers.push(x.id)); 
 
-    let testSubmission = {'userId': 7, 'testId': 4, 'answers': [42, 43]}
+    let testSubmission = {'userId': this.parsedUserData.id, 'testId': 4, 'answers': answers}
 
   // Post your data to the server here. 
     this.http.post(this.url, testSubmission, this.httpOptions).toPromise();  

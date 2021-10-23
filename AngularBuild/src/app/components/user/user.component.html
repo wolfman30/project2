@@ -1,9 +1,9 @@
-<div *ngFor="let user of userList; let i = index">
-    <div *ngIf="userList[i].id == parsedUserData.id">
-        <h1 class="greeting">Hello <span>{{userList[i].firstName}} {{userList[i].lastName}}</span></h1>
-    </div>
-</div>
+
+    
+<h1 class="greeting">Hello <span>{{parsedUserData.firstName}} {{parsedUserData.lastName}}</span></h1>
+
 <h2 id="intro">Here is your information: </h2>
+
 <mat-card class="row">
     
     <mat-card>
@@ -27,8 +27,16 @@
 
 </mat-card>
 
+<mat-card>
+    <h2>Date Joined: <span>{{parsedUserData.dateJointed}}</span></h2>
+    <mat-card-footer>
+        <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+    </mat-card-footer>
+</mat-card>
+
 <div class="row buttons">
-    <button mat-raised-button color="primary">Take Test</button>
-<button mat-raised-button color="primary">View Test History</button>
+    <button mat-raised-button color="primary" (click)="takeTest()">Take Test</button>
+<button mat-raised-button color="primary" (click)="getTestHistory()">View Test History</button>
 </div>
+{{testHistory}}
 
