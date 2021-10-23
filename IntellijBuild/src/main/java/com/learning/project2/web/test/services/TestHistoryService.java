@@ -31,6 +31,22 @@ public class TestHistoryService {
         this.answerGivenRepository = answerGivenRepository;
     }
 
+
+    public ResponseEntity<List<TestHistory>> getByUserId(Long id){
+        try {
+            List<TestHistory> th = this.testHistoryRepository.findByUser_Id(id);
+
+            if (th != null) {
+                return new ResponseEntity<>(th, HttpStatus.OK);
+            }
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+
+        }catch(Exception e){
+            e.printStackTrace();
+            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
+
     public ResponseEntity<TestHistory> submitTest(TestHistory testHistory) {
         try{
             //Get all answer objects

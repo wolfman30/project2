@@ -12,8 +12,11 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping(path = "/test")
+@CrossOrigin(origins = WebLinks.ANGULAR_ORIGIN)
 public class TestController {
 
     private TestService testService;
@@ -33,7 +36,6 @@ public class TestController {
     //
     // Get request will return JSON of test object information
     // without any of the questions attached.
-    @CrossOrigin(origins = WebLinks.ANGULAR_ORIGIN)
     @GetMapping(
         path="get/{id}",
         produces =
@@ -55,7 +57,6 @@ public class TestController {
     // is replaced with 5, it will give five random questions.)
     // The answers object does not have a value for whether the
     // answer is correct or not.
-    @CrossOrigin(origins = WebLinks.ANGULAR_ORIGIN)
     @GetMapping(
         path="/take/{id}/{count}",
         produces =
@@ -77,7 +78,6 @@ public class TestController {
     //
     // Get the test history object associated with
     // Some instance of a user's test submission
-    @CrossOrigin(origins = WebLinks.ANGULAR_ORIGIN)
     @GetMapping(
             path="/get_history/{id}",
             produces =
@@ -89,6 +89,21 @@ public class TestController {
         return testHistoryService.getTestHistoryWithQuestions(id);
     }
 
+    // path: BASEURL/test/get_history/user/{id}
+    //
+    // Get the test history object associated with
+    // Some user id
+    @GetMapping(
+            path="/get_history/user/{id}",
+            produces =
+                    MediaType.APPLICATION_JSON_VALUE,
+            consumes =
+                    MediaType.TEXT_PLAIN_VALUE
+    )
+    public ResponseEntity<List<TestHistory>> getTestHistoryByUserId(@PathVariable Long id){
+        return testHistoryService.getByUserId(id);
+    }
+
 
     // path: BASEURL/test/submit
     //
@@ -96,8 +111,6 @@ public class TestController {
     // to the database. The object in the body of the request
     // will be formated with the testId, userId, and list of
     // answers they gave.
-
-    @CrossOrigin(origins = WebLinks.ANGULAR_ORIGIN)
     @PostMapping(
             value="/submit",
             consumes = MediaType.APPLICATION_JSON_VALUE,
