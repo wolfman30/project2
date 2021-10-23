@@ -60,7 +60,7 @@ export class UserComponent implements OnInit
 
   getTestHistory()
   {
-    this.http.get("http://localhost:8000/test/get_history/57", this.httpOptions).subscribe
+    this.http.get(`http://localhost:8000/test/get_history/${this.parsedUserData.id}`, this.httpOptions).subscribe
     (
       (response) =>
       {
@@ -68,7 +68,6 @@ export class UserComponent implements OnInit
         this.testHistory = sessionStorage.getItem("test-history"); 
         this.testHistory = JSON.parse(this.testHistory); 
         console.log(this.testHistory); 
-         
       }
     )
   }

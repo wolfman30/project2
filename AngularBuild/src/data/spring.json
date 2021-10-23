@@ -1,36 +1,36 @@
 {
-    "id": 1,
+    "id": 4,
     "test_name": "Spring Quiz",
     "subject": "Spring Quiz (Multiple Choice Questions for Java Developers)",
     "questions": [
         {
-            "id": 1010,
+            "id": 21,
             "content": "What is Spring?",
-            "test_id": 1, 
+            "test_id": 4, 
             "questionTypeId": 1,
             "difficulty": 1,
             "points": 2,
             "answers": [
                 {
-                    "id": 1055,
-                    "question_id": 1010,
-                    "content": "Spring is basically Hibernate on steroids. ",
+                    "id": 41,
+                    "question_id": 1,
+                    "content": "Spring is basically Hibernate on steroids.",
                     "is_correct": false
                 },
                 {
-                    "id": 1056,
-                    "question_id": 1010,
-                    "content": "Spring is an application framework written in Java used for Inversion of Control through Dependency Injection to alleviate the complex nature of developing enterprise-grade applications.",
+                    "id": 42,
+                    "question_id": 1,
+                    "content": "Spring is an application framework written in Java used for Inversion of Control through Dependency Injection to reduce the complexity of developing enterprise-grade applications.",
                     "is_correct": true
                 },
                 {
-                    "id": 1057,
+                    "id": 43,
                     "question_id": 1010,
                     "content": "Spring is used to connect a database to a web application. ",
                     "is_correct": false
                 },
                 {
-                    "id": 1058,
+                    "id": 44,
                     "question_id": 1010,
                     "content": "Spring automates the entire DevOps pipeline.",
                     "is_correct": false
@@ -39,16 +39,16 @@
 
         },
         {
-            "id": 1011,
+            "id": 22,
             "content": "In Aspect Oriented Programming: ",
             "test_id": 1,
             "questionTypeId": 1,
             "difficulty": 1,
             "answers": [
                 {
-                    "id": 1055,
+                    "id": 42,
                     "question_id": 1010,
-                    "content": "classes are used as the key component to drive creation of objects, which serve the purpose of representing concrete ideas or things with states and behaviors. ",
+                    "content": "classes are used as the key component to drive creation of objects, which serve the purpose of representing concrete ideas or things with states and behaviors.",
                     "is_correct": false
                 },
                 {
@@ -73,14 +73,14 @@
             "points": 2
         },
         {
-            "id": 1012,
+            "id": 23,
             "content": "Which API does Spring need to use to modify the behavior of methods and classes at runtime?",
             "test_id": 1,
             "questionTypeId": 1,
             "difficulty": 1,
             "answers": [
                 {
-                    "id": 1055,
+                    "id": 43,
                     "question_id": 1010,
                     "content": "Fetch API",
                     "is_correct": false
@@ -107,14 +107,14 @@
             "points": 2
         },
         {
-            "id": 1013,
+            "id": 24,
             "content": "Which of the following is NOT an example of a cross-cutting concern:",
             "test_id":1,
             "questionTypeId": 1,
             "difficulty": 1,
             "answers": [
                 {
-                    "id": 1055,
+                    "id": 44,
                     "question_id": 1010,
                     "content": "Instance field - data member of an object ",
                     "is_correct": true
@@ -141,7 +141,7 @@
             "points": 2
         },
         {
-            "id": 1014,
+            "id": 25,
             "content": "Weaving is:",
             "test_id": 1,
             "questionTypeId": 1,
@@ -175,8 +175,8 @@
             "points": 2
         },
         {
-            "id": 1015,
-            "content": "What is the common goal between Lombok and Spring? ",
+            "id": 26,
+            "content": "What is the common goal between Lombok and Spring?",
             "test_id": 1,
             "questionTypeId": 1,
             "difficulty": 1, 
@@ -209,7 +209,7 @@
             "points": 2
         },
         {
-            "id": 1016,
+            "id": 27,
             "content": "Which of the following is used as the front controller in the Spring Web MVC Framework?",
             "test_id": 1, 
             "questionTypeId": 1,
@@ -243,8 +243,8 @@
             "points": 2
         },
         {
-            "id": 1017,
-            "content": "Which of the following is not an endpoint for a Spring Boot Actuator?",
+            "id": 28,
+            "content": "Which of the following is NOT an endpoint for a Spring Boot Actuator?",
             "test_id": 1, 
             "questionTypeId": 1,
             "difficulty": 1,
@@ -277,8 +277,8 @@
             "points": 2
         },
         {
-            "id": 1018,
-            "content": "In Spring, RestTemplate acts as a: ",
+            "id": 29,
+            "content": "In Spring, RestTemplate acts as a:",
             "test_id": 1,
             "questionTypeId": 1,
             "difficulty": 1,
@@ -311,8 +311,8 @@
             "points": 2
         },
         {
-            "id": 1019,
-            "content": "Which of the following are the two major tools use to improve development workflow in Spring Boot applications?",
+            "id": 30,
+            "content": "Which of the following are the two major tools used to improve development workflow in Spring Boot applications?",
             "test_id": 1,
             "questionTypeId": 1,
             "difficulty": 1,
@@ -345,7 +345,7 @@
             "points": 2
         },
         {
-            "id": 1020,
+            "id": 31,
             "content": "Which of the following is not a Spring Bean scope?",
             "test_id": 1,
             "questionTypeId": 1,
@@ -398,7 +398,7 @@
             
         },
         {
-            "id": 1021,
+            "id": 32,
             "content": "What is the ApplicationContext?",
             "test_id": 1,
             "questionTypeId": 1,
@@ -408,7 +408,7 @@
                     "id": 1055,
                     "question_id": 1010,
                     "content": "The main feature of the Context module that represents the Spring IoC container. It is used to instantiate, configure, and assemble beans.",
-                    "is_correct": false
+                    "is_correct": true
                 },
                 {
                     "id": 1056,
@@ -420,7 +420,7 @@
                     "id": 1057,
                     "question_id": 1010,
                     "content": "A module which provides an implementation for Spring MVC.",
-                    "is_correct": true
+                    "is_correct": false
                 },
                 {
                     "id": 1058,
