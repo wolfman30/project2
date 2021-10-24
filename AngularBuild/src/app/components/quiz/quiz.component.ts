@@ -34,7 +34,7 @@ export class QuizComponent implements OnInit
     'allowBack': true, 
     'allowReview': true, 
     'autoMove': false, 
-    'duration': 300, 
+    'duration': 30000, 
     'pageSize': 1, 
     'requiredAll': false, 
     'richText': false, 
@@ -178,14 +178,24 @@ export class QuizComponent implements OnInit
 
   onSubmit()
   {
+    //not an elegant way to weed out the answers selected, but it works :(
     let answers: any[] = []; 
-    this.quiz.questions.forEach(x => answers.push(x.id)); 
+    for (let question of this.quiz.questions)
+    {
+      for (let answer of question.answers)
+      {
+        if (answer.selected)
+        {
+          answers.push(answer.id); 
+        }
+      }
+    }; 
 
-    let testSubmission = {'userId': this.parsedUserData.id, 'testId': 4, 'answers': answers}
+    let testSubmission = {'userId': this.parsedUserData.id, 'testId': this.quiz.id, 'answers': answers}
 
   // Post your data to the server here. 
     this.http.post(this.url, testSubmission, this.httpOptions).toPromise();  
-
+    console.log(answers.toString()); 
     
     localStorage.setItem('completed-quiz', JSON.stringify(this.quiz.questions)); 
 

@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping(path = "/bot")
+@CrossOrigin(origins = WebLinks.ANGULAR_ORIGIN)
 public class BotController {
 
     private BotService botService;

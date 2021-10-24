@@ -1,5 +1,4 @@
-
-    
+<app-navbar></app-navbar>
 <h1 class="greeting">Hello <span>{{parsedUserData.firstName}} {{parsedUserData.lastName}}</span></h1>
 
 <h2 id="intro">Here is your information: </h2>
@@ -28,7 +27,8 @@
 </mat-card>
 
 <mat-card>
-    <h2>Date Joined: <span>{{parsedUserData.dateJointed}}</span></h2>
+
+    <h2>Date Joined: <span>{{parsedUserData.dateJointed.slice(0, 10)}}&nbsp;{{parsedUserData.dateJointed.slice(11, 16)}}</span></h2>
     <mat-card-footer>
         <mat-progress-bar mode="indeterminate"></mat-progress-bar>
     </mat-card-footer>
@@ -36,7 +36,13 @@
 
 <div class="row buttons">
     <button mat-raised-button color="primary" (click)="takeTest()">Take Test</button>
-<button mat-raised-button color="primary" (click)="getTestHistory()">View Test History</button>
+    <button mat-raised-button color="primary" (click)="getTestHistory()">View Test History</button>
 </div>
-{{testHistory}}
+
+<mat-card id="pal-container">
+    <h2>PAL</h2>
+    <textarea readonly="readonly" name="conversation" rows="10" cols="80">{{lexResponse}}</textarea>
+    <span><input type="text" size="60" name="message" style="line-height: 2.0em;" enterkeyhint=""/>
+    <button type="button" style="line-height: 2em;">Send</button></span>
+</mat-card>
 

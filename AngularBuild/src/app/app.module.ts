@@ -14,7 +14,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { UserComponent } from './components/user/user.component';
 import { MessagingComponent } from './components/messaging/messaging.component'; 
-import { userList } from './models/userList'; 
+import { userList } from './models/userList';
+import { TestHistoryComponent } from './components/test-history/test-history.component';
+import { AuthGuard } from './auth/auth.guard'; 
 
 @NgModule({
   declarations: [
@@ -25,7 +27,8 @@ import { userList } from './models/userList';
     QuizComponent,
     ResultComponent,
     UserComponent,
-    MessagingComponent
+    MessagingComponent,
+    TestHistoryComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +40,8 @@ import { userList } from './models/userList';
     HttpClientModule
   ],
   providers: [
-    { provide: "USERS", useValue: userList }
+    { provide: "USERS", useValue: userList }, 
+    AuthGuard
    ],
   bootstrap: [AppComponent]
 })

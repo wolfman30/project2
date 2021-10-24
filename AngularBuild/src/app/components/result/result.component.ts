@@ -5,6 +5,7 @@ import { QuizComponent } from '../quiz/quiz.component';
 import { Router } from '@angular/router'; 
 import { analyzeAndValidateNgModules } from '@angular/compiler';
 import { FOCUS_MONITOR_DEFAULT_OPTIONS } from '@angular/cdk/a11y';
+import { HttpClient, HttpHeaders} from '@angular/common/http';
 
 @Component({
   selector: 'app-result',
@@ -19,8 +20,18 @@ export class ResultComponent implements OnInit
 
   questions: any = localStorage.getItem('completed-quiz'); 
   parsedQuestions: any = JSON.parse(this.questions); 
+  userData: any = sessionStorage.getItem("userData"); 
+  parsedUserData: any = JSON.parse(this.userData);
   total_points: number = 0; 
   actual_points: number = 0; 
+  testHistory: any; 
+  httpOptions = 
+  {
+    headers: new HttpHeaders
+    ({
+      'Content-Type': 'text/plain'
+    })
+  }
   
   forLoop(points: number, questions: any): number
   {
@@ -73,8 +84,7 @@ export class ResultComponent implements OnInit
       }
     }
     return count; 
-  }
-  
+  }  
 
   
   
@@ -111,7 +121,7 @@ export class ResultComponent implements OnInit
     'theme': 'none' 
   }
 
-  constructor(private quizService: QuizAltService) { }
+  constructor(private quizService: QuizAltService, private router: Router, private http:HttpClient) { }
 
   ngOnInit(): void 
   {
@@ -172,6 +182,21 @@ export class ResultComponent implements OnInit
   {
     return question.answers.every(x => x.selected === x.is_correct) ? 'correct' : 'wrong'; 
   }; 
+
+  viewTestHistory()
+  {
+    let url = `http://localhost:8000/test/get_history/user/${this.parsedUserData.id}`; 
+    this.http.get(url, this.httpOptions).subscribe
+    (
+      (response) =>
+      {
+        sessionStorage.setItem("test-history", JSON.stringify(response));
+        this.testHistory = sessionStorage.getItem("test-history");  
+        this.router.navigate(['/test-history'])
+      }
+    )
+    
+  }
 
 
 }
