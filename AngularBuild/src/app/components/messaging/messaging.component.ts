@@ -14,10 +14,4 @@ export class MessagingComponent implements OnInit {
   {
   }
 
-  messageLex()
-  {
-    let url = `http://localhost:8000/bot/converse${sessionId}`; 
-    this.http.post(url, {'greeting': "hello"})
-  }
-
 }

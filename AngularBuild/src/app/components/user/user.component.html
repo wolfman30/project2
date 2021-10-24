@@ -38,5 +38,11 @@
     <button mat-raised-button color="primary" (click)="takeTest()">Take Test</button>
     <button mat-raised-button color="primary" (click)="getTestHistory()">View Test History</button>
 </div>
-{{testHistory}}
+
+<mat-card id="pal-container">
+    <h2>PAL</h2>
+    <textarea readonly="readonly" name="conversation" rows="10" cols="80">{{lexResponse}}</textarea>
+    <span><input type="text" size="60" name="message" style="line-height: 2.0em;" enterkeyhint=""/>
+    <button type="button" style="line-height: 2em;">Send</button></span>
+</mat-card>
 

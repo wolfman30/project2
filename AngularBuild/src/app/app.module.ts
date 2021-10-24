@@ -15,7 +15,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { UserComponent } from './components/user/user.component';
 import { MessagingComponent } from './components/messaging/messaging.component'; 
 import { userList } from './models/userList';
-import { TestHistoryComponent } from './components/test-history/test-history.component'; 
+import { TestHistoryComponent } from './components/test-history/test-history.component';
+import { AuthGuard } from './auth/auth.guard'; 
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { TestHistoryComponent } from './components/test-history/test-history.com
     HttpClientModule
   ],
   providers: [
-    { provide: "USERS", useValue: userList }
+    { provide: "USERS", useValue: userList }, 
+    AuthGuard
    ],
   bootstrap: [AppComponent]
 })

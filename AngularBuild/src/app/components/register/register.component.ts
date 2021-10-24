@@ -2,10 +2,11 @@ import { Component, Inject, OnInit } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
 import { User } from 'src/app/models/user';
 import { QuizService } from 'src/app/services/quiz.service'; 
-import { HttpClient, HttpHeaders } from '@angular/common/http'; 
+import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http'; 
 import { ɵparseCookieValue } from '@angular/common';
 import { Router } from '@angular/router'; 
 import users from 'src/data/users.json'; 
+import 'rxjs/add/operator/catch'; 
 
 
 @Component({
@@ -15,7 +16,10 @@ import users from 'src/data/users.json';
 })
 export class RegisterComponent implements OnInit 
 {
-  newId: number = 0; 
+  newId: number = 0;
+  responseStatus: number = 0; 
+  responseText: string = ''; 
+  response: any; 
   newDatum: any; 
   registered_user: any; 
   firstName = new FormControl("", [Validators.required]);
@@ -38,7 +42,7 @@ export class RegisterComponent implements OnInit
     ({
       'Content-Type': 'application/json', 
       'Accept': 'application/json',
-      'Access-Control-Allow-Origin': 'null'
+      'Access-Control-Allow-Origin': '*'
     })
   }
 
@@ -72,7 +76,22 @@ export class RegisterComponent implements OnInit
                           }
 
     this.http.post(this.register_url, this.registered_user, 
-                  this.httpOptions).toPromise(); 
+                  this.httpOptions).toPromise()
+                  .then
+                  (
+                    (data: any) =>
+                      {
+                        console.log(data)
+                      }
+                  )
+                  // .subscribe
+                  // (
+                  //   (response) =>
+                  //   {
+                  //     this.responseText = JSON.stringify(response); 
+                  //     this.response = JSON.parse(this.responseText); 
+                  //   }
+                  // )
   }
 
 }

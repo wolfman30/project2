@@ -15,6 +15,7 @@ import users from 'src/data/users.json';
 })
 export class UserComponent implements OnInit 
 {
+  lexResponse: any; 
   userData: any = sessionStorage.getItem("userData"); 
   parsedUserData: any = JSON.parse(this.userData); 
   testHistory: any; 
@@ -30,17 +31,6 @@ export class UserComponent implements OnInit
     })
   }
 
-  LexhttpOptions = 
-  {
-    headers: new HttpHeaders
-    (
-      {
-        'Content-type': 'application/json', 
-        'SessionId': '75983749823'
-      }
-    )
-  }
-
   lex_url = "http://localhost:8000/bot/converse/75983749823"; 
   insert_user_url = 'http://localhost:8000/user/create-or-update'; 
   get_login_creds_url =  'http://localhost:8000/user/login-attempt'; 
@@ -53,7 +43,7 @@ export class UserComponent implements OnInit
     this.userName = this.usersContainer[0].id; 
     this.loadUsers(this.userName);
     
-    this.messageService.messageLex(); 
+    //this.lexResponse = this.messageService.messageLex(); 
   }
 
   loadUsers(userName: string)

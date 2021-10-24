@@ -57,6 +57,9 @@
           <button (click)="register();" mat-raised-button color="primary">Create Profile</button>
   
         </mat-card>
+        <div *ngIf="response">
+          <h3>Successfull Registered! You can log in now!</h3>
+        </div>
     </mat-tab>
 
     <mat-tab label="Login">
