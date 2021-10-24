@@ -6,7 +6,6 @@ import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http
 import { ɵparseCookieValue } from '@angular/common';
 import { Router } from '@angular/router'; 
 import users from 'src/data/users.json'; 
-import 'rxjs/add/operator/catch'; 
 
 
 @Component({
@@ -60,9 +59,14 @@ export class RegisterComponent implements OnInit
     (
       (response) =>
         {
+          this.response = response; 
           sessionStorage.setItem("userData", JSON.stringify(response)); 
           this.router.navigate(["/user"]); 
-        }
+        },
+      (error) =>
+      {
+        this.response="error"; 
+      }
     ); 
   }
 
@@ -81,17 +85,16 @@ export class RegisterComponent implements OnInit
                   (
                     (data: any) =>
                       {
+                        this.response = 'successful-registration'; 
                         console.log(data)
                       }
+                  ).catch(
+                    (error: HttpErrorResponse) =>
+                    {
+                      this.response = 'registration-error'; 
+                      console.log(error, "409 conflict"); 
+                    }
                   )
-                  // .subscribe
-                  // (
-                  //   (response) =>
-                  //   {
-                  //     this.responseText = JSON.stringify(response); 
-                  //     this.response = JSON.parse(this.responseText); 
-                  //   }
-                  // )
   }
 
 }
