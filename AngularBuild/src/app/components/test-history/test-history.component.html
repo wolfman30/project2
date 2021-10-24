@@ -1,0 +1,30 @@
+<app-navbar></app-navbar>
+<h1>Test History</h1>
+<table mat-table [dataSource]="parsedTestHistory" class="mat-elevation-z8">
+    <ng-container matColumnDef="time">
+        <th mat-header-cell *matHeaderCellDef> Time Taken </th>
+        <td mat-cell *matCellDef="let test">{{test.dateTaken.slice(0, 10)}} &nbsp;{{test.dateTaken.slice(11, 16)}}</td>
+    </ng-container>
+    <ng-container matColumnDef="test-name">
+        <th mat-header-cell *matHeaderCellDef> Test Name </th>
+        <td mat-cell *matCellDef="let test">{{test.test.testName}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="score-ratio">
+        <th mat-header-cell *matHeaderCellDef> Correct Answers / Total Questions</th>
+        <td mat-cell *matCellDef="let test; let i = index"> &nbsp;{{getTotalCorrectAnswers()[i]}}/{{getTotalQuestions()[i]}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="score-percentage">
+        <th mat-header-cell *matHeaderCellDef> Correct Answers/Total Questions</th>
+        <td mat-cell *matCellDef="let test; let i = index"> {{getPercentageScoreList()[i]}}%</td>
+    </ng-container>
+    <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
+    <tr mat-row *matRowDef="let myRowData; columns: columnsToDisplay"></tr>
+</table>
+
+<br><br>
+<div id="button-center">
+    <button mat-raised-button color="primary" (click)="goHome()">Go Home</button>
+</div>
+

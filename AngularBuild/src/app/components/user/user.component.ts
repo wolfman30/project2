@@ -60,16 +60,17 @@ export class UserComponent implements OnInit
 
   getTestHistory()
   {
-    this.http.get(`http://localhost:8000/test/get_history/${this.parsedUserData.id}`, this.httpOptions).subscribe
+    let url = `http://localhost:8000/test/get_history/user/${this.parsedUserData.id}`; 
+    this.http.get(url, this.httpOptions).subscribe
     (
       (response) =>
       {
         sessionStorage.setItem("test-history", JSON.stringify(response));
-        this.testHistory = sessionStorage.getItem("test-history"); 
-        this.testHistory = JSON.parse(this.testHistory); 
-        console.log(this.testHistory); 
+        this.testHistory = sessionStorage.getItem("test-history");  
+        this.router.navigate(['/test-history']); 
       }
     )
+    
   }
 
 }

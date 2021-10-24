@@ -13,25 +13,25 @@
             "answers": [
                 {
                     "id": 41,
-                    "question_id": 1,
+                    "question_id": 21,
                     "content": "Spring is basically Hibernate on steroids.",
                     "is_correct": false
                 },
                 {
-                    "id": 42,
-                    "question_id": 1,
+                    "id": 45,
+                    "question_id": 21,
                     "content": "Spring is an application framework written in Java used for Inversion of Control through Dependency Injection to reduce the complexity of developing enterprise-grade applications.",
                     "is_correct": true
                 },
                 {
-                    "id": 43,
-                    "question_id": 1010,
+                    "id": 46,
+                    "question_id": 21,
                     "content": "Spring is used to connect a database to a web application. ",
                     "is_correct": false
                 },
                 {
-                    "id": 44,
-                    "question_id": 1010,
+                    "id": 47,
+                    "question_id": 21,
                     "content": "Spring automates the entire DevOps pipeline.",
                     "is_correct": false
                 }
@@ -41,31 +41,31 @@
         {
             "id": 22,
             "content": "In Aspect Oriented Programming: ",
-            "test_id": 1,
+            "test_id": 4,
             "questionTypeId": 1,
             "difficulty": 1,
             "answers": [
                 {
                     "id": 42,
-                    "question_id": 1010,
+                    "question_id": 22,
                     "content": "classes are used as the key component to drive creation of objects, which serve the purpose of representing concrete ideas or things with states and behaviors.",
                     "is_correct": false
                 },
                 {
-                    "id": 1057,
-                    "question_id": 1010,
+                    "id": 48,
+                    "question_id": 22,
                     "content": "dependencies are injected into models. ",
                     "is_correct": false
                 },
                 {
-                    "id": 1056,
-                    "question_id": 1010,
-                    "content": "the key components modularize particular transactional concerns which can present across multiple classes known as cross-cutting concerns.",
+                    "id": 49,
+                    "question_id": 22,
+                    "content": "aspects are the key components that modularize particular transactional concerns which can present across multiple classes known as cross-cutting concerns.",
                     "is_correct": true
                 },
                 {
-                    "id": 1058,
-                    "question_id": 1010,
+                    "id": 50,
+                    "question_id": 22,
                     "content": "functions are objects that can serve as input to other functions.",
                     "is_correct": false
                 }
@@ -75,31 +75,31 @@
         {
             "id": 23,
             "content": "Which API does Spring need to use to modify the behavior of methods and classes at runtime?",
-            "test_id": 1,
+            "test_id": 4,
             "questionTypeId": 1,
             "difficulty": 1,
             "answers": [
                 {
                     "id": 43,
-                    "question_id": 1010,
+                    "question_id": 23,
                     "content": "Fetch API",
                     "is_correct": false
                 },
                 {
-                    "id": 1057,
-                    "question_id": 1010,
+                    "id": 51,
+                    "question_id": 23,
                     "content": "RxJS API",
                     "is_correct": false
                 },
                 {
-                    "id": 1056,
-                    "question_id": 1010,
+                    "id": 52,
+                    "question_id": 23,
                     "content": "Reflection API",
                     "is_correct": true
                 },
                 {
-                    "id": 1058,
-                    "question_id": 1010,
+                    "id": 53,
+                    "question_id": 23,
                     "content": "Jackson API",
                     "is_correct": false
                 }
@@ -109,31 +109,31 @@
         {
             "id": 24,
             "content": "Which of the following is NOT an example of a cross-cutting concern:",
-            "test_id":1,
+            "test_id":4,
             "questionTypeId": 1,
             "difficulty": 1,
             "answers": [
                 {
                     "id": 44,
-                    "question_id": 1010,
+                    "question_id": 24,
                     "content": "Instance field - data member of an object ",
                     "is_correct": true
                 },
                 {
-                    "id": 1057,
-                    "question_id": 1010,
+                    "id": 54,
+                    "question_id": 24,
                     "content": "Database Access - security for a database",
                     "is_correct": false
                 },
                 {
-                    "id": 1056,
-                    "question_id": 1010,
+                    "id": 55,
+                    "question_id": 24,
                     "content": "Data Entities - transactions to take place",
                     "is_correct": false
                 },
                 {
-                    "id": 1058,
-                    "question_id": 1010,
+                    "id": 56,
+                    "question_id": 24,
                     "content": "Error Handling - handling checked and unchecked exceptions and errors",
                     "is_correct": false
                 }
@@ -143,31 +143,31 @@
         {
             "id": 25,
             "content": "Weaving is:",
-            "test_id": 1,
+            "test_id": 4,
             "questionTypeId": 1,
             "difficulty": 1,
             "answers": [
                 {
-                    "id": 1055,
-                    "question_id": 1010,
+                    "id": 57,
+                    "question_id": 25,
                     "content": "the chaining of objects",
                     "is_correct": false
                 },
                 {
-                    "id": 1057,
-                    "question_id": 1010,
+                    "id": 58,
+                    "question_id": 25,
                     "content": "the process of linking aspects with other objects, such as beans, to create advised objects.",
                     "is_correct": true
                 },
                 {
-                    "id": 1056,
-                    "question_id": 1010,
+                    "id": 59,
+                    "question_id": 25,
                     "content": "a defintiion of which methods in our application advice ought to be injected into or around",
                     "is_correct": false
                 },
                 {
-                    "id": 1058,
-                    "question_id": 1010,
+                    "id": 60,
+                    "question_id": 25,
                     "content": "declaration of new interfaces and corresponding implementations in subclasses of any advised object such that they are all functionally woven together",
                     "is_correct": false
                 }
@@ -177,32 +177,32 @@
         {
             "id": 26,
             "content": "What is the common goal between Lombok and Spring?",
-            "test_id": 1,
+            "test_id": 4,
             "questionTypeId": 1,
             "difficulty": 1, 
             "answers": [
                 {
-                    "id": 1055,
-                    "question_id": 1010,
+                    "id": 61,
+                    "question_id": 26,
                     "content": "To reduce the amount of boilerplate code by autogenerating the required code elements at compiletime.",
                     "is_correct": true
                 },
                 {
-                    "id": 1057,
-                    "question_id": 1010,
-                    "content": "To make the workflow of a DevOps team more efficient. ",
+                    "id": 62,
+                    "question_id": 26,
+                    "content": "To make the workflow of a DevOps team more efficient.",
                     "is_correct": false
                 },
                 {
-                    "id": 1056,
-                    "question_id": 1010,
+                    "id": 63,
+                    "question_id": 26,
                     "content": "To abstract away the need to write connective code between a database and Java objects.",
                     "is_correct": false
                 },
                 {
-                    "id": 1058,
-                    "question_id": 1010,
-                    "content": "To autogenerate the XML configuration file that configures servlets. ",
+                    "id": 64,
+                    "question_id": 26,
+                    "content": "To autogenerate the XML configuration file that configures servlets.",
                     "is_correct": false
                 }
             ],
@@ -211,31 +211,31 @@
         {
             "id": 27,
             "content": "Which of the following is used as the front controller in the Spring Web MVC Framework?",
-            "test_id": 1, 
+            "test_id": 4, 
             "questionTypeId": 1,
             "difficulty": 1,
             "answers": [
                 {
-                    "id": 1055,
-                    "question_id": 1010,
+                    "id": 65,
+                    "question_id": 27,
                     "content": "HttpServlet",
                     "is_correct": false
                 },
                 {
-                    "id": 1056,
-                    "question_id": 1010,
-                    "content": " HelperServlet",
+                    "id": 66,
+                    "question_id": 27,
+                    "content": "HelperServlet",
                     "is_correct": false
                 },
                 {
-                    "id": 1057,
-                    "question_id": 1010,
+                    "id": 67,
+                    "question_id": 27,
                     "content": "DispatcherServlet",
                     "is_correct": true
                 },
                 {
-                    "id": 1058,
-                    "question_id": 1010,
+                    "id": 68,
+                    "question_id": 27,
                     "content": "FrontControllerServlet",
                     "is_correct": false
                 }
@@ -245,31 +245,31 @@
         {
             "id": 28,
             "content": "Which of the following is NOT an endpoint for a Spring Boot Actuator?",
-            "test_id": 1, 
+            "test_id": 4, 
             "questionTypeId": 1,
             "difficulty": 1,
             "answers": [
                 {
-                    "id": 1055,
-                    "question_id": 1010,
+                    "id": 69,
+                    "question_id": 28,
                     "content": "/health",
                     "is_correct": false
                 },
                 {
-                    "id": 1056,
-                    "question_id": 1010,
+                    "id": 70,
+                    "question_id": 28,
                     "content": "/logfile",
                     "is_correct": false
                 },
                 {
-                    "id": 1057,
-                    "question_id": 1010,
+                    "id": 71,
+                    "question_id": 28,
                     "content": "/wiring",
                     "is_correct": true
                 },
                 {
-                    "id": 1058,
-                    "question_id": 1010,
+                    "id": 72,
+                    "question_id": 28,
                     "content": "/shutdown",
                     "is_correct": false
                 }
@@ -279,32 +279,32 @@
         {
             "id": 29,
             "content": "In Spring, RestTemplate acts as a:",
-            "test_id": 1,
+            "test_id": 4,
             "questionTypeId": 1,
             "difficulty": 1,
             "answers": [
                 {
-                    "id": 1055,
-                    "question_id": 1010,
+                    "id": 73,
+                    "question_id": 29,
                     "content": "web client to make requests to web services.",
                     "is_correct": true
                 },
                 {
-                    "id": 1057,
-                    "question_id": 1010,
+                    "id": 74,
+                    "question_id": 29,
                     "content": "a front controller to direct HTTP requests to their respective controllers.",
                     "is_correct": false
                 },
                 {
-                    "id": 1056,
-                    "question_id": 1010,
-                    "content": "an aspect that controls the cross-cutting concern of security. ",
+                    "id": 75,
+                    "question_id": 29,
+                    "content": "an aspect that controls the cross-cutting concern of security.",
                     "is_correct": false
                 },
                 {
-                    "id": 1058,
-                    "question_id": 1010,
-                    "content": "an interface that facilitates the conversion of JSON to Java objects",
+                    "id": 76,
+                    "question_id": 29,
+                    "content": "an interface that facilitates the conversion of JSON to Java objects.",
                     "is_correct": false
                 }
             ],
@@ -318,26 +318,26 @@
             "difficulty": 1,
             "answers": [
                 {
-                    "id": 1055,
-                    "question_id": 1010,
+                    "id": 77,
+                    "question_id": 30,
                     "content": "Hibernate and Jackson",
                     "is_correct": false
                 },
                 {
-                    "id": 1056,
-                    "question_id": 1010,
+                    "id": 78,
+                    "question_id": 30,
                     "content": "Disabling caching and manual restarts",
                     "is_correct": false
                 },
                 {
-                    "id": 1057,
-                    "question_id": 1010,
+                    "id": 79,
+                    "question_id": 30,
                     "content": "Jenkings and Docker",
                     "is_correct": false
                 },
                 {
-                    "id": 1058,
-                    "question_id": 1010,
+                    "id": 80,
+                    "question_id": 30,
                     "content": "Disabling caching and automatic restarts",
                     "is_correct": true
                 }
@@ -347,49 +347,49 @@
         {
             "id": 31,
             "content": "Which of the following is not a Spring Bean scope?",
-            "test_id": 1,
+            "test_id": 4,
             "questionTypeId": 1,
             "difficulty": 1,
             "answers": [
                 {
-                    "id": 1055,
-                    "question_id": 1010,
+                    "id": 81,
+                    "question_id": 31,
                     "content": "singleton scope",
                     "is_correct": false
                 },
                 {
-                    "id": 1056,
-                    "question_id": 1010,
+                    "id": 82,
+                    "question_id": 31,
                     "content": "prototype scope",
                     "is_correct": false
                 },
                 {
-                    "id": 1057,
-                    "question_id": 1010,
+                    "id": 83,
+                    "question_id": 31,
                     "content": "parameter scope",
                     "is_correct": true
                 },
                 {
-                    "id": 1058,
-                    "question_id": 1010,
+                    "id": 84,
+                    "question_id": 31,
                     "content": "request scope",
                     "is_correct": false
                 }, 
                 {
-                    "id": 1059,
-                    "question_id": 1010,
+                    "id": 85,
+                    "question_id": 31,
                     "content": "session scope",
                     "is_correct": false
                 }, 
                 {
-                    "id": 1060,
-                    "question_id": 1010,
+                    "id": 86,
+                    "question_id": 31,
                     "content": "global session scope",
                     "is_correct": false
                 },
                 {                 
-                    "id": 1060,
-                    "question_id": 1010,
+                    "id": 87,
+                    "question_id": 31,
                     "content": "application scope",
                     "is_correct": false
                 }
@@ -400,31 +400,31 @@
         {
             "id": 32,
             "content": "What is the ApplicationContext?",
-            "test_id": 1,
+            "test_id": 4,
             "questionTypeId": 1,
             "difficulty": 1,
             "answers": [
                 {
-                    "id": 1055,
-                    "question_id": 1010,
-                    "content": "The main feature of the Context module that represents the Spring IoC container. It is used to instantiate, configure, and assemble beans.",
+                    "id": 88,
+                    "question_id": 32,
+                    "content": "The main feature of the Context sub-module that represents the Spring IoC container. It is used to instantiate, configure, and assemble beans.",
                     "is_correct": true
                 },
                 {
-                    "id": 1056,
-                    "question_id": 1010,
+                    "id": 89,
+                    "question_id": 32,
                     "content": "A module which provides a powerful expression language which can be used to query and manipulate an object graph at runtime.",
                     "is_correct": false
                 },
                 {
-                    "id": 1057,
-                    "question_id": 1010,
+                    "id": 90,
+                    "question_id": 32,
                     "content": "A module which provides an implementation for Spring MVC.",
                     "is_correct": false
                 },
                 {
-                    "id": 1058,
-                    "question_id": 1010,
+                    "id": 91,
+                    "question_id": 32,
                     "content": "A module which provides a layer of abstraction for mapping implementations for JAXB, Castor, XMLBeans, JiBX, and XStream",
                     "is_correct": false
                 } 
@@ -432,6 +432,112 @@
             ],
             "points": 2
             
+        }, 
+        {
+            "id": 33,
+            "content": "What is Inversion of Control?",
+            "test_id": 4,
+            "questionTypeId": 1,
+            "difficulty": 1,
+            "answers": [
+                {
+                    "id": 92,
+                    "question_id": 33,
+                    "content": "A design principle of giving control over aspects of the software to a framework",
+                    "is_correct": false
+                },
+                {
+                    "id": 93,
+                    "question_id": 33,
+                    "content": "The process of giving control of configuration to a framework",
+                    "is_correct": false
+                },
+                {
+                    "id": 94,
+                    "question_id": 33,
+                    "content": "When control over writing code is given to an AI framework",
+                    "is_correct": false
+                },
+                {
+                    "id": 95,
+                    "question_id": 33,
+                    "content": "A design principle in which control over certain parts of object-oriented design is inverted to achieve loose coupling.",
+                    "is_correct": true
+                } 
+
+            ],
+            "points": 2
+            
+        },
+        {
+            "id": 34,
+            "content": "What is Dependency Injection?",
+            "test_id": 4,
+            "questionTypeId": 1,
+            "difficulty": 1,
+            "answers": [
+                {
+                    "id": 96,
+                    "question_id": 34,
+                    "content": "A design pattern that removes dependencies of a program by providing the configuration in an external source.",
+                    "is_correct": true
+                },
+                {
+                    "id": 97,
+                    "question_id": 34,
+                    "content": "The pattern of injecting dependencies show different parts of a program can share data and business logic",
+                    "is_correct": false
+                },
+                {
+                    "id": 98,
+                    "question_id": 34,
+                    "content": "A way of creating loose coupling between Spring beans",
+                    "is_correct": false
+                },
+                {
+                    "id": 99,
+                    "question_id": 34,
+                    "content": "A design principle of taking code an an object needs and injecting it into the constructor of the class",
+                    "is_correct": false
+                } 
+
+            ],
+            "points": 2  
+        }, 
+        {
+            "id": 35,
+            "content": "Which of the following are two methods of Dependency Injection?",
+            "test_id": 4,
+            "questionTypeId": 1,
+            "difficulty": 1,
+            "answers": [
+                {
+                    "id": 100,
+                    "question_id": 35,
+                    "content": "Parameter and Application injection",
+                    "is_correct": false
+                },
+                {
+                    "id": 101,
+                    "question_id": 35,
+                    "content": "Custructor and Setter Injection",
+                    "is_correct": true
+                },
+                {
+                    "id": 102,
+                    "question_id": 35,
+                    "content": "Spring and AOP injection",
+                    "is_correct": false
+                },
+                {
+                    "id": 103,
+                    "question_id": 35,
+                    "content": "Hibernate and Jackson injection",
+                    "is_correct": false
+                } 
+
+            ],
+            "points": 2  
         }
     ]
 }
