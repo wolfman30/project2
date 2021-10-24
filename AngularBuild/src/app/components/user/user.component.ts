@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from 'src/app/services/user.service'; 
+import { MessagingService } from 'src/app/services/messaging.service'; 
 import { User } from 'src/app/models/userClass'; 
 import { HttpClient, HttpHeaders} from '@angular/common/http';
 import { Router } from '@angular/router'; 
@@ -10,7 +11,7 @@ import users from 'src/data/users.json';
   selector: 'app-user',
   templateUrl: './user.component.html',
   styleUrls: ['./user.component.css'], 
-  providers: [UserService]
+  providers: [UserService, MessagingService]
 })
 export class UserComponent implements OnInit 
 {
@@ -29,16 +30,30 @@ export class UserComponent implements OnInit
     })
   }
 
+  LexhttpOptions = 
+  {
+    headers: new HttpHeaders
+    (
+      {
+        'Content-type': 'application/json', 
+        'SessionId': '75983749823'
+      }
+    )
+  }
+
+  lex_url = "http://localhost:8000/bot/converse/75983749823"; 
   insert_user_url = 'http://localhost:8000/user/create-or-update'; 
   get_login_creds_url =  'http://localhost:8000/user/login-attempt'; 
 
-  constructor(private userService: UserService, private http:HttpClient, private router: Router) { }
+  constructor(private userService: UserService, private http:HttpClient, private router: Router, private messageService: MessagingService) { }
 
   ngOnInit(): void 
   {
     this.usersContainer = this.userService.getAll(); 
     this.userName = this.usersContainer[0].id; 
-    this.loadUsers(this.userName); 
+    this.loadUsers(this.userName);
+    
+    this.messageService.messageLex(); 
   }
 
   loadUsers(userName: string)
