@@ -15,13 +15,12 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping(path = "/user")
 public class UserController {
 
-    private UserRepository userRepository;
+    UserService userService;
 
     @Autowired
-    private void setUserRepository(UserRepository userRepository){
-        this.userRepository = userRepository;
+    private void setUserService(UserService userService){
+        this.userService = userService;
     }
-
 
     // path: BASEURL/user/create-or-update/
     //
@@ -34,17 +33,7 @@ public class UserController {
             produces = MediaType.APPLICATION_JSON_VALUE
     )
     public ResponseEntity<User> createOrUpdate(@RequestBody User user){
-        try{
-            System.out.println(user.toString());
-            userRepository.save(user);
-            return new ResponseEntity<>(user, HttpStatus.OK);
-        }catch(JDBCException | DataIntegrityViolationException e){
-            e.printStackTrace();
-            return new ResponseEntity<>(HttpStatus.CONFLICT);
-        }catch (Exception e){
-            e.printStackTrace();
-            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
-        }
+        return userService.createOrUpdate(user);
     }
 
 
@@ -61,24 +50,7 @@ public class UserController {
             produces = MediaType.APPLICATION_JSON_VALUE
     )
     public ResponseEntity<User> loginAttempt(@RequestBody User user) {
-        try {
-            HttpHeaders headers = new HttpHeaders();
-            headers.add("Content-Type", "application/json");
-
-            System.out.println(user.getUsername());
-            String username = user.getUsername();
-            String password = user.getPassword();
-
-            User login = userRepository.findByUsernameIgnoreCaseAndPassword(username, password);
-
-            if (login != null) {
-                return new ResponseEntity<>(login, HttpStatus.OK);
-            }
-            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-        }catch(Exception e){
-            e.printStackTrace();
-            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
-        }
+        return userService.loginAttempt(user);
     }
 
 }
