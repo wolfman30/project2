@@ -85,10 +85,24 @@ public class BotService {
         switch(interaction.getIntent()){
             case("TellJoke"):
                 return tellJoke(interaction);
+            case("UserAsksHowAreYou"):
+                return howAreYou(interaction);
             default:
                 return interaction;
         }
 
+    }
+
+    private Interaction howAreYou(Interaction interaction) {
+        String feeling = interaction.getSlotValue("UserFeeling");
+        if(feeling.equals("Good")){
+            interaction.addToBotMessages("I'm glad to hear that!");
+        }else if(feeling.equals("Bad")) {
+            interaction.addToBotMessages("I'm sorry to hear that.");
+        }else{
+            interaction.addToBotMessages("Okay");
+        }
+        return interaction;
     }
 
     private Interaction tellJoke(Interaction interaction) {
@@ -121,10 +135,15 @@ public class BotService {
             Map<String, Slot> slots = response.sessionState().intent().slots();
             for(String s : slots.keySet()){
                 Slot slot = slots.get(s);
-                if(slot!=null)
+                log.info("Found slot value: "+s);
+                if(slot!=null) {
+                    log.info("Adding slot " + s + " with value " + slot.value().interpretedValue());
                     interaction.addToSlots(s, slot.value().interpretedValue());
-                else
+                }
+                else {
+                    log.info("Indeterminate data. Adding null to slot "+ slot);
                     interaction.addToSlots(s, null);
+                }
             }
 
             // Add Intent to the interaction
