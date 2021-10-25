@@ -45,6 +45,7 @@
 
 <mat-card id="pal-container">
     <h1>PAL</h1>
+    <textarea readonly="readonly" name="conversation" rows="10" cols="80"></textarea>
     <div *ngIf="display">
         <h2>PAL: {{parsedLexResponse.currentBotMessage}}</h2>
     </div>
