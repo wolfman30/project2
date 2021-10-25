@@ -17,3 +17,10 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     gap: 2.5em; 
     justify-content: center; 
 }
+
+.toolbar
+{
+    display: flex;  
+    gap: 10em; 
+    margin: 0 auto; 
+}

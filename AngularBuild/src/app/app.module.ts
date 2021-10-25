@@ -16,7 +16,9 @@ import { UserComponent } from './components/user/user.component';
 import { MessagingComponent } from './components/messaging/messaging.component'; 
 import { userList } from './models/userList';
 import { TestHistoryComponent } from './components/test-history/test-history.component';
-import { AuthGuard } from './auth/auth.guard'; 
+import { AuthGuard } from './auth/auth.guard';
+import { HeaderComponent } from './components/header/header.component';
+import { FooterComponent } from './components/footer/footer.component'; 
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { AuthGuard } from './auth/auth.guard';
     ResultComponent,
     UserComponent,
     MessagingComponent,
-    TestHistoryComponent
+    TestHistoryComponent,
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
