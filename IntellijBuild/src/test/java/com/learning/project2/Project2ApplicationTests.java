@@ -1,5 +1,7 @@
 package com.learning.project2;
 
+import com.learning.project2.web.lex.BotService;
+import com.learning.project2.web.lex.models.Interaction;
 import com.learning.project2.web.test.models.TestAnswer;
 import com.learning.project2.web.test.models.history.TestHistory;
 import com.learning.project2.web.test.models.history.TestHistoryAnswerGiven;
@@ -19,6 +21,7 @@ import org.springframework.http.ResponseEntity;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.assertNotNull;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.isNotNull;
 import static org.mockito.Mockito.*;
@@ -92,6 +95,16 @@ class Project2ApplicationTests {
         actual = testHistoryService.submitTest(testHistory);
 
         assertEquals(expected, actual);
+    }
+
+    public void botResponse() {
+        BotService botService = new BotService();
+        botService.init();
+        Interaction interaction = new Interaction();
+
+        Interaction result = botService.converse(interaction);
+
+        assertNotNull(result);
     }
 
 }
