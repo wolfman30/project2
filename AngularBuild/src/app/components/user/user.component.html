@@ -34,15 +34,26 @@
     </mat-card-footer>
 </mat-card>
 
+
 <div class="row buttons">
     <button mat-raised-button color="primary" (click)="takeTest()">Take Test</button>
     <button mat-raised-button color="primary" (click)="getTestHistory()">View Test History</button>
+    <div *ngIf="loading">
+        <h3>Loading: please wait</h3> <mat-spinner></mat-spinner>
+    </div>
 </div>
 
 <mat-card id="pal-container">
-    <h2>PAL</h2>
-    <textarea readonly="readonly" name="conversation" rows="10" cols="80">{{lexResponse}}</textarea>
-    <span><input type="text" size="60" name="message" style="line-height: 2.0em;" enterkeyhint=""/>
-    <button type="button" style="line-height: 2em;">Send</button></span>
+    <h1>PAL</h1>
+    <div *ngIf="display">
+        <h2>PAL: {{parsedLexResponse.currentBotMessage}}</h2>
+    </div>
+    <span>
+        <mat-form-field appearance="fill">
+            <mat-label>Write your message to PAL</mat-label>
+            <input size="60" name="message" style="line-height: 1em;" enterkeyhint="" matInput [formControl]="userMessage"/>
+        </mat-form-field>
+        <button mat-raised-button color="primary" style="line-height: 2em;" (click)="talkToLex(userMessage.value)">Send</button>
+    </span>
 </mat-card>
 

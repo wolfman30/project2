@@ -57,10 +57,10 @@
           <button (click)="register();" mat-raised-button color="primary">Create Profile</button>
   
         </mat-card>
-        <div *ngIf="response == 'successful-registration'">
+        <div id="successful-registration" *ngIf="response == 'successful-registration'">
           <h3>Successfull Registered! You can log in now!</h3>
         </div>
-        <div *ngIf="response == 'registration-error'">
+        <div id="already-registered" *ngIf="response == 'registration-error'">
           <h3>You are already registered. Please log in.</h3>
         </div>
     </mat-tab>
@@ -94,7 +94,7 @@
         <button mat-raised-button color="primary" (click)="login()">Log In</button>
 
         </mat-card>
-        <div *ngIf="response == 'error'">
+        <div id="wrong-creds" *ngIf="response == 'error'">
           <h3>Oops! Wrong username or password!</h3>
         </div>
     </mat-tab>

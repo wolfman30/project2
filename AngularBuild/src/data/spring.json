@@ -538,6 +538,64 @@
 
             ],
             "points": 2  
+        }, 
+        {
+            "id": 36,
+            "content": "What is declarative programming?",
+            "test_id": 4,
+            "questionTypeId": 1,
+            "difficulty": 1,
+            "answers": [
+                {
+                    "id": 104,
+                    "question_id": 36,
+                    "content": "a programming paradigm that declares what and how the code implements the solution",
+                    "is_correct": false
+                },
+                {
+                    "id": 105,
+                    "question_id": 36,
+                    "content": "the ability to write code that declares how to the code implements a solution rather than what is implemented",
+                    "is_correct": false
+                },
+                {
+                    "id": 106,
+                    "question_id": 36,
+                    "content": "the ability to write code that says (declares) what we want it to do instead of how to do it",
+                    "is_correct": true
+                },
+                {
+                    "id": 107,
+                    "question_id": 36,
+                    "content": "a programming paradigm where code is a series of instructions for the computer to execute",
+                    "is_correct": false
+                } 
+
+            ],
+            "points": 2  
+        }, 
+        {
+            "id": 37,
+            "content": "Spring is written in C#?",
+            "test_id": 4,
+            "questionTypeId": 1,
+            "difficulty": 1,
+            "answers": [
+                {
+                    "id": 108,
+                    "question_id": 37,
+                    "content": "True",
+                    "is_correct": false
+                },
+                {
+                    "id": 109,
+                    "question_id": 37,
+                    "content": "False",
+                    "is_correct": true
+                }
+
+            ],
+            "points": 2  
         }
     ]
 }

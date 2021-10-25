@@ -24,3 +24,9 @@ span
     width: 50%; 
     margin-left: 25%; 
 }
+
+#loading
+{
+    display: flex; 
+    justify-content: center; 
+}

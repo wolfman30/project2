@@ -35,6 +35,10 @@
 <mat-card style="display: flex; justify-content: center;">
     <button mat-raised-button color="primary" (click)="viewTestHistory()">View Test History</button>
 </mat-card>
+<div id="loading" *ngIf="loading">
+    <h3>Loading: please wait</h3> <mat-spinner></mat-spinner>
+</div>
+
 
 
 

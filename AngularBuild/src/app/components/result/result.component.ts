@@ -18,6 +18,7 @@ export class ResultComponent implements OnInit
 {
   @Input() data: any; 
 
+  loading: boolean = false; 
   questions: any = localStorage.getItem('completed-quiz'); 
   parsedQuestions: any = JSON.parse(this.questions); 
   userData: any = sessionStorage.getItem("userData"); 
@@ -185,6 +186,7 @@ export class ResultComponent implements OnInit
 
   viewTestHistory()
   {
+    this.loading = true; 
     let url = `http://localhost:8000/test/get_history/user/${this.parsedUserData.id}`; 
     this.http.get(url, this.httpOptions).subscribe
     (

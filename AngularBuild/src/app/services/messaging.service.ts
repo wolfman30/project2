@@ -13,15 +13,14 @@ lexResponse: any;
     headers: new HttpHeaders
     (
       {
-        'Content-type': 'application/json', 
-        'SessionId': '75983749823'
+        'Content-type': 'application/json'
       }
     )
   }
   messageLex()
   {
-    let url = `http://localhost:8000/bot/converse/75983749823`; 
-    this.http.post(url, {'greeting': "hello"}, this.lexHttpOptions).subscribe
+    let url = "http://localhost:8000/bot/converse/"; 
+    this.http.post(url, {"userMessages": ["hello"]}, this.lexHttpOptions).subscribe
     (
       (response) =>
       {

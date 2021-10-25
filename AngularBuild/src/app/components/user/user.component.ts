@@ -3,6 +3,7 @@ import { UserService } from 'src/app/services/user.service';
 import { MessagingService } from 'src/app/services/messaging.service'; 
 import { User } from 'src/app/models/userClass'; 
 import { HttpClient, HttpHeaders} from '@angular/common/http';
+import { FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router'; 
 import users from 'src/data/users.json'; 
 
@@ -15,7 +16,11 @@ import users from 'src/data/users.json';
 })
 export class UserComponent implements OnInit 
 {
-  lexResponse: any; 
+  display: boolean = false; 
+  userMessage = new FormControl("", [Validators.required])
+  lexResponse: any = sessionStorage.getItem("lexMessage"); 
+  parsedLexResponse: any = JSON.parse(this.lexResponse); 
+  loading: boolean = false; 
   userData: any = sessionStorage.getItem("userData"); 
   parsedUserData: any = JSON.parse(this.userData); 
   testHistory: any; 
@@ -31,19 +36,43 @@ export class UserComponent implements OnInit
     })
   }
 
+  lexHttpOptions = 
+  {
+    headers: new HttpHeaders
+    (
+      {
+        'Content-type': 'application/json'
+      }
+    )
+  }
+
   lex_url = "http://localhost:8000/bot/converse/75983749823"; 
   insert_user_url = 'http://localhost:8000/user/create-or-update'; 
   get_login_creds_url =  'http://localhost:8000/user/login-attempt'; 
 
-  constructor(private userService: UserService, private http:HttpClient, private router: Router, private messageService: MessagingService) { }
+  constructor(private userService: UserService, private http:HttpClient, 
+              private router: Router, private messageService: MessagingService) { }
 
   ngOnInit(): void 
   {
     this.usersContainer = this.userService.getAll(); 
     this.userName = this.usersContainer[0].id; 
     this.loadUsers(this.userName);
-    
-    //this.lexResponse = this.messageService.messageLex(); 
+  }
+
+  talkToLex(message: string)
+  {
+    let url = "http://localhost:8000/bot/converse/"; 
+    this.display = true; 
+    this.http.post(url, {"userMessages": [message]}, this.lexHttpOptions)
+      .subscribe
+      (
+        (response) =>
+        {
+          sessionStorage.setItem("lexMessage", JSON.stringify(response)); 
+        }
+      );
+      
   }
 
   loadUsers(userName: string)
@@ -65,6 +94,7 @@ export class UserComponent implements OnInit
 
   getTestHistory()
   {
+    this.loading = true; 
     let url = `http://localhost:8000/test/get_history/user/${this.parsedUserData.id}`; 
     this.http.get(url, this.httpOptions).subscribe
     (
