@@ -38,3 +38,21 @@ span
     margin-top: 20px; 
     border: 2px solid rgb(40, 3, 143); 
 }
+
+#pal-message
+{
+    background: rgb(40, 3, 143); 
+    color: white; 
+    border-radius: 15px 15px 15px 1px;  
+    padding: 10px; 
+}
+
+#user-message
+{
+    display: inline-block; 
+    border: 2px solid rgb(40, 3, 143); 
+    text-align: right; 
+    color: rgb(40, 3, 143); 
+    border-radius: 15px 15px 1px 15px;  
+    padding: 10px; 
+}

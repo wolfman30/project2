@@ -16,10 +16,13 @@ import users from 'src/data/users.json';
 })
 export class UserComponent implements OnInit 
 {
+  count: number = 0; 
   display: boolean = false; 
   userMessage = new FormControl("", [Validators.required])
   lexResponse: any = sessionStorage.getItem("lexMessage"); 
-  parsedLexResponse: any = JSON.parse(this.lexResponse); 
+  parsedLexResponse: any = JSON.parse(this.lexResponse);
+  lexResponseList: any[] = [];
+  userMessageList: any[] = [];   
   loading: boolean = false; 
   userData: any = sessionStorage.getItem("userData"); 
   parsedUserData: any = JSON.parse(this.userData); 
@@ -62,16 +65,33 @@ export class UserComponent implements OnInit
 
   talkToLex(message: string)
   {
+    if (sessionStorage.getItem("lexResponse") == null)
+      this.count = 0; 
+
+    this.count++; 
+    let userMessage: any; 
+
+    if (this.count === 1)
+      userMessage = {"message": message}; 
+    else
+      userMessage = {"sessionId": this.parsedLexResponse.sessionId, "message": message}; 
+
+    this.userMessageList.push(userMessage); 
     let url = "http://localhost:8000/bot/converse/"; 
-    this.display = true; 
-    this.http.post(url, {"userMessages": [message]}, this.lexHttpOptions)
+    this.http.post(url, userMessage, this.lexHttpOptions)
       .subscribe
       (
-        (response) =>
+        async (response) =>
         {
-          sessionStorage.setItem("lexMessage", JSON.stringify(response)); 
+          
+          sessionStorage.setItem("lexMessage", JSON.stringify(response));
+          this.lexResponse = sessionStorage.getItem("lexMessage"); 
+          this.parsedLexResponse = JSON.parse(this.lexResponse);
+          this.display = true; 
+          
         }
       );
+       
       
   }
 
@@ -94,6 +114,7 @@ export class UserComponent implements OnInit
 
   getTestHistory()
   {
+    
     this.loading = true; 
     let url = `http://localhost:8000/test/get_history/user/${this.parsedUserData.id}`; 
     this.http.get(url, this.httpOptions).subscribe
@@ -104,8 +125,7 @@ export class UserComponent implements OnInit
         this.testHistory = sessionStorage.getItem("test-history");  
         this.router.navigate(['/test-history']); 
       }
-    )
-    
+    ); 
   }
 
 }

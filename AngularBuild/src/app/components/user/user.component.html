@@ -1,39 +1,55 @@
 <app-navbar></app-navbar>
 <h1 class="greeting">Hello <span>{{parsedUserData.firstName}} {{parsedUserData.lastName}}</span></h1>
 
-<h2 id="intro">Here is your information: </h2>
+<div class="row">
+    <div class="col">
+        <mat-card>
+            <h2>Username: <span>{{parsedUserData.username}}</span></h2>
+        </mat-card>
 
-<mat-card class="row">
-    
-    <mat-card>
-        <h2>Username: <span>{{parsedUserData.username}}</span></h2>
-        <mat-card-footer>
-            <mat-progress-bar mode="indeterminate"></mat-progress-bar>
-        </mat-card-footer>
+
+        <mat-card>
+            <h2>Password: <span>{{parsedUserData.password}}</span></h2>
+        </mat-card>
+
+
+        <mat-card>
+            <h2>Email: <span>{{parsedUserData.email}}</span></h2>
+        </mat-card>
+
+        <mat-card>
+
+            <h2>Date Joined: <span>{{parsedUserData.dateJointed.slice(0, 10)}}&nbsp;{{parsedUserData.dateJointed.slice(11, 16)}}</span></h2>
+
+        </mat-card>
+    </div>
+    <mat-card id="pal-container">
+        <h1>PAL</h1>
+        <!--<textarea readonly="readonly" name="conversation" rows="10" cols="80">{{lexResponse}}</textarea>-->
+        <div *ngIf="display">
+            <div *ngFor="let message of userMessageList; let i = index;">
+                <h2 id="user-message">YOU: {{userMessageList[i].message}}</h2>
+                <div *ngIf="parsedLexResponse != null">
+                    <h2 id="pal-message">PAL: {{parsedLexResponse.message}}</h2>
+                </div>
+                
+            </div>
+            
+        </div>
+        <span>
+            <mat-form-field appearance="fill">
+                <mat-label>Write your message to PAL</mat-label>
+                <input size="60" name="message" style="line-height: 1em;" enterkeyhint="" matInput [formControl]="userMessage"/>
+            </mat-form-field>
+            <button mat-raised-button color="primary" style="line-height: 2em;" (click)="talkToLex(userMessage.value)">Send</button>
+        </span>
+                    <!--
+                    <mat-card-footer>
+                <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+                </mat-card-footer>
+            -->
     </mat-card>
-    <mat-card>
-        <h2>Password: <span>{{parsedUserData.password}}</span></h2>
-        <mat-card-footer>
-            <mat-progress-bar mode="indeterminate"></mat-progress-bar>
-        </mat-card-footer>
-    </mat-card>
-    <mat-card>
-        <h2>Email: <span>{{parsedUserData.email}}</span></h2>
-        <mat-card-footer>
-            <mat-progress-bar mode="indeterminate"></mat-progress-bar>
-        </mat-card-footer>
-    </mat-card>
-
-</mat-card>
-
-<mat-card>
-
-    <h2>Date Joined: <span>{{parsedUserData.dateJointed.slice(0, 10)}}&nbsp;{{parsedUserData.dateJointed.slice(11, 16)}}</span></h2>
-    <mat-card-footer>
-        <mat-progress-bar mode="indeterminate"></mat-progress-bar>
-    </mat-card-footer>
-</mat-card>
-
+</div>
 
 <div class="row buttons">
     <button mat-raised-button color="primary" (click)="takeTest()">Take Test</button>
@@ -43,18 +59,5 @@
     </div>
 </div>
 
-<mat-card id="pal-container">
-    <h1>PAL</h1>
-    <textarea readonly="readonly" name="conversation" rows="10" cols="80"></textarea>
-    <div *ngIf="display">
-        <h2>PAL: {{parsedLexResponse.currentBotMessage}}</h2>
-    </div>
-    <span>
-        <mat-form-field appearance="fill">
-            <mat-label>Write your message to PAL</mat-label>
-            <input size="60" name="message" style="line-height: 1em;" enterkeyhint="" matInput [formControl]="userMessage"/>
-        </mat-form-field>
-        <button mat-raised-button color="primary" style="line-height: 2em;" (click)="talkToLex(userMessage.value)">Send</button>
-    </span>
-</mat-card>
+
 
