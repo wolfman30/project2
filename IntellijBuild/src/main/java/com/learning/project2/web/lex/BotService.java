@@ -2,6 +2,7 @@ package com.learning.project2.web.lex;
 
 import com.learning.project2.web.lex.models.Interaction;
 import lombok.Getter;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang.ObjectUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -24,6 +25,7 @@ import java.util.UUID;
 import static com.learning.project2.web.lex.LexTest.getRecognizeTextRequest;
 
 @Service
+@Slf4j
 public class BotService {
 
     @Value("${aws.lex.key}")
@@ -49,7 +51,7 @@ public class BotService {
 
     @PostConstruct
     public void init(){
-        System.out.println("Initializing bot");
+        log.info("Initializing bot from yaml file");
         try {
             awsCreds = AwsBasicCredentials.create(key, secret);
             awsCredentialsProvider = StaticCredentialsProvider.create(awsCreds);
@@ -105,6 +107,10 @@ public class BotService {
             RecognizeTextRequest recognizeTextRequest =
                     getRecognizeTextRequest(botId, botAliasId, localeId, interaction.getSessionId(), interaction.getCurrentUserMessage());
             RecognizeTextResponse response = lexV2Client.recognizeText(recognizeTextRequest);
+
+            // Log bot response
+            log.info("Request sent to bot with id: "+interaction.getSessionId());
+            log.info(response.toString());
 
             // Add bot's response to the interaction
             for(Message m : response.messages()){
