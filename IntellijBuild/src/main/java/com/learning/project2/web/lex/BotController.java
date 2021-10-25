@@ -8,10 +8,9 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
+@CrossOrigin(origins = WebLinks.ANGULAR_ORIGIN)
 @RestController
 @RequestMapping(path = "/bot")
-@CrossOrigin(origins = WebLinks.ANGULAR_ORIGIN)
 public class BotController {
 
     private BotService botService;
@@ -27,7 +26,8 @@ public class BotController {
             consumes = MediaType.APPLICATION_JSON_VALUE,
             produces = MediaType.APPLICATION_JSON_VALUE
     )
-    public ResponseEntity<Interaction> converse(@RequestBody Interaction exchange) {
+    public ResponseEntity<Interaction> converse(@RequestBody Interaction exchange)
+    {
 
         Interaction ex;
         ex = botService.converse(exchange);
