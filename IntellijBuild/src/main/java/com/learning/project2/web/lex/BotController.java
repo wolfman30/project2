@@ -3,6 +3,7 @@ package com.learning.project2.web.lex;
 
 import com.learning.project2.web.WebLinks;
 import com.learning.project2.web.lex.models.Interaction;
+import com.learning.project2.web.lex.models.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -26,14 +27,20 @@ public class BotController {
             consumes = MediaType.APPLICATION_JSON_VALUE,
             produces = MediaType.APPLICATION_JSON_VALUE
     )
-    public ResponseEntity<Interaction> converse(@RequestBody Interaction exchange)
+    public ResponseEntity<Response> converse(@RequestBody Response input)
     {
 
+        Interaction in = new Interaction();
+        in.addToUserMessages(input.getMessage());
+        in.setSessionId(input.getSessionId());
+
         Interaction ex;
-        ex = botService.converse(exchange);
+
+        ex = botService.converse(in);
 
         if(ex!=null){
-            return new ResponseEntity<>(ex, HttpStatus.OK);
+            Response response = new Response(in.getSessionId(), in.getCurrentBotMessage());
+            return new ResponseEntity<>(response, HttpStatus.OK);
         }
         return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
     }
