@@ -22,7 +22,7 @@ public class BotController {
 
     @CrossOrigin(origins = WebLinks.ANGULAR_ORIGIN)
     @PostMapping(
-            value = {"converse/{sessionId}", "converse"},
+            value = {"converse/", "converse"},
             consumes = MediaType.APPLICATION_JSON_VALUE,
             produces = MediaType.APPLICATION_JSON_VALUE
     )
