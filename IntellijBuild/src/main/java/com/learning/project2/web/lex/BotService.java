@@ -2,6 +2,7 @@ package com.learning.project2.web.lex;
 
 import com.learning.project2.web.lex.models.Interaction;
 import lombok.Getter;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang.ObjectUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -24,6 +25,7 @@ import java.util.UUID;
 import static com.learning.project2.web.lex.LexTest.getRecognizeTextRequest;
 
 @Service
+@Slf4j
 public class BotService {
 
     @Value("${aws.lex.key}")
@@ -124,8 +126,12 @@ public class BotService {
             // Add Intent to the interaction
             interaction.setIntent(response.sessionState().intent().name());
 
-            //Add State
+            // Add State
             interaction.setState(response.sessionState().intent().state().toString());
+
+            // Debug
+            log.info("\nFull Response:\n"+response.toString());
+            log.info("\nTruncated Response Obj:\n"+interaction.toString());
 
             return interaction;
 
