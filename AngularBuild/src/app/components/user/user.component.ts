@@ -88,6 +88,7 @@ export class UserComponent implements OnInit
           this.lexResponse = sessionStorage.getItem("lexMessage"); 
           this.parsedLexResponse = JSON.parse(this.lexResponse);
           this.display = true; 
+          this.userMessage.reset(); 
           
         }
       );

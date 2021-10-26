@@ -2,6 +2,12 @@ span
 {
     color: rgb(40, 3, 143) 
 }
+
+mat-tab-group
+{
+    border: 2px solid rgb(40, 3, 143); 
+    padding: 30px; 
+}
 .greeting
 {
     margin-top: 2%; 
@@ -17,7 +23,7 @@ span
 
 .buttons
 {
-    margin-top: 15px; 
+    margin-top: 22px; 
 }
 
 #intro
@@ -33,7 +39,6 @@ span
     flex-direction: column;
     align-items: center; 
     gap: 2em;  
-    width: 1000px; 
     margin-left: 20%;  
     margin-top: 20px; 
     border: 2px solid rgb(40, 3, 143); 
@@ -55,4 +60,17 @@ span
     color: rgb(40, 3, 143); 
     border-radius: 15px 15px 1px 15px;  
     padding: 10px; 
+}
+
+#center
+{
+    display: flex; 
+    justify-content: center; 
+}
+
+#input
+{
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
 }
