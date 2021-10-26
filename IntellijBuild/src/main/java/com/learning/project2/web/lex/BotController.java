@@ -39,7 +39,7 @@ public class BotController {
         ex = botService.converse(in);
 
         if(ex!=null){
-            Response response = new Response(in.getSessionId(), in.getCurrentBotMessage());
+            Response response = new Response(in.getSessionId(), in.getCurrentBotMessage(), in.getUserId());
             return new ResponseEntity<>(response, HttpStatus.OK);
         }
         return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);

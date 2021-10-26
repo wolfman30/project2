@@ -12,6 +12,7 @@ import java.util.*;
 @AllArgsConstructor
 public class Interaction {
     private String sessionId;
+    private Long userId;
     private List<String> botMessages = new ArrayList<>();
     private List<String> userMessages = new ArrayList<>();
 
