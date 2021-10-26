@@ -182,8 +182,9 @@ class Project2ApplicationTests {
         // Inject the repos
         TestService testService = new TestService(mockTestRepo);
         TestHistoryService testHistoryService = new TestHistoryService(mockTestHistoryRepo, mockAnswersGivenRepo);
-
         TestController controller = new TestController(testService, testHistoryService);
+
+        BotService botService = new BotService(mockTestHistoryRepo);
 
         // Do Unit testing
 
@@ -223,5 +224,9 @@ class Project2ApplicationTests {
         );
     }
 
+    @Test
+    public void testBotObjects(){
+        Interaction interaction = new Interaction();
 
+    }
 }

@@ -8,6 +8,7 @@ import com.learning.project2.web.test.models.history.TestHistoryAnswerGiven;
 import com.learning.project2.web.test.repositories.TestHistoryRepository;
 import com.learning.project2.web.test.services.TestHistoryService;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang.ObjectUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,10 +32,9 @@ import java.util.List;
 import java.util.Map;
 import java.util.UUID;
 
-import static com.learning.project2.web.lex.LexTest.getRecognizeTextRequest;
-
 @Service
 @Slf4j
+@NoArgsConstructor
 public class BotService {
 
     @Value("${aws.lex.key}")
@@ -57,6 +57,11 @@ public class BotService {
     @Autowired
     private void setTestHistoryRepository(TestHistoryRepository testHistoryRepository){
         this.testHistoryRepository = testHistoryRepository;
+    }
+
+    public BotService(TestHistoryRepository thr){
+        this();
+        this.testHistoryRepository = thr;
     }
 
     private final Region region = Region.US_WEST_2;
@@ -207,5 +212,16 @@ public class BotService {
 
     public boolean isInitialized(){
         return (awsCredentialsProvider!=null||awsCreds!=null||lexV2Client!=null);
+    }
+
+    static private RecognizeTextRequest getRecognizeTextRequest(String botId, String botAliasId, String localeId, String sessionId, String userInput) {
+        RecognizeTextRequest recognizeTextRequest = RecognizeTextRequest.builder()
+                .botAliasId(botAliasId)
+                .botId(botId)
+                .localeId(localeId)
+                .sessionId(sessionId)
+                .text(userInput)
+                .build();
+        return recognizeTextRequest;
     }
 }

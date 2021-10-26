@@ -2,3 +2,4 @@
 IntellijBuild/src/main/resources/application.yaml
 *.yaml
 IntellijBuild/log.log
+*.log
