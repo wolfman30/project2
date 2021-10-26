@@ -27,21 +27,30 @@ public interface TestHistoryRepository extends JpaRepository<TestHistory, Long> 
             List<TestQuestion> questions = th.getTest().getTestQuestions();
             List<TestHistoryAnswerGiven> answers = th.getAnswers();
 
+            double pointsEarned=0;
+            double possiblePoints=0;
             for(TestHistoryAnswerGiven answer : answers){
                 boolean isCorrect = answer.getTestAnswer().getIsCorrect();
+
+                // Find the question that matches the answer
                 for(TestQuestion question : questions){
                     if(question.getTestAnswerList().contains(answer.getTestAnswer())){
+
+                        // If a question is found that has this as an answer
+                        // Checks for if answer is correct
+                        // then adds the points of the question
                         if(isCorrect) {
-                            score += question.getPoints();
+                            pointsEarned += question.getPoints();
                         }
+                        possiblePoints +=question.getPoints();
                         break;
                     }
                 }
-                itteration++;
             }
 
-        }
+            score+= pointsEarned/possiblePoints;
 
-        return score/itteration;
+        }
+        return score/tests.size();
     }
 }
