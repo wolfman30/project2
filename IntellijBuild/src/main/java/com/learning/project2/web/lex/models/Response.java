@@ -11,5 +11,6 @@ public class Response {
 
     private String sessionId;
     private String message;
+    private Long userId;
 
 }

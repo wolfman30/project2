@@ -1,315 +1,345 @@
-2021-10-25 13:36:14.313  INFO 15416 --- [restartedMain] c.learning.project2.Project2Application  : Starting Project2Application using Java 1.8.0_302 on DESKTOP-GTIL6SV with PID 15416 (C:\Users\erose\Desktop\Projects\Project2\project2\IntellijBuild\target\classes started by erose in C:\Users\erose\Desktop\Projects\Project2\project2\IntellijBuild)
-2021-10-25 13:36:14.313 DEBUG 15416 --- [restartedMain] c.learning.project2.Project2Application  : Running with Spring Boot v2.5.5, Spring v5.3.10
-2021-10-25 13:36:14.313  INFO 15416 --- [restartedMain] c.learning.project2.Project2Application  : No active profile set, falling back to default profiles: default
-2021-10-25 13:36:15.438  INFO 15416 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-10-25 13:36:15.438  INFO 15416 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.53]
-2021-10-25 13:36:15.469  INFO 15416 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2021-10-25 13:36:15.626  INFO 15416 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2021-10-25 13:36:16.882  INFO 15416 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2021-10-25 13:36:16.914  INFO 15416 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2021-10-25 13:36:16.945  INFO 15416 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
-2021-10-25 13:36:16.976  INFO 15416 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2021-10-25 13:36:17.054  INFO 15416 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
-2021-10-25 13:36:18.378  INFO 15416 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2021-10-25 13:36:18.409  INFO 15416 --- [restartedMain] c.learning.project2.web.lex.BotService   : Initializing bot from yaml file
-2021-10-25 13:36:19.550  INFO 15416 --- [restartedMain] c.learning.project2.Project2Application  : Started Project2Application in 5.58 seconds (JVM running for 6.388)
-2021-10-25 13:36:19.800  INFO 15416 --- [RMI TCP Connection(1)-192.168.0.100] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-10-25 13:36:53.612  INFO 15416 --- [http-nio-8000-exec-1] c.learning.project2.web.lex.BotService   : Request sent to bot with id: d2aee6c3-8aea-4ce9-b54e-b1dcdca4208b
-2021-10-25 13:36:53.613  INFO 15416 --- [http-nio-8000-exec-1] c.learning.project2.web.lex.BotService   : RecognizeTextResponse(Messages=[Message(Content=*** Sensitive Data Redacted ***, ContentType=PlainText)], SessionState=SessionState(DialogAction=DialogAction(Type=Close), Intent=Intent(Name=Welcome, Slots={}, State=Fulfilled, ConfirmationState=None), OriginatingRequestId=2c06e192-46c9-4e0a-a525-16d053d2e08d), Interpretations=[Interpretation(NluConfidence=ConfidenceScore(Score=1.0), SentimentResponse=SentimentResponse(Sentiment=NEUTRAL, SentimentScore=SentimentScore(Positive=0.15911301970481873, Negative=0.015240686945617199, Neutral=0.7283250689506531, Mixed=0.09732116013765335)), Intent=Intent(Name=Welcome, Slots={}, State=Fulfilled, ConfirmationState=None)), Interpretation(NluConfidence=ConfidenceScore(Score=0.58), SentimentResponse=SentimentResponse(Sentiment=NEUTRAL, SentimentScore=SentimentScore(Positive=0.15911301970481873, Negative=0.015240686945617199, Neutral=0.7283250689506531, Mixed=0.09732116013765335)), Intent=Intent(Name=TalkAboutSpring, Slots={})), Interpretation(SentimentResponse=SentimentResponse(Sentiment=NEUTRAL, SentimentScore=SentimentScore(Positive=0.15911301970481873, Negative=0.015240686945617199, Neutral=0.7283250689506531, Mixed=0.09732116013765335)), Intent=Intent(Name=FallbackIntent, Slots={})), Interpretation(NluConfidence=ConfidenceScore(Score=0.47), SentimentResponse=SentimentResponse(Sentiment=NEUTRAL, SentimentScore=SentimentScore(Positive=0.15911301970481873, Negative=0.015240686945617199, Neutral=0.7283250689506531, Mixed=0.09732116013765335)), Intent=Intent(Name=UserAsksHowAreYou, Slots={UserFeeling=null})), Interpretation(NluConfidence=ConfidenceScore(Score=0.41), SentimentResponse=SentimentResponse(Sentiment=NEUTRAL, SentimentScore=SentimentScore(Positive=0.15911301970481873, Negative=0.015240686945617199, Neutral=0.7283250689506531, Mixed=0.09732116013765335)), Intent=Intent(Name=HelloWorld, Slots={}))], SessionId=d2aee6c3-8aea-4ce9-b54e-b1dcdca4208b)
-2021-10-25 16:07:36.999  WARN 15416 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h28m18s993ms589µs400ns).
-2021-10-25 16:53:33.204  INFO 15416 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2021-10-25 16:53:33.214  INFO 15416 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2021-10-25 17:08:10.072  INFO 19004 --- [restartedMain] c.learning.project2.Project2Application  : Starting Project2Application using Java 1.8.0_302 on DESKTOP-GTIL6SV with PID 19004 (C:\Users\erose\Desktop\Projects\Project2\project2\IntellijBuild\target\classes started by erose in C:\Users\erose\Desktop\Projects\Project2\project2\IntellijBuild)
-2021-10-25 17:08:10.074 DEBUG 19004 --- [restartedMain] c.learning.project2.Project2Application  : Running with Spring Boot v2.5.5, Spring v5.3.10
-2021-10-25 17:08:10.074  INFO 19004 --- [restartedMain] c.learning.project2.Project2Application  : No active profile set, falling back to default profiles: default
-2021-10-25 17:08:11.349  INFO 19004 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-10-25 17:08:11.349  INFO 19004 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.53]
-2021-10-25 17:08:11.379  INFO 19004 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2021-10-25 17:08:11.540  INFO 19004 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2021-10-25 17:08:12.312  INFO 19004 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2021-10-25 17:08:12.347  INFO 19004 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2021-10-25 17:08:12.383  INFO 19004 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
-2021-10-25 17:08:12.414  INFO 19004 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2021-10-25 17:08:12.498  INFO 19004 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
-2021-10-25 17:08:13.221  INFO 19004 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2021-10-25 17:08:13.248  INFO 19004 --- [restartedMain] c.learning.project2.web.lex.BotService   : Initializing bot from yaml file
-2021-10-25 17:08:14.375  INFO 19004 --- [restartedMain] c.learning.project2.Project2Application  : Started Project2Application in 4.655 seconds (JVM running for 5.603)
-2021-10-25 17:08:14.814  INFO 19004 --- [RMI TCP Connection(2)-192.168.0.100] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-10-25 17:08:39.236  INFO 19004 --- [http-nio-8000-exec-1] c.learning.project2.web.lex.BotService   : Request sent to bot with id: 09c42f78-ee39-4de4-adf5-c1502f266fd5
-2021-10-25 17:08:39.237  INFO 19004 --- [http-nio-8000-exec-1] c.learning.project2.web.lex.BotService   : RecognizeTextResponse(Messages=[Message(Content=*** Sensitive Data Redacted ***, ContentType=PlainText)], SessionState=SessionState(DialogAction=DialogAction(Type=ElicitSlot, SlotToElicit=UserFeeling), Intent=Intent(Name=UserAsksHowAreYou, Slots={UserFeeling=null}, State=InProgress, ConfirmationState=None), OriginatingRequestId=a13ba491-533d-443b-80c8-1ae8ab821ab2), Interpretations=[Interpretation(NluConfidence=ConfidenceScore(Score=1.0), SentimentResponse=SentimentResponse(Sentiment=NEUTRAL, SentimentScore=SentimentScore(Positive=0.001959556946530938, Negative=0.046040404587984085, Neutral=0.9511720538139343, Mixed=8.279564790427685E-4)), Intent=Intent(Name=UserAsksHowAreYou, Slots={UserFeeling=null}, State=InProgress, ConfirmationState=None)), Interpretation(NluConfidence=ConfidenceScore(Score=0.6), SentimentResponse=SentimentResponse(Sentiment=NEUTRAL, SentimentScore=SentimentScore(Positive=0.001959556946530938, Negative=0.046040404587984085, Neutral=0.9511720538139343, Mixed=8.279564790427685E-4)), Intent=Intent(Name=Welcome, Slots={})), Interpretation(NluConfidence=ConfidenceScore(Score=0.55), SentimentResponse=SentimentResponse(Sentiment=NEUTRAL, SentimentScore=SentimentScore(Positive=0.001959556946530938, Negative=0.046040404587984085, Neutral=0.9511720538139343, Mixed=8.279564790427685E-4)), Intent=Intent(Name=TellMeAbout, Slots={topic=null})), Interpretation(NluConfidence=ConfidenceScore(Score=0.51), SentimentResponse=SentimentResponse(Sentiment=NEUTRAL, SentimentScore=SentimentScore(Positive=0.001959556946530938, Negative=0.046040404587984085, Neutral=0.9511720538139343, Mixed=8.279564790427685E-4)), Intent=Intent(Name=HowAmIDoing, Slots={})), Interpretation(SentimentResponse=SentimentResponse(Sentiment=NEUTRAL, SentimentScore=SentimentScore(Positive=0.001959556946530938, Negative=0.046040404587984085, Neutral=0.9511720538139343, Mixed=8.279564790427685E-4)), Intent=Intent(Name=FallbackIntent, Slots={}))], SessionId=09c42f78-ee39-4de4-adf5-c1502f266fd5)
-2021-10-25 17:09:04.667  INFO 19004 --- [http-nio-8000-exec-2] c.learning.project2.web.lex.BotService   : Request sent to bot with id: 09c42f78-ee39-4de4-adf5-c1502f266fd5
-2021-10-25 17:09:04.670  INFO 19004 --- [http-nio-8000-exec-2] c.learning.project2.web.lex.BotService   : RecognizeTextResponse(SessionState=SessionState(DialogAction=DialogAction(Type=Close), Intent=Intent(Name=UserAsksHowAreYou, Slots={UserFeeling=Slot(Value=Value(OriginalValue=Bad, InterpretedValue=Bad, ResolvedValues=[Bad, Neutral]))}, State=ReadyForFulfillment, ConfirmationState=None), ActiveContexts=[ActiveContext(Name=HowIsUser, TimeToLive=ActiveContextTimeToLive(TimeToLiveInSeconds=360, TurnsToLive=20), ContextAttributes=*** Sensitive Data Redacted ***)], OriginatingRequestId=a13ba491-533d-443b-80c8-1ae8ab821ab2), Interpretations=[Interpretation(NluConfidence=ConfidenceScore(Score=1.0), SentimentResponse=SentimentResponse(Sentiment=NEGATIVE, SentimentScore=SentimentScore(Positive=0.006611177697777748, Negative=0.6533507704734802, Neutral=0.05373417213559151, Mixed=0.28630390763282776)), Intent=Intent(Name=UserAsksHowAreYou, Slots={UserFeeling=Slot(Value=Value(OriginalValue=Bad, InterpretedValue=Bad, ResolvedValues=[Bad, Neutral]))}, State=ReadyForFulfillment, ConfirmationState=None)), Interpretation(SentimentResponse=SentimentResponse(Sentiment=NEGATIVE, SentimentScore=SentimentScore(Positive=0.006611177697777748, Negative=0.6533507704734802, Neutral=0.05373417213559151, Mixed=0.28630390763282776)), Intent=Intent(Name=FallbackIntent, Slots={})), Interpretation(NluConfidence=ConfidenceScore(Score=0.58), SentimentResponse=SentimentResponse(Sentiment=NEGATIVE, SentimentScore=SentimentScore(Positive=0.006611177697777748, Negative=0.6533507704734802, Neutral=0.05373417213559151, Mixed=0.28630390763282776)), Intent=Intent(Name=Welcome, Slots={})), Interpretation(NluConfidence=ConfidenceScore(Score=0.58), SentimentResponse=SentimentResponse(Sentiment=NEGATIVE, SentimentScore=SentimentScore(Positive=0.006611177697777748, Negative=0.6533507704734802, Neutral=0.05373417213559151, Mixed=0.28630390763282776)), Intent=Intent(Name=TellMeAbout, Slots={topic=null})), Interpretation(NluConfidence=ConfidenceScore(Score=0.51), SentimentResponse=SentimentResponse(Sentiment=NEGATIVE, SentimentScore=SentimentScore(Positive=0.006611177697777748, Negative=0.6533507704734802, Neutral=0.05373417213559151, Mixed=0.28630390763282776)), Intent=Intent(Name=TellJoke, Slots={Topic=null}))], SessionId=09c42f78-ee39-4de4-adf5-c1502f266fd5)
-2021-10-25 17:09:04.680 ERROR 19004 --- [http-nio-8000-exec-2] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
-
-java.lang.NullPointerException: null
-	at com.learning.project2.web.lex.BotService.howAreYou(BotService.java:98) ~[classes/:na]
-	at com.learning.project2.web.lex.BotService.fulfillmentSwitchBoard(BotService.java:89) ~[classes/:na]
-	at com.learning.project2.web.lex.BotService.converse(BotService.java:77) ~[classes/:na]
-	at com.learning.project2.web.lex.BotController.converse(BotController.java:39) ~[classes/:na]
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_302]
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_302]
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_302]
-	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_302]
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-5.3.10.jar:5.3.10]
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-5.3.10.jar:5.3.10]
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.10.jar:5.3.10]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.10.jar:5.3.10]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.10.jar:5.3.10]
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.10.jar:5.3.10]
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067) ~[spring-webmvc-5.3.10.jar:5.3.10]
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963) ~[spring-webmvc-5.3.10.jar:5.3.10]
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.10.jar:5.3.10]
-	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) ~[spring-webmvc-5.3.10.jar:5.3.10]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681) ~[tomcat-embed-core-9.0.53.jar:4.0.FR]
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.10.jar:5.3.10]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764) ~[tomcat-embed-core-9.0.53.jar:4.0.FR]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.53.jar:9.0.53]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.10.jar:5.3.10]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.10.jar:5.3.10]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.10.jar:5.3.10]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.10.jar:5.3.10]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
-	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96) ~[spring-boot-actuator-2.5.5.jar:2.5.5]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.10.jar:5.3.10]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.10.jar:5.3.10]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.10.jar:5.3.10]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) [tomcat-embed-core-9.0.53.jar:9.0.53]
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540) [tomcat-embed-core-9.0.53.jar:9.0.53]
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) [tomcat-embed-core-9.0.53.jar:9.0.53]
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.53.jar:9.0.53]
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) [tomcat-embed-core-9.0.53.jar:9.0.53]
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) [tomcat-embed-core-9.0.53.jar:9.0.53]
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382) [tomcat-embed-core-9.0.53.jar:9.0.53]
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.53.jar:9.0.53]
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893) [tomcat-embed-core-9.0.53.jar:9.0.53]
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1726) [tomcat-embed-core-9.0.53.jar:9.0.53]
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.53.jar:9.0.53]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) [tomcat-embed-core-9.0.53.jar:9.0.53]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) [tomcat-embed-core-9.0.53.jar:9.0.53]
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.53.jar:9.0.53]
-	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_302]
-
-2021-10-25 17:14:48.268  INFO 19004 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2021-10-25 17:14:48.274  INFO 19004 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2021-10-25 17:14:53.683  INFO 21296 --- [restartedMain] c.learning.project2.Project2Application  : Starting Project2Application using Java 1.8.0_302 on DESKTOP-GTIL6SV with PID 21296 (C:\Users\erose\Desktop\Projects\Project2\project2\IntellijBuild\target\classes started by erose in C:\Users\erose\Desktop\Projects\Project2\project2\IntellijBuild)
-2021-10-25 17:14:53.685 DEBUG 21296 --- [restartedMain] c.learning.project2.Project2Application  : Running with Spring Boot v2.5.5, Spring v5.3.10
-2021-10-25 17:14:53.685  INFO 21296 --- [restartedMain] c.learning.project2.Project2Application  : No active profile set, falling back to default profiles: default
-2021-10-25 17:14:54.883  INFO 21296 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-10-25 17:14:54.883  INFO 21296 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.53]
-2021-10-25 17:14:54.914  INFO 21296 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2021-10-25 17:14:55.073  INFO 21296 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2021-10-25 17:14:55.788  INFO 21296 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2021-10-25 17:14:55.825  INFO 21296 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2021-10-25 17:14:55.862  INFO 21296 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
-2021-10-25 17:14:55.893  INFO 21296 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2021-10-25 17:14:55.977  INFO 21296 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
-2021-10-25 17:14:56.809  INFO 21296 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2021-10-25 17:14:56.836  INFO 21296 --- [restartedMain] c.learning.project2.web.lex.BotService   : Initializing bot from yaml file
-2021-10-25 17:14:58.019  INFO 21296 --- [restartedMain] c.learning.project2.Project2Application  : Started Project2Application in 4.684 seconds (JVM running for 5.506)
-2021-10-25 17:14:58.733  INFO 21296 --- [RMI TCP Connection(3)-192.168.0.100] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-10-25 17:15:39.380  INFO 21296 --- [http-nio-8000-exec-1] c.learning.project2.web.lex.BotService   : Request sent to bot with id: 68613f04-3e18-4e67-914e-d05e3675d2c2
-2021-10-25 17:15:39.381  INFO 21296 --- [http-nio-8000-exec-1] c.learning.project2.web.lex.BotService   : RecognizeTextResponse(Messages=[Message(Content=*** Sensitive Data Redacted ***, ContentType=PlainText)], SessionState=SessionState(DialogAction=DialogAction(Type=ElicitSlot, SlotToElicit=UserFeeling), Intent=Intent(Name=UserAsksHowAreYou, Slots={UserFeeling=null}, State=InProgress, ConfirmationState=None), OriginatingRequestId=58d52ddf-2c26-4b6e-9b5a-24494e798890), Interpretations=[Interpretation(NluConfidence=ConfidenceScore(Score=1.0), SentimentResponse=SentimentResponse(Sentiment=NEUTRAL, SentimentScore=SentimentScore(Positive=0.001959556946530938, Negative=0.046040404587984085, Neutral=0.9511720538139343, Mixed=8.279564790427685E-4)), Intent=Intent(Name=UserAsksHowAreYou, Slots={UserFeeling=null}, State=InProgress, ConfirmationState=None)), Interpretation(NluConfidence=ConfidenceScore(Score=0.6), SentimentResponse=SentimentResponse(Sentiment=NEUTRAL, SentimentScore=SentimentScore(Positive=0.001959556946530938, Negative=0.046040404587984085, Neutral=0.9511720538139343, Mixed=8.279564790427685E-4)), Intent=Intent(Name=Welcome, Slots={})), Interpretation(NluConfidence=ConfidenceScore(Score=0.55), SentimentResponse=SentimentResponse(Sentiment=NEUTRAL, SentimentScore=SentimentScore(Positive=0.001959556946530938, Negative=0.046040404587984085, Neutral=0.9511720538139343, Mixed=8.279564790427685E-4)), Intent=Intent(Name=TellMeAbout, Slots={topic=null})), Interpretation(NluConfidence=ConfidenceScore(Score=0.51), SentimentResponse=SentimentResponse(Sentiment=NEUTRAL, SentimentScore=SentimentScore(Positive=0.001959556946530938, Negative=0.046040404587984085, Neutral=0.9511720538139343, Mixed=8.279564790427685E-4)), Intent=Intent(Name=HowAmIDoing, Slots={})), Interpretation(SentimentResponse=SentimentResponse(Sentiment=NEUTRAL, SentimentScore=SentimentScore(Positive=0.001959556946530938, Negative=0.046040404587984085, Neutral=0.9511720538139343, Mixed=8.279564790427685E-4)), Intent=Intent(Name=FallbackIntent, Slots={}))], SessionId=68613f04-3e18-4e67-914e-d05e3675d2c2)
-2021-10-25 17:15:39.382  INFO 21296 --- [http-nio-8000-exec-1] c.learning.project2.web.lex.BotService   : Found slot value: UserFeeling
-2021-10-25 17:15:58.508  INFO 21296 --- [http-nio-8000-exec-2] c.learning.project2.web.lex.BotService   : Request sent to bot with id: 68613f04-3e18-4e67-914e-d05e3675d2c2
-2021-10-25 17:15:58.509  INFO 21296 --- [http-nio-8000-exec-2] c.learning.project2.web.lex.BotService   : RecognizeTextResponse(SessionState=SessionState(DialogAction=DialogAction(Type=Close), Intent=Intent(Name=UserAsksHowAreYou, Slots={UserFeeling=Slot(Value=Value(OriginalValue=Great, InterpretedValue=Good, ResolvedValues=[Good, Bad]))}, State=ReadyForFulfillment, ConfirmationState=None), ActiveContexts=[ActiveContext(Name=HowIsUser, TimeToLive=ActiveContextTimeToLive(TimeToLiveInSeconds=360, TurnsToLive=20), ContextAttributes=*** Sensitive Data Redacted ***)], OriginatingRequestId=58d52ddf-2c26-4b6e-9b5a-24494e798890), Interpretations=[Interpretation(NluConfidence=ConfidenceScore(Score=1.0), SentimentResponse=SentimentResponse(Sentiment=POSITIVE, SentimentScore=SentimentScore(Positive=0.9949328303337097, Negative=5.220627062954009E-4, Neutral=0.0031970764975994825, Mixed=0.001347963698208332)), Intent=Intent(Name=UserAsksHowAreYou, Slots={UserFeeling=Slot(Value=Value(OriginalValue=Great, InterpretedValue=Good, ResolvedValues=[Good, Bad]))}, State=ReadyForFulfillment, ConfirmationState=None)), Interpretation(SentimentResponse=SentimentResponse(Sentiment=POSITIVE, SentimentScore=SentimentScore(Positive=0.9949328303337097, Negative=5.220627062954009E-4, Neutral=0.0031970764975994825, Mixed=0.001347963698208332)), Intent=Intent(Name=FallbackIntent, Slots={})), Interpretation(NluConfidence=ConfidenceScore(Score=0.59), SentimentResponse=SentimentResponse(Sentiment=POSITIVE, SentimentScore=SentimentScore(Positive=0.9949328303337097, Negative=5.220627062954009E-4, Neutral=0.0031970764975994825, Mixed=0.001347963698208332)), Intent=Intent(Name=TellMeAbout, Slots={topic=null})), Interpretation(NluConfidence=ConfidenceScore(Score=0.57), SentimentResponse=SentimentResponse(Sentiment=POSITIVE, SentimentScore=SentimentScore(Positive=0.9949328303337097, Negative=5.220627062954009E-4, Neutral=0.0031970764975994825, Mixed=0.001347963698208332)), Intent=Intent(Name=Welcome, Slots={})), Interpretation(NluConfidence=ConfidenceScore(Score=0.52), SentimentResponse=SentimentResponse(Sentiment=POSITIVE, SentimentScore=SentimentScore(Positive=0.9949328303337097, Negative=5.220627062954009E-4, Neutral=0.0031970764975994825, Mixed=0.001347963698208332)), Intent=Intent(Name=TellJoke, Slots={Topic=null}))], SessionId=68613f04-3e18-4e67-914e-d05e3675d2c2)
-2021-10-25 17:15:58.510  INFO 21296 --- [http-nio-8000-exec-2] c.learning.project2.web.lex.BotService   : Found slot value: UserFeeling
-2021-10-25 17:15:58.522 ERROR 21296 --- [http-nio-8000-exec-2] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
-
-java.lang.NullPointerException: null
-	at com.learning.project2.web.lex.BotService.howAreYou(BotService.java:98) ~[classes/:na]
-	at com.learning.project2.web.lex.BotService.fulfillmentSwitchBoard(BotService.java:89) ~[classes/:na]
-	at com.learning.project2.web.lex.BotService.converse(BotService.java:77) ~[classes/:na]
-	at com.learning.project2.web.lex.BotController.converse(BotController.java:39) ~[classes/:na]
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_302]
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_302]
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_302]
-	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_302]
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-5.3.10.jar:5.3.10]
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-5.3.10.jar:5.3.10]
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.10.jar:5.3.10]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.10.jar:5.3.10]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.10.jar:5.3.10]
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.10.jar:5.3.10]
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067) ~[spring-webmvc-5.3.10.jar:5.3.10]
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963) ~[spring-webmvc-5.3.10.jar:5.3.10]
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.10.jar:5.3.10]
-	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) ~[spring-webmvc-5.3.10.jar:5.3.10]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681) ~[tomcat-embed-core-9.0.53.jar:4.0.FR]
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.10.jar:5.3.10]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764) ~[tomcat-embed-core-9.0.53.jar:4.0.FR]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.53.jar:9.0.53]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.10.jar:5.3.10]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.10.jar:5.3.10]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.10.jar:5.3.10]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.10.jar:5.3.10]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
-	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96) ~[spring-boot-actuator-2.5.5.jar:2.5.5]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.10.jar:5.3.10]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.10.jar:5.3.10]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.10.jar:5.3.10]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) [tomcat-embed-core-9.0.53.jar:9.0.53]
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540) [tomcat-embed-core-9.0.53.jar:9.0.53]
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) [tomcat-embed-core-9.0.53.jar:9.0.53]
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.53.jar:9.0.53]
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) [tomcat-embed-core-9.0.53.jar:9.0.53]
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) [tomcat-embed-core-9.0.53.jar:9.0.53]
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382) [tomcat-embed-core-9.0.53.jar:9.0.53]
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.53.jar:9.0.53]
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893) [tomcat-embed-core-9.0.53.jar:9.0.53]
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1726) [tomcat-embed-core-9.0.53.jar:9.0.53]
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.53.jar:9.0.53]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) [tomcat-embed-core-9.0.53.jar:9.0.53]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) [tomcat-embed-core-9.0.53.jar:9.0.53]
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.53.jar:9.0.53]
-	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_302]
-
-2021-10-25 17:18:30.034  INFO 21296 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2021-10-25 17:18:30.040  INFO 21296 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2021-10-25 17:18:35.230  INFO 8924 --- [restartedMain] c.learning.project2.Project2Application  : Starting Project2Application using Java 1.8.0_302 on DESKTOP-GTIL6SV with PID 8924 (C:\Users\erose\Desktop\Projects\Project2\project2\IntellijBuild\target\classes started by erose in C:\Users\erose\Desktop\Projects\Project2\project2\IntellijBuild)
-2021-10-25 17:18:35.231 DEBUG 8924 --- [restartedMain] c.learning.project2.Project2Application  : Running with Spring Boot v2.5.5, Spring v5.3.10
-2021-10-25 17:18:35.232  INFO 8924 --- [restartedMain] c.learning.project2.Project2Application  : No active profile set, falling back to default profiles: default
-2021-10-25 17:18:36.417  INFO 8924 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-10-25 17:18:36.417  INFO 8924 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.53]
-2021-10-25 17:18:36.448  INFO 8924 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2021-10-25 17:18:36.606  INFO 8924 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2021-10-25 17:18:37.312  INFO 8924 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2021-10-25 17:18:37.348  INFO 8924 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2021-10-25 17:18:37.385  INFO 8924 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
-2021-10-25 17:18:37.415  INFO 8924 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2021-10-25 17:18:37.497  INFO 8924 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
-2021-10-25 17:18:44.670  INFO 8924 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2021-10-25 17:18:44.697  INFO 8924 --- [restartedMain] c.learning.project2.web.lex.BotService   : Initializing bot from yaml file
-2021-10-25 17:18:45.845  INFO 8924 --- [restartedMain] c.learning.project2.Project2Application  : Started Project2Application in 10.961 seconds (JVM running for 11.761)
-2021-10-25 17:18:46.356  INFO 8924 --- [RMI TCP Connection(1)-192.168.0.100] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-10-25 17:18:58.361  INFO 8924 --- [http-nio-8000-exec-1] c.learning.project2.web.lex.BotService   : Request sent to bot with id: 475e6ee9-73fc-4247-83e2-6d99a1688fd4
-2021-10-25 17:18:58.362  INFO 8924 --- [http-nio-8000-exec-1] c.learning.project2.web.lex.BotService   : RecognizeTextResponse(Messages=[Message(Content=*** Sensitive Data Redacted ***, ContentType=PlainText)], SessionState=SessionState(DialogAction=DialogAction(Type=ElicitSlot, SlotToElicit=UserFeeling), Intent=Intent(Name=UserAsksHowAreYou, Slots={UserFeeling=null}, State=InProgress, ConfirmationState=None), OriginatingRequestId=8dd3b767-e074-4067-b431-b32cbe146f1a), Interpretations=[Interpretation(NluConfidence=ConfidenceScore(Score=1.0), SentimentResponse=SentimentResponse(Sentiment=NEUTRAL, SentimentScore=SentimentScore(Positive=0.001959556946530938, Negative=0.046040404587984085, Neutral=0.9511720538139343, Mixed=8.279564790427685E-4)), Intent=Intent(Name=UserAsksHowAreYou, Slots={UserFeeling=null}, State=InProgress, ConfirmationState=None)), Interpretation(NluConfidence=ConfidenceScore(Score=0.6), SentimentResponse=SentimentResponse(Sentiment=NEUTRAL, SentimentScore=SentimentScore(Positive=0.001959556946530938, Negative=0.046040404587984085, Neutral=0.9511720538139343, Mixed=8.279564790427685E-4)), Intent=Intent(Name=Welcome, Slots={})), Interpretation(NluConfidence=ConfidenceScore(Score=0.55), SentimentResponse=SentimentResponse(Sentiment=NEUTRAL, SentimentScore=SentimentScore(Positive=0.001959556946530938, Negative=0.046040404587984085, Neutral=0.9511720538139343, Mixed=8.279564790427685E-4)), Intent=Intent(Name=TellMeAbout, Slots={topic=null})), Interpretation(NluConfidence=ConfidenceScore(Score=0.51), SentimentResponse=SentimentResponse(Sentiment=NEUTRAL, SentimentScore=SentimentScore(Positive=0.001959556946530938, Negative=0.046040404587984085, Neutral=0.9511720538139343, Mixed=8.279564790427685E-4)), Intent=Intent(Name=HowAmIDoing, Slots={})), Interpretation(SentimentResponse=SentimentResponse(Sentiment=NEUTRAL, SentimentScore=SentimentScore(Positive=0.001959556946530938, Negative=0.046040404587984085, Neutral=0.9511720538139343, Mixed=8.279564790427685E-4)), Intent=Intent(Name=FallbackIntent, Slots={}))], SessionId=475e6ee9-73fc-4247-83e2-6d99a1688fd4)
-2021-10-25 17:18:58.362  INFO 8924 --- [http-nio-8000-exec-1] c.learning.project2.web.lex.BotService   : Found slot value: UserFeeling
-2021-10-25 17:18:58.363  INFO 8924 --- [http-nio-8000-exec-1] c.learning.project2.web.lex.BotService   : Indeterminate data. Adding null to slot null
-2021-10-25 17:19:21.274  INFO 8924 --- [http-nio-8000-exec-2] c.learning.project2.web.lex.BotService   : Request sent to bot with id: 475e6ee9-73fc-4247-83e2-6d99a1688fd4
-2021-10-25 17:19:21.275  INFO 8924 --- [http-nio-8000-exec-2] c.learning.project2.web.lex.BotService   : RecognizeTextResponse(SessionState=SessionState(DialogAction=DialogAction(Type=Close), Intent=Intent(Name=UserAsksHowAreYou, Slots={UserFeeling=Slot(Value=Value(OriginalValue=Great, InterpretedValue=Good, ResolvedValues=[Good, Bad]))}, State=ReadyForFulfillment, ConfirmationState=None), ActiveContexts=[ActiveContext(Name=HowIsUser, TimeToLive=ActiveContextTimeToLive(TimeToLiveInSeconds=360, TurnsToLive=20), ContextAttributes=*** Sensitive Data Redacted ***)], OriginatingRequestId=8dd3b767-e074-4067-b431-b32cbe146f1a), Interpretations=[Interpretation(NluConfidence=ConfidenceScore(Score=1.0), SentimentResponse=SentimentResponse(Sentiment=POSITIVE, SentimentScore=SentimentScore(Positive=0.9949328303337097, Negative=5.220627062954009E-4, Neutral=0.0031970764975994825, Mixed=0.001347963698208332)), Intent=Intent(Name=UserAsksHowAreYou, Slots={UserFeeling=Slot(Value=Value(OriginalValue=Great, InterpretedValue=Good, ResolvedValues=[Good, Bad]))}, State=ReadyForFulfillment, ConfirmationState=None)), Interpretation(SentimentResponse=SentimentResponse(Sentiment=POSITIVE, SentimentScore=SentimentScore(Positive=0.9949328303337097, Negative=5.220627062954009E-4, Neutral=0.0031970764975994825, Mixed=0.001347963698208332)), Intent=Intent(Name=FallbackIntent, Slots={})), Interpretation(NluConfidence=ConfidenceScore(Score=0.59), SentimentResponse=SentimentResponse(Sentiment=POSITIVE, SentimentScore=SentimentScore(Positive=0.9949328303337097, Negative=5.220627062954009E-4, Neutral=0.0031970764975994825, Mixed=0.001347963698208332)), Intent=Intent(Name=TellMeAbout, Slots={topic=null})), Interpretation(NluConfidence=ConfidenceScore(Score=0.57), SentimentResponse=SentimentResponse(Sentiment=POSITIVE, SentimentScore=SentimentScore(Positive=0.9949328303337097, Negative=5.220627062954009E-4, Neutral=0.0031970764975994825, Mixed=0.001347963698208332)), Intent=Intent(Name=Welcome, Slots={})), Interpretation(NluConfidence=ConfidenceScore(Score=0.52), SentimentResponse=SentimentResponse(Sentiment=POSITIVE, SentimentScore=SentimentScore(Positive=0.9949328303337097, Negative=5.220627062954009E-4, Neutral=0.0031970764975994825, Mixed=0.001347963698208332)), Intent=Intent(Name=TellJoke, Slots={Topic=null}))], SessionId=475e6ee9-73fc-4247-83e2-6d99a1688fd4)
-2021-10-25 17:19:21.275  INFO 8924 --- [http-nio-8000-exec-2] c.learning.project2.web.lex.BotService   : Found slot value: UserFeeling
-2021-10-25 17:19:21.275  INFO 8924 --- [http-nio-8000-exec-2] c.learning.project2.web.lex.BotService   : Adding slot UserFeeling to Good
-2021-10-25 17:19:21.285 ERROR 8924 --- [http-nio-8000-exec-2] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
-
-java.lang.NullPointerException: null
-	at com.learning.project2.web.lex.BotService.howAreYou(BotService.java:98) ~[classes/:na]
-	at com.learning.project2.web.lex.BotService.fulfillmentSwitchBoard(BotService.java:89) ~[classes/:na]
-	at com.learning.project2.web.lex.BotService.converse(BotService.java:77) ~[classes/:na]
-	at com.learning.project2.web.lex.BotController.converse(BotController.java:39) ~[classes/:na]
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_302]
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_302]
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_302]
-	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_302]
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-5.3.10.jar:5.3.10]
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-5.3.10.jar:5.3.10]
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.10.jar:5.3.10]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.10.jar:5.3.10]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.10.jar:5.3.10]
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.10.jar:5.3.10]
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067) ~[spring-webmvc-5.3.10.jar:5.3.10]
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963) ~[spring-webmvc-5.3.10.jar:5.3.10]
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.10.jar:5.3.10]
-	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) ~[spring-webmvc-5.3.10.jar:5.3.10]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681) ~[tomcat-embed-core-9.0.53.jar:4.0.FR]
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.10.jar:5.3.10]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764) ~[tomcat-embed-core-9.0.53.jar:4.0.FR]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.53.jar:9.0.53]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.10.jar:5.3.10]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.10.jar:5.3.10]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.10.jar:5.3.10]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.10.jar:5.3.10]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
-	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96) ~[spring-boot-actuator-2.5.5.jar:2.5.5]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.10.jar:5.3.10]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.10.jar:5.3.10]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.10.jar:5.3.10]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) [tomcat-embed-core-9.0.53.jar:9.0.53]
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540) [tomcat-embed-core-9.0.53.jar:9.0.53]
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) [tomcat-embed-core-9.0.53.jar:9.0.53]
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.53.jar:9.0.53]
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) [tomcat-embed-core-9.0.53.jar:9.0.53]
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) [tomcat-embed-core-9.0.53.jar:9.0.53]
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382) [tomcat-embed-core-9.0.53.jar:9.0.53]
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.53.jar:9.0.53]
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893) [tomcat-embed-core-9.0.53.jar:9.0.53]
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1726) [tomcat-embed-core-9.0.53.jar:9.0.53]
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.53.jar:9.0.53]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) [tomcat-embed-core-9.0.53.jar:9.0.53]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) [tomcat-embed-core-9.0.53.jar:9.0.53]
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.53.jar:9.0.53]
-	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_302]
-
-2021-10-25 17:22:54.927  INFO 8924 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2021-10-25 17:22:54.934  INFO 8924 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2021-10-25 17:23:01.061  INFO 21060 --- [restartedMain] c.learning.project2.Project2Application  : Starting Project2Application using Java 1.8.0_302 on DESKTOP-GTIL6SV with PID 21060 (C:\Users\erose\Desktop\Projects\Project2\project2\IntellijBuild\target\classes started by erose in C:\Users\erose\Desktop\Projects\Project2\project2\IntellijBuild)
-2021-10-25 17:23:01.063 DEBUG 21060 --- [restartedMain] c.learning.project2.Project2Application  : Running with Spring Boot v2.5.5, Spring v5.3.10
-2021-10-25 17:23:01.063  INFO 21060 --- [restartedMain] c.learning.project2.Project2Application  : No active profile set, falling back to default profiles: default
-2021-10-25 17:23:02.251  INFO 21060 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-10-25 17:23:02.252  INFO 21060 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.53]
-2021-10-25 17:23:02.284  INFO 21060 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2021-10-25 17:23:02.439  INFO 21060 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2021-10-25 17:23:03.212  INFO 21060 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2021-10-25 17:23:03.248  INFO 21060 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2021-10-25 17:23:03.285  INFO 21060 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
-2021-10-25 17:23:03.317  INFO 21060 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2021-10-25 17:23:03.401  INFO 21060 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
-2021-10-25 17:23:04.137  INFO 21060 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2021-10-25 17:23:04.163  INFO 21060 --- [restartedMain] c.learning.project2.web.lex.BotService   : Initializing bot from yaml file
-2021-10-25 17:23:05.320  INFO 21060 --- [restartedMain] c.learning.project2.Project2Application  : Started Project2Application in 4.604 seconds (JVM running for 5.431)
-2021-10-25 17:23:06.009  INFO 21060 --- [RMI TCP Connection(2)-192.168.0.100] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-10-25 17:23:36.233  INFO 21060 --- [http-nio-8000-exec-1] c.learning.project2.web.lex.BotService   : Request sent to bot with id: 1ec3e280-2b2d-47c6-9b55-87b1fc680365
-2021-10-25 17:23:36.233  INFO 21060 --- [http-nio-8000-exec-1] c.learning.project2.web.lex.BotService   : RecognizeTextResponse(SessionState=SessionState(DialogAction=DialogAction(Type=Close), Intent=Intent(Name=HowAmIDoing, Slots={}, State=ReadyForFulfillment, ConfirmationState=None), OriginatingRequestId=d872053b-d6b2-4b4a-884f-d218369c4d35), Interpretations=[Interpretation(NluConfidence=ConfidenceScore(Score=0.91), SentimentResponse=SentimentResponse(Sentiment=NEUTRAL, SentimentScore=SentimentScore(Positive=0.002755547408014536, Negative=0.06550899893045425, Neutral=0.9307186603546143, Mixed=0.0010169083252549171)), Intent=Intent(Name=HowAmIDoing, Slots={}, State=ReadyForFulfillment, ConfirmationState=None)), Interpretation(NluConfidence=ConfidenceScore(Score=0.83), SentimentResponse=SentimentResponse(Sentiment=NEUTRAL, SentimentScore=SentimentScore(Positive=0.002755547408014536, Negative=0.06550899893045425, Neutral=0.9307186603546143, Mixed=0.0010169083252549171)), Intent=Intent(Name=UserAsksHowAreYou, Slots={UserFeeling=null})), Interpretation(NluConfidence=ConfidenceScore(Score=0.56), SentimentResponse=SentimentResponse(Sentiment=NEUTRAL, SentimentScore=SentimentScore(Positive=0.002755547408014536, Negative=0.06550899893045425, Neutral=0.9307186603546143, Mixed=0.0010169083252549171)), Intent=Intent(Name=Welcome, Slots={})), Interpretation(SentimentResponse=SentimentResponse(Sentiment=NEUTRAL, SentimentScore=SentimentScore(Positive=0.002755547408014536, Negative=0.06550899893045425, Neutral=0.9307186603546143, Mixed=0.0010169083252549171)), Intent=Intent(Name=FallbackIntent, Slots={})), Interpretation(NluConfidence=ConfidenceScore(Score=0.5), SentimentResponse=SentimentResponse(Sentiment=NEUTRAL, SentimentScore=SentimentScore(Positive=0.002755547408014536, Negative=0.06550899893045425, Neutral=0.9307186603546143, Mixed=0.0010169083252549171)), Intent=Intent(Name=TellMeAbout, Slots={topic=null}))], SessionId=1ec3e280-2b2d-47c6-9b55-87b1fc680365)
-2021-10-25 17:23:47.042  INFO 21060 --- [http-nio-8000-exec-2] c.learning.project2.web.lex.BotService   : Request sent to bot with id: 2524ec5f-0223-4c16-93af-7dcea867426f
-2021-10-25 17:23:47.043  INFO 21060 --- [http-nio-8000-exec-2] c.learning.project2.web.lex.BotService   : RecognizeTextResponse(Messages=[Message(Content=*** Sensitive Data Redacted ***, ContentType=PlainText)], SessionState=SessionState(DialogAction=DialogAction(Type=ElicitSlot, SlotToElicit=UserFeeling), Intent=Intent(Name=UserAsksHowAreYou, Slots={UserFeeling=null}, State=InProgress, ConfirmationState=None), OriginatingRequestId=f08a46e6-6173-4d7e-a2fa-54a4f328dd19), Interpretations=[Interpretation(NluConfidence=ConfidenceScore(Score=1.0), SentimentResponse=SentimentResponse(Sentiment=NEUTRAL, SentimentScore=SentimentScore(Positive=0.001959556946530938, Negative=0.046040404587984085, Neutral=0.9511720538139343, Mixed=8.279564790427685E-4)), Intent=Intent(Name=UserAsksHowAreYou, Slots={UserFeeling=null}, State=InProgress, ConfirmationState=None)), Interpretation(NluConfidence=ConfidenceScore(Score=0.6), SentimentResponse=SentimentResponse(Sentiment=NEUTRAL, SentimentScore=SentimentScore(Positive=0.001959556946530938, Negative=0.046040404587984085, Neutral=0.9511720538139343, Mixed=8.279564790427685E-4)), Intent=Intent(Name=Welcome, Slots={})), Interpretation(NluConfidence=ConfidenceScore(Score=0.55), SentimentResponse=SentimentResponse(Sentiment=NEUTRAL, SentimentScore=SentimentScore(Positive=0.001959556946530938, Negative=0.046040404587984085, Neutral=0.9511720538139343, Mixed=8.279564790427685E-4)), Intent=Intent(Name=TellMeAbout, Slots={topic=null})), Interpretation(NluConfidence=ConfidenceScore(Score=0.51), SentimentResponse=SentimentResponse(Sentiment=NEUTRAL, SentimentScore=SentimentScore(Positive=0.001959556946530938, Negative=0.046040404587984085, Neutral=0.9511720538139343, Mixed=8.279564790427685E-4)), Intent=Intent(Name=HowAmIDoing, Slots={})), Interpretation(SentimentResponse=SentimentResponse(Sentiment=NEUTRAL, SentimentScore=SentimentScore(Positive=0.001959556946530938, Negative=0.046040404587984085, Neutral=0.9511720538139343, Mixed=8.279564790427685E-4)), Intent=Intent(Name=FallbackIntent, Slots={}))], SessionId=2524ec5f-0223-4c16-93af-7dcea867426f)
-2021-10-25 17:23:47.043  INFO 21060 --- [http-nio-8000-exec-2] c.learning.project2.web.lex.BotService   : Found slot value: UserFeeling
-2021-10-25 17:23:47.043  INFO 21060 --- [http-nio-8000-exec-2] c.learning.project2.web.lex.BotService   : Indeterminate data. Adding null to slot null
-2021-10-25 17:24:16.029  INFO 21060 --- [http-nio-8000-exec-3] c.learning.project2.web.lex.BotService   : Request sent to bot with id: 2524ec5f-0223-4c16-93af-7dcea867426f
-2021-10-25 17:24:16.030  INFO 21060 --- [http-nio-8000-exec-3] c.learning.project2.web.lex.BotService   : RecognizeTextResponse(SessionState=SessionState(DialogAction=DialogAction(Type=Close), Intent=Intent(Name=UserAsksHowAreYou, Slots={UserFeeling=Slot(Value=Value(OriginalValue=great, InterpretedValue=Good, ResolvedValues=[Good, Bad]))}, State=ReadyForFulfillment, ConfirmationState=None), ActiveContexts=[ActiveContext(Name=HowIsUser, TimeToLive=ActiveContextTimeToLive(TimeToLiveInSeconds=360, TurnsToLive=20), ContextAttributes=*** Sensitive Data Redacted ***)], OriginatingRequestId=f08a46e6-6173-4d7e-a2fa-54a4f328dd19), Interpretations=[Interpretation(NluConfidence=ConfidenceScore(Score=1.0), SentimentResponse=SentimentResponse(Sentiment=POSITIVE, SentimentScore=SentimentScore(Positive=0.9344272017478943, Negative=0.002327215624973178, Neutral=0.017892371863126755, Mixed=0.04535321891307831)), Intent=Intent(Name=UserAsksHowAreYou, Slots={UserFeeling=Slot(Value=Value(OriginalValue=great, InterpretedValue=Good, ResolvedValues=[Good, Bad]))}, State=ReadyForFulfillment, ConfirmationState=None)), Interpretation(SentimentResponse=SentimentResponse(Sentiment=POSITIVE, SentimentScore=SentimentScore(Positive=0.9344272017478943, Negative=0.002327215624973178, Neutral=0.017892371863126755, Mixed=0.04535321891307831)), Intent=Intent(Name=FallbackIntent, Slots={})), Interpretation(NluConfidence=ConfidenceScore(Score=0.59), SentimentResponse=SentimentResponse(Sentiment=POSITIVE, SentimentScore=SentimentScore(Positive=0.9344272017478943, Negative=0.002327215624973178, Neutral=0.017892371863126755, Mixed=0.04535321891307831)), Intent=Intent(Name=TellMeAbout, Slots={topic=null})), Interpretation(NluConfidence=ConfidenceScore(Score=0.57), SentimentResponse=SentimentResponse(Sentiment=POSITIVE, SentimentScore=SentimentScore(Positive=0.9344272017478943, Negative=0.002327215624973178, Neutral=0.017892371863126755, Mixed=0.04535321891307831)), Intent=Intent(Name=Welcome, Slots={})), Interpretation(NluConfidence=ConfidenceScore(Score=0.52), SentimentResponse=SentimentResponse(Sentiment=POSITIVE, SentimentScore=SentimentScore(Positive=0.9344272017478943, Negative=0.002327215624973178, Neutral=0.017892371863126755, Mixed=0.04535321891307831)), Intent=Intent(Name=TellJoke, Slots={Topic=null}))], SessionId=2524ec5f-0223-4c16-93af-7dcea867426f)
-2021-10-25 17:24:16.030  INFO 21060 --- [http-nio-8000-exec-3] c.learning.project2.web.lex.BotService   : Found slot value: UserFeeling
-2021-10-25 17:24:16.030  INFO 21060 --- [http-nio-8000-exec-3] c.learning.project2.web.lex.BotService   : Adding slot UserFeeling with value Good
-2021-10-25 17:24:29.920  INFO 21060 --- [http-nio-8000-exec-4] c.learning.project2.web.lex.BotService   : Request sent to bot with id: 2524ec5f-0223-4c16-93af-7dcea867426f
-2021-10-25 17:24:29.923  INFO 21060 --- [http-nio-8000-exec-4] c.learning.project2.web.lex.BotService   : RecognizeTextResponse(Messages=[Message(Content=*** Sensitive Data Redacted ***, ContentType=PlainText)], SessionState=SessionState(DialogAction=DialogAction(Type=ElicitSlot, SlotToElicit=UserFeeling), Intent=Intent(Name=UserAsksHowAreYou, Slots={UserFeeling=null}, State=InProgress, ConfirmationState=None), ActiveContexts=[ActiveContext(Name=HowIsUser, TimeToLive=ActiveContextTimeToLive(TimeToLiveInSeconds=346, TurnsToLive=19), ContextAttributes=*** Sensitive Data Redacted ***)], OriginatingRequestId=f08a46e6-6173-4d7e-a2fa-54a4f328dd19), Interpretations=[Interpretation(NluConfidence=ConfidenceScore(Score=0.86), SentimentResponse=SentimentResponse(Sentiment=NEUTRAL, SentimentScore=SentimentScore(Positive=0.1741466373205185, Negative=0.06272745877504349, Neutral=0.4343682825565338, Mixed=0.3287575840950012)), Intent=Intent(Name=UserAsksHowAreYou, Slots={UserFeeling=null}, State=InProgress, ConfirmationState=None)), Interpretation(NluConfidence=ConfidenceScore(Score=0.67), SentimentResponse=SentimentResponse(Sentiment=NEUTRAL, SentimentScore=SentimentScore(Positive=0.1741466373205185, Negative=0.06272745877504349, Neutral=0.4343682825565338, Mixed=0.3287575840950012)), Intent=Intent(Name=TellMeAbout, Slots={topic=null})), Interpretation(SentimentResponse=SentimentResponse(Sentiment=NEUTRAL, SentimentScore=SentimentScore(Positive=0.1741466373205185, Negative=0.06272745877504349, Neutral=0.4343682825565338, Mixed=0.3287575840950012)), Intent=Intent(Name=FallbackIntent, Slots={})), Interpretation(NluConfidence=ConfidenceScore(Score=0.54), SentimentResponse=SentimentResponse(Sentiment=NEUTRAL, SentimentScore=SentimentScore(Positive=0.1741466373205185, Negative=0.06272745877504349, Neutral=0.4343682825565338, Mixed=0.3287575840950012)), Intent=Intent(Name=Welcome, Slots={})), Interpretation(NluConfidence=ConfidenceScore(Score=0.52), SentimentResponse=SentimentResponse(Sentiment=NEUTRAL, SentimentScore=SentimentScore(Positive=0.1741466373205185, Negative=0.06272745877504349, Neutral=0.4343682825565338, Mixed=0.3287575840950012)), Intent=Intent(Name=TellJoke, Slots={Topic=null}))], SessionId=2524ec5f-0223-4c16-93af-7dcea867426f)
-2021-10-25 17:24:29.923  INFO 21060 --- [http-nio-8000-exec-4] c.learning.project2.web.lex.BotService   : Found slot value: UserFeeling
-2021-10-25 17:24:29.923  INFO 21060 --- [http-nio-8000-exec-4] c.learning.project2.web.lex.BotService   : Indeterminate data. Adding null to slot null
-2021-10-25 17:24:40.084  INFO 21060 --- [http-nio-8000-exec-5] c.learning.project2.web.lex.BotService   : Request sent to bot with id: 2524ec5f-0223-4c16-93af-7dcea867426f
-2021-10-25 17:24:40.085  INFO 21060 --- [http-nio-8000-exec-5] c.learning.project2.web.lex.BotService   : RecognizeTextResponse(SessionState=SessionState(DialogAction=DialogAction(Type=Close), Intent=Intent(Name=UserAsksHowAreYou, Slots={UserFeeling=Slot(Value=Value(OriginalValue=Fine, InterpretedValue=Neutral, ResolvedValues=[Neutral]))}, State=ReadyForFulfillment, ConfirmationState=None), ActiveContexts=[ActiveContext(Name=HowIsUser, TimeToLive=ActiveContextTimeToLive(TimeToLiveInSeconds=360, TurnsToLive=20), ContextAttributes=*** Sensitive Data Redacted ***)], OriginatingRequestId=f08a46e6-6173-4d7e-a2fa-54a4f328dd19), Interpretations=[Interpretation(NluConfidence=ConfidenceScore(Score=1.0), SentimentResponse=SentimentResponse(Sentiment=NEUTRAL, SentimentScore=SentimentScore(Positive=0.1741466373205185, Negative=0.06272745877504349, Neutral=0.4343682825565338, Mixed=0.3287575840950012)), Intent=Intent(Name=UserAsksHowAreYou, Slots={UserFeeling=Slot(Value=Value(OriginalValue=Fine, InterpretedValue=Neutral, ResolvedValues=[Neutral]))}, State=ReadyForFulfillment, ConfirmationState=None)), Interpretation(SentimentResponse=SentimentResponse(Sentiment=NEUTRAL, SentimentScore=SentimentScore(Positive=0.1741466373205185, Negative=0.06272745877504349, Neutral=0.4343682825565338, Mixed=0.3287575840950012)), Intent=Intent(Name=FallbackIntent, Slots={})), Interpretation(NluConfidence=ConfidenceScore(Score=0.62), SentimentResponse=SentimentResponse(Sentiment=NEUTRAL, SentimentScore=SentimentScore(Positive=0.1741466373205185, Negative=0.06272745877504349, Neutral=0.4343682825565338, Mixed=0.3287575840950012)), Intent=Intent(Name=TellMeAbout, Slots={topic=null})), Interpretation(NluConfidence=ConfidenceScore(Score=0.51), SentimentResponse=SentimentResponse(Sentiment=NEUTRAL, SentimentScore=SentimentScore(Positive=0.1741466373205185, Negative=0.06272745877504349, Neutral=0.4343682825565338, Mixed=0.3287575840950012)), Intent=Intent(Name=Welcome, Slots={})), Interpretation(NluConfidence=ConfidenceScore(Score=0.47), SentimentResponse=SentimentResponse(Sentiment=NEUTRAL, SentimentScore=SentimentScore(Positive=0.1741466373205185, Negative=0.06272745877504349, Neutral=0.4343682825565338, Mixed=0.3287575840950012)), Intent=Intent(Name=TellJoke, Slots={Topic=Slot(Value=Value(OriginalValue=Fine, InterpretedValue=Fine, ResolvedValues=[]), Shape=List, Values=[Slot(Value=Value(OriginalValue=Fine, InterpretedValue=Fine, ResolvedValues=[]), Shape=Scalar)])}))], SessionId=2524ec5f-0223-4c16-93af-7dcea867426f)
-2021-10-25 17:24:40.085  INFO 21060 --- [http-nio-8000-exec-5] c.learning.project2.web.lex.BotService   : Found slot value: UserFeeling
-2021-10-25 17:24:40.085  INFO 21060 --- [http-nio-8000-exec-5] c.learning.project2.web.lex.BotService   : Adding slot UserFeeling with value Neutral
-2021-10-25 17:24:56.933  INFO 21060 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2021-10-25 17:24:56.940  INFO 21060 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-10-26 10:20:47.739  INFO 15708 --- [main] c.l.project2.Project2ApplicationTests    : Starting Project2ApplicationTests using Java 1.8.0_302 on DESKTOP-GTIL6SV with PID 15708 (started by erose in C:\Users\erose\Desktop\Projects\Project2\project2\IntellijBuild)
+2021-10-26 10:20:47.745 DEBUG 15708 --- [main] c.l.project2.Project2ApplicationTests    : Running with Spring Boot v2.5.5, Spring v5.3.10
+2021-10-26 10:20:47.746  INFO 15708 --- [main] c.l.project2.Project2ApplicationTests    : No active profile set, falling back to default profiles: default
+2021-10-26 10:20:49.556  INFO 15708 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-10-26 10:20:50.994  INFO 15708 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-10-26 10:20:51.064  INFO 15708 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-10-26 10:20:51.123  INFO 15708 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-10-26 10:20:51.167  INFO 15708 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-10-26 10:20:51.317  INFO 15708 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2021-10-26 10:20:52.227  INFO 15708 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-10-26 10:20:52.257  INFO 15708 --- [main] c.learning.project2.web.lex.BotService   : Initializing bot from yaml file
+2021-10-26 10:20:54.620  INFO 15708 --- [main] c.l.project2.Project2ApplicationTests    : Started Project2ApplicationTests in 7.212 seconds (JVM running for 8.461)
+2021-10-26 10:20:54.714  INFO 15708 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-10-26 10:20:54.788  INFO 15708 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-10-26 10:21:07.445  INFO 15620 --- [main] c.l.project2.Project2ApplicationTests    : Starting Project2ApplicationTests using Java 1.8.0_302 on DESKTOP-GTIL6SV with PID 15620 (started by erose in C:\Users\erose\Desktop\Projects\Project2\project2\IntellijBuild)
+2021-10-26 10:21:07.446 DEBUG 15620 --- [main] c.l.project2.Project2ApplicationTests    : Running with Spring Boot v2.5.5, Spring v5.3.10
+2021-10-26 10:21:07.448  INFO 15620 --- [main] c.l.project2.Project2ApplicationTests    : No active profile set, falling back to default profiles: default
+2021-10-26 10:21:09.271  INFO 15620 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-10-26 10:21:10.755  INFO 15620 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-10-26 10:21:10.821  INFO 15620 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-10-26 10:21:10.889  INFO 15620 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-10-26 10:21:10.939  INFO 15620 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-10-26 10:21:11.079  INFO 15620 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2021-10-26 10:21:12.405  INFO 15620 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-10-26 10:21:12.436  INFO 15620 --- [main] c.learning.project2.web.lex.BotService   : Initializing bot from yaml file
+2021-10-26 10:21:14.849  INFO 15620 --- [main] c.l.project2.Project2ApplicationTests    : Started Project2ApplicationTests in 7.761 seconds (JVM running for 8.926)
+2021-10-26 10:21:14.949  INFO 15620 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-10-26 10:21:15.028  INFO 15620 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-10-26 10:50:51.248  INFO 16716 --- [main] c.l.project2.Project2ApplicationTests    : Starting Project2ApplicationTests using Java 1.8.0_302 on DESKTOP-GTIL6SV with PID 16716 (started by erose in C:\Users\erose\Desktop\Projects\Project2\project2\IntellijBuild)
+2021-10-26 10:50:51.249 DEBUG 16716 --- [main] c.l.project2.Project2ApplicationTests    : Running with Spring Boot v2.5.5, Spring v5.3.10
+2021-10-26 10:50:51.250  INFO 16716 --- [main] c.l.project2.Project2ApplicationTests    : No active profile set, falling back to default profiles: default
+2021-10-26 10:50:53.074  INFO 16716 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-10-26 10:50:54.040  INFO 16716 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-10-26 10:50:54.117  INFO 16716 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-10-26 10:50:54.185  INFO 16716 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-10-26 10:50:54.238  INFO 16716 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-10-26 10:50:54.385  INFO 16716 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2021-10-26 10:50:55.312  INFO 16716 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-10-26 10:50:55.345  INFO 16716 --- [main] c.learning.project2.web.lex.BotService   : Initializing bot from yaml file
+2021-10-26 10:50:57.945  INFO 16716 --- [main] c.l.project2.Project2ApplicationTests    : Started Project2ApplicationTests in 7.09 seconds (JVM running for 8.89)
+2021-10-26 10:50:58.051  INFO 16716 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-10-26 10:50:58.065  INFO 16716 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-10-26 10:51:48.708  INFO 19396 --- [main] c.l.project2.Project2ApplicationTests    : Starting Project2ApplicationTests using Java 1.8.0_302 on DESKTOP-GTIL6SV with PID 19396 (started by erose in C:\Users\erose\Desktop\Projects\Project2\project2\IntellijBuild)
+2021-10-26 10:51:48.709 DEBUG 19396 --- [main] c.l.project2.Project2ApplicationTests    : Running with Spring Boot v2.5.5, Spring v5.3.10
+2021-10-26 10:51:48.710  INFO 19396 --- [main] c.l.project2.Project2ApplicationTests    : No active profile set, falling back to default profiles: default
+2021-10-26 10:51:50.513  INFO 19396 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-10-26 10:51:51.466  INFO 19396 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-10-26 10:51:51.537  INFO 19396 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-10-26 10:51:51.607  INFO 19396 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-10-26 10:51:51.658  INFO 19396 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-10-26 10:51:51.801  INFO 19396 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2021-10-26 10:51:52.696  INFO 19396 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-10-26 10:51:52.728  INFO 19396 --- [main] c.learning.project2.web.lex.BotService   : Initializing bot from yaml file
+2021-10-26 10:51:55.248  INFO 19396 --- [main] c.l.project2.Project2ApplicationTests    : Started Project2ApplicationTests in 6.896 seconds (JVM running for 8.101)
+2021-10-26 10:51:55.361  INFO 19396 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-10-26 10:51:55.373  INFO 19396 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-10-26 11:00:40.351  INFO 2728 --- [main] c.l.project2.Project2ApplicationTests    : Starting Project2ApplicationTests using Java 1.8.0_302 on DESKTOP-GTIL6SV with PID 2728 (started by erose in C:\Users\erose\Desktop\Projects\Project2\project2\IntellijBuild)
+2021-10-26 11:00:40.353 DEBUG 2728 --- [main] c.l.project2.Project2ApplicationTests    : Running with Spring Boot v2.5.5, Spring v5.3.10
+2021-10-26 11:00:40.354  INFO 2728 --- [main] c.l.project2.Project2ApplicationTests    : No active profile set, falling back to default profiles: default
+2021-10-26 11:00:42.247  INFO 2728 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-10-26 11:00:43.516  INFO 2728 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-10-26 11:00:43.591  INFO 2728 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-10-26 11:00:43.659  INFO 2728 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-10-26 11:00:43.716  INFO 2728 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-10-26 11:00:43.860  INFO 2728 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2021-10-26 11:00:44.812  INFO 2728 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-10-26 11:00:44.846  INFO 2728 --- [main] c.learning.project2.web.lex.BotService   : Initializing bot from yaml file
+2021-10-26 11:00:47.498  INFO 2728 --- [main] c.l.project2.Project2ApplicationTests    : Started Project2ApplicationTests in 7.565 seconds (JVM running for 9.032)
+2021-10-26 11:00:47.601  INFO 2728 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-10-26 11:00:47.617  INFO 2728 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-10-26 11:02:53.536  INFO 17744 --- [main] c.l.project2.Project2ApplicationTests    : Starting Project2ApplicationTests using Java 1.8.0_302 on DESKTOP-GTIL6SV with PID 17744 (started by erose in C:\Users\erose\Desktop\Projects\Project2\project2\IntellijBuild)
+2021-10-26 11:02:53.537 DEBUG 17744 --- [main] c.l.project2.Project2ApplicationTests    : Running with Spring Boot v2.5.5, Spring v5.3.10
+2021-10-26 11:02:53.539  INFO 17744 --- [main] c.l.project2.Project2ApplicationTests    : No active profile set, falling back to default profiles: default
+2021-10-26 11:02:55.356  INFO 17744 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-10-26 11:02:56.446  INFO 17744 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-10-26 11:02:56.518  INFO 17744 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-10-26 11:02:56.586  INFO 17744 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-10-26 11:02:56.638  INFO 17744 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-10-26 11:02:56.781  INFO 17744 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2021-10-26 11:02:57.704  INFO 17744 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-10-26 11:02:57.741  INFO 17744 --- [main] c.learning.project2.web.lex.BotService   : Initializing bot from yaml file
+2021-10-26 11:03:00.213  INFO 17744 --- [main] c.l.project2.Project2ApplicationTests    : Started Project2ApplicationTests in 7.034 seconds (JVM running for 8.303)
+2021-10-26 11:03:00.281  INFO 17744 --- [main] c.learning.project2.web.lex.BotService   : Initializing bot from yaml file
+2021-10-26 11:03:00.347  INFO 17744 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-10-26 11:03:00.358  INFO 17744 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-10-26 11:05:11.395  INFO 17532 --- [main] c.l.project2.Project2ApplicationTests    : Starting Project2ApplicationTests using Java 1.8.0_302 on DESKTOP-GTIL6SV with PID 17532 (started by erose in C:\Users\erose\Desktop\Projects\Project2\project2\IntellijBuild)
+2021-10-26 11:05:11.396 DEBUG 17532 --- [main] c.l.project2.Project2ApplicationTests    : Running with Spring Boot v2.5.5, Spring v5.3.10
+2021-10-26 11:05:11.398  INFO 17532 --- [main] c.l.project2.Project2ApplicationTests    : No active profile set, falling back to default profiles: default
+2021-10-26 11:05:13.173  INFO 17532 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-10-26 11:05:14.142  INFO 17532 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-10-26 11:05:14.213  INFO 17532 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-10-26 11:05:14.276  INFO 17532 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-10-26 11:05:14.321  INFO 17532 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-10-26 11:05:14.472  INFO 17532 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2021-10-26 11:05:15.348  INFO 17532 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-10-26 11:05:17.523  INFO 17532 --- [main] c.l.project2.Project2ApplicationTests    : Started Project2ApplicationTests in 6.483 seconds (JVM running for 7.658)
+2021-10-26 11:05:17.639  INFO 17532 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-10-26 11:05:17.777  INFO 17532 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-10-26 11:06:10.342  INFO 6736 --- [main] c.l.project2.Project2ApplicationTests    : Starting Project2ApplicationTests using Java 1.8.0_302 on DESKTOP-GTIL6SV with PID 6736 (started by erose in C:\Users\erose\Desktop\Projects\Project2\project2\IntellijBuild)
+2021-10-26 11:06:10.343 DEBUG 6736 --- [main] c.l.project2.Project2ApplicationTests    : Running with Spring Boot v2.5.5, Spring v5.3.10
+2021-10-26 11:06:10.346  INFO 6736 --- [main] c.l.project2.Project2ApplicationTests    : No active profile set, falling back to default profiles: default
+2021-10-26 11:06:12.153  INFO 6736 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-10-26 11:06:13.066  INFO 6736 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-10-26 11:06:13.134  INFO 6736 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-10-26 11:06:13.206  INFO 6736 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-10-26 11:06:13.258  INFO 6736 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-10-26 11:06:13.398  INFO 6736 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2021-10-26 11:06:14.290  INFO 6736 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-10-26 11:06:16.462  INFO 6736 --- [main] c.l.project2.Project2ApplicationTests    : Started Project2ApplicationTests in 6.491 seconds (JVM running for 7.68)
+2021-10-26 11:06:16.582  INFO 6736 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-10-26 11:06:16.784  INFO 6736 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-10-26 11:06:53.305  INFO 9916 --- [main] c.l.project2.Project2ApplicationTests    : Starting Project2ApplicationTests using Java 1.8.0_302 on DESKTOP-GTIL6SV with PID 9916 (started by erose in C:\Users\erose\Desktop\Projects\Project2\project2\IntellijBuild)
+2021-10-26 11:06:53.306 DEBUG 9916 --- [main] c.l.project2.Project2ApplicationTests    : Running with Spring Boot v2.5.5, Spring v5.3.10
+2021-10-26 11:06:53.308  INFO 9916 --- [main] c.l.project2.Project2ApplicationTests    : No active profile set, falling back to default profiles: default
+2021-10-26 11:06:55.180  INFO 9916 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-10-26 11:06:56.129  INFO 9916 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-10-26 11:06:56.200  INFO 9916 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-10-26 11:06:56.269  INFO 9916 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-10-26 11:06:56.323  INFO 9916 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-10-26 11:06:56.465  INFO 9916 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2021-10-26 11:06:57.358  INFO 9916 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-10-26 11:06:59.523  INFO 9916 --- [main] c.l.project2.Project2ApplicationTests    : Started Project2ApplicationTests in 6.585 seconds (JVM running for 7.847)
+2021-10-26 11:06:59.643  INFO 9916 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-10-26 11:06:59.770  INFO 9916 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-10-26 11:07:10.599  INFO 6388 --- [main] c.l.project2.Project2ApplicationTests    : Starting Project2ApplicationTests using Java 1.8.0_302 on DESKTOP-GTIL6SV with PID 6388 (started by erose in C:\Users\erose\Desktop\Projects\Project2\project2\IntellijBuild)
+2021-10-26 11:07:10.599 DEBUG 6388 --- [main] c.l.project2.Project2ApplicationTests    : Running with Spring Boot v2.5.5, Spring v5.3.10
+2021-10-26 11:07:10.601  INFO 6388 --- [main] c.l.project2.Project2ApplicationTests    : No active profile set, falling back to default profiles: default
+2021-10-26 11:07:12.611  INFO 6388 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-10-26 11:07:13.604  INFO 6388 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-10-26 11:07:13.691  INFO 6388 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-10-26 11:07:13.759  INFO 6388 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-10-26 11:07:13.824  INFO 6388 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-10-26 11:07:13.990  INFO 6388 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2021-10-26 11:07:14.927  INFO 6388 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-10-26 11:07:17.618  INFO 6388 --- [main] c.l.project2.Project2ApplicationTests    : Started Project2ApplicationTests in 7.397 seconds (JVM running for 9.23)
+2021-10-26 11:07:17.758  INFO 6388 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-10-26 11:07:17.769  INFO 6388 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-10-26 11:09:00.320  INFO 17424 --- [main] c.l.project2.Project2ApplicationTests    : Starting Project2ApplicationTests using Java 1.8.0_302 on DESKTOP-GTIL6SV with PID 17424 (started by erose in C:\Users\erose\Desktop\Projects\Project2\project2\IntellijBuild)
+2021-10-26 11:09:00.321 DEBUG 17424 --- [main] c.l.project2.Project2ApplicationTests    : Running with Spring Boot v2.5.5, Spring v5.3.10
+2021-10-26 11:09:00.322  INFO 17424 --- [main] c.l.project2.Project2ApplicationTests    : No active profile set, falling back to default profiles: default
+2021-10-26 11:09:02.137  INFO 17424 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-10-26 11:09:03.141  INFO 17424 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-10-26 11:09:03.216  INFO 17424 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-10-26 11:09:03.284  INFO 17424 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-10-26 11:09:03.337  INFO 17424 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-10-26 11:09:03.480  INFO 17424 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2021-10-26 11:09:04.359  INFO 17424 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-10-26 11:09:06.562  INFO 17424 --- [main] c.l.project2.Project2ApplicationTests    : Started Project2ApplicationTests in 6.595 seconds (JVM running for 7.782)
+2021-10-26 11:09:06.694  INFO 17424 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-10-26 11:09:06.705  INFO 17424 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-10-26 11:11:23.378  INFO 10384 --- [main] c.l.project2.Project2ApplicationTests    : Starting Project2ApplicationTests using Java 1.8.0_302 on DESKTOP-GTIL6SV with PID 10384 (started by erose in C:\Users\erose\Desktop\Projects\Project2\project2\IntellijBuild)
+2021-10-26 11:11:23.378 DEBUG 10384 --- [main] c.l.project2.Project2ApplicationTests    : Running with Spring Boot v2.5.5, Spring v5.3.10
+2021-10-26 11:11:23.379  INFO 10384 --- [main] c.l.project2.Project2ApplicationTests    : No active profile set, falling back to default profiles: default
+2021-10-26 11:11:25.279  INFO 10384 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-10-26 11:11:26.300  INFO 10384 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-10-26 11:11:26.372  INFO 10384 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-10-26 11:11:26.437  INFO 10384 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-10-26 11:11:26.485  INFO 10384 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-10-26 11:11:26.660  INFO 10384 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2021-10-26 11:11:27.570  INFO 10384 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-10-26 11:11:29.833  INFO 10384 --- [main] c.l.project2.Project2ApplicationTests    : Started Project2ApplicationTests in 6.81 seconds (JVM running for 8.005)
+2021-10-26 11:11:29.842  INFO 10384 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-10-26 11:11:30.230  INFO 10384 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-10-26 11:14:01.420  INFO 20844 --- [main] c.l.project2.Project2ApplicationTests    : Starting Project2ApplicationTests using Java 1.8.0_302 on DESKTOP-GTIL6SV with PID 20844 (started by erose in C:\Users\erose\Desktop\Projects\Project2\project2\IntellijBuild)
+2021-10-26 11:14:01.421 DEBUG 20844 --- [main] c.l.project2.Project2ApplicationTests    : Running with Spring Boot v2.5.5, Spring v5.3.10
+2021-10-26 11:14:01.422  INFO 20844 --- [main] c.l.project2.Project2ApplicationTests    : No active profile set, falling back to default profiles: default
+2021-10-26 11:14:03.248  INFO 20844 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-10-26 11:14:04.176  INFO 20844 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-10-26 11:14:04.244  INFO 20844 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-10-26 11:14:04.310  INFO 20844 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-10-26 11:14:04.356  INFO 20844 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-10-26 11:14:04.520  INFO 20844 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2021-10-26 11:14:05.445  INFO 20844 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-10-26 11:14:07.766  INFO 20844 --- [main] c.l.project2.Project2ApplicationTests    : Started Project2ApplicationTests in 6.701 seconds (JVM running for 7.913)
+2021-10-26 11:14:07.894  INFO 20844 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-10-26 11:14:07.909  INFO 20844 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-10-26 11:16:19.889  INFO 17184 --- [main] c.l.project2.Project2ApplicationTests    : Starting Project2ApplicationTests using Java 1.8.0_302 on DESKTOP-GTIL6SV with PID 17184 (started by erose in C:\Users\erose\Desktop\Projects\Project2\project2\IntellijBuild)
+2021-10-26 11:16:19.890 DEBUG 17184 --- [main] c.l.project2.Project2ApplicationTests    : Running with Spring Boot v2.5.5, Spring v5.3.10
+2021-10-26 11:16:19.891  INFO 17184 --- [main] c.l.project2.Project2ApplicationTests    : No active profile set, falling back to default profiles: default
+2021-10-26 11:16:21.715  INFO 17184 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-10-26 11:16:22.623  INFO 17184 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-10-26 11:16:22.691  INFO 17184 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-10-26 11:16:22.758  INFO 17184 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-10-26 11:16:22.810  INFO 17184 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-10-26 11:16:22.952  INFO 17184 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2021-10-26 11:16:23.837  INFO 17184 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-10-26 11:16:26.025  INFO 17184 --- [main] c.l.project2.Project2ApplicationTests    : Started Project2ApplicationTests in 6.518 seconds (JVM running for 7.681)
+2021-10-26 11:16:26.118  INFO 17184 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-10-26 11:16:26.446  INFO 17184 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-10-26 11:19:11.054  INFO 6572 --- [main] c.l.project2.Project2ApplicationTests    : Starting Project2ApplicationTests using Java 1.8.0_302 on DESKTOP-GTIL6SV with PID 6572 (started by erose in C:\Users\erose\Desktop\Projects\Project2\project2\IntellijBuild)
+2021-10-26 11:19:11.055 DEBUG 6572 --- [main] c.l.project2.Project2ApplicationTests    : Running with Spring Boot v2.5.5, Spring v5.3.10
+2021-10-26 11:19:11.056  INFO 6572 --- [main] c.l.project2.Project2ApplicationTests    : No active profile set, falling back to default profiles: default
+2021-10-26 11:19:12.849  INFO 6572 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-10-26 11:19:13.745  INFO 6572 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-10-26 11:19:13.821  INFO 6572 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-10-26 11:19:13.894  INFO 6572 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-10-26 11:19:13.936  INFO 6572 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-10-26 11:19:14.075  INFO 6572 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2021-10-26 11:19:14.928  INFO 6572 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-10-26 11:19:16.981  INFO 6572 --- [main] c.l.project2.Project2ApplicationTests    : Started Project2ApplicationTests in 6.279 seconds (JVM running for 7.473)
+2021-10-26 11:19:17.091  INFO 6572 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-10-26 11:19:17.391  INFO 6572 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-10-26 11:20:30.931  INFO 11412 --- [main] c.l.project2.Project2ApplicationTests    : Starting Project2ApplicationTests using Java 1.8.0_302 on DESKTOP-GTIL6SV with PID 11412 (started by erose in C:\Users\erose\Desktop\Projects\Project2\project2\IntellijBuild)
+2021-10-26 11:20:30.932 DEBUG 11412 --- [main] c.l.project2.Project2ApplicationTests    : Running with Spring Boot v2.5.5, Spring v5.3.10
+2021-10-26 11:20:30.934  INFO 11412 --- [main] c.l.project2.Project2ApplicationTests    : No active profile set, falling back to default profiles: default
+2021-10-26 11:20:32.745  INFO 11412 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-10-26 11:20:33.711  INFO 11412 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-10-26 11:20:33.785  INFO 11412 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-10-26 11:20:33.859  INFO 11412 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-10-26 11:20:33.901  INFO 11412 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-10-26 11:20:34.042  INFO 11412 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2021-10-26 11:20:34.940  INFO 11412 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-10-26 11:20:36.993  INFO 11412 --- [main] c.l.project2.Project2ApplicationTests    : Started Project2ApplicationTests in 6.406 seconds (JVM running for 7.613)
+2021-10-26 11:20:37.103  INFO 11412 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-10-26 11:20:37.322  INFO 11412 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-10-26 11:21:06.071  INFO 19340 --- [main] c.l.project2.Project2ApplicationTests    : Starting Project2ApplicationTests using Java 1.8.0_302 on DESKTOP-GTIL6SV with PID 19340 (started by erose in C:\Users\erose\Desktop\Projects\Project2\project2\IntellijBuild)
+2021-10-26 11:21:06.072 DEBUG 19340 --- [main] c.l.project2.Project2ApplicationTests    : Running with Spring Boot v2.5.5, Spring v5.3.10
+2021-10-26 11:21:06.073  INFO 19340 --- [main] c.l.project2.Project2ApplicationTests    : No active profile set, falling back to default profiles: default
+2021-10-26 11:21:07.842  INFO 19340 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-10-26 11:21:08.841  INFO 19340 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-10-26 11:21:08.910  INFO 19340 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-10-26 11:21:08.975  INFO 19340 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-10-26 11:21:09.019  INFO 19340 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-10-26 11:21:09.167  INFO 19340 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2021-10-26 11:21:10.052  INFO 19340 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-10-26 11:21:12.148  INFO 19340 --- [main] c.l.project2.Project2ApplicationTests    : Started Project2ApplicationTests in 6.421 seconds (JVM running for 7.547)
+2021-10-26 11:21:12.254  INFO 19340 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-10-26 11:21:12.519  INFO 19340 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-10-26 11:23:25.838  INFO 6576 --- [main] c.l.project2.Project2ApplicationTests    : Starting Project2ApplicationTests using Java 1.8.0_302 on DESKTOP-GTIL6SV with PID 6576 (started by erose in C:\Users\erose\Desktop\Projects\Project2\project2\IntellijBuild)
+2021-10-26 11:23:25.839 DEBUG 6576 --- [main] c.l.project2.Project2ApplicationTests    : Running with Spring Boot v2.5.5, Spring v5.3.10
+2021-10-26 11:23:25.840  INFO 6576 --- [main] c.l.project2.Project2ApplicationTests    : No active profile set, falling back to default profiles: default
+2021-10-26 11:23:27.646  INFO 6576 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-10-26 11:23:28.617  INFO 6576 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-10-26 11:23:28.686  INFO 6576 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-10-26 11:23:28.753  INFO 6576 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-10-26 11:23:28.803  INFO 6576 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-10-26 11:23:28.941  INFO 6576 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2021-10-26 11:23:29.844  INFO 6576 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-10-26 11:23:31.966  INFO 6576 --- [main] c.l.project2.Project2ApplicationTests    : Started Project2ApplicationTests in 6.485 seconds (JVM running for 7.663)
+2021-10-26 11:23:32.076  INFO 6576 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-10-26 11:23:32.444  INFO 6576 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-10-26 11:25:09.713  INFO 8160 --- [main] c.l.project2.Project2ApplicationTests    : Starting Project2ApplicationTests using Java 1.8.0_302 on DESKTOP-GTIL6SV with PID 8160 (started by erose in C:\Users\erose\Desktop\Projects\Project2\project2\IntellijBuild)
+2021-10-26 11:25:09.715 DEBUG 8160 --- [main] c.l.project2.Project2ApplicationTests    : Running with Spring Boot v2.5.5, Spring v5.3.10
+2021-10-26 11:25:09.717  INFO 8160 --- [main] c.l.project2.Project2ApplicationTests    : No active profile set, falling back to default profiles: default
+2021-10-26 11:25:11.512  INFO 8160 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-10-26 11:25:12.470  INFO 8160 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-10-26 11:25:12.538  INFO 8160 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-10-26 11:25:12.602  INFO 8160 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-10-26 11:25:12.647  INFO 8160 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-10-26 11:25:12.799  INFO 8160 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2021-10-26 11:25:13.679  INFO 8160 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-10-26 11:25:15.754  INFO 8160 --- [main] c.l.project2.Project2ApplicationTests    : Started Project2ApplicationTests in 6.377 seconds (JVM running for 7.491)
+2021-10-26 11:25:15.858  INFO 8160 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-10-26 11:25:16.157  INFO 8160 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-10-26 11:28:46.328  INFO 13156 --- [main] c.l.project2.Project2ApplicationTests    : Starting Project2ApplicationTests using Java 1.8.0_302 on DESKTOP-GTIL6SV with PID 13156 (started by erose in C:\Users\erose\Desktop\Projects\Project2\project2\IntellijBuild)
+2021-10-26 11:28:46.329 DEBUG 13156 --- [main] c.l.project2.Project2ApplicationTests    : Running with Spring Boot v2.5.5, Spring v5.3.10
+2021-10-26 11:28:46.330  INFO 13156 --- [main] c.l.project2.Project2ApplicationTests    : No active profile set, falling back to default profiles: default
+2021-10-26 11:28:48.125  INFO 13156 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-10-26 11:28:49.036  INFO 13156 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-10-26 11:28:49.103  INFO 13156 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-10-26 11:28:49.167  INFO 13156 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-10-26 11:28:49.220  INFO 13156 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-10-26 11:28:49.359  INFO 13156 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2021-10-26 11:28:50.231  INFO 13156 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-10-26 11:28:52.391  INFO 13156 --- [main] c.l.project2.Project2ApplicationTests    : Started Project2ApplicationTests in 6.423 seconds (JVM running for 7.585)
+2021-10-26 11:28:52.512  INFO 13156 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-10-26 11:28:52.803  INFO 13156 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-10-26 11:29:41.016  INFO 20008 --- [main] c.l.project2.Project2ApplicationTests    : Starting Project2ApplicationTests using Java 1.8.0_302 on DESKTOP-GTIL6SV with PID 20008 (started by erose in C:\Users\erose\Desktop\Projects\Project2\project2\IntellijBuild)
+2021-10-26 11:29:41.017 DEBUG 20008 --- [main] c.l.project2.Project2ApplicationTests    : Running with Spring Boot v2.5.5, Spring v5.3.10
+2021-10-26 11:29:41.018  INFO 20008 --- [main] c.l.project2.Project2ApplicationTests    : No active profile set, falling back to default profiles: default
+2021-10-26 11:29:42.829  INFO 20008 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-10-26 11:29:43.778  INFO 20008 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-10-26 11:29:43.849  INFO 20008 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-10-26 11:29:43.914  INFO 20008 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-10-26 11:29:43.965  INFO 20008 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-10-26 11:29:44.106  INFO 20008 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2021-10-26 11:29:44.991  INFO 20008 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-10-26 11:29:47.187  INFO 20008 --- [main] c.l.project2.Project2ApplicationTests    : Started Project2ApplicationTests in 6.529 seconds (JVM running for 7.709)
+2021-10-26 11:29:47.288  INFO 20008 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-10-26 11:29:47.588  INFO 20008 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-10-26 11:32:33.436  INFO 19244 --- [main] c.l.project2.Project2ApplicationTests    : Starting Project2ApplicationTests using Java 1.8.0_302 on DESKTOP-GTIL6SV with PID 19244 (started by erose in C:\Users\erose\Desktop\Projects\Project2\project2\IntellijBuild)
+2021-10-26 11:32:33.437 DEBUG 19244 --- [main] c.l.project2.Project2ApplicationTests    : Running with Spring Boot v2.5.5, Spring v5.3.10
+2021-10-26 11:32:33.439  INFO 19244 --- [main] c.l.project2.Project2ApplicationTests    : No active profile set, falling back to default profiles: default
+2021-10-26 11:32:35.243  INFO 19244 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-10-26 11:32:36.239  INFO 19244 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-10-26 11:32:36.315  INFO 19244 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-10-26 11:32:36.386  INFO 19244 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-10-26 11:32:36.433  INFO 19244 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-10-26 11:32:36.580  INFO 19244 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2021-10-26 11:32:37.473  INFO 19244 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-10-26 11:32:39.677  INFO 19244 --- [main] c.l.project2.Project2ApplicationTests    : Started Project2ApplicationTests in 6.61 seconds (JVM running for 7.834)
+2021-10-26 11:32:39.790  INFO 19244 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-10-26 11:32:39.970  INFO 19244 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-10-26 11:35:45.530  INFO 19280 --- [main] c.l.project2.Project2ApplicationTests    : Starting Project2ApplicationTests using Java 1.8.0_302 on DESKTOP-GTIL6SV with PID 19280 (started by erose in C:\Users\erose\Desktop\Projects\Project2\project2\IntellijBuild)
+2021-10-26 11:35:45.531 DEBUG 19280 --- [main] c.l.project2.Project2ApplicationTests    : Running with Spring Boot v2.5.5, Spring v5.3.10
+2021-10-26 11:35:45.533  INFO 19280 --- [main] c.l.project2.Project2ApplicationTests    : No active profile set, falling back to default profiles: default
+2021-10-26 11:35:47.374  INFO 19280 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-10-26 11:35:48.365  INFO 19280 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-10-26 11:35:48.435  INFO 19280 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-10-26 11:35:48.503  INFO 19280 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-10-26 11:35:48.554  INFO 19280 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-10-26 11:35:48.700  INFO 19280 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2021-10-26 11:35:49.585  INFO 19280 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-10-26 11:35:51.797  INFO 19280 --- [main] c.l.project2.Project2ApplicationTests    : Started Project2ApplicationTests in 6.64 seconds (JVM running for 7.849)
+2021-10-26 11:35:51.916  INFO 19280 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-10-26 11:35:52.129  INFO 19280 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-10-26 11:36:10.540  INFO 9444 --- [main] c.l.project2.Project2ApplicationTests    : Starting Project2ApplicationTests using Java 1.8.0_302 on DESKTOP-GTIL6SV with PID 9444 (started by erose in C:\Users\erose\Desktop\Projects\Project2\project2\IntellijBuild)
+2021-10-26 11:36:10.541 DEBUG 9444 --- [main] c.l.project2.Project2ApplicationTests    : Running with Spring Boot v2.5.5, Spring v5.3.10
+2021-10-26 11:36:10.542  INFO 9444 --- [main] c.l.project2.Project2ApplicationTests    : No active profile set, falling back to default profiles: default
+2021-10-26 11:36:12.393  INFO 9444 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-10-26 11:36:13.345  INFO 9444 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-10-26 11:36:13.416  INFO 9444 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-10-26 11:36:13.483  INFO 9444 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-10-26 11:36:13.536  INFO 9444 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-10-26 11:36:13.676  INFO 9444 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2021-10-26 11:36:14.568  INFO 9444 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-10-26 11:36:16.731  INFO 9444 --- [main] c.l.project2.Project2ApplicationTests    : Started Project2ApplicationTests in 6.563 seconds (JVM running for 7.825)
+2021-10-26 11:36:16.874  INFO 9444 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-10-26 11:36:16.959  INFO 9444 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-10-26 11:39:45.307  INFO 16452 --- [main] c.l.project2.Project2ApplicationTests    : Starting Project2ApplicationTests using Java 1.8.0_302 on DESKTOP-GTIL6SV with PID 16452 (started by erose in C:\Users\erose\Desktop\Projects\Project2\project2\IntellijBuild)
+2021-10-26 11:39:45.308 DEBUG 16452 --- [main] c.l.project2.Project2ApplicationTests    : Running with Spring Boot v2.5.5, Spring v5.3.10
+2021-10-26 11:39:45.309  INFO 16452 --- [main] c.l.project2.Project2ApplicationTests    : No active profile set, falling back to default profiles: default
+2021-10-26 11:39:47.193  INFO 16452 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-10-26 11:39:48.137  INFO 16452 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-10-26 11:39:48.211  INFO 16452 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-10-26 11:39:48.280  INFO 16452 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-10-26 11:39:48.331  INFO 16452 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-10-26 11:39:48.470  INFO 16452 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2021-10-26 11:39:49.351  INFO 16452 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-10-26 11:39:51.551  INFO 16452 --- [main] c.l.project2.Project2ApplicationTests    : Started Project2ApplicationTests in 6.62 seconds (JVM running for 7.823)
+2021-10-26 11:39:51.675  INFO 16452 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-10-26 11:39:51.792  INFO 16452 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-10-26 11:50:16.895  INFO 9624 --- [main] c.l.project2.Project2ApplicationTests    : Starting Project2ApplicationTests using Java 1.8.0_302 on DESKTOP-GTIL6SV with PID 9624 (started by erose in C:\Users\erose\Desktop\Projects\Project2\project2\IntellijBuild)
+2021-10-26 11:50:16.896 DEBUG 9624 --- [main] c.l.project2.Project2ApplicationTests    : Running with Spring Boot v2.5.5, Spring v5.3.10
+2021-10-26 11:50:16.897  INFO 9624 --- [main] c.l.project2.Project2ApplicationTests    : No active profile set, falling back to default profiles: default
+2021-10-26 11:50:18.716  INFO 9624 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-10-26 11:50:19.658  INFO 9624 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-10-26 11:50:19.736  INFO 9624 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-10-26 11:50:19.803  INFO 9624 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-10-26 11:50:19.853  INFO 9624 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-10-26 11:50:19.998  INFO 9624 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2021-10-26 11:50:20.892  INFO 9624 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-10-26 11:50:23.111  INFO 9624 --- [main] c.l.project2.Project2ApplicationTests    : Started Project2ApplicationTests in 6.572 seconds (JVM running for 7.764)
+2021-10-26 11:50:23.223  INFO 9624 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-10-26 11:50:23.245  INFO 9624 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
