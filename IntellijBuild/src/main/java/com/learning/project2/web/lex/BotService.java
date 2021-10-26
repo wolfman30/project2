@@ -105,10 +105,22 @@ public class BotService {
                 return howAreYou(interaction);
             case("HowAmIDoing"):
                 return getAverage(interaction);
+            case("TellMeAbout"):
+                return tellMeAbout(interaction);
             default:
                 return interaction;
         }
 
+    }
+
+    private Interaction tellMeAbout(Interaction interaction)
+    {
+        String learningTopic = interaction.getSlotValue("LearningTopic");
+        if (learningTopic.equals("Spring"))
+        {
+            interaction.addToBotMessages("Spring is a framework that provides inversion of control via dependency injection to alleviate the complexity of enterprise-grade applications");
+        }
+        return interaction;
     }
 
     private Interaction howAreYou(Interaction interaction) {
