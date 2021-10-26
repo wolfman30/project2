@@ -124,7 +124,8 @@ public class BotService {
         TestHistoryService testHistory = new TestHistoryService();
         ResponseEntity<List<TestHistory>> testScores = testHistory.getByUserId(id);
         System.out.println(testScores.toString());
-        interaction.addToBotMessages("Here is your average: " + testScores);
+        //average = testScores / testScores.length
+        interaction.addToBotMessages("Here is your average: " + average);
         return interaction;
     }
 
