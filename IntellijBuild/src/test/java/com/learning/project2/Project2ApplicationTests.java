@@ -2,6 +2,7 @@ package com.learning.project2;
 
 import com.learning.project2.web.lex.BotService;
 import com.learning.project2.web.lex.models.Interaction;
+import com.learning.project2.web.lex.models.Response;
 import com.learning.project2.web.test.TestController;
 import com.learning.project2.web.test.models.DTO.TestSubmission;
 import com.learning.project2.web.test.models.TestAnswer;
@@ -42,9 +43,7 @@ import static org.mockito.Mockito.*;
 import java.sql.Array;
 import java.sql.SQLException;
 import java.time.Instant;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Objects;
+import java.util.*;
 
 @SpringBootTest
 class Project2ApplicationTests {
@@ -234,9 +233,36 @@ class Project2ApplicationTests {
         List<String> botMessages = new ArrayList<>();
         botMessages.add("Hello back");
 
+        Map<String, String> slots = new HashMap<String, String>();
+        slots.put("Hi","Hello");
+
         interaction.setIntent("Hello");
         interaction.setSessionId("123");
+        interaction.setState("Ready");
         interaction.setUserMessages(userMessages);
+        interaction.setBotMessages(botMessages);
+        interaction.addToUserMessages("Hi");
+        interaction.addToBotMessages("Hello 2");
+        interaction.setSlots(slots);
+        interaction.addToSlots("Slot", "ValueOfSlot");
+
+        Response response = new Response();
+        response.setMessage("response message");
+        response.setUserId(2L);
+        response.setSessionId("lkasdjfadlsjf");
+
+        Assertions.assertEquals("Hello", interaction.getIntent());
+        Assertions.assertEquals("Ready", interaction.getState());
+        Assertions.assertEquals(2, interaction.getUserMessages().size());
+        Assertions.assertEquals(2, interaction.getBotMessages().size());
+        Assertions.assertEquals("Hi", interaction.getCurrentUserMessage());
+        Assertions.assertEquals("Hello 2", interaction.getCurrentBotMessage());
+        Assertions.assertEquals(2, interaction.getSlotNames().length);
+        Assertions.assertEquals("ValueOfSlot", interaction.getSlotValue("Slot"));
+
+        Assertions.assertEquals("response message", response.getMessage());
+        Assertions.assertEquals(2L, response.getUserId());
+        Assertions.assertEquals("lkasdjfadlsjf", response.getSessionId());
 
     }
 }
