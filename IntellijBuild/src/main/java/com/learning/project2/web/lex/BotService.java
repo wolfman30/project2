@@ -115,7 +115,7 @@ public class BotService {
 
     private Interaction getAverage(Interaction interaction)
     {
-        int average;
+        int average=0;
 
         interaction.addToBotMessages("Here is your average: " + average);
         return interaction;

@@ -343,3 +343,120 @@
 2021-10-26 11:50:23.111  INFO 9624 --- [main] c.l.project2.Project2ApplicationTests    : Started Project2ApplicationTests in 6.572 seconds (JVM running for 7.764)
 2021-10-26 11:50:23.223  INFO 9624 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2021-10-26 11:50:23.245  INFO 9624 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-10-26 13:58:11.255  INFO 18092 --- [main] c.l.project2.Project2ApplicationTests    : Starting Project2ApplicationTests using Java 1.8.0_302 on DESKTOP-GTIL6SV with PID 18092 (started by erose in C:\Users\erose\Desktop\Projects\Project2\project2\IntellijBuild)
+2021-10-26 13:58:11.256 DEBUG 18092 --- [main] c.l.project2.Project2ApplicationTests    : Running with Spring Boot v2.5.5, Spring v5.3.10
+2021-10-26 13:58:11.257  INFO 18092 --- [main] c.l.project2.Project2ApplicationTests    : No active profile set, falling back to default profiles: default
+2021-10-26 13:58:12.987  INFO 18092 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-10-26 13:58:13.949  INFO 18092 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-10-26 13:58:14.017  INFO 18092 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-10-26 13:58:14.081  INFO 18092 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-10-26 13:58:14.131  INFO 18092 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-10-26 13:58:14.267  INFO 18092 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2021-10-26 13:58:15.597  INFO 18092 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-10-26 13:58:17.709  INFO 18092 --- [main] c.l.project2.Project2ApplicationTests    : Started Project2ApplicationTests in 6.781 seconds (JVM running for 7.92)
+2021-10-26 13:58:17.819  INFO 18092 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-10-26 13:58:18.023  INFO 18092 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-10-26 13:58:50.932  INFO 14064 --- [main] c.l.project2.Project2ApplicationTests    : Starting Project2ApplicationTests using Java 1.8.0_302 on DESKTOP-GTIL6SV with PID 14064 (started by erose in C:\Users\erose\Desktop\Projects\Project2\project2\IntellijBuild)
+2021-10-26 13:58:50.933 DEBUG 14064 --- [main] c.l.project2.Project2ApplicationTests    : Running with Spring Boot v2.5.5, Spring v5.3.10
+2021-10-26 13:58:50.935  INFO 14064 --- [main] c.l.project2.Project2ApplicationTests    : No active profile set, falling back to default profiles: default
+2021-10-26 13:58:52.734  INFO 6812 --- [main] c.l.project2.Project2ApplicationTests    : Starting Project2ApplicationTests using Java 1.8.0_302 on DESKTOP-GTIL6SV with PID 6812 (started by erose in C:\Users\erose\Desktop\Projects\Project2\project2\IntellijBuild)
+2021-10-26 13:58:52.735 DEBUG 6812 --- [main] c.l.project2.Project2ApplicationTests    : Running with Spring Boot v2.5.5, Spring v5.3.10
+2021-10-26 13:58:52.738  INFO 6812 --- [main] c.l.project2.Project2ApplicationTests    : No active profile set, falling back to default profiles: default
+2021-10-26 13:58:53.373  INFO 14064 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-10-26 13:58:54.353  INFO 14064 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-10-26 13:58:54.424  INFO 14064 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-10-26 13:58:54.492  INFO 14064 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-10-26 13:58:54.558  INFO 14064 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-10-26 13:58:54.665  INFO 6812 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-10-26 13:58:54.725  INFO 14064 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2021-10-26 13:58:55.582  INFO 6812 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-10-26 13:58:55.645  INFO 14064 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-10-26 13:58:55.652  INFO 6812 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-10-26 13:58:55.743  INFO 6812 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-10-26 13:58:55.808  INFO 6812 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-10-26 13:58:55.983  INFO 6812 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2021-10-26 13:58:56.969  INFO 6812 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-10-26 13:58:58.316  INFO 14064 --- [main] c.l.project2.Project2ApplicationTests    : Started Project2ApplicationTests in 7.782 seconds (JVM running for 8.954)
+2021-10-26 13:58:58.454  INFO 14064 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-10-26 13:58:58.467  INFO 14064 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-10-26 13:58:59.600  INFO 6812 --- [main] c.l.project2.Project2ApplicationTests    : Started Project2ApplicationTests in 7.246 seconds (JVM running for 8.723)
+2021-10-26 13:58:59.784  INFO 6812 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-10-26 13:58:59.828  INFO 6812 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-10-26 14:02:04.158  INFO 6276 --- [main] c.l.project2.Project2ApplicationTests    : Starting Project2ApplicationTests using Java 1.8.0_302 on DESKTOP-GTIL6SV with PID 6276 (started by erose in C:\Users\erose\Desktop\Projects\Project2\project2\IntellijBuild)
+2021-10-26 14:02:04.159 DEBUG 6276 --- [main] c.l.project2.Project2ApplicationTests    : Running with Spring Boot v2.5.5, Spring v5.3.10
+2021-10-26 14:02:04.160  INFO 6276 --- [main] c.l.project2.Project2ApplicationTests    : No active profile set, falling back to default profiles: default
+2021-10-26 14:02:05.857  INFO 6276 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-10-26 14:02:06.816  INFO 6276 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-10-26 14:02:06.884  INFO 6276 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-10-26 14:02:06.949  INFO 6276 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-10-26 14:02:06.999  INFO 6276 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-10-26 14:02:07.135  INFO 6276 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2021-10-26 14:02:08.549  INFO 6276 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-10-26 14:02:10.611  INFO 6276 --- [main] c.l.project2.Project2ApplicationTests    : Started Project2ApplicationTests in 6.786 seconds (JVM running for 7.899)
+2021-10-26 14:02:10.736  INFO 6276 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-10-26 14:02:11.255  INFO 6276 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-10-26 14:07:18.172  INFO 10408 --- [main] c.l.project2.Project2ApplicationTests    : Starting Project2ApplicationTests using Java 1.8.0_302 on DESKTOP-GTIL6SV with PID 10408 (started by erose in C:\Users\erose\Desktop\Projects\Project2\project2\IntellijBuild)
+2021-10-26 14:07:18.173 DEBUG 10408 --- [main] c.l.project2.Project2ApplicationTests    : Running with Spring Boot v2.5.5, Spring v5.3.10
+2021-10-26 14:07:18.174  INFO 10408 --- [main] c.l.project2.Project2ApplicationTests    : No active profile set, falling back to default profiles: default
+2021-10-26 14:07:19.930  INFO 10408 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-10-26 14:07:21.116  INFO 10408 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-10-26 14:07:21.188  INFO 10408 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-10-26 14:07:21.251  INFO 10408 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-10-26 14:07:21.302  INFO 10408 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-10-26 14:07:21.438  INFO 10408 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2021-10-26 14:07:22.335  INFO 10408 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-10-26 14:07:24.617  INFO 10408 --- [main] c.l.project2.Project2ApplicationTests    : Started Project2ApplicationTests in 6.787 seconds (JVM running for 7.986)
+2021-10-26 14:07:24.727  INFO 10408 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-10-26 14:07:24.739  INFO 10408 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-10-26 14:10:32.945  INFO 4920 --- [main] c.l.project2.Project2ApplicationTests    : Starting Project2ApplicationTests using Java 1.8.0_302 on DESKTOP-GTIL6SV with PID 4920 (started by erose in C:\Users\erose\Desktop\Projects\Project2\project2\IntellijBuild)
+2021-10-26 14:10:32.946 DEBUG 4920 --- [main] c.l.project2.Project2ApplicationTests    : Running with Spring Boot v2.5.5, Spring v5.3.10
+2021-10-26 14:10:32.947  INFO 4920 --- [main] c.l.project2.Project2ApplicationTests    : No active profile set, falling back to default profiles: default
+2021-10-26 14:10:34.652  INFO 4920 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-10-26 14:10:35.639  INFO 4920 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-10-26 14:10:35.715  INFO 4920 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-10-26 14:10:35.777  INFO 4920 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-10-26 14:10:35.827  INFO 4920 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-10-26 14:10:35.959  INFO 4920 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2021-10-26 14:10:36.870  INFO 4920 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-10-26 14:10:38.868  INFO 4920 --- [main] c.l.project2.Project2ApplicationTests    : Started Project2ApplicationTests in 6.274 seconds (JVM running for 7.378)
+2021-10-26 14:10:38.985  INFO 4920 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-10-26 14:10:39.254  INFO 4920 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-10-26 14:11:09.717  INFO 6772 --- [main] c.l.project2.Project2ApplicationTests    : Starting Project2ApplicationTests using Java 1.8.0_302 on DESKTOP-GTIL6SV with PID 6772 (started by erose in C:\Users\erose\Desktop\Projects\Project2\project2\IntellijBuild)
+2021-10-26 14:11:09.718 DEBUG 6772 --- [main] c.l.project2.Project2ApplicationTests    : Running with Spring Boot v2.5.5, Spring v5.3.10
+2021-10-26 14:11:09.719  INFO 6772 --- [main] c.l.project2.Project2ApplicationTests    : No active profile set, falling back to default profiles: default
+2021-10-26 14:11:11.429  INFO 6772 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-10-26 14:11:12.699  INFO 6772 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-10-26 14:11:12.764  INFO 6772 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-10-26 14:11:12.829  INFO 6772 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-10-26 14:11:12.883  INFO 6772 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-10-26 14:11:13.018  INFO 6772 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2021-10-26 14:11:13.886  INFO 6772 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-10-26 14:11:15.895  INFO 6772 --- [main] c.l.project2.Project2ApplicationTests    : Started Project2ApplicationTests in 6.524 seconds (JVM running for 7.663)
+2021-10-26 14:11:16.004  INFO 6772 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-10-26 14:11:16.030  INFO 6772 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-10-26 14:15:06.246  INFO 10500 --- [main] c.l.project2.Project2ApplicationTests    : Starting Project2ApplicationTests using Java 1.8.0_302 on DESKTOP-GTIL6SV with PID 10500 (started by erose in C:\Users\erose\Desktop\Projects\Project2\project2\IntellijBuild)
+2021-10-26 14:15:06.247 DEBUG 10500 --- [main] c.l.project2.Project2ApplicationTests    : Running with Spring Boot v2.5.5, Spring v5.3.10
+2021-10-26 14:15:06.249  INFO 10500 --- [main] c.l.project2.Project2ApplicationTests    : No active profile set, falling back to default profiles: default
+2021-10-26 14:15:07.954  INFO 10500 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-10-26 14:15:08.961  INFO 10500 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-10-26 14:15:09.027  INFO 10500 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-10-26 14:15:09.090  INFO 10500 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-10-26 14:15:09.141  INFO 10500 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-10-26 14:15:09.276  INFO 10500 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2021-10-26 14:15:10.179  INFO 10500 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-10-26 14:15:12.205  INFO 10500 --- [main] c.l.project2.Project2ApplicationTests    : Started Project2ApplicationTests in 6.292 seconds (JVM running for 7.437)
+2021-10-26 14:15:12.320  INFO 10500 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-10-26 14:15:12.595  INFO 10500 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-10-26 14:25:47.609  INFO 452 --- [main] c.l.project2.Project2ApplicationTests    : Starting Project2ApplicationTests using Java 1.8.0_302 on DESKTOP-GTIL6SV with PID 452 (started by erose in C:\Users\erose\Desktop\Projects\Project2\project2\IntellijBuild)
+2021-10-26 14:25:47.610 DEBUG 452 --- [main] c.l.project2.Project2ApplicationTests    : Running with Spring Boot v2.5.5, Spring v5.3.10
+2021-10-26 14:25:47.611  INFO 452 --- [main] c.l.project2.Project2ApplicationTests    : No active profile set, falling back to default profiles: default
+2021-10-26 14:25:49.260  INFO 452 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-10-26 14:25:50.303  INFO 452 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-10-26 14:25:50.373  INFO 452 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-10-26 14:25:50.432  INFO 452 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-10-26 14:25:50.477  INFO 452 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-10-26 14:25:50.618  INFO 452 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2021-10-26 14:25:51.493  INFO 452 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-10-26 14:25:53.540  INFO 452 --- [main] c.l.project2.Project2ApplicationTests    : Started Project2ApplicationTests in 6.277 seconds (JVM running for 7.371)
+2021-10-26 14:25:53.703  INFO 452 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-10-26 14:25:53.753  INFO 452 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

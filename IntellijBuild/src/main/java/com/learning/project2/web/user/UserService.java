@@ -18,6 +18,11 @@ public class UserService {
         this.userRepository = userRepository;
     }
 
+    UserService(UserRepository repo){
+        super();
+        this.setUserRepository(repo);
+    }
+
 
     public ResponseEntity<User> createOrUpdate(User user) {
         try{

@@ -22,6 +22,11 @@ public class UserController {
         this.userService = userService;
     }
 
+    public UserController(UserRepository repo){
+        super();
+        setUserService(new UserService(repo));
+    }
+
     // path: BASEURL/user/create-or-update/
     //
     // Send in post request with user information and the service will

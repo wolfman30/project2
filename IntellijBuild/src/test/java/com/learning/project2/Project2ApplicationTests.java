@@ -12,11 +12,13 @@ import com.learning.project2.web.test.services.TestHistoryService;
 import com.learning.project2.web.user.User;
 import com.learning.project2.web.user.UserController;
 import com.learning.project2.web.user.UserRepository;
+import com.learning.project2.web.user.UserService;
 import org.junit.Before;
 import org.junit.Ignore;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.mockito.ArgumentMatchers;
+import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.internal.matchers.Null;
 import org.mockito.stubbing.Answer;
@@ -50,11 +52,6 @@ class Project2ApplicationTests {
     private TestHistoryService testHistoryService;
 
     @MockBean
-    private UserRepository userRepository;
-    @MockBean
-    private UserController userController;
-
-    @MockBean
     private BotService botService;
 
     @Before
@@ -67,8 +64,25 @@ class Project2ApplicationTests {
     public void testUserObject(){
         User user = new User();
         user.setId(1L);
+        user.setUsername("Hello");
+        user.setPassword("Password");
+        user.setEmail("Email");
+        user.setDateJointed(Instant.parse("2018-11-30T18:35:24.00Z"));
+        user.setFirstName("Fname");
+        user.setLastName("Lname");
+
+        Assertions.assertEquals(1L, user.getId());
+        Assertions.assertEquals("Hello",user.getUsername());
+        Assertions.assertEquals("Password",user.getPassword());
+        Assertions.assertEquals("Email",user.getEmail());
+        Assertions.assertEquals(Instant.parse("2018-11-30T18:35:24.00Z"),user.getDateJointed());
+        Assertions.assertEquals("Fname",user.getFirstName());
+        Assertions.assertEquals("Lname",user.getLastName());
+
+
         User otherUser = new User();
         otherUser.setId(2L);
+
 
         Assertions.assertNotNull(user.toString());
         Assertions.assertNotEquals(0, user.hashCode());
@@ -81,12 +95,17 @@ class Project2ApplicationTests {
     @Test
     public void testGetUser(){
 
-        User user = new User(1L, "username", "password", "email", Instant.now(), "First", "Last");
+        UserRepository mockRepo = mock(UserRepository.class);
+        UserController controller = new UserController(mockRepo);
 
+        User user = new User(1L, "username", "password", "email", Instant.now(), "First", "Last");;
+
+        when(mockRepo.save(user)).thenReturn(user);
+
+        ResponseEntity<User> newUserResponse = controller.createOrUpdate(user);
         ResponseEntity<User> thisUserResponse = new ResponseEntity<>(user, HttpStatus.OK);
-        ResponseEntity<User> newUserResponse = userController.createOrUpdate(user);
 
-        Assertions.assertNotEquals(thisUserResponse, newUserResponse);
+        Assertions.assertEquals(thisUserResponse, newUserResponse);
     }
 
 
