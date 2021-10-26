@@ -228,5 +228,15 @@ class Project2ApplicationTests {
     public void testBotObjects(){
         Interaction interaction = new Interaction();
 
+        List<String> userMessages = new ArrayList<>();
+        userMessages.add("hello world");
+
+        List<String> botMessages = new ArrayList<>();
+        botMessages.add("Hello back");
+
+        interaction.setIntent("Hello");
+        interaction.setSessionId("123");
+        interaction.setUserMessages(userMessages);
+
     }
 }

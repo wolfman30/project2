@@ -6,6 +6,7 @@ import com.learning.project2.web.test.models.history.TestHistoryAnswerGiven;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Repository
@@ -17,10 +18,10 @@ public interface TestHistoryRepository extends JpaRepository<TestHistory, Long> 
     default double findAverageScoreByUser(long id){
         // Get the score of each test
         // and add them to the average
-        int itteration = 0;
-        double score = 0;
+        List<Double> scores = new ArrayList<>();
 
         List<TestHistory> tests = findByUser_Id(id);
+
 
         for(TestHistory th : tests){
 
@@ -29,28 +30,30 @@ public interface TestHistoryRepository extends JpaRepository<TestHistory, Long> 
 
             double pointsEarned=0;
             double possiblePoints=0;
+
             for(TestHistoryAnswerGiven answer : answers){
                 boolean isCorrect = answer.getTestAnswer().getIsCorrect();
 
                 // Find the question that matches the answer
                 for(TestQuestion question : questions){
                     if(question.getTestAnswerList().contains(answer.getTestAnswer())){
-
                         // If a question is found that has this as an answer
                         // Checks for if answer is correct
                         // then adds the points of the question
                         if(isCorrect) {
                             pointsEarned += question.getPoints();
                         }
-                        possiblePoints +=question.getPoints();
+                        possiblePoints += question.getPoints();
                         break;
                     }
                 }
+                scores.add(pointsEarned / possiblePoints);
             }
-
-            score+= pointsEarned/possiblePoints;
-
         }
-        return score/tests.size();
+
+        System.out.println(scores);
+        double score = scores.stream().mapToDouble(s -> s).sum();
+
+        return score/scores.size();
     }
 }
