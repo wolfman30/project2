@@ -1,11 +1,14 @@
 package com.learning.project2.web.lex;
 
 import com.learning.project2.web.lex.models.Interaction;
+import com.learning.project2.web.test.models.history.TestHistory;
+import com.learning.project2.web.test.services.TestHistoryService;
 import lombok.Getter;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang.ObjectUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import software.amazon.awssdk.auth.credentials.AwsBasicCredentials;
 import software.amazon.awssdk.auth.credentials.AwsCredentialsProvider;
@@ -20,6 +23,7 @@ import com.learning.project2.web.test.repositories.TestHistoryAnswerGivenReposit
 
 import javax.annotation.PostConstruct;
 
+import java.util.List;
 import java.util.Map;
 import java.util.UUID;
 
@@ -88,7 +92,7 @@ public class BotService {
                 return tellJoke(interaction);
             case("UserAsksHowAreYou"):
                 return howAreYou(interaction);
-            case("GetAverage"):
+            case("HowAmIDoing"):
                 return getAverage(interaction);
             default:
                 return interaction;
@@ -116,8 +120,11 @@ public class BotService {
     private Interaction getAverage(Interaction interaction)
     {
         int average=0;
-
-        interaction.addToBotMessages("Here is your average: " + average);
+        long id = interaction.getUserId();
+        TestHistoryService testHistory = new TestHistoryService();
+        ResponseEntity<List<TestHistory>> testScores = testHistory.getByUserId(id);
+        System.out.println(testScores.toString());
+        interaction.addToBotMessages("Here is your average: " + testScores);
         return interaction;
     }
 
