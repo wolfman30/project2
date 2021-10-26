@@ -88,14 +88,25 @@ public class BotService {
                 return tellJoke(interaction);
             case("UserAsksHowAreYou"):
                 return howAreYou(interaction);
-            case("GetAverage"):
+            case("HowAmIDoing"):
                 return getAverage(interaction);
+            case("TellMeAbout"):
+                return tellMeAbout(interaction);
             default:
                 return interaction;
         }
 
     }
 
+    private Interaction tellMeAbout(Interaction interaction)
+    {
+        String learningTopic = interaction.getSlotValue("LearningTopic");
+        if (learningTopic.equals("Spring") || learningTopic.equals("spring"))
+        {
+            interaction.addToBotMessages("Spring is a framework that provides inversion of control (IoC) via dependency injection to alleviate the complexity of developing enterprise applications.");
+        }
+        return interaction;
+    }
     private Interaction howAreYou(Interaction interaction) {
         String feeling = interaction.getSlotValue("UserFeeling");
         if(feeling.equals("Good")){
@@ -109,15 +120,15 @@ public class BotService {
     }
 
     private Interaction tellJoke(Interaction interaction) {
-        interaction.addToBotMessages("[insert joke text here]");
+        interaction.addToBotMessages("What happens when you ask a bot to tell a joke?");
         return interaction;
     }
 
     private Interaction getAverage(Interaction interaction)
     {
-        int average;
+        int average = 0;
 
-        interaction.addToBotMessages("Here is your average: " + average);
+        interaction.addToBotMessages("Here is your overall average: " + average + "%...so not so good!");
         return interaction;
     }
 
