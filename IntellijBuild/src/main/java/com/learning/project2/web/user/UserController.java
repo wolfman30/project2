@@ -1,6 +1,7 @@
 package com.learning.project2.web.user;
 
 import com.learning.project2.web.WebLinks;
+import lombok.NoArgsConstructor;
 import org.hibernate.JDBCException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
@@ -13,6 +14,7 @@ import org.springframework.web.bind.annotation.*;
 @CrossOrigin(origins = WebLinks.ANGULAR_ORIGIN)
 @RestController
 @RequestMapping(path = "/user")
+@NoArgsConstructor
 public class UserController {
 
     UserService userService;
@@ -23,7 +25,7 @@ public class UserController {
     }
 
     public UserController(UserRepository repo){
-        super();
+        this();
         setUserService(new UserService(repo));
     }
 

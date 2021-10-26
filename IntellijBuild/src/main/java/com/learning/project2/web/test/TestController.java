@@ -6,6 +6,7 @@ import com.learning.project2.web.test.models.Test;
 import com.learning.project2.web.test.models.history.TestHistory;
 import com.learning.project2.web.test.services.TestHistoryService;
 import com.learning.project2.web.test.services.TestService;
+import lombok.NoArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -17,6 +18,7 @@ import java.util.List;
 @RestController
 @RequestMapping(path = "/test")
 @CrossOrigin(origins = WebLinks.ANGULAR_ORIGIN)
+@NoArgsConstructor
 public class TestController {
 
     private TestService testService;
@@ -30,6 +32,12 @@ public class TestController {
     @Autowired
     private void setTestHistoryService(TestHistoryService testHistoryService){
         this.testHistoryService = testHistoryService;
+    }
+
+    public TestController(TestService testService, TestHistoryService testHistoryService){
+        this();
+        setTestService(testService);
+        setTestHistoryService(testHistoryService);
     }
 
     // path: BASEURL/test/get/{id}
@@ -117,8 +125,6 @@ public class TestController {
             produces = MediaType.APPLICATION_JSON_VALUE
     )
     public ResponseEntity<TestHistory> submitTest(@RequestBody TestSubmission testSubmission){
-        System.out.println(testSubmission.toString());
-        System.out.println(testSubmission.asTestHistory().toString());
         return testHistoryService.submitTest(testSubmission.asTestHistory());
     }
 }

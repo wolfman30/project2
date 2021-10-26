@@ -6,6 +6,8 @@ import com.learning.project2.web.test.models.TestQuestion;
 import com.learning.project2.web.test.models.history.TestHistory;
 import com.learning.project2.web.test.repositories.TestHistoryRepository;
 import com.learning.project2.web.test.repositories.TestRepository;
+import lombok.NoArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
@@ -13,16 +15,21 @@ import org.springframework.stereotype.Service;
 import java.util.*;
 
 @Service
+@NoArgsConstructor
+@Slf4j
 public class TestService {
 
     private TestRepository testRepository;
-    private TestHistoryRepository testHistoryRepository;
 
     @Autowired
     private void setTestRepository(TestRepository testRepository){
         this.testRepository = testRepository;
     }
 
+    public TestService(TestRepository repo){
+        this();
+        setTestRepository(repo);
+    }
 
     public Test getTestWithAnswersLabeled(Long id){
         Optional<Test> resp = testRepository.findById(id);
@@ -52,16 +59,17 @@ public class TestService {
     public Test getTestWithRandomQuestionsSelected(Long id, int count){
         Test t = getTestWithAnswersUnlabeled(id);
         if(t==null){
-            System.out.println("test returned null");
+            log.warn("test not found. Returned null");
             return null;
         }
         if(count > t.getTestQuestions().size()){
-            System.out.println("Count is out of bounds (too large) Count"+count+" Size"+t.getTestQuestions().size());
+            log.warn("Count is out of bounds (too large) Count"+count+" Size"+t.getTestQuestions().size());
+            log.warn("test returned null");
             return null;
         }
-        if(count <= 1){
-            System.out.println("Count is out of bounds (too small) Count"+count);
-            System.out.println("test returned null");
+        if(count < 1){
+            log.warn("Count is out of bounds (too small) Count"+count);
+            log.warn("test returned null");
             return null;
         }
 
