@@ -46,11 +46,12 @@ public class Test {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Test test = (Test) o;
-        return id.equals(test.id) && subject.equals(test.subject) && testName.equals(test.testName);
+        return Objects.equals(id, test.id) && Objects.equals(subject, test.subject) && Objects.equals(testName, test.testName) && Objects.equals(testQuestions, test.testQuestions);
     }
 
     @Override
     public int hashCode() {
         return Objects.hash(id, subject, testName);
     }
+
 }

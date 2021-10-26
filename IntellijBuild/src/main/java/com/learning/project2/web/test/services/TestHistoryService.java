@@ -4,9 +4,8 @@ import com.learning.project2.web.test.models.history.TestHistory;
 import com.learning.project2.web.test.models.history.TestHistoryAnswerGiven;
 import com.learning.project2.web.test.repositories.TestHistoryAnswerGivenRepository;
 import com.learning.project2.web.test.repositories.TestHistoryRepository;
-import com.learning.project2.web.test.repositories.TestRepository;
+import lombok.NoArgsConstructor;
 import org.hibernate.JDBCException;
-import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.HttpStatus;
@@ -18,6 +17,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
+@NoArgsConstructor
 public class TestHistoryService {
 
     private TestHistoryRepository testHistoryRepository;
@@ -29,6 +29,12 @@ public class TestHistoryService {
 
     @Autowired public void setAnswerGivenRepository(TestHistoryAnswerGivenRepository answerGivenRepository){
         this.answerGivenRepository = answerGivenRepository;
+    }
+
+    public TestHistoryService(TestHistoryRepository testrepo, TestHistoryAnswerGivenRepository answerrepo){
+        this();
+        setTestHistoryRepository(testrepo);
+        setAnswerGivenRepository(answerrepo);
     }
 
 

@@ -1,5 +1,6 @@
 package com.learning.project2.web.user;
 
+import lombok.NoArgsConstructor;
 import org.hibernate.JDBCException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
@@ -9,6 +10,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 @Service
+@NoArgsConstructor
 public class UserService {
 
     private UserRepository userRepository;
