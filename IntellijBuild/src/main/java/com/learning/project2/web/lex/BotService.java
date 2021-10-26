@@ -16,6 +16,7 @@ import software.amazon.awssdk.services.lexruntimev2.model.Message;
 import software.amazon.awssdk.services.lexruntimev2.model.RecognizeTextRequest;
 import software.amazon.awssdk.services.lexruntimev2.model.RecognizeTextResponse;
 import software.amazon.awssdk.services.lexruntimev2.model.Slot;
+import com.learning.project2.web.test.repositories.TestHistoryAnswerGivenRepository;
 
 import javax.annotation.PostConstruct;
 
@@ -87,6 +88,8 @@ public class BotService {
                 return tellJoke(interaction);
             case("UserAsksHowAreYou"):
                 return howAreYou(interaction);
+            case("GetAverage"):
+                return getAverage(interaction);
             default:
                 return interaction;
         }
@@ -107,6 +110,14 @@ public class BotService {
 
     private Interaction tellJoke(Interaction interaction) {
         interaction.addToBotMessages("[insert joke text here]");
+        return interaction;
+    }
+
+    private Interaction getAverage(Interaction interaction)
+    {
+        int average;
+
+        interaction.addToBotMessages("Here is your average: " + average);
         return interaction;
     }
 
