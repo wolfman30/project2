@@ -105,7 +105,15 @@ class Project2ApplicationTests {
         ResponseEntity<User> newUserResponse = controller.createOrUpdate(user);
         ResponseEntity<User> thisUserResponse = new ResponseEntity<>(user, HttpStatus.OK);
 
+        // Test Update or Create User
         Assertions.assertEquals(thisUserResponse, newUserResponse);
+
+        when(mockRepo.findByUsernameIgnoreCaseAndPassword(user.getUsername(), user.getPassword())).thenReturn(user);
+
+        ResponseEntity<User> loginAttempt = controller.loginAttempt(user);
+
+        //Test login attempt
+        Assertions.assertEquals(thisUserResponse, loginAttempt);
     }
 
 

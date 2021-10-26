@@ -460,3 +460,16 @@
 2021-10-26 14:25:53.540  INFO 452 --- [main] c.l.project2.Project2ApplicationTests    : Started Project2ApplicationTests in 6.277 seconds (JVM running for 7.371)
 2021-10-26 14:25:53.703  INFO 452 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2021-10-26 14:25:53.753  INFO 452 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-10-26 14:31:45.643  INFO 520 --- [main] c.l.project2.Project2ApplicationTests    : Starting Project2ApplicationTests using Java 1.8.0_302 on DESKTOP-GTIL6SV with PID 520 (started by erose in C:\Users\erose\Desktop\Projects\Project2\project2\IntellijBuild)
+2021-10-26 14:31:45.644 DEBUG 520 --- [main] c.l.project2.Project2ApplicationTests    : Running with Spring Boot v2.5.5, Spring v5.3.10
+2021-10-26 14:31:45.645  INFO 520 --- [main] c.l.project2.Project2ApplicationTests    : No active profile set, falling back to default profiles: default
+2021-10-26 14:31:47.296  INFO 520 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-10-26 14:31:48.312  INFO 520 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-10-26 14:31:48.382  INFO 520 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-10-26 14:31:48.441  INFO 520 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-10-26 14:31:48.485  INFO 520 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-10-26 14:31:48.628  INFO 520 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2021-10-26 14:31:49.519  INFO 520 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-10-26 14:31:51.578  INFO 520 --- [main] c.l.project2.Project2ApplicationTests    : Started Project2ApplicationTests in 6.29 seconds (JVM running for 7.414)
+2021-10-26 14:31:51.739  INFO 520 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-10-26 14:31:52.035  INFO 520 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
