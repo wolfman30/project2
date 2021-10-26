@@ -1,19 +1,12 @@
 package com.learning.project2.web.lex;
 
 import com.learning.project2.web.lex.models.Interaction;
-import com.learning.project2.web.test.models.Test;
-import com.learning.project2.web.test.models.TestQuestion;
 import com.learning.project2.web.test.models.history.TestHistory;
-import com.learning.project2.web.test.models.history.TestHistoryAnswerGiven;
 import com.learning.project2.web.test.repositories.TestHistoryRepository;
-import com.learning.project2.web.test.services.TestHistoryService;
-import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.apache.commons.lang.ObjectUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import software.amazon.awssdk.auth.credentials.AwsBasicCredentials;
 import software.amazon.awssdk.auth.credentials.AwsCredentialsProvider;
@@ -24,10 +17,10 @@ import software.amazon.awssdk.services.lexruntimev2.model.Message;
 import software.amazon.awssdk.services.lexruntimev2.model.RecognizeTextRequest;
 import software.amazon.awssdk.services.lexruntimev2.model.RecognizeTextResponse;
 import software.amazon.awssdk.services.lexruntimev2.model.Slot;
-import com.learning.project2.web.test.repositories.TestHistoryAnswerGivenRepository;
 
 import javax.annotation.PostConstruct;
 
+import java.text.DecimalFormat;
 import java.util.List;
 import java.util.Map;
 import java.util.UUID;
@@ -129,7 +122,7 @@ public class BotService {
     }
 
     private Interaction howAreYou(Interaction interaction) {
-        String feeling = interaction.getSlotValue("UserFeeling");
+        String feeling = interaction.getSlotValue("Feeling");
         if(feeling.equals("Good")){
             interaction.addToBotMessages("I'm glad to hear that!");
         }else if(feeling.equals("Bad")) {
@@ -147,6 +140,7 @@ public class BotService {
 
     private Interaction getAverage(Interaction interaction)
     {
+        DecimalFormat df = new DecimalFormat("#.#");
         long id = interaction.getUserId();
 
         // Get a list of tests that the user has taken from the test repository
@@ -154,7 +148,7 @@ public class BotService {
 
         double average = testHistoryRepository.findAverageScoreByUser(id);
 
-        interaction.addToBotMessages("Here is your average: " + average);
+        interaction.addToBotMessages("Here is your cumulative average: " + df.format(average * 100) + "%");
         return interaction;
     }
 
