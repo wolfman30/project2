@@ -33,6 +33,7 @@ public class BotController {
         Interaction in = new Interaction();
         in.addToUserMessages(input.getMessage());
         in.setSessionId(input.getSessionId());
+        in.setUserId(input.getUserId());
 
         Interaction ex;
 

@@ -1,7 +1,11 @@
 package com.learning.project2.web.lex;
 
 import com.learning.project2.web.lex.models.Interaction;
+import com.learning.project2.web.test.models.Test;
+import com.learning.project2.web.test.models.TestQuestion;
 import com.learning.project2.web.test.models.history.TestHistory;
+import com.learning.project2.web.test.models.history.TestHistoryAnswerGiven;
+import com.learning.project2.web.test.repositories.TestHistoryRepository;
 import com.learning.project2.web.test.services.TestHistoryService;
 import lombok.Getter;
 import lombok.extern.slf4j.Slf4j;
@@ -47,6 +51,13 @@ public class BotService {
 
     @Value("${aws.lex.botAliasId}")
     private String botAliasId;
+
+    private TestHistoryRepository testHistoryRepository;
+
+    @Autowired
+    private void setTestHistoryRepository(TestHistoryRepository testHistoryRepository){
+        this.testHistoryRepository = testHistoryRepository;
+    }
 
     private final Region region = Region.US_WEST_2;
 
@@ -119,12 +130,13 @@ public class BotService {
 
     private Interaction getAverage(Interaction interaction)
     {
-        int average=0;
         long id = interaction.getUserId();
-        TestHistoryService testHistory = new TestHistoryService();
-        ResponseEntity<List<TestHistory>> testScores = testHistory.getByUserId(id);
-        System.out.println(testScores.toString());
-        //average = testScores / testScores.length
+
+        // Get a list of tests that the user has taken from the test repository
+        List<TestHistory> tests = testHistoryRepository.findByUser_Id(id);
+
+        double average = testHistoryRepository.findAverageScoreByUser(id);
+
         interaction.addToBotMessages("Here is your average: " + average);
         return interaction;
     }
