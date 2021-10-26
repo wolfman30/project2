@@ -1063,3 +1063,531 @@ java.lang.NullPointerException: null
 2021-10-26 16:08:13.872  INFO 18092 --- [main] c.l.project2.Project2ApplicationTests    : Started Project2ApplicationTests in 7.303 seconds (JVM running for 8.411)
 2021-10-26 16:08:14.485  INFO 18092 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2021-10-26 16:08:14.497  INFO 18092 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-10-26 16:48:47.955  INFO 1764 --- [restartedMain] c.learning.project2.Project2Application  : Starting Project2Application using Java 1.8.0_302 on DESKTOP-GTIL6SV with PID 1764 (C:\Users\erose\Desktop\Projects\Project2\project2\IntellijBuild\target\classes started by erose in C:\Users\erose\Desktop\Projects\Project2\project2\IntellijBuild)
+2021-10-26 16:48:47.957 DEBUG 1764 --- [restartedMain] c.learning.project2.Project2Application  : Running with Spring Boot v2.5.5, Spring v5.3.10
+2021-10-26 16:48:47.957  INFO 1764 --- [restartedMain] c.learning.project2.Project2Application  : No active profile set, falling back to default profiles: default
+2021-10-26 16:48:49.127  INFO 1764 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-10-26 16:48:49.127  INFO 1764 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.53]
+2021-10-26 16:48:49.158  INFO 1764 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-10-26 16:48:49.317  INFO 1764 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-10-26 16:49:00.434 ERROR 1764 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Exception during pool initialization.
+
+org.postgresql.util.PSQLException: The connection attempt failed.
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:315) ~[postgresql-42.2.24.jar:42.2.24]
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:51) ~[postgresql-42.2.24.jar:42.2.24]
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:225) ~[postgresql-42.2.24.jar:42.2.24]
+	at org.postgresql.Driver.makeConnection(Driver.java:465) ~[postgresql-42.2.24.jar:42.2.24]
+	at org.postgresql.Driver.connect(Driver.java:264) ~[postgresql-42.2.24.jar:42.2.24]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:364) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:476) [HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561) [HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115) [HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112) [HikariCP-4.0.3.jar:na]
+	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:158) [spring-jdbc-5.3.10.jar:5.3.10]
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:116) [spring-jdbc-5.3.10.jar:5.3.10]
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:79) [spring-jdbc-5.3.10.jar:5.3.10]
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:330) [spring-jdbc-5.3.10.jar:5.3.10]
+	at org.springframework.boot.jdbc.EmbeddedDatabaseConnection.isEmbedded(EmbeddedDatabaseConnection.java:184) [spring-boot-2.5.5.jar:2.5.5]
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateDefaultDdlAutoProvider.getDefaultDdlAuto(HibernateDefaultDdlAutoProvider.java:42) [spring-boot-autoconfigure-2.5.5.jar:2.5.5]
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration.lambda$getVendorProperties$1(HibernateJpaConfiguration.java:130) [spring-boot-autoconfigure-2.5.5.jar:2.5.5]
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateSettings.getDdlAuto(HibernateSettings.java:41) ~[spring-boot-autoconfigure-2.5.5.jar:2.5.5]
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateProperties.determineDdlAuto(HibernateProperties.java:143) ~[spring-boot-autoconfigure-2.5.5.jar:2.5.5]
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateProperties.getAdditionalProperties(HibernateProperties.java:103) ~[spring-boot-autoconfigure-2.5.5.jar:2.5.5]
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateProperties.determineHibernateProperties(HibernateProperties.java:95) ~[spring-boot-autoconfigure-2.5.5.jar:2.5.5]
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration.getVendorProperties(HibernateJpaConfiguration.java:132) [spring-boot-autoconfigure-2.5.5.jar:2.5.5]
+	at org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration.entityManagerFactory(JpaBaseConfiguration.java:132) ~[spring-boot-autoconfigure-2.5.5.jar:2.5.5]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_302]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_302]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_302]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_302]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) ~[spring-beans-5.3.10.jar:5.3.10]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653) ~[spring-beans-5.3.10.jar:5.3.10]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:638) ~[spring-beans-5.3.10.jar:5.3.10]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352) ~[spring-beans-5.3.10.jar:5.3.10]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195) ~[spring-beans-5.3.10.jar:5.3.10]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.10.jar:5.3.10]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.10.jar:5.3.10]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.10.jar:5.3.10]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.10.jar:5.3.10]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.10.jar:5.3.10]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.10.jar:5.3.10]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154) ~[spring-context-5.3.10.jar:5.3.10]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908) ~[spring-context-5.3.10.jar:5.3.10]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.10.jar:5.3.10]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145) ~[spring-boot-2.5.5.jar:2.5.5]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-2.5.5.jar:2.5.5]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434) ~[spring-boot-2.5.5.jar:2.5.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338) ~[spring-boot-2.5.5.jar:2.5.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343) ~[spring-boot-2.5.5.jar:2.5.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332) ~[spring-boot-2.5.5.jar:2.5.5]
+	at com.learning.project2.Project2Application.main(Project2Application.java:11) ~[classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_302]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_302]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_302]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_302]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.5.5.jar:2.5.5]
+Caused by: java.net.SocketTimeoutException: connect timed out
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method) ~[na:1.8.0_302]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85) ~[na:1.8.0_302]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_302]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_302]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_302]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[na:1.8.0_302]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_302]
+	at java.net.Socket.connect(Socket.java:607) ~[na:1.8.0_302]
+	at org.postgresql.core.PGStream.createSocket(PGStream.java:231) ~[postgresql-42.2.24.jar:42.2.24]
+	at org.postgresql.core.PGStream.<init>(PGStream.java:95) ~[postgresql-42.2.24.jar:42.2.24]
+	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:98) ~[postgresql-42.2.24.jar:42.2.24]
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:213) ~[postgresql-42.2.24.jar:42.2.24]
+	... 54 common frames omitted
+
+2021-10-26 16:49:00.461  INFO 1764 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-10-26 16:49:00.534  INFO 1764 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-10-26 16:49:00.567  INFO 1764 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-10-26 16:49:00.644  INFO 1764 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-10-26 16:49:11.658 ERROR 1764 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Exception during pool initialization.
+
+org.postgresql.util.PSQLException: The connection attempt failed.
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:315) ~[postgresql-42.2.24.jar:42.2.24]
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:51) ~[postgresql-42.2.24.jar:42.2.24]
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:225) ~[postgresql-42.2.24.jar:42.2.24]
+	at org.postgresql.Driver.makeConnection(Driver.java:465) ~[postgresql-42.2.24.jar:42.2.24]
+	at org.postgresql.Driver.connect(Driver.java:264) ~[postgresql-42.2.24.jar:42.2.24]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:364) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:476) [HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561) [HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115) [HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112) [HikariCP-4.0.3.jar:na]
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122) [hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:180) [hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:68) [hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:35) [hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:101) [hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263) [hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:237) [hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214) [hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory.injectServices(DefaultIdentifierGeneratorFactory.java:152) [hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.injectDependencies(AbstractServiceRegistryImpl.java:286) [hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:243) [hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214) [hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:176) [hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:127) [hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1224) [hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1255) [hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58) [spring-orm-5.3.10.jar:5.3.10]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365) [spring-orm-5.3.10.jar:5.3.10]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) [spring-orm-5.3.10.jar:5.3.10]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) [spring-orm-5.3.10.jar:5.3.10]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341) [spring-orm-5.3.10.jar:5.3.10]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863) [spring-beans-5.3.10.jar:5.3.10]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800) [spring-beans-5.3.10.jar:5.3.10]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) [spring-beans-5.3.10.jar:5.3.10]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) [spring-beans-5.3.10.jar:5.3.10]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) [spring-beans-5.3.10.jar:5.3.10]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.10.jar:5.3.10]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) [spring-beans-5.3.10.jar:5.3.10]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) [spring-beans-5.3.10.jar:5.3.10]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154) ~[spring-context-5.3.10.jar:5.3.10]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908) ~[spring-context-5.3.10.jar:5.3.10]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.10.jar:5.3.10]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145) ~[spring-boot-2.5.5.jar:2.5.5]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-2.5.5.jar:2.5.5]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434) ~[spring-boot-2.5.5.jar:2.5.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338) ~[spring-boot-2.5.5.jar:2.5.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343) ~[spring-boot-2.5.5.jar:2.5.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332) ~[spring-boot-2.5.5.jar:2.5.5]
+	at com.learning.project2.Project2Application.main(Project2Application.java:11) ~[classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_302]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_302]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_302]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_302]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.5.5.jar:2.5.5]
+Caused by: java.net.SocketTimeoutException: connect timed out
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method) ~[na:1.8.0_302]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85) ~[na:1.8.0_302]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_302]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_302]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_302]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[na:1.8.0_302]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_302]
+	at java.net.Socket.connect(Socket.java:607) ~[na:1.8.0_302]
+	at org.postgresql.core.PGStream.createSocket(PGStream.java:231) ~[postgresql-42.2.24.jar:42.2.24]
+	at org.postgresql.core.PGStream.<init>(PGStream.java:95) ~[postgresql-42.2.24.jar:42.2.24]
+	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:98) ~[postgresql-42.2.24.jar:42.2.24]
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:213) ~[postgresql-42.2.24.jar:42.2.24]
+	... 55 common frames omitted
+
+2021-10-26 16:49:11.659  WARN 1764 --- [restartedMain] o.h.e.j.e.i.JdbcEnvironmentInitiator     : HHH000342: Could not obtain connection to query metadata
+
+org.postgresql.util.PSQLException: The connection attempt failed.
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:315) ~[postgresql-42.2.24.jar:42.2.24]
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:51) ~[postgresql-42.2.24.jar:42.2.24]
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:225) ~[postgresql-42.2.24.jar:42.2.24]
+	at org.postgresql.Driver.makeConnection(Driver.java:465) ~[postgresql-42.2.24.jar:42.2.24]
+	at org.postgresql.Driver.connect(Driver.java:264) ~[postgresql-42.2.24.jar:42.2.24]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:364) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:476) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112) ~[HikariCP-4.0.3.jar:na]
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:180) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:68) [hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:35) [hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:101) [hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263) [hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:237) [hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214) [hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory.injectServices(DefaultIdentifierGeneratorFactory.java:152) [hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.injectDependencies(AbstractServiceRegistryImpl.java:286) [hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:243) [hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214) [hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:176) [hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:127) [hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1224) [hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1255) [hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58) [spring-orm-5.3.10.jar:5.3.10]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365) [spring-orm-5.3.10.jar:5.3.10]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) [spring-orm-5.3.10.jar:5.3.10]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) [spring-orm-5.3.10.jar:5.3.10]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341) [spring-orm-5.3.10.jar:5.3.10]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863) [spring-beans-5.3.10.jar:5.3.10]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800) [spring-beans-5.3.10.jar:5.3.10]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) [spring-beans-5.3.10.jar:5.3.10]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) [spring-beans-5.3.10.jar:5.3.10]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) [spring-beans-5.3.10.jar:5.3.10]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.10.jar:5.3.10]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) [spring-beans-5.3.10.jar:5.3.10]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) [spring-beans-5.3.10.jar:5.3.10]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154) ~[spring-context-5.3.10.jar:5.3.10]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908) ~[spring-context-5.3.10.jar:5.3.10]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.10.jar:5.3.10]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145) ~[spring-boot-2.5.5.jar:2.5.5]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-2.5.5.jar:2.5.5]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434) ~[spring-boot-2.5.5.jar:2.5.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338) ~[spring-boot-2.5.5.jar:2.5.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343) ~[spring-boot-2.5.5.jar:2.5.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332) ~[spring-boot-2.5.5.jar:2.5.5]
+	at com.learning.project2.Project2Application.main(Project2Application.java:11) ~[classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_302]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_302]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_302]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_302]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.5.5.jar:2.5.5]
+Caused by: java.net.SocketTimeoutException: connect timed out
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method) ~[na:1.8.0_302]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85) ~[na:1.8.0_302]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_302]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_302]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_302]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[na:1.8.0_302]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_302]
+	at java.net.Socket.connect(Socket.java:607) ~[na:1.8.0_302]
+	at org.postgresql.core.PGStream.createSocket(PGStream.java:231) ~[postgresql-42.2.24.jar:42.2.24]
+	at org.postgresql.core.PGStream.<init>(PGStream.java:95) ~[postgresql-42.2.24.jar:42.2.24]
+	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:98) ~[postgresql-42.2.24.jar:42.2.24]
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:213) ~[postgresql-42.2.24.jar:42.2.24]
+	... 55 common frames omitted
+
+2021-10-26 16:49:11.661 ERROR 1764 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Failed to initialize JPA EntityManagerFactory: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+2021-10-26 16:49:11.664  INFO 1764 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2021-10-26 16:49:11.696 ERROR 1764 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804) ~[spring-beans-5.3.10.jar:5.3.10]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.10.jar:5.3.10]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.10.jar:5.3.10]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.10.jar:5.3.10]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.10.jar:5.3.10]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.10.jar:5.3.10]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.10.jar:5.3.10]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154) ~[spring-context-5.3.10.jar:5.3.10]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908) ~[spring-context-5.3.10.jar:5.3.10]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.10.jar:5.3.10]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145) ~[spring-boot-2.5.5.jar:2.5.5]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) [spring-boot-2.5.5.jar:2.5.5]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434) [spring-boot-2.5.5.jar:2.5.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338) [spring-boot-2.5.5.jar:2.5.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343) [spring-boot-2.5.5.jar:2.5.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332) [spring-boot-2.5.5.jar:2.5.5]
+	at com.learning.project2.Project2Application.main(Project2Application.java:11) [classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_302]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_302]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_302]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_302]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) [spring-boot-devtools-2.5.5.jar:2.5.5]
+Caused by: org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:275) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:237) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory.injectServices(DefaultIdentifierGeneratorFactory.java:152) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.injectDependencies(AbstractServiceRegistryImpl.java:286) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:243) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:176) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:127) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1224) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1255) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58) ~[spring-orm-5.3.10.jar:5.3.10]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365) ~[spring-orm-5.3.10.jar:5.3.10]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-5.3.10.jar:5.3.10]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-5.3.10.jar:5.3.10]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341) ~[spring-orm-5.3.10.jar:5.3.10]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863) ~[spring-beans-5.3.10.jar:5.3.10]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800) ~[spring-beans-5.3.10.jar:5.3.10]
+	... 21 common frames omitted
+Caused by: org.hibernate.HibernateException: Access to DialectResolutionInfo cannot be null when 'hibernate.dialect' not set
+	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.determineDialect(DialectFactoryImpl.java:100) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.buildDialect(DialectFactoryImpl.java:54) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:137) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:35) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:101) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	... 38 common frames omitted
+
+2021-10-26 17:02:55.673  INFO 17216 --- [restartedMain] c.learning.project2.Project2Application  : Starting Project2Application using Java 1.8.0_302 on DESKTOP-GTIL6SV with PID 17216 (C:\Users\erose\Desktop\Projects\Project2\project2\IntellijBuild\target\classes started by erose in C:\Users\erose\Desktop\Projects\Project2\project2\IntellijBuild)
+2021-10-26 17:02:55.676 DEBUG 17216 --- [restartedMain] c.learning.project2.Project2Application  : Running with Spring Boot v2.5.5, Spring v5.3.10
+2021-10-26 17:02:55.676  INFO 17216 --- [restartedMain] c.learning.project2.Project2Application  : No active profile set, falling back to default profiles: default
+2021-10-26 17:02:56.884  INFO 17216 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-10-26 17:02:56.885  INFO 17216 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.53]
+2021-10-26 17:02:56.915  INFO 17216 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-10-26 17:02:57.080  INFO 17216 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-10-26 17:02:57.821  INFO 17216 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-10-26 17:02:57.862  INFO 17216 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-10-26 17:02:57.898  INFO 17216 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-10-26 17:02:57.929  INFO 17216 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-10-26 17:02:58.012  INFO 17216 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2021-10-26 17:02:58.761  INFO 17216 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-10-26 17:02:59.040  INFO 17216 --- [restartedMain] c.learning.project2.web.lex.BotService   : Initializing bot from yaml file
+2021-10-26 17:02:59.954  INFO 17216 --- [restartedMain] c.learning.project2.Project2Application  : Started Project2Application in 4.637 seconds (JVM running for 5.462)
+2021-10-26 17:03:00.716  INFO 17216 --- [RMI TCP Connection(3)-192.168.0.100] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-10-26 17:03:14.075  INFO 17216 --- [http-nio-8000-exec-1] c.learning.project2.web.lex.BotService   : Request sent to bot with id: 9f24dbd3-6ad5-4c6c-99de-3a08b31f1a99
+2021-10-26 17:03:14.076  INFO 17216 --- [http-nio-8000-exec-1] c.learning.project2.web.lex.BotService   : RecognizeTextResponse(SessionState=SessionState(DialogAction=DialogAction(Type=Close), Intent=Intent(Name=HowAmIDoing, Slots={}, State=ReadyForFulfillment, ConfirmationState=None), OriginatingRequestId=5dba76f8-df20-4723-8f1c-c714652709ce), Interpretations=[Interpretation(NluConfidence=ConfidenceScore(Score=1.0), SentimentResponse=SentimentResponse(Sentiment=NEUTRAL, SentimentScore=SentimentScore(Positive=0.0021765283308923244, Negative=0.033124808222055435, Neutral=0.9645980000495911, Mixed=1.0075904719997197E-4)), Intent=Intent(Name=HowAmIDoing, Slots={}, State=ReadyForFulfillment, ConfirmationState=None)), Interpretation(NluConfidence=ConfidenceScore(Score=0.64), SentimentResponse=SentimentResponse(Sentiment=NEUTRAL, SentimentScore=SentimentScore(Positive=0.0021765283308923244, Negative=0.033124808222055435, Neutral=0.9645980000495911, Mixed=1.0075904719997197E-4)), Intent=Intent(Name=UserAsksHowAreYou, Slots={UserFeeling=null})), Interpretation(NluConfidence=ConfidenceScore(Score=0.52), SentimentResponse=SentimentResponse(Sentiment=NEUTRAL, SentimentScore=SentimentScore(Positive=0.0021765283308923244, Negative=0.033124808222055435, Neutral=0.9645980000495911, Mixed=1.0075904719997197E-4)), Intent=Intent(Name=Welcome, Slots={})), Interpretation(NluConfidence=ConfidenceScore(Score=0.51), SentimentResponse=SentimentResponse(Sentiment=NEUTRAL, SentimentScore=SentimentScore(Positive=0.0021765283308923244, Negative=0.033124808222055435, Neutral=0.9645980000495911, Mixed=1.0075904719997197E-4)), Intent=Intent(Name=TellMeAbout, Slots={topic=null})), Interpretation(SentimentResponse=SentimentResponse(Sentiment=NEUTRAL, SentimentScore=SentimentScore(Positive=0.0021765283308923244, Negative=0.033124808222055435, Neutral=0.9645980000495911, Mixed=1.0075904719997197E-4)), Intent=Intent(Name=FallbackIntent, Slots={}))], SessionId=9f24dbd3-6ad5-4c6c-99de-3a08b31f1a99)
+2021-10-26 17:04:10.663  INFO 17216 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-10-26 17:04:10.670  INFO 17216 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-10-26 17:04:15.763  INFO 9576 --- [restartedMain] c.learning.project2.Project2Application  : Starting Project2Application using Java 1.8.0_302 on DESKTOP-GTIL6SV with PID 9576 (C:\Users\erose\Desktop\Projects\Project2\project2\IntellijBuild\target\classes started by erose in C:\Users\erose\Desktop\Projects\Project2\project2\IntellijBuild)
+2021-10-26 17:04:15.764 DEBUG 9576 --- [restartedMain] c.learning.project2.Project2Application  : Running with Spring Boot v2.5.5, Spring v5.3.10
+2021-10-26 17:04:15.764  INFO 9576 --- [restartedMain] c.learning.project2.Project2Application  : No active profile set, falling back to default profiles: default
+2021-10-26 17:04:16.972  INFO 9576 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-10-26 17:04:16.972  INFO 9576 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.53]
+2021-10-26 17:04:17.003  INFO 9576 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-10-26 17:04:17.166  INFO 9576 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-10-26 17:04:17.937  INFO 9576 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-10-26 17:04:17.973  INFO 9576 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-10-26 17:04:18.010  INFO 9576 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-10-26 17:04:18.043  INFO 9576 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-10-26 17:04:18.129  INFO 9576 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2021-10-26 17:04:18.855  INFO 9576 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-10-26 17:04:19.132  INFO 9576 --- [restartedMain] c.learning.project2.web.lex.BotService   : Initializing bot from yaml file
+2021-10-26 17:04:20.014  INFO 9576 --- [restartedMain] c.learning.project2.Project2Application  : Started Project2Application in 4.608 seconds (JVM running for 5.423)
+2021-10-26 17:04:20.418  INFO 9576 --- [RMI TCP Connection(3)-192.168.0.100] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-10-26 17:05:54.137  INFO 9576 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-10-26 17:05:54.145  INFO 9576 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-10-26 17:05:59.380  INFO 15192 --- [restartedMain] c.learning.project2.Project2Application  : Starting Project2Application using Java 1.8.0_302 on DESKTOP-GTIL6SV with PID 15192 (C:\Users\erose\Desktop\Projects\Project2\project2\IntellijBuild\target\classes started by erose in C:\Users\erose\Desktop\Projects\Project2\project2\IntellijBuild)
+2021-10-26 17:05:59.383 DEBUG 15192 --- [restartedMain] c.learning.project2.Project2Application  : Running with Spring Boot v2.5.5, Spring v5.3.10
+2021-10-26 17:05:59.383  INFO 15192 --- [restartedMain] c.learning.project2.Project2Application  : No active profile set, falling back to default profiles: default
+2021-10-26 17:06:00.622  INFO 15192 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-10-26 17:06:00.622  INFO 15192 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.53]
+2021-10-26 17:06:00.654  INFO 15192 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-10-26 17:06:00.820  INFO 15192 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-10-26 17:06:01.561  INFO 15192 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-10-26 17:06:01.599  INFO 15192 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-10-26 17:06:01.636  INFO 15192 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-10-26 17:06:01.670  INFO 15192 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-10-26 17:06:01.760  INFO 15192 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2021-10-26 17:06:03.083  INFO 15192 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-10-26 17:06:03.373  INFO 15192 --- [restartedMain] c.learning.project2.web.lex.BotService   : Initializing bot from yaml file
+2021-10-26 17:06:04.329  INFO 15192 --- [restartedMain] c.learning.project2.Project2Application  : Started Project2Application in 5.323 seconds (JVM running for 6.157)
+2021-10-26 17:06:04.908  INFO 15192 --- [RMI TCP Connection(1)-192.168.0.100] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-10-26 17:06:26.554  INFO 15192 --- [http-nio-8000-exec-1] c.learning.project2.web.lex.BotService   : Request sent to bot with id: 169a6b94-5fa6-48f4-90f2-393754aa0c0f
+2021-10-26 17:06:26.555  INFO 15192 --- [http-nio-8000-exec-1] c.learning.project2.web.lex.BotService   : RecognizeTextResponse(SessionState=SessionState(DialogAction=DialogAction(Type=Close), Intent=Intent(Name=HowAmIDoing, Slots={}, State=ReadyForFulfillment, ConfirmationState=None), OriginatingRequestId=c4c82220-977b-4b83-9939-6804aff9010a), Interpretations=[Interpretation(NluConfidence=ConfidenceScore(Score=1.0), SentimentResponse=SentimentResponse(Sentiment=NEUTRAL, SentimentScore=SentimentScore(Positive=0.0021765283308923244, Negative=0.033124808222055435, Neutral=0.9645980000495911, Mixed=1.0075904719997197E-4)), Intent=Intent(Name=HowAmIDoing, Slots={}, State=ReadyForFulfillment, ConfirmationState=None)), Interpretation(NluConfidence=ConfidenceScore(Score=0.64), SentimentResponse=SentimentResponse(Sentiment=NEUTRAL, SentimentScore=SentimentScore(Positive=0.0021765283308923244, Negative=0.033124808222055435, Neutral=0.9645980000495911, Mixed=1.0075904719997197E-4)), Intent=Intent(Name=UserAsksHowAreYou, Slots={UserFeeling=null})), Interpretation(NluConfidence=ConfidenceScore(Score=0.52), SentimentResponse=SentimentResponse(Sentiment=NEUTRAL, SentimentScore=SentimentScore(Positive=0.0021765283308923244, Negative=0.033124808222055435, Neutral=0.9645980000495911, Mixed=1.0075904719997197E-4)), Intent=Intent(Name=Welcome, Slots={})), Interpretation(NluConfidence=ConfidenceScore(Score=0.51), SentimentResponse=SentimentResponse(Sentiment=NEUTRAL, SentimentScore=SentimentScore(Positive=0.0021765283308923244, Negative=0.033124808222055435, Neutral=0.9645980000495911, Mixed=1.0075904719997197E-4)), Intent=Intent(Name=TellMeAbout, Slots={topic=null})), Interpretation(SentimentResponse=SentimentResponse(Sentiment=NEUTRAL, SentimentScore=SentimentScore(Positive=0.0021765283308923244, Negative=0.033124808222055435, Neutral=0.9645980000495911, Mixed=1.0075904719997197E-4)), Intent=Intent(Name=FallbackIntent, Slots={}))], SessionId=169a6b94-5fa6-48f4-90f2-393754aa0c0f)
+2021-10-26 17:06:32.867  INFO 15192 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-10-26 17:06:32.875  INFO 15192 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-10-26 17:06:36.069  INFO 7920 --- [restartedMain] c.learning.project2.Project2Application  : Starting Project2Application using Java 1.8.0_302 on DESKTOP-GTIL6SV with PID 7920 (C:\Users\erose\Desktop\Projects\Project2\project2\IntellijBuild\target\classes started by erose in C:\Users\erose\Desktop\Projects\Project2\project2\IntellijBuild)
+2021-10-26 17:06:36.070 DEBUG 7920 --- [restartedMain] c.learning.project2.Project2Application  : Running with Spring Boot v2.5.5, Spring v5.3.10
+2021-10-26 17:06:36.071  INFO 7920 --- [restartedMain] c.learning.project2.Project2Application  : No active profile set, falling back to default profiles: default
+2021-10-26 17:06:37.284  INFO 7920 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-10-26 17:06:37.285  INFO 7920 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.53]
+2021-10-26 17:06:37.315  INFO 7920 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-10-26 17:06:37.477  INFO 7920 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-10-26 17:06:38.240  INFO 7920 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-10-26 17:06:38.275  INFO 7920 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-10-26 17:06:38.312  INFO 7920 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-10-26 17:06:38.343  INFO 7920 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-10-26 17:06:38.429  INFO 7920 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2021-10-26 17:06:39.177  INFO 7920 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-10-26 17:06:39.458  INFO 7920 --- [restartedMain] c.learning.project2.web.lex.BotService   : Initializing bot from yaml file
+2021-10-26 17:06:40.364  INFO 7920 --- [restartedMain] c.learning.project2.Project2Application  : Started Project2Application in 4.654 seconds (JVM running for 5.506)
+2021-10-26 17:06:40.673  INFO 7920 --- [RMI TCP Connection(2)-192.168.0.100] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-10-26 17:06:50.422  INFO 7920 --- [http-nio-8000-exec-1] c.learning.project2.web.lex.BotService   : Request sent to bot with id: e85af2f3-7aee-4e8d-a9f0-3c1827674d20
+2021-10-26 17:06:50.423  INFO 7920 --- [http-nio-8000-exec-1] c.learning.project2.web.lex.BotService   : RecognizeTextResponse(SessionState=SessionState(DialogAction=DialogAction(Type=Close), Intent=Intent(Name=HowAmIDoing, Slots={}, State=ReadyForFulfillment, ConfirmationState=None), OriginatingRequestId=85acc483-ebda-4968-8ada-13be4e9ff4f0), Interpretations=[Interpretation(NluConfidence=ConfidenceScore(Score=1.0), SentimentResponse=SentimentResponse(Sentiment=NEUTRAL, SentimentScore=SentimentScore(Positive=0.0021765283308923244, Negative=0.033124808222055435, Neutral=0.9645980000495911, Mixed=1.0075904719997197E-4)), Intent=Intent(Name=HowAmIDoing, Slots={}, State=ReadyForFulfillment, ConfirmationState=None)), Interpretation(NluConfidence=ConfidenceScore(Score=0.64), SentimentResponse=SentimentResponse(Sentiment=NEUTRAL, SentimentScore=SentimentScore(Positive=0.0021765283308923244, Negative=0.033124808222055435, Neutral=0.9645980000495911, Mixed=1.0075904719997197E-4)), Intent=Intent(Name=UserAsksHowAreYou, Slots={UserFeeling=null})), Interpretation(NluConfidence=ConfidenceScore(Score=0.52), SentimentResponse=SentimentResponse(Sentiment=NEUTRAL, SentimentScore=SentimentScore(Positive=0.0021765283308923244, Negative=0.033124808222055435, Neutral=0.9645980000495911, Mixed=1.0075904719997197E-4)), Intent=Intent(Name=Welcome, Slots={})), Interpretation(NluConfidence=ConfidenceScore(Score=0.51), SentimentResponse=SentimentResponse(Sentiment=NEUTRAL, SentimentScore=SentimentScore(Positive=0.0021765283308923244, Negative=0.033124808222055435, Neutral=0.9645980000495911, Mixed=1.0075904719997197E-4)), Intent=Intent(Name=TellMeAbout, Slots={topic=null})), Interpretation(SentimentResponse=SentimentResponse(Sentiment=NEUTRAL, SentimentScore=SentimentScore(Positive=0.0021765283308923244, Negative=0.033124808222055435, Neutral=0.9645980000495911, Mixed=1.0075904719997197E-4)), Intent=Intent(Name=FallbackIntent, Slots={}))], SessionId=e85af2f3-7aee-4e8d-a9f0-3c1827674d20)
+2021-10-26 17:07:59.266  INFO 7920 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-10-26 17:07:59.275  INFO 7920 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-10-26 17:08:04.428  INFO 15244 --- [restartedMain] c.learning.project2.Project2Application  : Starting Project2Application using Java 1.8.0_302 on DESKTOP-GTIL6SV with PID 15244 (C:\Users\erose\Desktop\Projects\Project2\project2\IntellijBuild\target\classes started by erose in C:\Users\erose\Desktop\Projects\Project2\project2\IntellijBuild)
+2021-10-26 17:08:04.430 DEBUG 15244 --- [restartedMain] c.learning.project2.Project2Application  : Running with Spring Boot v2.5.5, Spring v5.3.10
+2021-10-26 17:08:04.430  INFO 15244 --- [restartedMain] c.learning.project2.Project2Application  : No active profile set, falling back to default profiles: default
+2021-10-26 17:08:05.665  INFO 15244 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-10-26 17:08:05.665  INFO 15244 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.53]
+2021-10-26 17:08:05.696  INFO 15244 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-10-26 17:08:05.860  INFO 15244 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-10-26 17:08:06.613  INFO 15244 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-10-26 17:08:06.657  INFO 15244 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-10-26 17:08:06.695  INFO 15244 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-10-26 17:08:06.727  INFO 15244 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-10-26 17:08:06.813  INFO 15244 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2021-10-26 17:08:07.573  INFO 15244 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-10-26 17:08:07.860  INFO 15244 --- [restartedMain] c.learning.project2.web.lex.BotService   : Initializing bot from yaml file
+2021-10-26 17:08:08.757  INFO 15244 --- [restartedMain] c.learning.project2.Project2Application  : Started Project2Application in 4.7 seconds (JVM running for 5.542)
+2021-10-26 17:08:09.429  INFO 15244 --- [RMI TCP Connection(1)-192.168.0.100] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-10-26 17:08:19.302  INFO 15244 --- [http-nio-8000-exec-1] c.learning.project2.web.lex.BotService   : Request sent to bot with id: 1204c4af-538a-442a-98e9-5d1f675200a5
+2021-10-26 17:08:19.303  INFO 15244 --- [http-nio-8000-exec-1] c.learning.project2.web.lex.BotService   : RecognizeTextResponse(SessionState=SessionState(DialogAction=DialogAction(Type=Close), Intent=Intent(Name=HowAmIDoing, Slots={}, State=ReadyForFulfillment, ConfirmationState=None), OriginatingRequestId=3369b4b6-9a7d-44ea-a8fb-f7ddeac71296), Interpretations=[Interpretation(NluConfidence=ConfidenceScore(Score=1.0), SentimentResponse=SentimentResponse(Sentiment=NEUTRAL, SentimentScore=SentimentScore(Positive=0.0021765283308923244, Negative=0.033124808222055435, Neutral=0.9645980000495911, Mixed=1.0075904719997197E-4)), Intent=Intent(Name=HowAmIDoing, Slots={}, State=ReadyForFulfillment, ConfirmationState=None)), Interpretation(NluConfidence=ConfidenceScore(Score=0.64), SentimentResponse=SentimentResponse(Sentiment=NEUTRAL, SentimentScore=SentimentScore(Positive=0.0021765283308923244, Negative=0.033124808222055435, Neutral=0.9645980000495911, Mixed=1.0075904719997197E-4)), Intent=Intent(Name=UserAsksHowAreYou, Slots={UserFeeling=null})), Interpretation(NluConfidence=ConfidenceScore(Score=0.52), SentimentResponse=SentimentResponse(Sentiment=NEUTRAL, SentimentScore=SentimentScore(Positive=0.0021765283308923244, Negative=0.033124808222055435, Neutral=0.9645980000495911, Mixed=1.0075904719997197E-4)), Intent=Intent(Name=Welcome, Slots={})), Interpretation(NluConfidence=ConfidenceScore(Score=0.51), SentimentResponse=SentimentResponse(Sentiment=NEUTRAL, SentimentScore=SentimentScore(Positive=0.0021765283308923244, Negative=0.033124808222055435, Neutral=0.9645980000495911, Mixed=1.0075904719997197E-4)), Intent=Intent(Name=TellMeAbout, Slots={topic=null})), Interpretation(SentimentResponse=SentimentResponse(Sentiment=NEUTRAL, SentimentScore=SentimentScore(Positive=0.0021765283308923244, Negative=0.033124808222055435, Neutral=0.9645980000495911, Mixed=1.0075904719997197E-4)), Intent=Intent(Name=FallbackIntent, Slots={}))], SessionId=1204c4af-538a-442a-98e9-5d1f675200a5)
+2021-10-26 17:08:34.179  INFO 15244 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-10-26 17:08:34.186  INFO 15244 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-10-26 17:08:39.505  INFO 1536 --- [restartedMain] c.learning.project2.Project2Application  : Starting Project2Application using Java 1.8.0_302 on DESKTOP-GTIL6SV with PID 1536 (C:\Users\erose\Desktop\Projects\Project2\project2\IntellijBuild\target\classes started by erose in C:\Users\erose\Desktop\Projects\Project2\project2\IntellijBuild)
+2021-10-26 17:08:39.507 DEBUG 1536 --- [restartedMain] c.learning.project2.Project2Application  : Running with Spring Boot v2.5.5, Spring v5.3.10
+2021-10-26 17:08:39.507  INFO 1536 --- [restartedMain] c.learning.project2.Project2Application  : No active profile set, falling back to default profiles: default
+2021-10-26 17:08:40.716  INFO 1536 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-10-26 17:08:40.716  INFO 1536 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.53]
+2021-10-26 17:08:40.752  INFO 1536 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-10-26 17:08:40.914  INFO 1536 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-10-26 17:08:41.620  INFO 1536 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-10-26 17:08:41.660  INFO 1536 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-10-26 17:08:41.698  INFO 1536 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-10-26 17:08:41.730  INFO 1536 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-10-26 17:08:41.819  INFO 1536 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2021-10-26 17:08:42.606  INFO 1536 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-10-26 17:08:42.896  INFO 1536 --- [restartedMain] c.learning.project2.web.lex.BotService   : Initializing bot from yaml file
+2021-10-26 17:08:43.824  INFO 1536 --- [restartedMain] c.learning.project2.Project2Application  : Started Project2Application in 4.684 seconds (JVM running for 5.519)
+2021-10-26 17:08:44.509  INFO 1536 --- [RMI TCP Connection(1)-192.168.0.100] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-10-26 17:08:51.963  INFO 1536 --- [http-nio-8000-exec-1] c.learning.project2.web.lex.BotService   : Request sent to bot with id: cfaa249f-e42c-4166-aacd-1f8fc1893df8
+2021-10-26 17:08:51.964  INFO 1536 --- [http-nio-8000-exec-1] c.learning.project2.web.lex.BotService   : RecognizeTextResponse(SessionState=SessionState(DialogAction=DialogAction(Type=Close), Intent=Intent(Name=HowAmIDoing, Slots={}, State=ReadyForFulfillment, ConfirmationState=None), OriginatingRequestId=121ed100-92d5-44a9-a694-4ce12548a6e0), Interpretations=[Interpretation(NluConfidence=ConfidenceScore(Score=1.0), SentimentResponse=SentimentResponse(Sentiment=NEUTRAL, SentimentScore=SentimentScore(Positive=0.0021765283308923244, Negative=0.033124808222055435, Neutral=0.9645980000495911, Mixed=1.0075904719997197E-4)), Intent=Intent(Name=HowAmIDoing, Slots={}, State=ReadyForFulfillment, ConfirmationState=None)), Interpretation(NluConfidence=ConfidenceScore(Score=0.64), SentimentResponse=SentimentResponse(Sentiment=NEUTRAL, SentimentScore=SentimentScore(Positive=0.0021765283308923244, Negative=0.033124808222055435, Neutral=0.9645980000495911, Mixed=1.0075904719997197E-4)), Intent=Intent(Name=UserAsksHowAreYou, Slots={UserFeeling=null})), Interpretation(NluConfidence=ConfidenceScore(Score=0.52), SentimentResponse=SentimentResponse(Sentiment=NEUTRAL, SentimentScore=SentimentScore(Positive=0.0021765283308923244, Negative=0.033124808222055435, Neutral=0.9645980000495911, Mixed=1.0075904719997197E-4)), Intent=Intent(Name=Welcome, Slots={})), Interpretation(NluConfidence=ConfidenceScore(Score=0.51), SentimentResponse=SentimentResponse(Sentiment=NEUTRAL, SentimentScore=SentimentScore(Positive=0.0021765283308923244, Negative=0.033124808222055435, Neutral=0.9645980000495911, Mixed=1.0075904719997197E-4)), Intent=Intent(Name=TellMeAbout, Slots={topic=null})), Interpretation(SentimentResponse=SentimentResponse(Sentiment=NEUTRAL, SentimentScore=SentimentScore(Positive=0.0021765283308923244, Negative=0.033124808222055435, Neutral=0.9645980000495911, Mixed=1.0075904719997197E-4)), Intent=Intent(Name=FallbackIntent, Slots={}))], SessionId=cfaa249f-e42c-4166-aacd-1f8fc1893df8)
+2021-10-26 17:09:28.461  INFO 1536 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-10-26 17:09:28.468  INFO 1536 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-10-26 17:09:33.695  INFO 7680 --- [restartedMain] c.learning.project2.Project2Application  : Starting Project2Application using Java 1.8.0_302 on DESKTOP-GTIL6SV with PID 7680 (C:\Users\erose\Desktop\Projects\Project2\project2\IntellijBuild\target\classes started by erose in C:\Users\erose\Desktop\Projects\Project2\project2\IntellijBuild)
+2021-10-26 17:09:33.697 DEBUG 7680 --- [restartedMain] c.learning.project2.Project2Application  : Running with Spring Boot v2.5.5, Spring v5.3.10
+2021-10-26 17:09:33.697  INFO 7680 --- [restartedMain] c.learning.project2.Project2Application  : No active profile set, falling back to default profiles: default
+2021-10-26 17:09:34.941  INFO 7680 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-10-26 17:09:34.941  INFO 7680 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.53]
+2021-10-26 17:09:34.972  INFO 7680 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-10-26 17:09:35.138  INFO 7680 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-10-26 17:09:35.850  INFO 7680 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-10-26 17:09:35.887  INFO 7680 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-10-26 17:09:35.924  INFO 7680 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-10-26 17:09:35.957  INFO 7680 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-10-26 17:09:36.043  INFO 7680 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2021-10-26 17:09:36.762  INFO 7680 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-10-26 17:09:37.046  INFO 7680 --- [restartedMain] c.learning.project2.web.lex.BotService   : Initializing bot from yaml file
+2021-10-26 17:09:37.982  INFO 7680 --- [restartedMain] c.learning.project2.Project2Application  : Started Project2Application in 4.654 seconds (JVM running for 5.524)
+2021-10-26 17:09:38.330  INFO 7680 --- [RMI TCP Connection(3)-192.168.0.100] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-10-26 17:09:52.461  INFO 7680 --- [http-nio-8000-exec-1] c.learning.project2.web.lex.BotService   : Request sent to bot with id: e388f764-547c-410a-81fa-f5659a55a9c2
+2021-10-26 17:09:52.463  INFO 7680 --- [http-nio-8000-exec-1] c.learning.project2.web.lex.BotService   : RecognizeTextResponse(SessionState=SessionState(DialogAction=DialogAction(Type=Close), Intent=Intent(Name=HowAmIDoing, Slots={}, State=ReadyForFulfillment, ConfirmationState=None), OriginatingRequestId=75caf3ff-21e8-4a0e-91e2-c4db97a4a820), Interpretations=[Interpretation(NluConfidence=ConfidenceScore(Score=1.0), SentimentResponse=SentimentResponse(Sentiment=NEUTRAL, SentimentScore=SentimentScore(Positive=0.0021765283308923244, Negative=0.033124808222055435, Neutral=0.9645980000495911, Mixed=1.0075904719997197E-4)), Intent=Intent(Name=HowAmIDoing, Slots={}, State=ReadyForFulfillment, ConfirmationState=None)), Interpretation(NluConfidence=ConfidenceScore(Score=0.64), SentimentResponse=SentimentResponse(Sentiment=NEUTRAL, SentimentScore=SentimentScore(Positive=0.0021765283308923244, Negative=0.033124808222055435, Neutral=0.9645980000495911, Mixed=1.0075904719997197E-4)), Intent=Intent(Name=UserAsksHowAreYou, Slots={UserFeeling=null})), Interpretation(NluConfidence=ConfidenceScore(Score=0.52), SentimentResponse=SentimentResponse(Sentiment=NEUTRAL, SentimentScore=SentimentScore(Positive=0.0021765283308923244, Negative=0.033124808222055435, Neutral=0.9645980000495911, Mixed=1.0075904719997197E-4)), Intent=Intent(Name=Welcome, Slots={})), Interpretation(NluConfidence=ConfidenceScore(Score=0.51), SentimentResponse=SentimentResponse(Sentiment=NEUTRAL, SentimentScore=SentimentScore(Positive=0.0021765283308923244, Negative=0.033124808222055435, Neutral=0.9645980000495911, Mixed=1.0075904719997197E-4)), Intent=Intent(Name=TellMeAbout, Slots={topic=null})), Interpretation(SentimentResponse=SentimentResponse(Sentiment=NEUTRAL, SentimentScore=SentimentScore(Positive=0.0021765283308923244, Negative=0.033124808222055435, Neutral=0.9645980000495911, Mixed=1.0075904719997197E-4)), Intent=Intent(Name=FallbackIntent, Slots={}))], SessionId=e388f764-547c-410a-81fa-f5659a55a9c2)
+2021-10-26 17:09:58.496  INFO 7680 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-10-26 17:09:58.502  INFO 7680 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-10-26 17:10:10.511  INFO 308 --- [restartedMain] c.learning.project2.Project2Application  : Starting Project2Application using Java 1.8.0_302 on DESKTOP-GTIL6SV with PID 308 (C:\Users\erose\Desktop\Projects\Project2\project2\IntellijBuild\target\classes started by erose in C:\Users\erose\Desktop\Projects\Project2\project2\IntellijBuild)
+2021-10-26 17:10:10.513 DEBUG 308 --- [restartedMain] c.learning.project2.Project2Application  : Running with Spring Boot v2.5.5, Spring v5.3.10
+2021-10-26 17:10:10.513  INFO 308 --- [restartedMain] c.learning.project2.Project2Application  : No active profile set, falling back to default profiles: default
+2021-10-26 17:10:11.736  INFO 308 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-10-26 17:10:11.736  INFO 308 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.53]
+2021-10-26 17:10:11.767  INFO 308 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-10-26 17:10:11.929  INFO 308 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-10-26 17:10:12.628  INFO 308 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-10-26 17:10:12.664  INFO 308 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-10-26 17:10:12.702  INFO 308 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-10-26 17:10:12.736  INFO 308 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-10-26 17:10:12.826  INFO 308 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2021-10-26 17:10:13.558  INFO 308 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-10-26 17:10:13.841  INFO 308 --- [restartedMain] c.learning.project2.web.lex.BotService   : Initializing bot from yaml file
+2021-10-26 17:10:14.749  INFO 308 --- [restartedMain] c.learning.project2.Project2Application  : Started Project2Application in 4.585 seconds (JVM running for 5.423)
+2021-10-26 17:10:15.084  INFO 308 --- [RMI TCP Connection(1)-192.168.0.100] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-10-26 17:10:25.431  INFO 308 --- [http-nio-8000-exec-1] c.learning.project2.web.lex.BotService   : Request sent to bot with id: 459e9d73-7fa4-4d5b-b1cf-8b2dad2b24c5
+2021-10-26 17:10:25.432  INFO 308 --- [http-nio-8000-exec-1] c.learning.project2.web.lex.BotService   : RecognizeTextResponse(SessionState=SessionState(DialogAction=DialogAction(Type=Close), Intent=Intent(Name=HowAmIDoing, Slots={}, State=ReadyForFulfillment, ConfirmationState=None), OriginatingRequestId=9f48a98f-04b1-4b13-8122-00e633d23a76), Interpretations=[Interpretation(NluConfidence=ConfidenceScore(Score=1.0), SentimentResponse=SentimentResponse(Sentiment=NEUTRAL, SentimentScore=SentimentScore(Positive=0.0021765283308923244, Negative=0.033124808222055435, Neutral=0.9645980000495911, Mixed=1.0075904719997197E-4)), Intent=Intent(Name=HowAmIDoing, Slots={}, State=ReadyForFulfillment, ConfirmationState=None)), Interpretation(NluConfidence=ConfidenceScore(Score=0.64), SentimentResponse=SentimentResponse(Sentiment=NEUTRAL, SentimentScore=SentimentScore(Positive=0.0021765283308923244, Negative=0.033124808222055435, Neutral=0.9645980000495911, Mixed=1.0075904719997197E-4)), Intent=Intent(Name=UserAsksHowAreYou, Slots={UserFeeling=null})), Interpretation(NluConfidence=ConfidenceScore(Score=0.52), SentimentResponse=SentimentResponse(Sentiment=NEUTRAL, SentimentScore=SentimentScore(Positive=0.0021765283308923244, Negative=0.033124808222055435, Neutral=0.9645980000495911, Mixed=1.0075904719997197E-4)), Intent=Intent(Name=Welcome, Slots={})), Interpretation(NluConfidence=ConfidenceScore(Score=0.51), SentimentResponse=SentimentResponse(Sentiment=NEUTRAL, SentimentScore=SentimentScore(Positive=0.0021765283308923244, Negative=0.033124808222055435, Neutral=0.9645980000495911, Mixed=1.0075904719997197E-4)), Intent=Intent(Name=TellMeAbout, Slots={topic=null})), Interpretation(SentimentResponse=SentimentResponse(Sentiment=NEUTRAL, SentimentScore=SentimentScore(Positive=0.0021765283308923244, Negative=0.033124808222055435, Neutral=0.9645980000495911, Mixed=1.0075904719997197E-4)), Intent=Intent(Name=FallbackIntent, Slots={}))], SessionId=459e9d73-7fa4-4d5b-b1cf-8b2dad2b24c5)
+2021-10-26 17:11:41.649  INFO 308 --- [http-nio-8000-exec-3] c.learning.project2.web.lex.BotService   : Request sent to bot with id: b09836e6-6b77-4aff-acaa-aeefa9eea996
+2021-10-26 17:11:41.649  INFO 308 --- [http-nio-8000-exec-3] c.learning.project2.web.lex.BotService   : RecognizeTextResponse(SessionState=SessionState(DialogAction=DialogAction(Type=Close), Intent=Intent(Name=HowAmIDoing, Slots={}, State=ReadyForFulfillment, ConfirmationState=None), OriginatingRequestId=7a3e9f72-5443-471f-afd7-a8f3b947f49f), Interpretations=[Interpretation(NluConfidence=ConfidenceScore(Score=1.0), SentimentResponse=SentimentResponse(Sentiment=NEUTRAL, SentimentScore=SentimentScore(Positive=0.0021765283308923244, Negative=0.033124808222055435, Neutral=0.9645980000495911, Mixed=1.0075904719997197E-4)), Intent=Intent(Name=HowAmIDoing, Slots={}, State=ReadyForFulfillment, ConfirmationState=None)), Interpretation(NluConfidence=ConfidenceScore(Score=0.64), SentimentResponse=SentimentResponse(Sentiment=NEUTRAL, SentimentScore=SentimentScore(Positive=0.0021765283308923244, Negative=0.033124808222055435, Neutral=0.9645980000495911, Mixed=1.0075904719997197E-4)), Intent=Intent(Name=UserAsksHowAreYou, Slots={UserFeeling=null})), Interpretation(NluConfidence=ConfidenceScore(Score=0.52), SentimentResponse=SentimentResponse(Sentiment=NEUTRAL, SentimentScore=SentimentScore(Positive=0.0021765283308923244, Negative=0.033124808222055435, Neutral=0.9645980000495911, Mixed=1.0075904719997197E-4)), Intent=Intent(Name=Welcome, Slots={})), Interpretation(NluConfidence=ConfidenceScore(Score=0.51), SentimentResponse=SentimentResponse(Sentiment=NEUTRAL, SentimentScore=SentimentScore(Positive=0.0021765283308923244, Negative=0.033124808222055435, Neutral=0.9645980000495911, Mixed=1.0075904719997197E-4)), Intent=Intent(Name=TellMeAbout, Slots={topic=null})), Interpretation(SentimentResponse=SentimentResponse(Sentiment=NEUTRAL, SentimentScore=SentimentScore(Positive=0.0021765283308923244, Negative=0.033124808222055435, Neutral=0.9645980000495911, Mixed=1.0075904719997197E-4)), Intent=Intent(Name=FallbackIntent, Slots={}))], SessionId=b09836e6-6b77-4aff-acaa-aeefa9eea996)
+2021-10-26 17:12:05.833  INFO 308 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-10-26 17:12:05.841  INFO 308 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-10-26 17:12:11.026  INFO 9688 --- [restartedMain] c.learning.project2.Project2Application  : Starting Project2Application using Java 1.8.0_302 on DESKTOP-GTIL6SV with PID 9688 (C:\Users\erose\Desktop\Projects\Project2\project2\IntellijBuild\target\classes started by erose in C:\Users\erose\Desktop\Projects\Project2\project2\IntellijBuild)
+2021-10-26 17:12:11.028 DEBUG 9688 --- [restartedMain] c.learning.project2.Project2Application  : Running with Spring Boot v2.5.5, Spring v5.3.10
+2021-10-26 17:12:11.028  INFO 9688 --- [restartedMain] c.learning.project2.Project2Application  : No active profile set, falling back to default profiles: default
+2021-10-26 17:12:12.273  INFO 9688 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-10-26 17:12:12.274  INFO 9688 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.53]
+2021-10-26 17:12:12.305  INFO 9688 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-10-26 17:12:12.470  INFO 9688 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-10-26 17:12:13.185  INFO 9688 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-10-26 17:12:13.222  INFO 9688 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-10-26 17:12:13.259  INFO 9688 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-10-26 17:12:13.293  INFO 9688 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-10-26 17:12:13.378  INFO 9688 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2021-10-26 17:12:14.133  INFO 9688 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-10-26 17:12:14.417  INFO 9688 --- [restartedMain] c.learning.project2.web.lex.BotService   : Initializing bot from yaml file
+2021-10-26 17:12:15.321  INFO 9688 --- [restartedMain] c.learning.project2.Project2Application  : Started Project2Application in 4.653 seconds (JVM running for 5.513)
+2021-10-26 17:12:15.531  INFO 9688 --- [RMI TCP Connection(1)-192.168.0.100] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-10-26 17:12:25.438  INFO 9688 --- [http-nio-8000-exec-1] c.learning.project2.web.lex.BotService   : Request sent to bot with id: e0444643-0471-4b05-aeb2-e621ea085214
+2021-10-26 17:12:25.439  INFO 9688 --- [http-nio-8000-exec-1] c.learning.project2.web.lex.BotService   : RecognizeTextResponse(SessionState=SessionState(DialogAction=DialogAction(Type=Close), Intent=Intent(Name=HowAmIDoing, Slots={}, State=ReadyForFulfillment, ConfirmationState=None), OriginatingRequestId=bacc9a29-33b4-4f14-b89d-14b5f47316ed), Interpretations=[Interpretation(NluConfidence=ConfidenceScore(Score=1.0), SentimentResponse=SentimentResponse(Sentiment=NEUTRAL, SentimentScore=SentimentScore(Positive=0.0021765283308923244, Negative=0.033124808222055435, Neutral=0.9645980000495911, Mixed=1.0075904719997197E-4)), Intent=Intent(Name=HowAmIDoing, Slots={}, State=ReadyForFulfillment, ConfirmationState=None)), Interpretation(NluConfidence=ConfidenceScore(Score=0.64), SentimentResponse=SentimentResponse(Sentiment=NEUTRAL, SentimentScore=SentimentScore(Positive=0.0021765283308923244, Negative=0.033124808222055435, Neutral=0.9645980000495911, Mixed=1.0075904719997197E-4)), Intent=Intent(Name=UserAsksHowAreYou, Slots={UserFeeling=null})), Interpretation(NluConfidence=ConfidenceScore(Score=0.52), SentimentResponse=SentimentResponse(Sentiment=NEUTRAL, SentimentScore=SentimentScore(Positive=0.0021765283308923244, Negative=0.033124808222055435, Neutral=0.9645980000495911, Mixed=1.0075904719997197E-4)), Intent=Intent(Name=Welcome, Slots={})), Interpretation(NluConfidence=ConfidenceScore(Score=0.51), SentimentResponse=SentimentResponse(Sentiment=NEUTRAL, SentimentScore=SentimentScore(Positive=0.0021765283308923244, Negative=0.033124808222055435, Neutral=0.9645980000495911, Mixed=1.0075904719997197E-4)), Intent=Intent(Name=TellMeAbout, Slots={topic=null})), Interpretation(SentimentResponse=SentimentResponse(Sentiment=NEUTRAL, SentimentScore=SentimentScore(Positive=0.0021765283308923244, Negative=0.033124808222055435, Neutral=0.9645980000495911, Mixed=1.0075904719997197E-4)), Intent=Intent(Name=FallbackIntent, Slots={}))], SessionId=e0444643-0471-4b05-aeb2-e621ea085214)
+2021-10-26 17:12:57.519  INFO 9688 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-10-26 17:12:57.527  INFO 9688 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-10-26 17:13:02.833  INFO 9820 --- [restartedMain] c.learning.project2.Project2Application  : Starting Project2Application using Java 1.8.0_302 on DESKTOP-GTIL6SV with PID 9820 (C:\Users\erose\Desktop\Projects\Project2\project2\IntellijBuild\target\classes started by erose in C:\Users\erose\Desktop\Projects\Project2\project2\IntellijBuild)
+2021-10-26 17:13:02.834 DEBUG 9820 --- [restartedMain] c.learning.project2.Project2Application  : Running with Spring Boot v2.5.5, Spring v5.3.10
+2021-10-26 17:13:02.834  INFO 9820 --- [restartedMain] c.learning.project2.Project2Application  : No active profile set, falling back to default profiles: default
+2021-10-26 17:13:04.076  INFO 9820 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-10-26 17:13:04.077  INFO 9820 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.53]
+2021-10-26 17:13:04.108  INFO 9820 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-10-26 17:13:04.273  INFO 9820 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-10-26 17:13:05.021  INFO 9820 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-10-26 17:13:05.059  INFO 9820 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-10-26 17:13:05.098  INFO 9820 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-10-26 17:13:05.131  INFO 9820 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-10-26 17:13:05.219  INFO 9820 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2021-10-26 17:13:05.976  INFO 9820 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-10-26 17:13:06.262  INFO 9820 --- [restartedMain] c.learning.project2.web.lex.BotService   : Initializing bot from yaml file
+2021-10-26 17:13:07.158  INFO 9820 --- [restartedMain] c.learning.project2.Project2Application  : Started Project2Application in 4.703 seconds (JVM running for 5.557)
+2021-10-26 17:13:07.815  INFO 9820 --- [RMI TCP Connection(1)-192.168.0.100] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-10-26 17:13:15.667  INFO 9820 --- [http-nio-8000-exec-1] c.learning.project2.web.lex.BotService   : Request sent to bot with id: 8126052c-7add-415e-a19a-883a14ec6d7b
+2021-10-26 17:13:15.668  INFO 9820 --- [http-nio-8000-exec-1] c.learning.project2.web.lex.BotService   : RecognizeTextResponse(SessionState=SessionState(DialogAction=DialogAction(Type=Close), Intent=Intent(Name=HowAmIDoing, Slots={}, State=ReadyForFulfillment, ConfirmationState=None), OriginatingRequestId=2cfb285d-9281-454e-b669-8a22dfd16aae), Interpretations=[Interpretation(NluConfidence=ConfidenceScore(Score=1.0), SentimentResponse=SentimentResponse(Sentiment=NEUTRAL, SentimentScore=SentimentScore(Positive=0.0021765283308923244, Negative=0.033124808222055435, Neutral=0.9645980000495911, Mixed=1.0075904719997197E-4)), Intent=Intent(Name=HowAmIDoing, Slots={}, State=ReadyForFulfillment, ConfirmationState=None)), Interpretation(NluConfidence=ConfidenceScore(Score=0.64), SentimentResponse=SentimentResponse(Sentiment=NEUTRAL, SentimentScore=SentimentScore(Positive=0.0021765283308923244, Negative=0.033124808222055435, Neutral=0.9645980000495911, Mixed=1.0075904719997197E-4)), Intent=Intent(Name=UserAsksHowAreYou, Slots={UserFeeling=null})), Interpretation(NluConfidence=ConfidenceScore(Score=0.52), SentimentResponse=SentimentResponse(Sentiment=NEUTRAL, SentimentScore=SentimentScore(Positive=0.0021765283308923244, Negative=0.033124808222055435, Neutral=0.9645980000495911, Mixed=1.0075904719997197E-4)), Intent=Intent(Name=Welcome, Slots={})), Interpretation(NluConfidence=ConfidenceScore(Score=0.51), SentimentResponse=SentimentResponse(Sentiment=NEUTRAL, SentimentScore=SentimentScore(Positive=0.0021765283308923244, Negative=0.033124808222055435, Neutral=0.9645980000495911, Mixed=1.0075904719997197E-4)), Intent=Intent(Name=TellMeAbout, Slots={topic=null})), Interpretation(SentimentResponse=SentimentResponse(Sentiment=NEUTRAL, SentimentScore=SentimentScore(Positive=0.0021765283308923244, Negative=0.033124808222055435, Neutral=0.9645980000495911, Mixed=1.0075904719997197E-4)), Intent=Intent(Name=FallbackIntent, Slots={}))], SessionId=8126052c-7add-415e-a19a-883a14ec6d7b)
+2021-10-26 17:14:13.668  INFO 9820 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-10-26 17:14:13.675  INFO 9820 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-10-26 17:14:19.476  INFO 4704 --- [restartedMain] c.learning.project2.Project2Application  : Starting Project2Application using Java 1.8.0_302 on DESKTOP-GTIL6SV with PID 4704 (C:\Users\erose\Desktop\Projects\Project2\project2\IntellijBuild\target\classes started by erose in C:\Users\erose\Desktop\Projects\Project2\project2\IntellijBuild)
+2021-10-26 17:14:19.479 DEBUG 4704 --- [restartedMain] c.learning.project2.Project2Application  : Running with Spring Boot v2.5.5, Spring v5.3.10
+2021-10-26 17:14:19.479  INFO 4704 --- [restartedMain] c.learning.project2.Project2Application  : No active profile set, falling back to default profiles: default
+2021-10-26 17:14:20.715  INFO 4704 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-10-26 17:14:20.716  INFO 4704 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.53]
+2021-10-26 17:14:20.747  INFO 4704 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-10-26 17:14:20.913  INFO 4704 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-10-26 17:14:21.664  INFO 4704 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-10-26 17:14:21.707  INFO 4704 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-10-26 17:14:21.746  INFO 4704 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-10-26 17:14:21.781  INFO 4704 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-10-26 17:14:21.868  INFO 4704 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2021-10-26 17:14:22.635  INFO 4704 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-10-26 17:14:22.921  INFO 4704 --- [restartedMain] c.learning.project2.web.lex.BotService   : Initializing bot from yaml file
+2021-10-26 17:14:23.864  INFO 4704 --- [restartedMain] c.learning.project2.Project2Application  : Started Project2Application in 4.747 seconds (JVM running for 5.602)
+2021-10-26 17:14:24.623  INFO 4704 --- [RMI TCP Connection(3)-192.168.0.100] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-10-26 17:14:29.027  INFO 4704 --- [http-nio-8000-exec-1] c.learning.project2.web.lex.BotService   : Request sent to bot with id: 7f52b4a5-a247-4b6c-a31c-f772759547bf
+2021-10-26 17:14:29.028  INFO 4704 --- [http-nio-8000-exec-1] c.learning.project2.web.lex.BotService   : RecognizeTextResponse(SessionState=SessionState(DialogAction=DialogAction(Type=Close), Intent=Intent(Name=HowAmIDoing, Slots={}, State=ReadyForFulfillment, ConfirmationState=None), OriginatingRequestId=5e681848-d7b6-4c5e-8b76-587ade1cf817), Interpretations=[Interpretation(NluConfidence=ConfidenceScore(Score=1.0), SentimentResponse=SentimentResponse(Sentiment=NEUTRAL, SentimentScore=SentimentScore(Positive=0.0021765283308923244, Negative=0.033124808222055435, Neutral=0.9645980000495911, Mixed=1.0075904719997197E-4)), Intent=Intent(Name=HowAmIDoing, Slots={}, State=ReadyForFulfillment, ConfirmationState=None)), Interpretation(NluConfidence=ConfidenceScore(Score=0.64), SentimentResponse=SentimentResponse(Sentiment=NEUTRAL, SentimentScore=SentimentScore(Positive=0.0021765283308923244, Negative=0.033124808222055435, Neutral=0.9645980000495911, Mixed=1.0075904719997197E-4)), Intent=Intent(Name=UserAsksHowAreYou, Slots={UserFeeling=null})), Interpretation(NluConfidence=ConfidenceScore(Score=0.52), SentimentResponse=SentimentResponse(Sentiment=NEUTRAL, SentimentScore=SentimentScore(Positive=0.0021765283308923244, Negative=0.033124808222055435, Neutral=0.9645980000495911, Mixed=1.0075904719997197E-4)), Intent=Intent(Name=Welcome, Slots={})), Interpretation(NluConfidence=ConfidenceScore(Score=0.51), SentimentResponse=SentimentResponse(Sentiment=NEUTRAL, SentimentScore=SentimentScore(Positive=0.0021765283308923244, Negative=0.033124808222055435, Neutral=0.9645980000495911, Mixed=1.0075904719997197E-4)), Intent=Intent(Name=TellMeAbout, Slots={topic=null})), Interpretation(SentimentResponse=SentimentResponse(Sentiment=NEUTRAL, SentimentScore=SentimentScore(Positive=0.0021765283308923244, Negative=0.033124808222055435, Neutral=0.9645980000495911, Mixed=1.0075904719997197E-4)), Intent=Intent(Name=FallbackIntent, Slots={}))], SessionId=7f52b4a5-a247-4b6c-a31c-f772759547bf)
+2021-10-26 17:22:41.998  INFO 4704 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-10-26 17:22:42.004  INFO 4704 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-10-26 17:22:47.291  INFO 13092 --- [restartedMain] c.learning.project2.Project2Application  : Starting Project2Application using Java 1.8.0_302 on DESKTOP-GTIL6SV with PID 13092 (C:\Users\erose\Desktop\Projects\Project2\project2\IntellijBuild\target\classes started by erose in C:\Users\erose\Desktop\Projects\Project2\project2\IntellijBuild)
+2021-10-26 17:22:47.293 DEBUG 13092 --- [restartedMain] c.learning.project2.Project2Application  : Running with Spring Boot v2.5.5, Spring v5.3.10
+2021-10-26 17:22:47.293  INFO 13092 --- [restartedMain] c.learning.project2.Project2Application  : No active profile set, falling back to default profiles: default
+2021-10-26 17:22:48.512  INFO 13092 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-10-26 17:22:48.512  INFO 13092 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.53]
+2021-10-26 17:22:48.543  INFO 13092 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-10-26 17:22:48.706  INFO 13092 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-10-26 17:22:49.387  INFO 13092 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-10-26 17:22:49.425  INFO 13092 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-10-26 17:22:49.464  INFO 13092 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-10-26 17:22:49.499  INFO 13092 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-10-26 17:22:49.587  INFO 13092 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2021-10-26 17:22:50.324  INFO 13092 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-10-26 17:22:50.609  INFO 13092 --- [restartedMain] c.learning.project2.web.lex.BotService   : Initializing bot from yaml file
+2021-10-26 17:22:51.502  INFO 13092 --- [restartedMain] c.learning.project2.Project2Application  : Started Project2Application in 4.582 seconds (JVM running for 5.443)
+2021-10-26 17:22:52.012  INFO 13092 --- [RMI TCP Connection(2)-192.168.0.100] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-10-26 17:23:03.228  INFO 13092 --- [http-nio-8000-exec-1] c.learning.project2.web.lex.BotService   : Request sent to bot with id: 7c9f03f5-774f-4ea0-be0a-5fa9167bde43
+2021-10-26 17:23:03.229  INFO 13092 --- [http-nio-8000-exec-1] c.learning.project2.web.lex.BotService   : RecognizeTextResponse(SessionState=SessionState(DialogAction=DialogAction(Type=Close), Intent=Intent(Name=HowAmIDoing, Slots={}, State=ReadyForFulfillment, ConfirmationState=None), OriginatingRequestId=89e093a9-1868-45eb-b92b-1cda676698e3), Interpretations=[Interpretation(NluConfidence=ConfidenceScore(Score=1.0), SentimentResponse=SentimentResponse(Sentiment=NEUTRAL, SentimentScore=SentimentScore(Positive=0.0021765283308923244, Negative=0.033124808222055435, Neutral=0.9645980000495911, Mixed=1.0075904719997197E-4)), Intent=Intent(Name=HowAmIDoing, Slots={}, State=ReadyForFulfillment, ConfirmationState=None)), Interpretation(NluConfidence=ConfidenceScore(Score=0.64), SentimentResponse=SentimentResponse(Sentiment=NEUTRAL, SentimentScore=SentimentScore(Positive=0.0021765283308923244, Negative=0.033124808222055435, Neutral=0.9645980000495911, Mixed=1.0075904719997197E-4)), Intent=Intent(Name=UserAsksHowAreYou, Slots={UserFeeling=null})), Interpretation(NluConfidence=ConfidenceScore(Score=0.52), SentimentResponse=SentimentResponse(Sentiment=NEUTRAL, SentimentScore=SentimentScore(Positive=0.0021765283308923244, Negative=0.033124808222055435, Neutral=0.9645980000495911, Mixed=1.0075904719997197E-4)), Intent=Intent(Name=Welcome, Slots={})), Interpretation(NluConfidence=ConfidenceScore(Score=0.51), SentimentResponse=SentimentResponse(Sentiment=NEUTRAL, SentimentScore=SentimentScore(Positive=0.0021765283308923244, Negative=0.033124808222055435, Neutral=0.9645980000495911, Mixed=1.0075904719997197E-4)), Intent=Intent(Name=TellMeAbout, Slots={topic=null})), Interpretation(SentimentResponse=SentimentResponse(Sentiment=NEUTRAL, SentimentScore=SentimentScore(Positive=0.0021765283308923244, Negative=0.033124808222055435, Neutral=0.9645980000495911, Mixed=1.0075904719997197E-4)), Intent=Intent(Name=FallbackIntent, Slots={}))], SessionId=7c9f03f5-774f-4ea0-be0a-5fa9167bde43)
+2021-10-26 17:23:15.740  INFO 13092 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-10-26 17:23:15.746  INFO 13092 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
