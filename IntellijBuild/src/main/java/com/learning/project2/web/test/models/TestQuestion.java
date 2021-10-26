@@ -40,6 +40,7 @@ public class TestQuestion {
                 ", questionText='" + questionText + '\'' +
                 ", difficulty=" + difficulty +
                 ", points=" + points +
+                ",answerList=" + testAnswerList.toString() +
                 '}';
     }
 

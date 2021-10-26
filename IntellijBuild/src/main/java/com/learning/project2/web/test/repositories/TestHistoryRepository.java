@@ -34,6 +34,7 @@ public interface TestHistoryRepository extends JpaRepository<TestHistory, Long> 
 
                 // Find the question that matches the answer
                 for(TestQuestion question : questions){
+                    System.out.println(question.toString());
                     if(question.getTestAnswerList().contains(answer.getTestAnswer())){
 
                         // If a question is found that has this as an answer
@@ -42,7 +43,7 @@ public interface TestHistoryRepository extends JpaRepository<TestHistory, Long> 
                         if(isCorrect) {
                             pointsEarned += question.getPoints();
                         }
-                        possiblePoints +=question.getPoints();
+                        possiblePoints += question.getPoints();
                         break;
                     }
                 }
