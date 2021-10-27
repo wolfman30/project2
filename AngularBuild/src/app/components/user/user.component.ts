@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Input, AfterViewInit, Component, OnInit } from '@angular/core';
 import { UserService } from 'src/app/services/user.service'; 
 import { MessagingService } from 'src/app/services/messaging.service'; 
 import { User } from 'src/app/models/userClass'; 
@@ -14,11 +14,13 @@ import users from 'src/data/users.json';
   styleUrls: ['./user.component.css'], 
   providers: [UserService, MessagingService]
 })
-export class UserComponent implements OnInit 
+export class UserComponent implements OnInit
 {
-  count: number = 0; 
-  display: boolean = false; 
   userMessage = new FormControl("", [Validators.required])
+  count: number = 0; 
+  sessionCount: number = 0;
+  sessionId: any;  
+  display: boolean = false; 
   lexResponse: any = sessionStorage.getItem("lexMessage"); 
   parsedLexResponse: any = JSON.parse(this.lexResponse);
   lexResponseList: any[] = [];
@@ -63,6 +65,8 @@ export class UserComponent implements OnInit
     this.loadUsers(this.userName);
   }
 
+  
+//Here we talk to the AWS lex or so named PAL
   talkToLex(message: string)
   {
     if (sessionStorage.getItem("lexResponse") == null)
@@ -72,26 +76,38 @@ export class UserComponent implements OnInit
     let userMessage: any; 
 
     if (this.count === 1)
-      userMessage = {"message": message}; 
+    { 
+      userMessage = {"userId":this.parsedUserData.id, "message": message}; 
+    }
     else
-      userMessage = {"sessionId": this.parsedLexResponse.sessionId, "message": message}; 
-
+    {
+      userMessage = {"userId":this.parsedUserData.id, "sessionId": this.sessionId, "message": message}; 
+      
+    }
+    
     this.userMessageList.push(userMessage); 
     let url = "http://localhost:8000/bot/converse/"; 
+    console.log("here is the session id before the http post: " + this.sessionId); 
     this.http.post(url, userMessage, this.lexHttpOptions)
       .subscribe
       (
-        async (response) =>
+        (response) =>
         {
-          
+          this.sessionCount++; 
           sessionStorage.setItem("lexMessage", JSON.stringify(response));
           this.lexResponse = sessionStorage.getItem("lexMessage"); 
           this.parsedLexResponse = JSON.parse(this.lexResponse);
+          if (this.sessionCount === 1)
+          {
+            this.sessionId = this.parsedLexResponse.sessionId; 
+          }
+          this.lexResponseList.push(this.parsedLexResponse); 
           this.display = true; 
           this.userMessage.reset(); 
           
         }
       );
+      console.log("here is the sessionId after the http post: " + this.sessionId); 
        
       
   }

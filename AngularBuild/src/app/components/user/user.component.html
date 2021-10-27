@@ -26,32 +26,35 @@
         </mat-card>
     </mat-tab>
     <mat-tab label="Talk to PAL">
-        <mat-card id="pal-container">
+        <mat-card #scrollMe id="pal-container">
             <h1>PAL</h1>
             <!--<textarea readonly="readonly" name="conversation" rows="10" cols="80">{{lexResponse}}</textarea>-->
             <div *ngIf="display">
-                <div *ngFor="let message of userMessageList; let i = index;">
-                    <h2 id="user-message">YOU: {{userMessageList[i].message}}</h2>
+                <ul *ngFor="let message of userMessageList; let i = index;">
+                    <li><h2 id="user-message">YOU: {{userMessageList[i].message}}</h2></li>
                     <div *ngIf="parsedLexResponse != null">
-                        <h2 id="pal-message">PAL: {{parsedLexResponse.message}}</h2>
+                        <div *ngIf="lexResponseList[i] != undefined">
+                            <li><h2 id="pal-message">PAL: {{lexResponseList[i].message}}</h2></li>
+                        </div>
+                        
                     </div>
                     
-                </div>
-                
+                </ul>
             </div>
-            <span id="input">
-                <mat-form-field appearance="fill">
-                    <mat-label>Write your message to PAL</mat-label>
-                    <input size="60" name="message" style="line-height: 1em;" enterkeyhint="" matInput [formControl]="userMessage"/>
-                </mat-form-field>
-                <button id="send-user-msg" mat-raised-button color="accent" style="line-height: 2em;" (click)="talkToLex(userMessage.value)">Send</button>
-            </span>
                         <!--
                         <mat-card-footer>
                     <mat-progress-bar mode="indeterminate"></mat-progress-bar>
                     </mat-card-footer>
                 -->
         </mat-card>
+        <span id="input">
+            <mat-form-field appearance="fill">
+                <mat-label>Write your message to PAL</mat-label>
+                <input size="60" name="message" style="line-height: 1em;" enterkeyhint="" matInput [formControl]="userMessage"/>
+            </mat-form-field>
+            <button id="send-user-msg" mat-raised-button color="accent" style="line-height: 2em;" (click)="talkToLex(userMessage.value)">Send</button>
+        </span>
+
     </mat-tab>
     </mat-tab-group>
 </div>

@@ -1,5 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch&display=swap');
 
+#title
+{
+    font-size: 55px; 
+    font-family: 'Chakra Petch', sans-serif;
+    margin-left: 170px; 
+}
 #logout
 {
-    background: white; 
+    background: white;
+  
+}
+
+.toolbar
+{
+    display: flex; 
+    justify-content: center; 
+    gap: 5em; 
 }

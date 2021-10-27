@@ -17,7 +17,7 @@ export class NavbarComponent implements OnInit {
   logOut() 
   {
     sessionStorage.clear();
-    this.router.navigate(['/register']);
+    this.router.navigate(['/']);
   }
 
 }

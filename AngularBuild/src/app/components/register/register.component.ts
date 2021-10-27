@@ -17,6 +17,7 @@ export class RegisterComponent implements OnInit
 {
   newId: number = 0;
   responseStatus: number = 0; 
+  mismatchedPasswords: boolean = false; 
   responseText: string = ''; 
   response: any; 
   newDatum: any; 
@@ -30,6 +31,8 @@ export class RegisterComponent implements OnInit
                                   Validators.minLength(5)]); 
   register_password = new FormControl("", [Validators.required, 
                                     Validators.minLength(5)]); 
+  confirm_register_password = new FormControl("", [Validators.required, 
+                                      Validators.minLength(5)]); 
                                   //Validators.pattern('^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])[a-zA-Z0-9]+$')
   login_creds_url =  'http://localhost:8000/user/login-attempt'; 
 
@@ -70,6 +73,11 @@ export class RegisterComponent implements OnInit
     ); 
   }
 
+  mismatched_passwords(): boolean
+  {
+    return this.register_password.value != this.confirm_register_password.value; 
+  }
+
   register()
   {
 
@@ -79,6 +87,8 @@ export class RegisterComponent implements OnInit
                       "email": this.email.value, "username": this.register_userName.value 
                           }
 
+    if (!this.mismatched_passwords())
+    {
     this.http.post(this.register_url, this.registered_user, 
                   this.httpOptions).toPromise()
                   .then
@@ -86,15 +96,24 @@ export class RegisterComponent implements OnInit
                     (data: any) =>
                       {
                         this.response = 'successful-registration'; 
-                        console.log(data)
+                        this.firstName.reset(); 
+                        this.lastName.reset(); 
+                        this.email.reset(); 
+                        this.register_userName.reset(); 
+                        this.register_password.reset(); 
+                        this.confirm_register_password.reset(); 
                       }
-                  ).catch(
+                  )
+                  .catch
+                  (
                     (error: HttpErrorResponse) =>
                     {
                       this.response = 'registration-error'; 
                       console.log(error, "409 conflict"); 
                     }
                   )
+    }
+  
   }
-
+  
 }

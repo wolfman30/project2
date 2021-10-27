@@ -55,11 +55,25 @@
               <input type="password" matInput [formControl]="register_password">
             </mat-form-field>
           </div>
-          <button (click)="register();" mat-raised-button color="primary">Create Profile</button>
+          <div class="row">
+            <mat-icon>
+              <span class="material-icons-outlined">
+                vpn_key
+              </span>
+            </mat-icon>
+            <mat-form-field appearance="fill">
+              <mat-label>Confirm Password</mat-label>
+              <input type="password" matInput [formControl]="confirm_register_password">
+            </mat-form-field>
+          </div>
+          <button (click)="mismatchedPasswords = mismatched_passwords(); register();" mat-raised-button color="primary">Create Profile</button>
   
         </mat-card>
+        <div id="mismatched-passwords" *ngIf="mismatchedPasswords">
+          <h3>Passwords do not match.</h3>
+        </div>
         <div id="successful-registration" *ngIf="response == 'successful-registration'">
-          <h3>Successfull Registered! You can log in now!</h3>
+          <h3>You successfully Registered! You can log in now!</h3>
         </div>
         <div id="already-registered" *ngIf="response == 'registration-error'">
           <h3>You are already registered. Please log in.</h3>

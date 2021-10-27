@@ -15,7 +15,7 @@ export class AuthGuard implements CanActivate {
         debugger
       if (sessionStorage.getItem('userData') != null){return true;}
         
-      this.router.navigate(['/register']); 
+      this.router.navigate(['/']); 
       return false; 
     }
   
