@@ -26,23 +26,39 @@ public class Interaction {
     }
 
     @JsonIgnore
+    /**
+     * @param name - name of the slot
+     * @returns value of the slot if one is found. Returns null if no slot with that name exists
+     */
     public String getSlotValue(String name){
         return slots.get(name);
     }
 
+    /**
+     * @return returns a string array of all slot names
+     */
     @JsonIgnore
     public String[] getSlotNames(){
         return slots.keySet().toArray(new String[0]);
     }
 
-    public void addToBotMessages(String... strs){
-        botMessages.addAll(Arrays.asList(strs));
+    /**
+     * @param messages a list of strings to add to the bot
+     */
+    public void addToBotMessages(String... messages){
+        botMessages.addAll(Arrays.asList(messages));
     }
 
-    public void addToUserMessages(String... strs){
-        userMessages.addAll(Arrays.asList(strs));
+    /**
+     * @param messages a list of strings to add to the user
+     */
+    public void addToUserMessages(String... messages){
+        userMessages.addAll(Arrays.asList(messages));
     }
 
+    /**
+     * @return returns the last message sent from the bot
+     */
     public String getCurrentBotMessage(){
         int len = botMessages.size();
         if(len==0) return "";
@@ -50,6 +66,9 @@ public class Interaction {
         return botMessages.get(len-1);
     }
 
+    /**
+     * @return returns the last message sent from the user
+     */
     public String getCurrentUserMessage(){
         int len = userMessages.size();
         if(len==0) return "";
