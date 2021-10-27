@@ -101,23 +101,65 @@ public class BotService {
                 return tellJoke(interaction);
             case("UserAsksHowAreYou"):
                 return howAreYou(interaction);
+            case("HowAreYouResponse"):
+                return respondToHowAreYou(interaction);
             case("HowAmIDoing"):
                 return getAverage(interaction);
-            case("TellMeAbout"):
-                return tellMeAbout(interaction);
+            case("Spring"):
+                return tellMeAboutSpring(interaction);
+            case("IoC"):
+                return tellMeAboutIoC(interaction);
+            case("Hibernate"):
+                return tellMeAboutHibernate(interaction);
+            case("HibernateAnnotations"):
+                return tellMeAboutHibernateAnnotations(interaction);
+            case("SpringVsHibernate"):
+                return explainDiffBetweenHibernateSpring(interaction);
+            case("LifeMeaning"):
+                return explainMeaningOfLife(interaction);
             default:
                 return interaction;
         }
 
     }
 
-    private Interaction tellMeAbout(Interaction interaction)
+    private Interaction explainMeaningOfLife(Interaction interaction)
     {
-        String learningTopic = interaction.getSlotValue("LearningTopic");
-        if (learningTopic.equals("Spring"))
-        {
-            interaction.addToBotMessages("Spring is a framework that provides inversion of control via dependency injection to alleviate the complexity of enterprise-grade applications");
-        }
+        interaction.addToBotMessages("Ultimately: none. For now: pass your QCs and assessments, suffer the intense learning now, and live the rest of your life as a creator of great applications that can solve really cool problems.");
+        return interaction;
+    }
+
+    private Interaction tellMeAboutHibernateAnnotations(Interaction interaction)
+    {
+        interaction.addToBotMessages("Hibernate annotations start with the @ symbol and provide metadata to map Java objects to relational database tables which is commonly used to replace or in addition to an XML file. One of the most commonly used annotations in Hibernate is @Entity placed over a Java class to indicate it maps to an entity in the relational database.");
+        return interaction;
+    }
+
+    private Interaction explainDiffBetweenHibernateSpring(Interaction interaction)
+    {
+        interaction.addToBotMessages("Spring is a larger framework than Hibernate. Developers may or may not use Hibernate with Spring. Developers could use Spring ORM instead of Hibernate. Hibernate just takes care of mapping java objects to reltional database tables whereas Spring provides dependency injection, aspect-oriented programming, web frameworks for easier web development, and more to reduce the complexity of developing enterprise-level applications. Enterprise developers would choose Spring over Hibernate to develop large-scale enterprise applications if they had to choose.");
+        return interaction;
+    }
+
+    private Interaction tellMeAboutHibernate(Interaction interaction)
+    {
+        interaction.addToBotMessages("Hibernate is an object-relational mapping (ORM) tool used to convert Java objects to database tables, allowing us to interact with a relational database without the required use of SQL. It is one of the most popular ORM frameworks in use today and is a standard implementation of Java Persistence API (JPA).");
+        return interaction;
+    }
+    private Interaction respondToHowAreYou(Interaction interaction)
+    {
+        interaction.addToBotMessages("Good news! Ask away.");
+        return interaction;
+    }
+
+    private Interaction tellMeAboutIoC(Interaction interaction)
+    {
+        interaction.addToBotMessages("Inversion of Control (IoC) is the principle in software engineering which transfers the control of objects or parts of a program to a container or framework. In Spring, this is usually the ApplicationContext which respresents the IoC container. IoC enables a framework to take control of the flow of a program and make calls to our custom custom code. IoC provides decoupling of the task executions from their implementations making it easier to switch between different implementations.");
+        return interaction;
+    }
+    private Interaction tellMeAboutSpring(Interaction interaction)
+    {
+        interaction.addToBotMessages("Spring is a framework that provides inversion of control via dependency injection to alleviate the complexity of developing enterprise-grade applications");
         return interaction;
     }
 
@@ -148,7 +190,7 @@ public class BotService {
 
         double average = testHistoryRepository.findAverageScoreByUser(id);
 
-        interaction.addToBotMessages("Here is your cumulative average: " + df.format(average * 100) + "%");
+        interaction.addToBotMessages("Here is your cumulative test score average: " + df.format(average * 100) + "%");
         return interaction;
     }
 
