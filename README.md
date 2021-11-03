@@ -6,20 +6,24 @@ Here goes your awesome project description!
 
 ## Technologies Used
 
-* Tech 1 - version 1.0
-* Tech 2 - version 2.0
-* Tech 3 - version 3.0
+* Spring Boot
+* Angular 12
+* Spring MVC
+* Spring Data
+* Lombok
+* Hibernate
 
 ## Features
 
 List of features ready and TODOs for future development
-* Awesome feature 1
-* Awesome feature 2
-* Awesome feature 3
+* AI chatbot name P.A.L (Personal Assistant in Learning) to answer questions such as "What is Spring?" and "What is Hibernate?" 
+* Spring Quiz of 17 Questions with Immediate results
+* View score history and get cumulative average from PAL asking "How am I doing?"
 
 To-do list:
-* Wow improvement to be done 1
-* Wow improvement to be done 2
+* Train PAL on a large text dataset of questions and answers for it learn responses to more questions
+* Ensure the latest score is at the top
+* Add a Hibernate multiple-choice quiz with at least 20 questions and answer choices
 
 ## Getting Started
    
