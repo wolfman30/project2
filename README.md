@@ -2,7 +2,8 @@
 
 ## Project Description
 
-Here goes your awesome project description!
+Learn Spring and Hibernate by taking a quick 17 question quiz on Spring to get your immdediate results and ask the Personal Assistant in Learning (PAL) 
+questions about Spring and Hibernate to have fun learning these important areas of Java full-stack development. 
 
 ## Technologies Used
 
