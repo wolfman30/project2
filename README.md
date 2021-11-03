@@ -44,7 +44,9 @@ To-do list:
 ## Contributors
 
 > Asher Rosenbaum 
+> 
 > Paxton Plum
+> 
 > Andrew Wolf
 
 ## License
