@@ -1,4 +1,4 @@
-# PROJECT NAME
+# Java Learning Tool with PAL
 
 ## Project Description
 
