@@ -1,4 +1,4 @@
-# Java Learning Tool with PAL
+# Java Study Tool with PAL
 
 ## Project Description
 
