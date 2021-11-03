@@ -43,7 +43,9 @@ To-do list:
 
 ## Contributors
 
-> Here list the people who have contributed to this project. (ignore this section, if its a solo project)
+> Asher Rosenbaum 
+> Paxton Plum
+> Andrew Wolf
 
 ## License
 
